@@ -119,19 +119,22 @@ export default function CertificationPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {offerings.map((o, i) => (
-            <Card key={i} className="overflow-hidden border-0 shadow-md">
-              <div className="h-48 w-full">
-                <img
-                  src={`/.jpg?height=300&width=600&query=${encodeURIComponent("maritime certification")}`}
-                  alt={o.title}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="mb-2 text-lg font-semibold text-[#8B2332]">{o.title}</h3>
-                <p className="text-sm leading-relaxed text-neutral-600">{o.desc}</p>
-              </CardContent>
-            </Card>
+            <AnimatedSection key={i} delay={i * 100}>
+              <Card className="overflow-hidden border-0 shadow-md h-full">
+                <div className="h-48 w-full">
+                  <img
+                    src={`https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop`}
+                    alt={o.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-6 flex flex-col h-full">
+                  <h3 className="mb-2 text-lg font-semibold text-[#8B2332]">{o.title}</h3>
+                  <p className="text-sm leading-relaxed text-neutral-600 flex-grow">{o.desc}</p>
+                  <CertificationKnowMoreButton title={o.title} />
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           ))}
         </div>
 
