@@ -529,6 +529,11 @@ export default function CochinMaritimeAcademy() {
         </div>
       </section>
 
+      {/* Testimonials Marquee */}
+      <section className="py-8 bg-[#0B2A4A]">
+        <TestimonialsMarquee />
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
