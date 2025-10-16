@@ -116,10 +116,9 @@ export default function CochinMaritimeAcademy() {
       {/* Hero Section */}
       <section id="home" className="relative pt-20 min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/large-container-ship-at-sea-with-sunset.jpg"
-            alt="Maritime Hero"
-            className="w-full h-full object-cover animate-in fade-in zoom-in duration-1000"
+          <VideoBackground
+            src="https://videos.pexels.com/video-files/3045163/3045163-preview-0.45s_HPiS0oT.mp4"
+            fallbackImage="/large-container-ship-at-sea-with-sunset.jpg"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#8B2332]/90 to-[#6B1B2A]/70"></div>
         </div>
