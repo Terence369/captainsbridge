@@ -5,30 +5,12 @@ import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight, Anchor, Compass, Ship, LifeBuoy } from "lucide-react"
 
 const offerings = [
-  {
-    title: "MARINE VALUE-ADDED SAFETY COURSES",
-    desc: "We provide the best Value Added courses in maritime with the latest research and techniques.",
-  },
-  {
-    title: "MARINE CREW MANAGEMENT",
-    desc: "Ongoing crew management services for entire crews or specific nationalities/departments.",
-  },
-  {
-    title: "MARINE DOCUMENTATION",
-    desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.",
-  },
-  {
-    title: "INDIAN CDC ASSISTANCE",
-    desc: "Assistance for arranging CDC and guidance for meeting requirements across the maritime industry.",
-  },
-  {
-    title: "PLACEMENT GUIDANCE",
-    desc: "Invitations to companies and organizations for placement interviews with relevant information.",
-  },
-  {
-    title: "MARINE – OFFSHORE COURSES",
-    desc: "Broad range of courses for Marine and Offshore sectors with compliant training as per guidelines.",
-  },
+  { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "https://picsum.photos/seed/off1/800/600" },
+  { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "https://picsum.photos/seed/off2/800/600" },
+  { title: "MARINE DOCUMENTATION", desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.", image: "https://picsum.photos/seed/off3/800/600" },
+  { title: "INDIAN CDC ASSISTANCE", desc: "Assistance for arranging CDC and guidance for meeting requirements across the maritime industry.", image: "https://picsum.photos/seed/off4/800/600" },
+  { title: "PLACEMENT GUIDANCE", desc: "Invitations to companies and organizations for placement interviews with relevant information.", image: "https://picsum.photos/seed/off5/800/600" },
+  { title: "MARINE – OFFSHORE COURSES", desc: "Broad range of courses for Marine and Offshore sectors with compliant training as per guidelines.", image: "https://picsum.photos/seed/off6/800/600" },
 ]
 
 const testimonials = [
@@ -73,7 +55,7 @@ export default function CertificationPage() {
             muted
             loop
             playsInline
-            poster="/images/certification-hero.jpg"
+            poster="https://picsum.photos/seed/certification-hero/1600/900"
           >
             <source src="https://cdn.coverr.co/videos/coverr-ship-deck-3347/1080p.mp4" type="video/mp4" />
           </video>
@@ -83,7 +65,7 @@ export default function CertificationPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-4xl text-center">
           <h2 className="text-2xl font-bold text-[#0B2A4A] md:text-3xl">COCHIN MARITIME ACADEMY WE OFFER</h2>
           <div className="mt-2 text-sm font-semibold text-[#0B2A4A] md:text-base">
@@ -98,7 +80,7 @@ export default function CertificationPage() {
             <Card key={i} className="overflow-hidden border-0 shadow-md">
               <div className="h-48 w-full">
                 <img
-                  src={`/.jpg?height=300&width=600&query=${encodeURIComponent("maritime certification")}`}
+                  src={o.image}
                   alt={o.title}
                   className="h-full w-full object-cover"
                 />
@@ -115,7 +97,7 @@ export default function CertificationPage() {
           <Card className="border-0 shadow-md">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-semibold text-[#0B2A4A]">Certifications</h3>
-              <img src="/maritime-certificates.jpg" alt="Certificates" className="h-auto w-full rounded" />
+              <img src="https://picsum.photos/seed/certificates/1200/800" alt="Certificates" className="h-auto w-full rounded" />
             </CardContent>
           </Card>
 
