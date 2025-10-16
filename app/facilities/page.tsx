@@ -10,7 +10,7 @@ function useIntersectionObserver(options = {}) {
   const ref = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
 
-  useState(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
