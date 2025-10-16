@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import { useRef, useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { VideoBackground } from "@/components/video-background"
+import { TestimonialCarousel } from "@/components/testimonial-carousel"
 
 function useIntersectionObserver(options = {}) {
   const ref = useRef(null)
