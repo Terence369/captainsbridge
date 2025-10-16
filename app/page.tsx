@@ -96,6 +96,14 @@ function KnowMoreButton({ source }: { source: string }) {
 export default function CochinMaritimeAcademy() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+    message: "",
+  })
+  const [formSubmitted, setFormSubmitted] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
