@@ -98,11 +98,10 @@ export default function ValueAddedCoursesPage() {
 
   return (
     <div>
-      <section className="relative">
-        <img
-          src="/images/value-added-hero.jpg"
-          alt="Value Added Courses"
-          className="h-[260px] w-full object-cover md:h-[360px]"
+      <section className="relative h-[260px] md:h-[360px]">
+        <VideoBackground
+          src="https://videos.pexels.com/video-files/3045163/3045163-preview-0.45s_HPiS0oT.mp4"
+          fallbackImage="/images/value-added-hero.jpg"
         />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Value Added Courses</h1>
