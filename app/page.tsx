@@ -74,6 +74,26 @@ function AnimatedSection({
   )
 }
 
+// Know More Button Component
+function KnowMoreButton({ source }: { source: string }) {
+  const router = useRouter()
+
+  const handleKnowMore = () => {
+    const message = `Hey, I would like to know more about ${source}`
+    router.push(`/contact?message=${encodeURIComponent(message)}`)
+  }
+
+  return (
+    <Button
+      onClick={handleKnowMore}
+      variant="link"
+      className="text-[#8B2332] hover:text-[#D4AF37] mt-4 mx-auto block font-semibold"
+    >
+      KNOW MORE →
+    </Button>
+  )
+}
+
 export default function CochinMaritimeAcademy() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
