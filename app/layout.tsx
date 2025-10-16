@@ -30,6 +30,7 @@ export default function RootLayout({
         <SiteHeader />
         <main className="min-h-[60vh]">{children}</main>
         <SiteFooter />
+        <WhatsAppButton />
       </body>
     </html>
   )
