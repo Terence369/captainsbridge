@@ -217,12 +217,7 @@ export default function CochinMaritimeAcademy() {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-[#8B2332] mb-3 text-center">{item.title}</h3>
                     <p className="text-[#5A5A5A] text-sm leading-relaxed text-center">{item.description}</p>
-                    <Button
-                      variant="link"
-                      className="text-[#8B2332] hover:text-[#D4AF37] mt-4 mx-auto block font-semibold"
-                    >
-                      READ MORE →
-                    </Button>
+                    <KnowMoreButton source={item.title} />
                   </CardContent>
                 </Card>
               </AnimatedSection>
