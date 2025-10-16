@@ -54,18 +54,63 @@ export default function ApplyPage() {
 
       <section className="mx-auto max-w-3xl px-4 py-12 md:py-16">
         <h2 className="mb-6 text-center text-2xl font-semibold text-[#8B2332]">Application Form</h2>
-        <form className="space-y-4 rounded border p-6 shadow-sm">
+        <form className="space-y-4 rounded border p-6 shadow-sm" onSubmit={handleFormSubmit}>
+          {formSubmitted && (
+            <div className="p-3 bg-green-100 text-green-700 rounded">
+              Application submitted successfully! We'll review your application and get back to you soon.
+            </div>
+          )}
           <div className="grid gap-4 md:grid-cols-2">
-            <Input placeholder="First name *" required />
-            <Input placeholder="Last name *" required />
+            <Input
+              name="firstName"
+              placeholder="First name *"
+              value={formData.firstName}
+              onChange={handleFormChange}
+              required
+            />
+            <Input
+              name="lastName"
+              placeholder="Last name *"
+              value={formData.lastName}
+              onChange={handleFormChange}
+              required
+            />
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            <Input type="email" placeholder="Email *" required />
-            <Input type="tel" placeholder="Phone *" required />
+            <Input
+              type="email"
+              name="email"
+              placeholder="Email *"
+              value={formData.email}
+              onChange={handleFormChange}
+              required
+            />
+            <Input
+              type="tel"
+              name="phone"
+              placeholder="Phone *"
+              value={formData.phone}
+              onChange={handleFormChange}
+              required
+            />
           </div>
-          <Input placeholder="Course applying for *" required />
-          <Textarea rows={5} placeholder="Briefly tell us about your interest" />
-          <Button className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">Submit Application</Button>
+          <Input
+            name="courseApplying"
+            placeholder="Course applying for *"
+            value={formData.courseApplying}
+            onChange={handleFormChange}
+            required
+          />
+          <Textarea
+            name="interest"
+            rows={5}
+            placeholder="Briefly tell us about your interest"
+            value={formData.interest}
+            onChange={handleFormChange}
+          />
+          <Button type="submit" className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">
+            Submit Application
+          </Button>
         </form>
         <p className="mt-4 text-center text-xs text-neutral-600">
           By submitting, you agree to be contacted with course details and schedules.
