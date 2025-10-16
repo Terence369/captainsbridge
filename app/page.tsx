@@ -122,7 +122,7 @@ export default function CochinMaritimeAcademy() {
             playsInline
             poster="/large-container-ship-at-sea-with-sunset.jpg"
           >
-            <source src="https://cdn.builder.io/o/assets%2F1256c551aea145f5add95fd9566b369a%2F0b5aaac9a02c4fa884faaf0caf064073?alt=media&token=3606304e-81ac-4a56-b1c7-74a540a1a86d&apiKey=1256c551aea145f5add95fd9566b369a" type="video/mp4" />
+            <source src="https://cdn.builder.io/o/assets%2F36014cc458b649769a7ba595a5c2c17d%2Fa5dbc24f26434ac48fbf23ee4c88480f?alt=media&token=a9cc98ad-1907-46ed-ab25-295fb0e00496&apiKey=36014cc458b649769a7ba595a5c2c17d" type="video/mp4" />
           </video>
           <div className="absolute inset-0" style={{ backgroundImage: "url('https://media.ktoo.org/wp-content/uploads/2021/09/Eielson-masks.jpg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" }}></div>
         </div>
