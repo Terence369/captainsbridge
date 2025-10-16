@@ -29,6 +29,42 @@ const testimonials: Testimonial[] = [
     quote: "The comprehensive curriculum and modern infrastructure at Cochin Maritime prepared me well for the maritime industry.",
     image: "/female-maritime-officer-portrait.jpg",
   },
+  {
+    name: "VIKRAM PATEL",
+    role: "Chief Engineer",
+    quote: "Outstanding faculty and world-class infrastructure. The institute prepared me exceptionally well for my career at sea.",
+    image: "/professional-maritime-officer-portrait.jpg",
+  },
+  {
+    name: "PRIYA DESHMUKH",
+    role: "Deck Officer",
+    quote: "The hands-on training and mentorship at Cochin Maritime made all the difference in my professional development.",
+    image: "/female-maritime-officer-portrait.jpg",
+  },
+  {
+    name: "ARJUN KUMAR",
+    role: "Cadet",
+    quote: "Best maritime academy in the region. The courses are comprehensive and the faculty is highly experienced.",
+    image: "/maritime-engineer-officer-portrait.jpg",
+  },
+  {
+    name: "SNEHA NAIR",
+    role: "Navigation Officer",
+    quote: "The combination of theoretical knowledge and practical training gave me the confidence to excel in the maritime industry.",
+    image: "/female-maritime-officer-portrait.jpg",
+  },
+  {
+    name: "RAJESH IYER",
+    role: "Engine Officer",
+    quote: "Cochin Maritime's approach to maritime education is modern, industry-relevant, and truly world-class.",
+    image: "/maritime-engineer-officer-portrait.jpg",
+  },
+  {
+    name: "DIVYA SHARMA",
+    role: "First Officer",
+    quote: "The institute's focus on safety standards and international norms is commendable and sets it apart.",
+    image: "/professional-maritime-officer-portrait.jpg",
+  },
 ]
 
 export default function TestimonialsMarquee() {
