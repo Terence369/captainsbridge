@@ -464,14 +464,42 @@ export default function CochinMaritimeAcademy() {
                 <div className="pt-6">
                   <h3 className="font-bold text-[#8B2332] mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
-                    {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
-                      <button
-                        key={index}
-                        className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
-                      >
-                        <Icon className="text-white" size={20} />
-                      </button>
-                    ))}
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
+                      aria-label="Follow us on Facebook"
+                    >
+                      <Facebook className="text-white" size={20} />
+                    </a>
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
+                      aria-label="Follow us on Twitter"
+                    >
+                      <Twitter className="text-white" size={20} />
+                    </a>
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
+                      aria-label="Follow us on LinkedIn"
+                    >
+                      <Linkedin className="text-white" size={20} />
+                    </a>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
+                      aria-label="Follow us on Instagram"
+                    >
+                      <Instagram className="text-white" size={20} />
+                    </a>
                   </div>
                 </div>
               </div>
