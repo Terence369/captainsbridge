@@ -40,7 +40,7 @@ export default function SiteHeader() {
             </Link>
           ))}
           <Link href="/apply">
-            <Button className="bg-[#D4AF37] text-[#8B2332] hover:bg-[#B8941F]">Apply Now</Button>
+            <Button className="bg-[#D4AF37] text-[#0B2A4A] hover:bg-[#B8941F]">Apply Now</Button>
           </Link>
         </nav>
 
@@ -65,7 +65,7 @@ export default function SiteHeader() {
               </Link>
             ))}
             <Link href="/apply" onClick={() => setOpen(false)}>
-              <Button className="mt-2 w-full bg-[#D4AF37] text-[#8B2332] hover:bg-[#B8941F]">Apply Now</Button>
+              <Button className="mt-2 w-full bg-[#D4AF37] text-[#0B2A4A] hover:bg-[#B8941F]">Apply Now</Button>
             </Link>
           </nav>
         </div>
