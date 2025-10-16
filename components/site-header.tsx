@@ -20,7 +20,7 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#8B2332] text-white">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0B2A4A] text-white">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20">
         <Link href="/" className="flex items-center gap-3">
           <img src="/images/logo.png" alt="Cochin Maritime Academy" className="h-10 w-10 sm:h-12 sm:w-12" />
