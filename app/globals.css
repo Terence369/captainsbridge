@@ -149,3 +149,9 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Background helper for ocean pattern used in Value Added Courses */
+.bg-ocean-pattern {
+  background-image: url('/--encodeuricomponent--------------------ocean-back.jpg');
+  background-size: cover;
+}
