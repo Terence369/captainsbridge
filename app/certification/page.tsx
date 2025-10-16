@@ -76,14 +76,31 @@ const offerings = [
   },
 ]
 
+function CertificationKnowMoreButton({ title }: { title: string }) {
+  const router = useRouter()
+
+  const handleKnowMore = () => {
+    const message = `Hey, I would like to know more about ${title}`
+    router.push(`/contact?message=${encodeURIComponent(message)}`)
+  }
+
+  return (
+    <button
+      onClick={handleKnowMore}
+      className="text-[#8B2332] hover:text-[#D4AF37] font-semibold transition-colors mt-2"
+    >
+      Learn More →
+    </button>
+  )
+}
+
 export default function CertificationPage() {
   return (
     <div>
-      <section className="relative">
-        <img
-          src="/images/certification-hero.jpg"
-          alt="Certification"
-          className="h-[260px] w-full object-cover md:h-[360px]"
+      <section className="relative h-[260px] md:h-[360px]">
+        <VideoBackground
+          src="https://videos.pexels.com/video-files/2961840/2961840-preview-0.45s_SqhX65y.mp4"
+          fallbackImage="/images/certification-hero.jpg"
         />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Certification</h1>
