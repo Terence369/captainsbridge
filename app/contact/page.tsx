@@ -1,15 +1,31 @@
 "use client"
 
+import { useEffect, useState } from "react"
+import { useSearchParams } from "next/navigation"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Phone } from "lucide-react"
+import { VideoBackground } from "@/components/video-background"
 
 export default function ContactPage() {
+  const searchParams = useSearchParams()
+  const [message, setMessage] = useState("")
+
+  useEffect(() => {
+    const msgParam = searchParams.get("message")
+    if (msgParam) {
+      setMessage(decodeURIComponent(msgParam))
+    }
+  }, [searchParams])
+
   return (
     <div>
-      <section className="relative">
-        <img src="/images/home-hero.jpg" alt="Contact" className="h-[220px] w-full object-cover md:h-[300px]" />
+      <section className="relative h-[220px] md:h-[300px]">
+        <VideoBackground
+          src="https://videos.pexels.com/video-files/3041265/3041265-preview-0.45s_LOlLWkH.mp4"
+          fallbackImage="/images/home-hero.jpg"
+        />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-4xl">Contact</h1>
         </div>
