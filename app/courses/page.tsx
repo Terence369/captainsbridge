@@ -69,7 +69,7 @@ export default function CoursesPage() {
               className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="h-40 w-full">
-                <img src={course.image} alt={course.title} className="h-full w-full object-cover" />
+                <img src={course.image} alt={course.title} className="h-full w-full object-cover" onError={(e) => (e.currentTarget.src = '/placeholder.svg')} />
               </div>
               <CardContent className="p-5">
                 <h3 className="mb-2 text-base font-semibold text-[#0B2A4A]">{course.title}</h3>
