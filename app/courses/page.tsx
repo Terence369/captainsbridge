@@ -122,25 +122,26 @@ export default function CoursesPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {courseCards.map((title, i) => (
-            <Card
-              key={i}
-              className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="h-40 w-full">
-                <img
-                  src={`/.jpg?height=240&width=480&query=${encodeURIComponent("maritime training course")}`}
-                  alt={title}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <CardContent className="p-5">
-                <h3 className="mb-2 text-base font-semibold text-[#8B2332]">{title}</h3>
-                <p className="mb-4 text-sm leading-relaxed text-neutral-600">
-                  Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
-                </p>
-                <Button className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">View Detail</Button>
-              </CardContent>
-            </Card>
+            <AnimatedSection key={i} delay={i * 100}>
+              <Card
+                className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg h-full"
+              >
+                <div className="h-40 w-full">
+                  <img
+                    src={`https://images.unsplash.com/photo-1590080876-0ac91e3b9a2a?w=480&h=240&fit=crop`}
+                    alt={title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-5 flex flex-col h-full">
+                  <h3 className="mb-2 text-base font-semibold text-[#8B2332]">{title}</h3>
+                  <p className="mb-4 text-sm leading-relaxed text-neutral-600 flex-grow">
+                    Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
+                  </p>
+                  <CourseKnowMoreButton title={title} />
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           ))}
         </div>
 
