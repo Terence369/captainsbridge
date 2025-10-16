@@ -30,19 +30,26 @@ export default function ValueAddedCoursesPage() {
   return (
     <div>
       <section className="relative">
-        <img
-          src="/images/value-added-hero.jpg"
-          alt="Value Added Courses"
-          className="h-[260px] w-full object-cover md:h-[360px]"
-        />
-        <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
+        <div className="h-[260px] w-full md:h-[360px]">
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/value-added-hero.jpg"
+          >
+            <source src="https://cdn.coverr.co/videos/coverr-oil-rig-in-the-ocean-3828/1080p.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="absolute inset-0 grid place-items-center bg-[#0B2A4A]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Value Added Courses</h1>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-2xl font-bold text-[#8B2332] md:text-3xl">Course Categories</h2>
+          <h2 className="text-2xl font-bold text-[#0B2A4A] md:text-3xl">Course Categories</h2>
           <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
             Content and layout inspired by the provided page: two-column sections on maritime-themed backgrounds. Each
             module has a clear overview so nothing is left blank.
@@ -60,7 +67,7 @@ export default function ValueAddedCoursesPage() {
               }}
             >
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-[#8B2332]">{s.title}</h3>
+                <h3 className="mb-2 text-xl font-semibold text-[#0B2A4A]">{s.title}</h3>
                 <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
               </div>
               <div className="rounded bg-white/90 p-4 shadow">
