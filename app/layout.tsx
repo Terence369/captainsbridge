@@ -52,6 +52,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  // Apply fetch safety patch on client
+  useSafeFetchPatch()
+
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`font-sans antialiased`}>
