@@ -7,14 +7,32 @@ export default function WhatsAppButton() {
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/\D/g, "")}`
 
   return (
-    <a
-      href={whatsappLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5F] text-white rounded-full p-4 shadow-lg transition-all hover:scale-110 flex items-center justify-center"
-      aria-label="Contact us on WhatsApp"
-    >
-      <MessageCircle size={28} />
-    </a>
+    <>
+      <style jsx>{`
+        @keyframes glow-pulse {
+          0%, 100% {
+            box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+          }
+          50% {
+            box-shadow: 0 0 0 12px rgba(212, 175, 55, 0);
+          }
+        }
+        .whatsapp-glow {
+          animation: glow-pulse 2s infinite;
+        }
+      `}</style>
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5F] text-white rounded-full p-4 shadow-lg transition-all hover:scale-110 flex items-center justify-center whatsapp-glow"
+        aria-label="Contact us on WhatsApp"
+      >
+        <MessageCircle size={28} />
+        <span className="absolute bottom-0 left-0 bg-[#D4AF37] text-[#0B2A4A] text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+          ^
+        </span>
+      </a>
+    </>
   )
 }
