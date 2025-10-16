@@ -54,7 +54,6 @@ export default function FacilitiesPage() {
                   src={f.image}
                   alt={f.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  onError={(e) => (e.currentTarget.src = '/placeholder.svg')}
                 />
               </div>
               <CardContent className="p-6">
