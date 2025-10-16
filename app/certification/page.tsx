@@ -83,6 +83,7 @@ export default function CertificationPage() {
                   src={o.image}
                   alt={o.title}
                   className="h-full w-full object-cover"
+                  onError={(e) => (e.currentTarget.src = '/placeholder.svg')}
                 />
               </div>
               <CardContent className="p-6">
