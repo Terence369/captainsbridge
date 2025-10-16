@@ -434,7 +434,7 @@ export default function CochinMaritimeAcademy() {
             ].map((stat, index) => (
               <AnimatedSection key={index} delay={index * 100}>
                 <div className="text-center group hover:scale-105 transition-transform">
-                  <div className="bg-white/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#D4AF37] transition-colors">
+                  <div className="icon-badge bg-white/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#D4AF37] transition-colors">
                     <stat.icon className="w-10 h-10 icon-animate" />
                   </div>
                   <div className="text-3xl md:text-4xl font-bold mb-2">
