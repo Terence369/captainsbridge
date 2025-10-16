@@ -25,10 +25,11 @@ export default function MarqueeBanner() {
         }
 
         .marquee-content {
-          animation: marquee 35s linear infinite 0s;
+          animation: marquee 35s linear infinite;
           display: flex;
           white-space: nowrap;
           gap: 2rem;
+          will-change: transform;
         }
 
         .marquee-content:hover {
