@@ -13,7 +13,7 @@ export default function MarqueeBanner() {
   ]
 
   return (
-    <div className="overflow-hidden bg-[#D4AF37]">
+    <div className="w-full overflow-hidden bg-[#D4AF37]">
       <style jsx>{`
         @keyframes marquee {
           0% {
@@ -25,7 +25,7 @@ export default function MarqueeBanner() {
         }
 
         .marquee-content {
-          animation: marquee 20s linear infinite;
+          animation: marquee 35s linear infinite;
           display: flex;
           white-space: nowrap;
           gap: 2rem;
@@ -36,7 +36,7 @@ export default function MarqueeBanner() {
         }
       `}</style>
 
-      <div className="flex items-center py-3">
+      <div className="flex items-center py-3 h-fit">
         <div className="marquee-content">
           {items.concat(items).map((item, idx) => {
             const Icon = item.icon
