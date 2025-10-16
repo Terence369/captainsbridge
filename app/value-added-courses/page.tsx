@@ -37,7 +37,7 @@ export default function ValueAddedCoursesPage() {
             muted
             loop
             playsInline
-            poster="/images/value-added-hero.jpg"
+            poster="https://picsum.photos/seed/value-hero/1600/900"
           >
             <source src="https://cdn.coverr.co/videos/coverr-oil-rig-in-the-ocean-3828/1080p.mp4" type="video/mp4" />
           </video>
@@ -47,7 +47,7 @@ export default function ValueAddedCoursesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <h2 className="text-2xl font-bold text-[#0B2A4A] md:text-3xl">Course Categories</h2>
           <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
@@ -67,7 +67,7 @@ export default function ValueAddedCoursesPage() {
                 <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
               </div>
               <div className="rounded bg-white/90 p-4 shadow">
-                <img src="/maritime-training-session.jpg" alt={`${s.title} details`} className="h-auto w-full rounded" />
+                <img src={`https://picsum.photos/seed/value${i+1}/1200/800`} alt={`${s.title} details`} className="h-auto w-full rounded" />
               </div>
             </div>
           ))}
