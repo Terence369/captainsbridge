@@ -1,11 +1,45 @@
 "use client"
 
+import { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { VideoBackground } from "@/components/video-background"
 
 export default function ApplyPage() {
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    courseApplying: "",
+    interest: "",
+  })
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    try {
+      console.log("Application form submitted with data:", formData)
+      setFormSubmitted(true)
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        courseApplying: "",
+        interest: "",
+      })
+      setTimeout(() => setFormSubmitted(false), 3000)
+    } catch (error) {
+      console.error("Form submission error:", error)
+    }
+  }
   return (
     <div>
       <section className="relative h-[220px] md:h-[300px]">
