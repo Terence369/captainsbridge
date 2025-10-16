@@ -346,6 +346,9 @@ export default function CochinMaritimeAcademy() {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <PartnersSection />
+
       {/* Stats Section */}
       <section className="py-16 md:py-20 bg-[#8B2332] text-white">
         <div className="container mx-auto px-4">
