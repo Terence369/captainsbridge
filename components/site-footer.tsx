@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Mail, MapPin, Phone } from "lucide-react"
 
 export default function SiteFooter() {
@@ -15,20 +16,52 @@ export default function SiteFooter() {
         <div>
           <h3 className="mb-4 text-lg font-semibold text-[#D4AF37]">Services & Facilities</h3>
           <ul className="space-y-2 text-sm text-white/80">
-            <li>Accreditations / Approvals</li>
-            <li>Advanced Computer Lab</li>
-            <li>Placement Guidelines</li>
-            <li>Partners & Supporting Organisations</li>
+            <li>
+              <Link href="/facilities" className="hover:text-[#D4AF37] transition-colors">
+                Accreditations / Approvals
+              </Link>
+            </li>
+            <li>
+              <Link href="/facilities" className="hover:text-[#D4AF37] transition-colors">
+                Advanced Computer Lab
+              </Link>
+            </li>
+            <li>
+              <Link href="/facilities" className="hover:text-[#D4AF37] transition-colors">
+                Placement Guidelines
+              </Link>
+            </li>
+            <li>
+              <Link href="/facilities" className="hover:text-[#D4AF37] transition-colors">
+                Partners & Supporting Organisations
+              </Link>
+            </li>
           </ul>
         </div>
 
         <div>
           <h3 className="mb-4 text-lg font-semibold text-[#D4AF37]">DP Marine Courses</h3>
           <ul className="space-y-2 text-sm text-white/80">
-            <li>Electrical & Electronic Technicians</li>
-            <li>Bridging Course</li>
-            <li>Ship Board Safety</li>
-            <li>Security Officer Course</li>
+            <li>
+              <Link href="/courses" className="hover:text-[#D4AF37] transition-colors">
+                Electrical & Electronic Technicians
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses" className="hover:text-[#D4AF37] transition-colors">
+                Bridging Course
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses" className="hover:text-[#D4AF37] transition-colors">
+                Ship Board Safety
+              </Link>
+            </li>
+            <li>
+              <Link href="/courses" className="hover:text-[#D4AF37] transition-colors">
+                Security Officer Course
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -36,14 +69,20 @@ export default function SiteFooter() {
           <h3 className="mb-4 text-lg font-semibold text-[#D4AF37]">Get in Touch</h3>
           <ul className="space-y-3 text-sm text-white/80">
             <li className="flex items-start gap-2">
-              <MapPin size={16} className="mt-1" />
-              Aditya Complex, Kochupally road, Thoppumpady, Kochi – 682005
+              <MapPin size={16} className="mt-1 flex-shrink-0" />
+              <span>Aditya Complex, Kochupally road, Thoppumpady, Kochi – 682005</span>
             </li>
             <li className="flex items-center gap-2">
-              <Phone size={16} /> +91 484 2234500
+              <Phone size={16} className="flex-shrink-0" />
+              <a href="tel:+914842234500" className="hover:text-[#D4AF37] transition-colors">
+                +91 484 2234500
+              </a>
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} /> cochinmaritime@gmail.com
+              <Mail size={16} className="flex-shrink-0" />
+              <a href="mailto:cochinmaritime@gmail.com" className="hover:text-[#D4AF37] transition-colors">
+                cochinmaritime@gmail.com
+              </a>
             </li>
           </ul>
         </div>

@@ -1,7 +1,54 @@
 "use client"
 
+import { useRouter } from "next/navigation"
+import { useRef, useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { VideoBackground } from "@/components/video-background"
+
+function useIntersectionObserver(options = {}) {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1, ...options },
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return [ref, isVisible] as const
+}
+
+function AnimatedSection({
+  children,
+  className = "",
+  delay = 0,
+}: { children: React.ReactNode; className?: string; delay?: number }) {
+  const [ref, isVisible] = useIntersectionObserver()
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      } ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  )
+}
 
 const facilities = [
   {
@@ -34,14 +81,30 @@ const facilities = [
   },
 ]
 
+function FacilityKnowMoreButton({ title }: { title: string }) {
+  const router = useRouter()
+
+  const handleKnowMore = () => {
+    const message = `Hey, I would like to know more about ${title}`
+    router.push(`/contact?message=${encodeURIComponent(message)}`)
+  }
+
+  return (
+    <Button
+      onClick={handleKnowMore}
+      className="bg-[#8B2332] text-white hover:bg-[#6B1B2A]"
+    >
+      View Detail
+    </Button>
+  )
+}
+
 export default function FacilitiesPage() {
   return (
     <div>
-      <section className="relative">
-        <img
-          src="/images/facilities-hero.jpg"
-          alt="Facilities"
-          className="h-[260px] w-full object-cover md:h-[360px]"
+      <section className="relative h-[260px] md:h-[360px]">
+        <VideoBackground
+          fallbackImage="https://images.unsplash.com/photo-1581092918092-42ea3da38cd1?w=1920&h=1080&fit=crop"
         />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Facilities</h1>
@@ -59,25 +122,24 @@ export default function FacilitiesPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {facilities.map((f, i) => (
-            <Card
-              key={i}
-              className="group overflow-hidden border-0 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="h-48 w-full overflow-hidden">
-                <img
-                  src={`/.jpg?height=300&width=600&query=${encodeURIComponent(
-                    "maritime training facility",
-                  )}`}
-                  alt={f.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="mb-2 text-lg font-semibold text-[#8B2332]">{f.title}</h3>
-                <p className="mb-4 text-sm leading-relaxed text-neutral-600">{f.desc}</p>
-                <Button className="bg-[#8B2332] text-white hover:bg-[#6B1B2A]">View Detail</Button>
-              </CardContent>
-            </Card>
+            <AnimatedSection key={i} delay={i * 100}>
+              <Card
+                className="group overflow-hidden border-0 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg h-full"
+              >
+                <div className="h-48 w-full overflow-hidden">
+                  <img
+                    src={`https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=300&fit=crop`}
+                    alt={f.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <CardContent className="p-6 flex flex-col h-full">
+                  <h3 className="mb-2 text-lg font-semibold text-[#8B2332]">{f.title}</h3>
+                  <p className="mb-4 text-sm leading-relaxed text-neutral-600 flex-grow">{f.desc}</p>
+                  <FacilityKnowMoreButton title={f.title} />
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           ))}
         </div>
       </section>

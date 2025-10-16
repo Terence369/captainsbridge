@@ -1,15 +1,58 @@
 "use client"
 
+import { useEffect, useState } from "react"
+import { useSearchParams } from "next/navigation"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Phone } from "lucide-react"
+import { VideoBackground } from "@/components/video-background"
 
 export default function ContactPage() {
+  const searchParams = useSearchParams()
+  const [message, setMessage] = useState("")
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    courseInterest: "",
+    message: "",
+  })
+
+  useEffect(() => {
+    const msgParam = searchParams.get("message")
+    if (msgParam) {
+      setFormData((prev) => ({
+        ...prev,
+        message: decodeURIComponent(msgParam),
+      }))
+    }
+  }, [searchParams])
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    try {
+      console.log("Contact form submitted with data:", formData)
+      setFormSubmitted(true)
+      setFormData({ fullName: "", email: "", phone: "", courseInterest: "", message: "" })
+      setTimeout(() => setFormSubmitted(false), 3000)
+    } catch (error) {
+      console.error("Form submission error:", error)
+    }
+  }
+
   return (
     <div>
-      <section className="relative">
-        <img src="/images/home-hero.jpg" alt="Contact" className="h-[220px] w-full object-cover md:h-[300px]" />
+      <section className="relative h-[220px] md:h-[300px]">
+        <VideoBackground
+          fallbackImage="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&h=1080&fit=crop"
+        />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-4xl">Contact</h1>
         </div>
@@ -36,15 +79,53 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form className="space-y-4 rounded border p-6 shadow-sm">
+        <form className="space-y-4 rounded border p-6 shadow-sm" onSubmit={handleFormSubmit}>
+          {formSubmitted && (
+            <div className="p-3 bg-green-100 text-green-700 rounded">
+              Thank you! We've received your inquiry. We'll get back to you shortly.
+            </div>
+          )}
           <div className="grid gap-4 md:grid-cols-2">
-            <Input placeholder="Full name *" required />
-            <Input type="email" placeholder="Email *" required />
+            <Input
+              name="fullName"
+              placeholder="Full name *"
+              value={formData.fullName}
+              onChange={handleFormChange}
+              required
+            />
+            <Input
+              type="email"
+              name="email"
+              placeholder="Email *"
+              value={formData.email}
+              onChange={handleFormChange}
+              required
+            />
           </div>
-          <Input type="tel" placeholder="Phone *" required />
-          <Input placeholder="Course of interest" />
-          <Textarea rows={5} placeholder="Message" />
-          <Button className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">Send Message</Button>
+          <Input
+            type="tel"
+            name="phone"
+            placeholder="Phone *"
+            value={formData.phone}
+            onChange={handleFormChange}
+            required
+          />
+          <Input
+            name="courseInterest"
+            placeholder="Course of interest"
+            value={formData.courseInterest}
+            onChange={handleFormChange}
+          />
+          <Textarea
+            name="message"
+            rows={5}
+            placeholder="Message"
+            value={formData.message}
+            onChange={handleFormChange}
+          />
+          <Button type="submit" className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">
+            Send Message
+          </Button>
         </form>
       </section>
     </div>

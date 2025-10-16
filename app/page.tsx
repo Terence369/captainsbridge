@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
+import { useRouter } from "next/navigation"
 import {
   Phone,
   Mail,
@@ -23,6 +24,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { VideoBackground } from "@/components/video-background"
+import { TestimonialCarousel } from "@/components/testimonial-carousel"
+import { PartnersSection } from "@/components/partners-section"
 
 // Animation hook for scroll-triggered animations
 function useIntersectionObserver(options = {}) {
@@ -70,9 +74,37 @@ function AnimatedSection({
   )
 }
 
+// Know More Button Component
+function KnowMoreButton({ source }: { source: string }) {
+  const router = useRouter()
+
+  const handleKnowMore = () => {
+    const message = `Hey, I would like to know more about ${source}`
+    router.push(`/contact?message=${encodeURIComponent(message)}`)
+  }
+
+  return (
+    <Button
+      onClick={handleKnowMore}
+      variant="link"
+      className="text-[#8B2332] hover:text-[#D4AF37] mt-4 mx-auto block font-semibold"
+    >
+      KNOW MORE →
+    </Button>
+  )
+}
+
 export default function CochinMaritimeAcademy() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    course: "",
+    message: "",
+  })
+  const [formSubmitted, setFormSubmitted] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,15 +139,30 @@ export default function CochinMaritimeAcademy() {
     setMobileMenuOpen(false)
   }
 
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    try {
+      console.log("Form submitted with data:", formData)
+      setFormSubmitted(true)
+      setFormData({ name: "", email: "", phone: "", course: "", message: "" })
+      setTimeout(() => setFormSubmitted(false), 3000)
+    } catch (error) {
+      console.error("Form submission error:", error)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section id="home" className="relative pt-20 min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/large-container-ship-at-sea-with-sunset.jpg"
-            alt="Maritime Hero"
-            className="w-full h-full object-cover animate-in fade-in zoom-in duration-1000"
+          <VideoBackground
+            fallbackImage="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1080&fit=crop"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#8B2332]/90 to-[#6B1B2A]/70"></div>
         </div>
@@ -214,12 +261,7 @@ export default function CochinMaritimeAcademy() {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-[#8B2332] mb-3 text-center">{item.title}</h3>
                     <p className="text-[#5A5A5A] text-sm leading-relaxed text-center">{item.description}</p>
-                    <Button
-                      variant="link"
-                      className="text-[#8B2332] hover:text-[#D4AF37] mt-4 mx-auto block font-semibold"
-                    >
-                      READ MORE →
-                    </Button>
+                    <KnowMoreButton source={item.title} />
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -294,9 +336,7 @@ export default function CochinMaritimeAcademy() {
                   <CardContent className="p-6 flex-grow flex flex-col">
                     <h3 className="text-lg font-bold text-[#8B2332] mb-3 leading-tight">{course.title}</h3>
                     <p className="text-[#5A5A5A] text-sm leading-relaxed mb-4 flex-grow">{course.description}</p>
-                    <Button className="bg-[#8B2332] hover:bg-[#6B1B2A] text-white w-full font-semibold transition-all">
-                      VIEW DETAIL
-                    </Button>
+                    <KnowMoreButton source={course.title} />
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -304,6 +344,9 @@ export default function CochinMaritimeAcademy() {
           </div>
         </div>
       </section>
+
+      {/* Partners Section */}
+      <PartnersSection />
 
       {/* Stats Section */}
       <section className="py-16 md:py-20 bg-[#8B2332] text-white">
@@ -387,54 +430,8 @@ export default function CochinMaritimeAcademy() {
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: "T. KISHORE KUMAR",
-                role: "Deck Cadet",
-                quote:
-                  "I'm very happy to join this institute. The institute has all the facilities required as per the norms of DG Shipping.",
-                image: "/professional-maritime-officer-portrait.jpg",
-              },
-              {
-                name: "RAHUL MENON",
-                role: "Engine Officer",
-                quote:
-                  "Excellent training facilities and experienced faculty. The practical approach to teaching helped me excel in my career.",
-                image: "/maritime-engineer-officer-portrait.jpg",
-              },
-              {
-                name: "ANITA SHARMA",
-                role: "Navigation Officer",
-                quote:
-                  "The comprehensive curriculum and modern infrastructure at Cochin Maritime prepared me well for the maritime industry.",
-                image: "/female-maritime-officer-portrait.jpg",
-              },
-            ].map((testimonial, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
-                <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full">
-                  <CardContent className="p-8 text-center">
-                    <div className="mb-6">
-                      <img
-                        src={testimonial.image || "/placeholder.svg"}
-                        alt={testimonial.name}
-                        className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-[#D4AF37]"
-                      />
-                    </div>
-                    <p className="text-[#5A5A5A] italic mb-6 leading-relaxed">"{testimonial.quote}"</p>
-                    <div className="flex justify-center mb-3">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-[#D4AF37] text-xl">
-                          ★
-                        </span>
-                      ))}
-                    </div>
-                    <h4 className="font-bold text-[#8B2332] text-lg">{testimonial.name}</h4>
-                    <p className="text-[#5A5A5A] text-sm">{testimonial.role}</p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
+          <div className="max-w-6xl mx-auto">
+            <TestimonialCarousel />
           </div>
         </div>
       </section>
@@ -495,14 +492,42 @@ export default function CochinMaritimeAcademy() {
                 <div className="pt-6">
                   <h3 className="font-bold text-[#8B2332] mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
-                    {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
-                      <button
-                        key={index}
-                        className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
-                      >
-                        <Icon className="text-white" size={20} />
-                      </button>
-                    ))}
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
+                      aria-label="Follow us on Facebook"
+                    >
+                      <Facebook className="text-white" size={20} />
+                    </a>
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
+                      aria-label="Follow us on Twitter"
+                    >
+                      <Twitter className="text-white" size={20} />
+                    </a>
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
+                      aria-label="Follow us on LinkedIn"
+                    >
+                      <Linkedin className="text-white" size={20} />
+                    </a>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#8B2332] p-3 rounded-full hover:bg-[#D4AF37] transition-all hover:scale-110"
+                      aria-label="Follow us on Instagram"
+                    >
+                      <Instagram className="text-white" size={20} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -511,10 +536,18 @@ export default function CochinMaritimeAcademy() {
             <AnimatedSection delay={200}>
               <Card className="border-2 border-[#8B2332]/20 shadow-lg">
                 <CardContent className="p-8">
-                  <form className="space-y-6">
+                  {formSubmitted && (
+                    <div className="mb-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                      Thank you! We've received your message. We'll get back to you soon.
+                    </div>
+                  )}
+                  <form className="space-y-6" onSubmit={handleFormSubmit}>
                     <div>
                       <Input
+                        name="name"
                         placeholder="Your Name *"
+                        value={formData.name}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                         required
                       />
@@ -522,7 +555,10 @@ export default function CochinMaritimeAcademy() {
                     <div>
                       <Input
                         type="email"
+                        name="email"
                         placeholder="Your Email *"
+                        value={formData.email}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                         required
                       />
@@ -530,21 +566,30 @@ export default function CochinMaritimeAcademy() {
                     <div>
                       <Input
                         type="tel"
+                        name="phone"
                         placeholder="Your Phone *"
+                        value={formData.phone}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                         required
                       />
                     </div>
                     <div>
                       <Input
+                        name="course"
                         placeholder="Course Interest"
+                        value={formData.course}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                       />
                     </div>
                     <div>
                       <Textarea
+                        name="message"
                         placeholder="Your Message"
                         rows={4}
+                        value={formData.message}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                       />
                     </div>
@@ -565,7 +610,7 @@ export default function CochinMaritimeAcademy() {
       {/* Scroll to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-8 right-8 bg-[#8B2332] text-white p-4 rounded-full shadow-lg hover:bg-[#D4AF37] hover:scale-110 transition-all z-40"
+        className="fixed bottom-8 left-6 bg-[#8B2332] text-white p-4 rounded-full shadow-lg hover:bg-[#D4AF37] hover:scale-110 transition-all z-40"
         aria-label="Scroll to top"
       >
         <ChevronRight className="rotate-[-90deg]" size={24} />

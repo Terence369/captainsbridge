@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 
 const nav = [
@@ -18,9 +18,23 @@ const nav = [
 export default function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#8B2332] text-white">
+    <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
+      isScrolled
+        ? "bg-[#8B2332]/90 backdrop-blur-sm border-white/10"
+        : "bg-[#8B2332] border-white/10"
+    } text-white`}>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20">
         <Link href="/" className="flex items-center gap-3">
           <img src="/images/logo.png" alt="Cochin Maritime Academy" className="h-10 w-10 sm:h-12 sm:w-12" />

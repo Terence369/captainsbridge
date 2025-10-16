@@ -1,7 +1,55 @@
 "use client"
 
+import { useRouter } from "next/navigation"
+import { useRef, useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { VideoBackground } from "@/components/video-background"
+
+// Animation hook
+function useIntersectionObserver(options = {}) {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1, ...options },
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return [ref, isVisible] as const
+}
+
+function AnimatedSection({
+  children,
+  className = "",
+  delay = 0,
+}: { children: React.ReactNode; className?: string; delay?: number }) {
+  const [ref, isVisible] = useIntersectionObserver()
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      } ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  )
+}
 
 const courseCards = [
   "HYDROGEN SULPHIDE AWARENESS (H2S)",
@@ -32,11 +80,31 @@ const table = [
   ["S-07", "CARGO HANDLING SAFETY", "2 DAYS"],
 ]
 
+function CourseKnowMoreButton({ title }: { title: string }) {
+  const router = useRouter()
+
+  const handleKnowMore = () => {
+    const message = `Hey, I would like to know more about ${title}`
+    router.push(`/contact?message=${encodeURIComponent(message)}`)
+  }
+
+  return (
+    <Button
+      onClick={handleKnowMore}
+      className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]"
+    >
+      Know More
+    </Button>
+  )
+}
+
 export default function CoursesPage() {
   return (
     <div>
-      <section className="relative">
-        <img src="/images/courses-hero.jpg" alt="Courses" className="h-[260px] w-full object-cover md:h-[360px]" />
+      <section className="relative h-[260px] md:h-[360px]">
+        <VideoBackground
+          fallbackImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop"
+        />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Courses</h1>
         </div>
@@ -53,25 +121,26 @@ export default function CoursesPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {courseCards.map((title, i) => (
-            <Card
-              key={i}
-              className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="h-40 w-full">
-                <img
-                  src={`/.jpg?height=240&width=480&query=${encodeURIComponent("maritime training course")}`}
-                  alt={title}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <CardContent className="p-5">
-                <h3 className="mb-2 text-base font-semibold text-[#8B2332]">{title}</h3>
-                <p className="mb-4 text-sm leading-relaxed text-neutral-600">
-                  Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
-                </p>
-                <Button className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">View Detail</Button>
-              </CardContent>
-            </Card>
+            <AnimatedSection key={i} delay={i * 100}>
+              <Card
+                className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg h-full"
+              >
+                <div className="h-40 w-full">
+                  <img
+                    src={`https://images.unsplash.com/photo-1590080876-0ac91e3b9a2a?w=480&h=240&fit=crop`}
+                    alt={title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-5 flex flex-col h-full">
+                  <h3 className="mb-2 text-base font-semibold text-[#8B2332]">{title}</h3>
+                  <p className="mb-4 text-sm leading-relaxed text-neutral-600 flex-grow">
+                    Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
+                  </p>
+                  <CourseKnowMoreButton title={title} />
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           ))}
         </div>
 

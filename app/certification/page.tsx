@@ -1,6 +1,54 @@
 "use client"
 
+import { useRouter } from "next/navigation"
+import { useRef, useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
+import { VideoBackground } from "@/components/video-background"
+import { TestimonialCarousel } from "@/components/testimonial-carousel"
+
+function useIntersectionObserver(options = {}) {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1, ...options },
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return [ref, isVisible] as const
+}
+
+function AnimatedSection({
+  children,
+  className = "",
+  delay = 0,
+}: { children: React.ReactNode; className?: string; delay?: number }) {
+  const [ref, isVisible] = useIntersectionObserver()
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      } ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  )
+}
 
 const offerings = [
   {
@@ -29,14 +77,30 @@ const offerings = [
   },
 ]
 
+function CertificationKnowMoreButton({ title }: { title: string }) {
+  const router = useRouter()
+
+  const handleKnowMore = () => {
+    const message = `Hey, I would like to know more about ${title}`
+    router.push(`/contact?message=${encodeURIComponent(message)}`)
+  }
+
+  return (
+    <button
+      onClick={handleKnowMore}
+      className="text-[#8B2332] hover:text-[#D4AF37] font-semibold transition-colors mt-2"
+    >
+      Learn More →
+    </button>
+  )
+}
+
 export default function CertificationPage() {
   return (
     <div>
-      <section className="relative">
-        <img
-          src="/images/certification-hero.jpg"
-          alt="Certification"
-          className="h-[260px] w-full object-cover md:h-[360px]"
+      <section className="relative h-[260px] md:h-[360px]">
+        <VideoBackground
+          fallbackImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop"
         />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Certification</h1>
@@ -55,19 +119,22 @@ export default function CertificationPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {offerings.map((o, i) => (
-            <Card key={i} className="overflow-hidden border-0 shadow-md">
-              <div className="h-48 w-full">
-                <img
-                  src={`/.jpg?height=300&width=600&query=${encodeURIComponent("maritime certification")}`}
-                  alt={o.title}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="mb-2 text-lg font-semibold text-[#8B2332]">{o.title}</h3>
-                <p className="text-sm leading-relaxed text-neutral-600">{o.desc}</p>
-              </CardContent>
-            </Card>
+            <AnimatedSection key={i} delay={i * 100}>
+              <Card className="overflow-hidden border-0 shadow-md h-full">
+                <div className="h-48 w-full">
+                  <img
+                    src={`https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop`}
+                    alt={o.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <CardContent className="p-6 flex flex-col h-full">
+                  <h3 className="mb-2 text-lg font-semibold text-[#8B2332]">{o.title}</h3>
+                  <p className="text-sm leading-relaxed text-neutral-600 flex-grow">{o.desc}</p>
+                  <CertificationKnowMoreButton title={o.title} />
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           ))}
         </div>
 
