@@ -80,11 +80,32 @@ const table = [
   ["S-07", "CARGO HANDLING SAFETY", "2 DAYS"],
 ]
 
+function CourseKnowMoreButton({ title }: { title: string }) {
+  const router = useRouter()
+
+  const handleKnowMore = () => {
+    const message = `Hey, I would like to know more about ${title}`
+    router.push(`/contact?message=${encodeURIComponent(message)}`)
+  }
+
+  return (
+    <Button
+      onClick={handleKnowMore}
+      className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]"
+    >
+      Know More
+    </Button>
+  )
+}
+
 export default function CoursesPage() {
   return (
     <div>
-      <section className="relative">
-        <img src="/images/courses-hero.jpg" alt="Courses" className="h-[260px] w-full object-cover md:h-[360px]" />
+      <section className="relative h-[260px] md:h-[360px]">
+        <VideoBackground
+          src="https://videos.pexels.com/video-files/3373097/3373097-preview-0.45s_GjIcsKQ.mp4"
+          fallbackImage="/images/courses-hero.jpg"
+        />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Courses</h1>
         </div>
