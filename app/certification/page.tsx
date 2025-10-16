@@ -98,7 +98,7 @@ export default function CertificationPage() {
           <Card className="border-0 shadow-md">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-semibold text-[#0B2A4A]">Certifications</h3>
-              <img src="https://picsum.photos/seed/certificates/1200/800" alt="Certificates" className="h-auto w-full rounded" />
+              <img src="https://picsum.photos/seed/certificates/1200/800" alt="Certificates" className="h-auto w-full rounded" onError={(e) => (e.currentTarget.src = '/placeholder.svg')} />
             </CardContent>
           </Card>
 
