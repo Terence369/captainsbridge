@@ -26,6 +26,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { VideoBackground } from "@/components/video-background"
 import { TestimonialCarousel } from "@/components/testimonial-carousel"
+import { PartnersSection } from "@/components/partners-section"
 
 // Animation hook for scroll-triggered animations
 function useIntersectionObserver(options = {}) {
