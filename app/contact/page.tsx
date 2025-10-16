@@ -9,29 +9,40 @@ export default function ContactPage() {
   return (
     <div>
       <section className="relative">
-        <img src="/images/home-hero.jpg" alt="Contact" className="h-[220px] w-full object-cover md:h-[300px]" />
-        <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
+        <div className="h-[220px] w-full md:h-[300px]">
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/home-hero.jpg"
+          >
+            <source src="https://cdn.coverr.co/videos/coverr-navigation-map-1089/1080p.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="absolute inset-0 grid place-items-center bg-[#0B2A4A]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-4xl">Contact</h1>
         </div>
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-2 md:py-16">
         <div>
-          <h2 className="mb-4 text-2xl font-semibold text-[#8B2332]">Get in touch</h2>
+          <h2 className="mb-4 text-2xl font-semibold text-[#0B2A4A]">Get in touch</h2>
           <p className="mb-6 text-sm leading-relaxed text-neutral-700">
             Have questions? We're here to help you start your maritime career.
           </p>
 
           <div className="space-y-5 text-sm text-neutral-700">
             <div className="flex items-start gap-3">
-              <MapPin className="text-[#8B2332]" />
+              <MapPin className="text-[#0B2A4A]" />
               Aditya Complex, Kochupally road, Next to Anjali Marriage hall, Thoppumpady, Kochi – 682005
             </div>
             <div className="flex items-center gap-3">
-              <Phone className="text-[#8B2332]" /> +91 484 2234500 &nbsp; / &nbsp; +91 8484545501
+              <Phone className="text-[#0B2A4A]" /> +91 484 2234500 &nbsp; / &nbsp; +91 8484545501
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="text-[#8B2332]" /> cochinmaritime@gmail.com
+              <Mail className="text-[#0B2A4A]" /> cochinmaritime@gmail.com
             </div>
           </div>
         </div>
@@ -44,7 +55,7 @@ export default function ContactPage() {
           <Input type="tel" placeholder="Phone *" required />
           <Input placeholder="Course of interest" />
           <Textarea rows={5} placeholder="Message" />
-          <Button className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">Send Message</Button>
+          <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">Send Message</Button>
         </form>
       </section>
     </div>

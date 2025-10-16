@@ -74,8 +74,10 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
+  --font-sans: "Merriweather", Georgia, "Times New Roman", serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -121,6 +123,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
 
@@ -148,4 +151,17 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Background helper for ocean pattern used in Value Added Courses */
+.bg-ocean-pattern {
+  background-image: url('/--encodeuricomponent--------------------ocean-back.jpg');
+  background-size: cover;
+}
+
+/* Subtle patterned backgrounds for white sections */
+.bg-subtle {
+  background-image: radial-gradient(circle at 10% 10%, rgba(11,42,74,0.03) 0px, transparent 30%), radial-gradient(circle at 90% 90%, rgba(11,42,74,0.02) 0px, transparent 25%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

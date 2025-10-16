@@ -3,23 +3,23 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
-const courseCards = [
-  "HYDROGEN SULPHIDE AWARENESS (H2S)",
-  "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)",
-  "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)",
-  "RIGGING AND SLINGING SAFETY LEVEL 2",
-  "LIFTING AND HOISTING SAFETY",
-  "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)",
-  "COOKERY COURSE WITH HACCP",
-  "BASIC COOKING COURSE CERTIFICATION",
-  "PSD CROWD MANAGEMENT",
-  "PSD HUMAN BEHAVIOUR",
-  "HOSPITALITY & SPANISH COURSE",
-  "SHIP BOARD SAFETY & SECURITY (SOFF)",
-  "SECURITY FACILITY CODE & AWARENESS",
-  "SHIPPING NEW ENTRY FOR FITTER & WELDERS",
-  "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS",
-  "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE",
+const courses = [
+  { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://source.unsplash.com/800x600/?hazmat,gas,ship" },
+  { title: "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)", image: "https://source.unsplash.com/800x600/?helicopter,rescue,sea" },
+  { title: "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)", image: "https://source.unsplash.com/800x600/?offshore,safety,training" },
+  { title: "RIGGING AND SLINGING SAFETY LEVEL 2", image: "https://source.unsplash.com/800x600/?rigging,crane,ship" },
+  { title: "LIFTING AND HOISTING SAFETY", image: "https://source.unsplash.com/800x600/?lifting,hoist,crew" },
+  { title: "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)", image: "https://source.unsplash.com/800x600/?crane,operator,shipyard" },
+  { title: "COOKERY COURSE WITH HACCP", image: "https://source.unsplash.com/800x600/?commercial,kitchen,cookery" },
+  { title: "BASIC COOKING COURSE CERTIFICATION", image: "https://source.unsplash.com/800x600/?cooking,classroom,chef" },
+  { title: "PSD CROWD MANAGEMENT", image: "https://source.unsplash.com/800x600/?crowd,management,training" },
+  { title: "PSD HUMAN BEHAVIOUR", image: "https://source.unsplash.com/800x600/?psychology,training,students" },
+  { title: "HOSPITALITY & SPANISH COURSE", image: "https://source.unsplash.com/800x600/?hospitality,training,service" },
+  { title: "SHIP BOARD SAFETY & SECURITY (SOFF)", image: "https://source.unsplash.com/800x600/?ship,bridge,crew" },
+  { title: "SECURITY FACILITY CODE & AWARENESS", image: "https://source.unsplash.com/800x600/?security,training,maritime" },
+  { title: "SHIPPING NEW ENTRY FOR FITTER & WELDERS", image: "https://source.unsplash.com/800x600/?welder,workshop,ship" },
+  { title: "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS", image: "https://source.unsplash.com/800x600/?mechanic,technician,engine" },
+  { title: "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE", image: "https://source.unsplash.com/800x600/?electrical,technician,training" },
 ]
 
 const table = [
@@ -36,15 +36,26 @@ export default function CoursesPage() {
   return (
     <div>
       <section className="relative">
-        <img src="/images/courses-hero.jpg" alt="Courses" className="h-[260px] w-full object-cover md:h-[360px]" />
-        <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
+        <div className="h-[260px] w-full md:h-[360px]">
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="https://picsum.photos/seed/courses-hero/1600/900"
+          >
+            <source src="https://cdn.coverr.co/videos/coverr-container-ship-3926/1080p.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="absolute inset-0 grid place-items-center bg-[#0B2A4A]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Courses</h1>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-2xl font-bold text-[#8B2332] md:text-3xl">Partners and Supporting Organisation</h2>
+          <h2 className="text-2xl font-bold text-[#0B2A4A] md:text-3xl">Partners and Supporting Organisation</h2>
           <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
             Training modules include offshore, safety, hospitality, and technical specializations across the maritime
             industry. Explore highlighted programs below.
@@ -52,36 +63,32 @@ export default function CoursesPage() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {courseCards.map((title, i) => (
+          {courses.map((course, i) => (
             <Card
               key={i}
               className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="h-40 w-full">
-                <img
-                  src={`/.jpg?height=240&width=480&query=${encodeURIComponent("maritime training course")}`}
-                  alt={title}
-                  className="h-full w-full object-cover"
-                />
+                <img src={course.image} alt={course.title} className="h-full w-full object-cover" />
               </div>
               <CardContent className="p-5">
-                <h3 className="mb-2 text-base font-semibold text-[#8B2332]">{title}</h3>
+                <h3 className="mb-2 text-base font-semibold text-[#0B2A4A]">{course.title}</h3>
                 <p className="mb-4 text-sm leading-relaxed text-neutral-600">
                   Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
                 </p>
-                <Button className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">View Detail</Button>
+                <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">View Detail</Button>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="mx-auto mt-14 max-w-4xl">
-          <h3 className="mb-4 text-center text-xl font-semibold text-[#8B2332]">
+          <h3 className="mb-4 text-center text-xl font-semibold text-[#0B2A4A]">
             SHORT TERM SAFETY VALUE ADDED COURSES — REGULAR COURSES
           </h3>
           <div className="overflow-x-auto rounded border">
             <table className="min-w-full text-left text-sm">
-              <thead className="bg-[#8B2332] text-white">
+              <thead className="bg-[#0B2A4A] text-white">
                 <tr>
                   <th className="px-4 py-3">Code</th>
                   <th className="px-4 py-3">Shipping & Maritime Course</th>
