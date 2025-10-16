@@ -540,9 +540,6 @@ export default function CochinMaritimeAcademy() {
       >
         <ChevronRight className="rotate-[-90deg]" size={24} />
       </button>
-
-      {/* Contact Badge */}
-      <ContactBadge />
     </div>
   )
 }
