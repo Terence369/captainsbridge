@@ -24,6 +24,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import AnimatedCounter from "@/components/animated-counter"
 
 // Animation hook for scroll-triggered animations
 function useIntersectionObserver(options = {}) {
@@ -122,7 +123,7 @@ export default function CochinMaritimeAcademy() {
             playsInline
             poster="/large-container-ship-at-sea-with-sunset.jpg"
           >
-            <source src="https://cdn.builder.io/o/assets%2F1256c551aea145f5add95fd9566b369a%2F0b5aaac9a02c4fa884faaf0caf064073?alt=media&token=3606304e-81ac-4a56-b1c7-74a540a1a86d&apiKey=1256c551aea145f5add95fd9566b369a" type="video/mp4" />
+            <source src="https://cdn.builder.io/o/assets%2F36014cc458b649769a7ba595a5c2c17d%2Fa5dbc24f26434ac48fbf23ee4c88480f?alt=media&token=a9cc98ad-1907-46ed-ab25-295fb0e00496&apiKey=36014cc458b649769a7ba595a5c2c17d" type="video/mp4" />
           </video>
           <div className="absolute inset-0" style={{ backgroundImage: "url('https://media.ktoo.org/wp-content/uploads/2021/09/Eielson-masks.jpg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" }}></div>
         </div>
@@ -385,6 +386,19 @@ export default function CochinMaritimeAcademy() {
 
       {/* Stats Section */}
       <section id="stats" className="py-16 md:py-20 bg-[#0B2A4A] text-white">
+        <style jsx>{`
+          @keyframes float {
+            0%, 100% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-8px);
+            }
+          }
+          .icon-animate {
+            animation: float 3s ease-in-out infinite;
+          }
+        `}</style>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -396,9 +410,11 @@ export default function CochinMaritimeAcademy() {
               <AnimatedSection key={index} delay={index * 100}>
                 <div className="text-center group hover:scale-105 transition-transform">
                   <div className="bg-white/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#D4AF37] transition-colors">
-                    <stat.icon className="w-10 h-10" />
+                    <stat.icon className="w-10 h-10 icon-animate" />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
+                  <div className="text-3xl md:text-4xl font-bold mb-2">
+                    <AnimatedCounter targetText={stat.number} duration={2500} />
+                  </div>
                   <div className="text-sm md:text-base text-white/80">{stat.label}</div>
                 </div>
               </AnimatedSection>
@@ -638,7 +654,7 @@ export default function CochinMaritimeAcademy() {
       {/* Scroll to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-8 right-8 bg-[#0B2A4A] text-white p-4 rounded-full shadow-lg hover:bg-[#D4AF37] hover:scale-110 transition-all z-40"
+        className="fixed bottom-8 left-8 bg-[#0B2A4A] text-white p-4 rounded-full shadow-lg hover:bg-[#D4AF37] hover:scale-110 transition-all z-40"
         aria-label="Scroll to top"
       >
         <ChevronRight className="rotate-[-90deg]" size={24} />
