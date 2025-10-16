@@ -535,11 +535,14 @@ export default function CochinMaritimeAcademy() {
       {/* Scroll to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-8 right-8 bg-[#8B2332] text-white p-4 rounded-full shadow-lg hover:bg-[#D4AF37] hover:scale-110 transition-all z-40"
+        className="fixed bottom-8 left-6 bg-[#8B2332] text-white p-4 rounded-full shadow-lg hover:bg-[#D4AF37] hover:scale-110 transition-all z-40"
         aria-label="Scroll to top"
       >
         <ChevronRight className="rotate-[-90deg]" size={24} />
       </button>
+
+      {/* Contact Badge */}
+      <ContactBadge />
     </div>
   )
 }
