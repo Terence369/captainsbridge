@@ -11,13 +11,41 @@ import { VideoBackground } from "@/components/video-background"
 export default function ContactPage() {
   const searchParams = useSearchParams()
   const [message, setMessage] = useState("")
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    courseInterest: "",
+    message: "",
+  })
 
   useEffect(() => {
     const msgParam = searchParams.get("message")
     if (msgParam) {
-      setMessage(decodeURIComponent(msgParam))
+      setFormData((prev) => ({
+        ...prev,
+        message: decodeURIComponent(msgParam),
+      }))
     }
   }, [searchParams])
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    try {
+      console.log("Contact form submitted with data:", formData)
+      setFormSubmitted(true)
+      setFormData({ fullName: "", email: "", phone: "", courseInterest: "", message: "" })
+      setTimeout(() => setFormSubmitted(false), 3000)
+    } catch (error) {
+      console.error("Form submission error:", error)
+    }
+  }
 
   return (
     <div>
