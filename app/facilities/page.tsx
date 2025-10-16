@@ -104,8 +104,7 @@ export default function FacilitiesPage() {
     <div>
       <section className="relative h-[260px] md:h-[360px]">
         <VideoBackground
-          src="https://videos.pexels.com/video-files/3045464/3045464-preview-0.45s_AjwKqWz.mp4"
-          fallbackImage="/images/facilities-hero.jpg"
+          fallbackImage="https://images.unsplash.com/photo-1581092918092-42ea3da38cd1?w=1920&h=1080&fit=crop"
         />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Facilities</h1>
