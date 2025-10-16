@@ -418,7 +418,7 @@ export default function CochinMaritimeAcademy() {
             animation: float 3s ease-in-out infinite, pulse-scale 2s ease-in-out infinite;
           }
           .icon-badge {
-            animation: rotate-glow 3s ease-in-out infinite;
+            animation: subtle-hop 2.5s ease-in-out infinite;
           }
         `}</style>
         <div className="container mx-auto px-4">
