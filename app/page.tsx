@@ -479,9 +479,11 @@ export default function CochinMaritimeAcademy() {
             </div>
           </AnimatedSection>
 
-          <TestimonialsMarquee />
         </div>
       </section>
+
+      {/* Testimonials Marquee - Full Width */}
+      <TestimonialsMarquee />
 
       {/* Contact Section */}
       <section id="contact" className="py-16 md:py-24 bg-white">
