@@ -60,11 +60,7 @@ export default function ValueAddedCoursesPage() {
           {sections.map((s, i) => (
             <div
               key={i}
-              className="grid items-center gap-6 rounded-lg border bg-white/90 p-6 md:grid-cols-2"
-              style={{
-                backgroundImage: `url('/--encodeuricomponent--------------------ocean-back.jpg')`,
-                backgroundSize: "cover",
-              }}
+              className="grid items-center gap-6 rounded-lg border bg-white/90 p-6 md:grid-cols-2 bg-ocean-pattern"
             >
               <div>
                 <h3 className="mb-2 text-xl font-semibold text-[#0B2A4A]">{s.title}</h3>
