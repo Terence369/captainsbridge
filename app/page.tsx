@@ -404,17 +404,14 @@ export default function CochinMaritimeAcademy() {
               transform: scale(1.1);
             }
           }
-          @keyframes rotate-glow {
-            0% {
-              transform: rotate(0deg);
-              filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0));
+          @keyframes subtle-hop {
+            0%, 100% {
+              transform: translateY(0px);
+              box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
             }
             50% {
-              filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
-            }
-            100% {
-              transform: rotate(360deg);
-              filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0));
+              transform: translateY(-6px);
+              box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
             }
           }
           .icon-animate {
