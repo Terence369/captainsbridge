@@ -162,8 +162,7 @@ export default function CochinMaritimeAcademy() {
       <section id="home" className="relative pt-20 min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <VideoBackground
-            src="https://videos.pexels.com/video-files/3045163/3045163-preview-0.45s_HPiS0oT.mp4"
-            fallbackImage="/large-container-ship-at-sea-with-sunset.jpg"
+            fallbackImage="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1080&fit=crop"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#8B2332]/90 to-[#6B1B2A]/70"></div>
         </div>
