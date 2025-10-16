@@ -27,6 +27,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`font-sans antialiased`}>
         <SafeFetchProvider />
+        <MarqueeBanner />
         <SiteHeader />
         <main className="min-h-[60vh]">{children}</main>
         <SiteFooter />
