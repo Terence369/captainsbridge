@@ -386,6 +386,19 @@ export default function CochinMaritimeAcademy() {
 
       {/* Stats Section */}
       <section id="stats" className="py-16 md:py-20 bg-[#0B2A4A] text-white">
+        <style jsx>{`
+          @keyframes float {
+            0%, 100% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-8px);
+            }
+          }
+          .icon-animate {
+            animation: float 3s ease-in-out infinite;
+          }
+        `}</style>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -397,9 +410,11 @@ export default function CochinMaritimeAcademy() {
               <AnimatedSection key={index} delay={index * 100}>
                 <div className="text-center group hover:scale-105 transition-transform">
                   <div className="bg-white/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-[#D4AF37] transition-colors">
-                    <stat.icon className="w-10 h-10" />
+                    <stat.icon className="w-10 h-10 icon-animate" />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
+                  <div className="text-3xl md:text-4xl font-bold mb-2">
+                    <AnimatedCounter targetText={stat.number} duration={2500} />
+                  </div>
                   <div className="text-sm md:text-base text-white/80">{stat.label}</div>
                 </div>
               </AnimatedSection>
