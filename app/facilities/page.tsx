@@ -123,25 +123,24 @@ export default function FacilitiesPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {facilities.map((f, i) => (
-            <Card
-              key={i}
-              className="group overflow-hidden border-0 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="h-48 w-full overflow-hidden">
-                <img
-                  src={`/.jpg?height=300&width=600&query=${encodeURIComponent(
-                    "maritime training facility",
-                  )}`}
-                  alt={f.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="mb-2 text-lg font-semibold text-[#8B2332]">{f.title}</h3>
-                <p className="mb-4 text-sm leading-relaxed text-neutral-600">{f.desc}</p>
-                <Button className="bg-[#8B2332] text-white hover:bg-[#6B1B2A]">View Detail</Button>
-              </CardContent>
-            </Card>
+            <AnimatedSection key={i} delay={i * 100}>
+              <Card
+                className="group overflow-hidden border-0 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg h-full"
+              >
+                <div className="h-48 w-full overflow-hidden">
+                  <img
+                    src={`https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=300&fit=crop`}
+                    alt={f.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <CardContent className="p-6 flex flex-col h-full">
+                  <h3 className="mb-2 text-lg font-semibold text-[#8B2332]">{f.title}</h3>
+                  <p className="mb-4 text-sm leading-relaxed text-neutral-600 flex-grow">{f.desc}</p>
+                  <FacilityKnowMoreButton title={f.title} />
+                </CardContent>
+              </Card>
+            </AnimatedSection>
           ))}
         </div>
       </section>
