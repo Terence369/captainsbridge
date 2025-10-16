@@ -479,59 +479,8 @@ export default function CochinMaritimeAcademy() {
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: "T. KISHORE KUMAR",
-                role: "Deck Cadet",
-                quote:
-                  "I'm very happy to join this institute. The institute has all the facilities required as per the norms of DG Shipping.",
-                image: "/professional-maritime-officer-portrait.jpg",
-              },
-              {
-                name: "RAHUL MENON",
-                role: "Engine Officer",
-                quote:
-                  "Excellent training facilities and experienced faculty. The practical approach to teaching helped me excel in my career.",
-                image: "/maritime-engineer-officer-portrait.jpg",
-              },
-              {
-                name: "ANITA SHARMA",
-                role: "Navigation Officer",
-                quote:
-                  "The comprehensive curriculum and modern infrastructure at Cochin Maritime prepared me well for the maritime industry.",
-                image: "/female-maritime-officer-portrait.jpg",
-              },
-            ].map((testimonial, index) => (
-              <AnimatedSection key={index} delay={index * 100}>
-                <Card className="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full">
-                  <CardContent className="p-8 text-center">
-                    <div className="mb-6">
-                      <img
-                        src={testimonial.image || "/placeholder.svg"}
-                        alt={testimonial.name}
-                        className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-[#D4AF37]"
-                      />
-                    </div>
-                    <p className="text-[#5A5A5A] italic mb-6 leading-relaxed">"{testimonial.quote}"</p>
-                    <div className="flex justify-center mb-3">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-[#D4AF37] text-xl">★</span>
-                      ))}
-                    </div>
-                    <h4 className="font-bold text-[#0B2A4A] text-lg">{testimonial.name}</h4>
-                    <p className="text-[#5A5A5A] text-sm">{testimonial.role}</p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
+          <TestimonialsMarquee />
         </div>
-      </section>
-
-      {/* Testimonials Marquee */}
-      <section className="py-8 bg-[#0B2A4A]">
-        <TestimonialsMarquee />
       </section>
 
       {/* Contact Section */}
