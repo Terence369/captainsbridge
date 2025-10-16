@@ -2,7 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react"
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-[#6B1B2A] py-12 text-white">
+    <footer className="bg-[#081E35] py-12 text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-4">
         <div>
           <h3 className="mb-4 text-lg font-semibold text-[#D4AF37]">Cochin Maritime Academy</h3>
