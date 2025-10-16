@@ -80,20 +80,53 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form className="space-y-4 rounded border p-6 shadow-sm">
+        <form className="space-y-4 rounded border p-6 shadow-sm" onSubmit={handleFormSubmit}>
+          {formSubmitted && (
+            <div className="p-3 bg-green-100 text-green-700 rounded">
+              Thank you! We've received your inquiry. We'll get back to you shortly.
+            </div>
+          )}
           <div className="grid gap-4 md:grid-cols-2">
-            <Input placeholder="Full name *" required />
-            <Input type="email" placeholder="Email *" required />
+            <Input
+              name="fullName"
+              placeholder="Full name *"
+              value={formData.fullName}
+              onChange={handleFormChange}
+              required
+            />
+            <Input
+              type="email"
+              name="email"
+              placeholder="Email *"
+              value={formData.email}
+              onChange={handleFormChange}
+              required
+            />
           </div>
-          <Input type="tel" placeholder="Phone *" required />
-          <Input placeholder="Course of interest" />
+          <Input
+            type="tel"
+            name="phone"
+            placeholder="Phone *"
+            value={formData.phone}
+            onChange={handleFormChange}
+            required
+          />
+          <Input
+            name="courseInterest"
+            placeholder="Course of interest"
+            value={formData.courseInterest}
+            onChange={handleFormChange}
+          />
           <Textarea
+            name="message"
             rows={5}
             placeholder="Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            value={formData.message}
+            onChange={handleFormChange}
           />
-          <Button className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">Send Message</Button>
+          <Button type="submit" className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">
+            Send Message
+          </Button>
         </form>
       </section>
     </div>
