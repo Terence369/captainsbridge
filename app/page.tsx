@@ -533,10 +533,18 @@ export default function CochinMaritimeAcademy() {
             <AnimatedSection delay={200}>
               <Card className="border-2 border-[#8B2332]/20 shadow-lg">
                 <CardContent className="p-8">
-                  <form className="space-y-6">
+                  {formSubmitted && (
+                    <div className="mb-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                      Thank you! We've received your message. We'll get back to you soon.
+                    </div>
+                  )}
+                  <form className="space-y-6" onSubmit={handleFormSubmit}>
                     <div>
                       <Input
+                        name="name"
                         placeholder="Your Name *"
+                        value={formData.name}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                         required
                       />
@@ -544,7 +552,10 @@ export default function CochinMaritimeAcademy() {
                     <div>
                       <Input
                         type="email"
+                        name="email"
                         placeholder="Your Email *"
+                        value={formData.email}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                         required
                       />
@@ -552,21 +563,30 @@ export default function CochinMaritimeAcademy() {
                     <div>
                       <Input
                         type="tel"
+                        name="phone"
                         placeholder="Your Phone *"
+                        value={formData.phone}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                         required
                       />
                     </div>
                     <div>
                       <Input
+                        name="course"
                         placeholder="Course Interest"
+                        value={formData.course}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                       />
                     </div>
                     <div>
                       <Textarea
+                        name="message"
                         placeholder="Your Message"
                         rows={4}
+                        value={formData.message}
+                        onChange={handleFormChange}
                         className="border-[#8B2332]/30 focus:border-[#8B2332] focus:ring-[#8B2332]"
                       />
                     </div>
