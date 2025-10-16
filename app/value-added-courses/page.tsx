@@ -67,7 +67,7 @@ export default function ValueAddedCoursesPage() {
                 <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
               </div>
               <div className="rounded bg-white/90 p-4 shadow">
-                <img src={`https://source.unsplash.com/1200x800/?${encodeURIComponent(s.title.split(' ').slice(0,3).join(','))}`} alt={`${s.title} details`} className="h-auto w-full rounded" />
+                <img src={`https://source.unsplash.com/1200x800/?${encodeURIComponent(s.title.split(' ').slice(0,3).join(','))}`} alt={`${s.title} details`} className="h-auto w-full rounded" onError={(e) => (e.currentTarget.src = '/placeholder.svg')} />
               </div>
             </div>
           ))}
