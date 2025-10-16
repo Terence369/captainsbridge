@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
+import { useRouter } from "next/navigation"
 import {
   Phone,
   Mail,
@@ -23,6 +24,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { VideoBackground } from "@/components/video-background"
+import { ContactBadge } from "@/components/contact-badge"
+import { TestimonialCarousel } from "@/components/testimonial-carousel"
 
 // Animation hook for scroll-triggered animations
 function useIntersectionObserver(options = {}) {
