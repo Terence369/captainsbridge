@@ -12,24 +12,6 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "T. KISHORE KUMAR",
-    role: "Deck Cadet",
-    quote: "I'm very happy to join this institute. The institute has all the facilities required as per the norms of DG Shipping.",
-    image: "/professional-maritime-officer-portrait.jpg",
-  },
-  {
-    name: "RAHUL MENON",
-    role: "Engine Officer",
-    quote: "Excellent training facilities and experienced faculty. The practical approach to teaching helped me excel in my career.",
-    image: "/maritime-engineer-officer-portrait.jpg",
-  },
-  {
-    name: "ANITA SHARMA",
-    role: "Navigation Officer",
-    quote: "The comprehensive curriculum and modern infrastructure at Cochin Maritime prepared me well for the maritime industry.",
-    image: "/female-maritime-officer-portrait.jpg",
-  },
-  {
     name: "VIKRAM PATEL",
     role: "Chief Engineer",
     quote: "Outstanding faculty and world-class infrastructure. The institute prepared me exceptionally well for my career at sea.",
