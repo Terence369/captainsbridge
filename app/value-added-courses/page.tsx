@@ -1,3 +1,72 @@
+"use client"
+
+import { useRouter } from "next/navigation"
+import { useRef, useState } from "react"
+import { Button } from "@/components/ui/button"
+import { VideoBackground } from "@/components/video-background"
+
+function useIntersectionObserver(options = {}) {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useState(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1, ...options },
+    )
+
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  return [ref, isVisible] as const
+}
+
+function AnimatedSection({
+  children,
+  className = "",
+  delay = 0,
+}: { children: React.ReactNode; className?: string; delay?: number }) {
+  const [ref, isVisible] = useIntersectionObserver()
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      } ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  )
+}
+
+function ValueAddedKnowMoreButton({ title }: { title: string }) {
+  const router = useRouter()
+
+  const handleKnowMore = () => {
+    const message = `Hey, I would like to know more about ${title}`
+    router.push(`/contact?message=${encodeURIComponent(message)}`)
+  }
+
+  return (
+    <Button
+      onClick={handleKnowMore}
+      className="bg-[#8B2332] text-white hover:bg-[#6B1B2A] mt-4"
+    >
+      Learn More
+    </Button>
+  )
+}
+
 export default function ValueAddedCoursesPage() {
   const sections = [
     {
