@@ -37,7 +37,7 @@ export default function ValueAddedCoursesPage() {
             muted
             loop
             playsInline
-            poster="https://picsum.photos/seed/value-hero/1600/900"
+            poster="https://source.unsplash.com/1600x900/?offshore,oil,rig"
           >
             <source src="https://cdn.coverr.co/videos/coverr-oil-rig-in-the-ocean-3828/1080p.mp4" type="video/mp4" />
           </video>
@@ -67,7 +67,7 @@ export default function ValueAddedCoursesPage() {
                 <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
               </div>
               <div className="rounded bg-white/90 p-4 shadow">
-                <img src={`https://picsum.photos/seed/value${i+1}/1200/800`} alt={`${s.title} details`} className="h-auto w-full rounded" />
+                <img src={`https://source.unsplash.com/1200x800/?${encodeURIComponent(s.title.split(' ').slice(0,3).join(','))}`} alt={`${s.title} details`} className="h-auto w-full rounded" />
               </div>
             </div>
           ))}

@@ -4,22 +4,22 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 const courses = [
-  { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://picsum.photos/seed/course1/800/600" },
-  { title: "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)", image: "https://picsum.photos/seed/course2/800/600" },
-  { title: "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)", image: "https://picsum.photos/seed/course3/800/600" },
-  { title: "RIGGING AND SLINGING SAFETY LEVEL 2", image: "https://picsum.photos/seed/course4/800/600" },
-  { title: "LIFTING AND HOISTING SAFETY", image: "https://picsum.photos/seed/course5/800/600" },
-  { title: "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)", image: "https://picsum.photos/seed/course6/800/600" },
-  { title: "COOKERY COURSE WITH HACCP", image: "https://picsum.photos/seed/course7/800/600" },
-  { title: "BASIC COOKING COURSE CERTIFICATION", image: "https://picsum.photos/seed/course8/800/600" },
-  { title: "PSD CROWD MANAGEMENT", image: "https://picsum.photos/seed/course9/800/600" },
-  { title: "PSD HUMAN BEHAVIOUR", image: "https://picsum.photos/seed/course10/800/600" },
-  { title: "HOSPITALITY & SPANISH COURSE", image: "https://picsum.photos/seed/course11/800/600" },
-  { title: "SHIP BOARD SAFETY & SECURITY (SOFF)", image: "https://picsum.photos/seed/course12/800/600" },
-  { title: "SECURITY FACILITY CODE & AWARENESS", image: "https://picsum.photos/seed/course13/800/600" },
-  { title: "SHIPPING NEW ENTRY FOR FITTER & WELDERS", image: "https://picsum.photos/seed/course14/800/600" },
-  { title: "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS", image: "https://picsum.photos/seed/course15/800/600" },
-  { title: "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE", image: "https://picsum.photos/seed/course16/800/600" },
+  { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://source.unsplash.com/800x600/?hazmat,gas,ship" },
+  { title: "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)", image: "https://source.unsplash.com/800x600/?helicopter,rescue,sea" },
+  { title: "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)", image: "https://source.unsplash.com/800x600/?offshore,safety,training" },
+  { title: "RIGGING AND SLINGING SAFETY LEVEL 2", image: "https://source.unsplash.com/800x600/?rigging,crane,ship" },
+  { title: "LIFTING AND HOISTING SAFETY", image: "https://source.unsplash.com/800x600/?lifting,hoist,crew" },
+  { title: "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)", image: "https://source.unsplash.com/800x600/?crane,operator,shipyard" },
+  { title: "COOKERY COURSE WITH HACCP", image: "https://source.unsplash.com/800x600/?commercial,kitchen,cookery" },
+  { title: "BASIC COOKING COURSE CERTIFICATION", image: "https://source.unsplash.com/800x600/?cooking,classroom,chef" },
+  { title: "PSD CROWD MANAGEMENT", image: "https://source.unsplash.com/800x600/?crowd,management,training" },
+  { title: "PSD HUMAN BEHAVIOUR", image: "https://source.unsplash.com/800x600/?psychology,training,students" },
+  { title: "HOSPITALITY & SPANISH COURSE", image: "https://source.unsplash.com/800x600/?hospitality,training,service" },
+  { title: "SHIP BOARD SAFETY & SECURITY (SOFF)", image: "https://source.unsplash.com/800x600/?ship,bridge,crew" },
+  { title: "SECURITY FACILITY CODE & AWARENESS", image: "https://source.unsplash.com/800x600/?security,training,maritime" },
+  { title: "SHIPPING NEW ENTRY FOR FITTER & WELDERS", image: "https://source.unsplash.com/800x600/?welder,workshop,ship" },
+  { title: "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS", image: "https://source.unsplash.com/800x600/?mechanic,technician,engine" },
+  { title: "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE", image: "https://source.unsplash.com/800x600/?electrical,technician,training" },
 ]
 
 const table = [

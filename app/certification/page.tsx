@@ -5,12 +5,12 @@ import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight, Anchor, Compass, Ship, LifeBuoy } from "lucide-react"
 
 const offerings = [
-  { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "https://picsum.photos/seed/off1/800/600" },
-  { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "https://picsum.photos/seed/off2/800/600" },
-  { title: "MARINE DOCUMENTATION", desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.", image: "https://picsum.photos/seed/off3/800/600" },
-  { title: "INDIAN CDC ASSISTANCE", desc: "Assistance for arranging CDC and guidance for meeting requirements across the maritime industry.", image: "https://picsum.photos/seed/off4/800/600" },
-  { title: "PLACEMENT GUIDANCE", desc: "Invitations to companies and organizations for placement interviews with relevant information.", image: "https://picsum.photos/seed/off5/800/600" },
-  { title: "MARINE – OFFSHORE COURSES", desc: "Broad range of courses for Marine and Offshore sectors with compliant training as per guidelines.", image: "https://picsum.photos/seed/off6/800/600" },
+  { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "https://source.unsplash.com/800x600/?safety,offshore,training" },
+  { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "https://source.unsplash.com/800x600/?crew,management,ship" },
+  { title: "MARINE DOCUMENTATION", desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.", image: "https://source.unsplash.com/800x600/?documents,maritime,office" },
+  { title: "INDIAN CDC ASSISTANCE", desc: "Assistance for arranging CDC and guidance for meeting requirements across the maritime industry.", image: "https://source.unsplash.com/800x600/?certificate,cdc,card" },
+  { title: "PLACEMENT GUIDANCE", desc: "Invitations to companies and organizations for placement interviews with relevant information.", image: "https://source.unsplash.com/800x600/?job,interview,placement" },
+  { title: "MARINE – OFFSHORE COURSES", desc: "Broad range of courses for Marine and Offshore sectors with compliant training as per guidelines.", image: "https://source.unsplash.com/800x600/?oil,rig,offshore" },
 ]
 
 const testimonials = [
