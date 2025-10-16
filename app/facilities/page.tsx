@@ -81,14 +81,31 @@ const facilities = [
   },
 ]
 
+function FacilityKnowMoreButton({ title }: { title: string }) {
+  const router = useRouter()
+
+  const handleKnowMore = () => {
+    const message = `Hey, I would like to know more about ${title}`
+    router.push(`/contact?message=${encodeURIComponent(message)}`)
+  }
+
+  return (
+    <Button
+      onClick={handleKnowMore}
+      className="bg-[#8B2332] text-white hover:bg-[#6B1B2A]"
+    >
+      View Detail
+    </Button>
+  )
+}
+
 export default function FacilitiesPage() {
   return (
     <div>
-      <section className="relative">
-        <img
-          src="/images/facilities-hero.jpg"
-          alt="Facilities"
-          className="h-[260px] w-full object-cover md:h-[360px]"
+      <section className="relative h-[260px] md:h-[360px]">
+        <VideoBackground
+          src="https://videos.pexels.com/video-files/3045464/3045464-preview-0.45s_AjwKqWz.mp4"
+          fallbackImage="/images/facilities-hero.jpg"
         />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Facilities</h1>
