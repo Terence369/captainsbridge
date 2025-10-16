@@ -2,7 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react"
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-[#081E35] py-12 text-white">
+    <footer className="bg-[#081E35] py-12 text-white" style={{ backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets%2F1256c551aea145f5add95fd9566b369a%2F3916f8ef80084c61846a2936ce381c7c')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" }}>
       <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-4">
         <div>
           <h3 className="mb-4 text-lg font-semibold text-[#D4AF37]">Cochin Maritime Academy</h3>
@@ -50,8 +50,7 @@ export default function SiteFooter() {
       </div>
 
       <div className="mx-auto mt-8 max-w-7xl border-t border-white/20 px-4 pt-6 text-center text-xs text-white/70 md:flex md:items-center md:justify-between">
-        <p>COCHIN MARITIME ACADEMY © 2017 All Rights Reserved</p>
-        <p>Maintained by Red Falcon Services</p>
+        <p>COCHIN MARITIME ACADEMY © 2025All Rights Reserved</p>
       </div>
     </footer>
   )
