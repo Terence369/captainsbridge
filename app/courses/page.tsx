@@ -3,23 +3,23 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
-const courseCards = [
-  "HYDROGEN SULPHIDE AWARENESS (H2S)",
-  "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)",
-  "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)",
-  "RIGGING AND SLINGING SAFETY LEVEL 2",
-  "LIFTING AND HOISTING SAFETY",
-  "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)",
-  "COOKERY COURSE WITH HACCP",
-  "BASIC COOKING COURSE CERTIFICATION",
-  "PSD CROWD MANAGEMENT",
-  "PSD HUMAN BEHAVIOUR",
-  "HOSPITALITY & SPANISH COURSE",
-  "SHIP BOARD SAFETY & SECURITY (SOFF)",
-  "SECURITY FACILITY CODE & AWARENESS",
-  "SHIPPING NEW ENTRY FOR FITTER & WELDERS",
-  "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS",
-  "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE",
+const courses = [
+  { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://picsum.photos/seed/course1/800/600" },
+  { title: "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)", image: "https://picsum.photos/seed/course2/800/600" },
+  { title: "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)", image: "https://picsum.photos/seed/course3/800/600" },
+  { title: "RIGGING AND SLINGING SAFETY LEVEL 2", image: "https://picsum.photos/seed/course4/800/600" },
+  { title: "LIFTING AND HOISTING SAFETY", image: "https://picsum.photos/seed/course5/800/600" },
+  { title: "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)", image: "https://picsum.photos/seed/course6/800/600" },
+  { title: "COOKERY COURSE WITH HACCP", image: "https://picsum.photos/seed/course7/800/600" },
+  { title: "BASIC COOKING COURSE CERTIFICATION", image: "https://picsum.photos/seed/course8/800/600" },
+  { title: "PSD CROWD MANAGEMENT", image: "https://picsum.photos/seed/course9/800/600" },
+  { title: "PSD HUMAN BEHAVIOUR", image: "https://picsum.photos/seed/course10/800/600" },
+  { title: "HOSPITALITY & SPANISH COURSE", image: "https://picsum.photos/seed/course11/800/600" },
+  { title: "SHIP BOARD SAFETY & SECURITY (SOFF)", image: "https://picsum.photos/seed/course12/800/600" },
+  { title: "SECURITY FACILITY CODE & AWARENESS", image: "https://picsum.photos/seed/course13/800/600" },
+  { title: "SHIPPING NEW ENTRY FOR FITTER & WELDERS", image: "https://picsum.photos/seed/course14/800/600" },
+  { title: "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS", image: "https://picsum.photos/seed/course15/800/600" },
+  { title: "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE", image: "https://picsum.photos/seed/course16/800/600" },
 ]
 
 const table = [
@@ -43,7 +43,7 @@ export default function CoursesPage() {
             muted
             loop
             playsInline
-            poster="/images/courses-hero.jpg"
+            poster="https://picsum.photos/seed/courses-hero/1600/900"
           >
             <source src="https://cdn.coverr.co/videos/coverr-container-ship-3926/1080p.mp4" type="video/mp4" />
           </video>
@@ -53,7 +53,7 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <h2 className="text-2xl font-bold text-[#0B2A4A] md:text-3xl">Partners and Supporting Organisation</h2>
           <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
@@ -63,20 +63,16 @@ export default function CoursesPage() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {courseCards.map((title, i) => (
+          {courses.map((course, i) => (
             <Card
               key={i}
               className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="h-40 w-full">
-                <img
-                  src={`/.jpg?height=240&width=480&query=${encodeURIComponent("maritime training course")}`}
-                  alt={title}
-                  className="h-full w-full object-cover"
-                />
+                <img src={course.image} alt={course.title} className="h-full w-full object-cover" />
               </div>
               <CardContent className="p-5">
-                <h3 className="mb-2 text-base font-semibold text-[#0B2A4A]">{title}</h3>
+                <h3 className="mb-2 text-base font-semibold text-[#0B2A4A]">{course.title}</h3>
                 <p className="mb-4 text-sm leading-relaxed text-neutral-600">
                   Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
                 </p>
