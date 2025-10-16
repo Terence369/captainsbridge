@@ -125,12 +125,12 @@ export default function CochinMaritimeAcademy() {
             <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-cargo-ship-3854/1080p.mp4" type="video/mp4" />
             <source src="https://cdn.coverr.co/videos/coverr-ocean-waves-5877/1080p.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B2A4A]/90 to-[#081E35]/70"></div>
+          <div className="absolute inset-0" style={{ backgroundImage: "url('https://media.ktoo.org/wp-content/uploads/2021/09/Eielson-masks.jpg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" }}></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 py-20">
+        <div className="container mx-auto px-4 relative z-10 py-20 flex flex-col items-start justify-start">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-in slide-in-from-bottom duration-800 text-balance">
+            <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 animate-in slide-in-from-bottom duration-800 text-balance">
               WELCOME TO COCHIN MARITIME ACADEMY
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed">
@@ -314,12 +314,12 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Partners Section */}
-      <section id="partners" className="py-16 md:py-20 bg-white">
+      <section id="partners" className="py-16 md:py-20 bg-white" style={{backgroundImage: "url('https://media.ktoo.org/wp-content/uploads/2021/09/Eielson-masks.jpg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover"}}>
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0B2A4A]">PARTNERS AND SUPPORTING ORGANIZATION</h2>
-              <p className="mt-4 text-[#5A5A5A]">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">PARTNERS AND SUPPORTING ORGANIZATION</h2>
+              <p className="mt-4 text-white">
                 The Institute for Cochin Maritime Institute strives to increase public understanding of the causes and
                 consequences of marine degradation while also promoting solutions. Through our partnerships, we are
                 working to further conservation of marine life and ocean environments around the world.
@@ -443,9 +443,6 @@ export default function CochinMaritimeAcademy() {
                     We further mention that we have the vast experience in training the aspirant candidates in all
                     trades essential for merchant navy career from Cadet & GP Officer.
                   </p>
-                  <div className="mt-6">
-                    <img src="/director-signature.jpg" alt="Director's Signature" className="h-16" />
-                  </div>
                 </div>
               </div>
             </AnimatedSection>
