@@ -36,15 +36,26 @@ export default function CoursesPage() {
   return (
     <div>
       <section className="relative">
-        <img src="/images/courses-hero.jpg" alt="Courses" className="h-[260px] w-full object-cover md:h-[360px]" />
-        <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
+        <div className="h-[260px] w-full md:h-[360px]">
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/courses-hero.jpg"
+          >
+            <source src="https://cdn.coverr.co/videos/coverr-container-ship-3926/1080p.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="absolute inset-0 grid place-items-center bg-[#0B2A4A]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Courses</h1>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-2xl font-bold text-[#8B2332] md:text-3xl">Partners and Supporting Organisation</h2>
+          <h2 className="text-2xl font-bold text-[#0B2A4A] md:text-3xl">Partners and Supporting Organisation</h2>
           <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
             Training modules include offshore, safety, hospitality, and technical specializations across the maritime
             industry. Explore highlighted programs below.
@@ -65,23 +76,23 @@ export default function CoursesPage() {
                 />
               </div>
               <CardContent className="p-5">
-                <h3 className="mb-2 text-base font-semibold text-[#8B2332]">{title}</h3>
+                <h3 className="mb-2 text-base font-semibold text-[#0B2A4A]">{title}</h3>
                 <p className="mb-4 text-sm leading-relaxed text-neutral-600">
                   Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
                 </p>
-                <Button className="w-full bg-[#8B2332] text-white hover:bg-[#6B1B2A]">View Detail</Button>
+                <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">View Detail</Button>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="mx-auto mt-14 max-w-4xl">
-          <h3 className="mb-4 text-center text-xl font-semibold text-[#8B2332]">
+          <h3 className="mb-4 text-center text-xl font-semibold text-[#0B2A4A]">
             SHORT TERM SAFETY VALUE ADDED COURSES — REGULAR COURSES
           </h3>
           <div className="overflow-x-auto rounded border">
             <table className="min-w-full text-left text-sm">
-              <thead className="bg-[#8B2332] text-white">
+              <thead className="bg-[#0B2A4A] text-white">
                 <tr>
                   <th className="px-4 py-3">Code</th>
                   <th className="px-4 py-3">Shipping & Maritime Course</th>
