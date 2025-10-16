@@ -138,6 +138,23 @@ export default function CochinMaritimeAcademy() {
     setMobileMenuOpen(false)
   }
 
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    try {
+      console.log("Form submitted with data:", formData)
+      setFormSubmitted(true)
+      setFormData({ name: "", email: "", phone: "", course: "", message: "" })
+      setTimeout(() => setFormSubmitted(false), 3000)
+    } catch (error) {
+      console.error("Form submission error:", error)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
