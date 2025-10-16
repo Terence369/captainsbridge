@@ -29,9 +29,6 @@ export default function WhatsAppButton() {
         aria-label="Contact us on WhatsApp"
       >
         <MessageCircle size={28} />
-        <span className="absolute bottom-0 left-0 bg-[#D4AF37] text-[#0B2A4A] text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
-          ^
-        </span>
       </a>
     </>
   )
