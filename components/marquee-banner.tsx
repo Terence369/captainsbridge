@@ -1,3 +1,5 @@
+"use client"
+
 import { Anchor, Ship, Compass, Award } from "lucide-react"
 
 export default function MarqueeBanner() {
