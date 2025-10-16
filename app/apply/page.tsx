@@ -44,8 +44,7 @@ export default function ApplyPage() {
     <div>
       <section className="relative h-[220px] md:h-[300px]">
         <VideoBackground
-          src="https://videos.pexels.com/video-files/3041265/3041265-preview-0.45s_LOlLWkH.mp4"
-          fallbackImage="/images/welcome-hero.jpg"
+          fallbackImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop"
         />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-4xl">Apply Now</h1>
