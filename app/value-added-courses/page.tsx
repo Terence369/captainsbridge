@@ -119,22 +119,24 @@ export default function ValueAddedCoursesPage() {
 
         <div className="space-y-12">
           {sections.map((s, i) => (
-            <div
-              key={i}
-              className="grid items-center gap-6 rounded-lg border bg-white/90 p-6 md:grid-cols-2"
-              style={{
-                backgroundImage: `url('/--encodeuricomponent--------------------ocean-back.jpg')`,
-                backgroundSize: "cover",
-              }}
-            >
-              <div>
-                <h3 className="mb-2 text-xl font-semibold text-[#8B2332]">{s.title}</h3>
-                <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
+            <AnimatedSection key={i} delay={i * 100}>
+              <div
+                className="grid items-center gap-6 rounded-lg border bg-white/90 p-6 md:grid-cols-2"
+                style={{
+                  backgroundImage: `url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=400&h=300&fit=crop')`,
+                  backgroundSize: "cover",
+                }}
+              >
+                <div>
+                  <h3 className="mb-2 text-xl font-semibold text-[#8B2332]">{s.title}</h3>
+                  <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
+                  <ValueAddedKnowMoreButton title={s.title} />
+                </div>
+                <div className="rounded bg-white/90 p-4 shadow">
+                  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt={`${s.title} details`} className="h-auto w-full rounded" />
+                </div>
               </div>
-              <div className="rounded bg-white/90 p-4 shadow">
-                <img src="/maritime-training-session.jpg" alt={`${s.title} details`} className="h-auto w-full rounded" />
-              </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
