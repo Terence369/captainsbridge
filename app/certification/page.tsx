@@ -99,8 +99,7 @@ export default function CertificationPage() {
     <div>
       <section className="relative h-[260px] md:h-[360px]">
         <VideoBackground
-          src="https://videos.pexels.com/video-files/2961840/2961840-preview-0.45s_SqhX65y.mp4"
-          fallbackImage="/images/certification-hero.jpg"
+          fallbackImage="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop"
         />
         <div className="absolute inset-0 grid place-items-center bg-[#8B2332]/50">
           <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Certification</h1>
