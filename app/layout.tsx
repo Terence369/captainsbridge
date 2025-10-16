@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
-import SafeFetchProvider from "@/components/safe-fetch-provider"
 import MarqueeBanner from "@/components/marquee-banner"
 
 const _geist = Geist({ subsets: ["latin"] })
