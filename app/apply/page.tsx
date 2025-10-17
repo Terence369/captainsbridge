@@ -8,23 +8,11 @@ import YouTubeHeroBackground from "@/components/youtube-hero-background"
 export default function ApplyPage() {
   return (
     <div>
-      <section className="relative">
-        <div className="h-[220px] w-full md:h-[300px]">
-          <video
-            className="h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/images/welcome-hero.jpg"
-          >
-            <source src="https://cdn.coverr.co/videos/coverr-writing-on-paper-2070/1080p.mp4" type="video/mp4" />
-          </video>
+      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+        <div className="h-[220px] w-full md:h-[300px] grid place-items-center relative z-10">
+          <h1 className="text-center text-3xl font-bold text-black md:text-4xl">Apply Now</h1>
         </div>
-        <div className="absolute inset-0 grid place-items-center bg-[#0B2A4A]/50">
-          <h1 className="text-center text-3xl font-bold text-white md:text-4xl">Apply Now</h1>
-        </div>
-      </section>
+      </YouTubeHeroBackground>
 
       <section className="mx-auto max-w-3xl px-4 py-12 md:py-16">
         <h2 className="mb-6 text-center text-2xl font-semibold text-[#0B2A4A]">Application Form</h2>
