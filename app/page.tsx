@@ -610,10 +610,13 @@ export default function CochinMaritimeAcademy() {
                       />
                     </div>
                     <div>
-                      <Input
-                        placeholder="Course Interest"
-                        className="border-[#0B2A4A]/30 focus:border-[#0B2A4A] focus:ring-[#0B2A4A]"
-                      />
+                      <label className="sr-only">Course Interest</label>
+                      <select className="border-[#0B2A4A]/30 focus:border-[#0B2A4A] focus:ring-[#0B2A4A] h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base md:text-sm" aria-label="Course Interest">
+                        <option value="">Select a course</option>
+                        {courses.map((c, i) => (
+                          <option key={i} value={c.title}>{c.title}</option>
+                        ))}
+                      </select>
                     </div>
                     <div>
                       <Textarea
