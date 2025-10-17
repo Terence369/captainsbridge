@@ -2,7 +2,6 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import YouTubeHeroBackground from "@/components/youtube-hero-background"
 
 const courses = [
   { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://source.unsplash.com/800x600/?hazmat,gas,ship" },
@@ -36,11 +35,13 @@ const table = [
 export default function CoursesPage() {
   return (
     <div>
-      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.1} height="half">
+      <div className="relative min-h-[50vh] w-full overflow-hidden">
+        <img src="https://source.unsplash.com/1600x900/?maritime,training,ship" alt="Maritime training hero" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} />
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Courses</h1>
         </div>
-      </YouTubeHeroBackground>
+      </div>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-3xl text-center">
