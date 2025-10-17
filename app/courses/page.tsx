@@ -35,9 +35,7 @@ const table = [
 export default function CoursesPage() {
   return (
     <div>
-      <div className="relative min-h-[50vh] w-full overflow-hidden">
-        <img src="https://source.unsplash.com/1600x900/?maritime,training,ship" alt="Maritime training hero" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} />
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.unsplash.com/photo-1510824702220-62b706f10405?q=80&w=1600&auto=format&fit=crop')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Courses</h1>
         </div>
@@ -59,7 +57,7 @@ export default function CoursesPage() {
               className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="h-40 w-full">
-                <img src={course.image} alt={course.title} className="h-full w-full object-cover" />
+                <img src={course.image} alt={course.title} className="h-full w-full object-cover" referrerPolicy="no-referrer" />
               </div>
               <CardContent className="p-5">
                 <h3 className="mb-2 text-base font-semibold text-[#0B2A4A]">{course.title}</h3>
