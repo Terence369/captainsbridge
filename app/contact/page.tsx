@@ -1,11 +1,16 @@
 "use client"
 
+"use client"
+
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Phone } from "lucide-react"
+import { useSearchParams } from "next/navigation"
 
 export default function ContactPage() {
+  const searchParams = useSearchParams()
+  const message = searchParams.get("message") || ""
   return (
     <div>
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/7634228/pexels-photo-7634228.jpeg')" }}>
@@ -42,7 +47,7 @@ export default function ContactPage() {
           </div>
           <Input type="tel" placeholder="Phone *" required />
           <Input placeholder="Course of interest" />
-          <Textarea rows={5} placeholder="Message" />
+          <Textarea rows={5} placeholder="Message" defaultValue={message} />
           <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">Send Message</Button>
         </form>
       </section>
