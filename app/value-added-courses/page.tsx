@@ -1,3 +1,7 @@
+"use client"
+
+import YouTubeHeroBackground from "@/components/youtube-hero-background"
+
 export default function ValueAddedCoursesPage() {
   const sections = [
     {
