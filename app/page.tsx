@@ -26,6 +26,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import AnimatedCounter from "@/components/animated-counter"
 import TestimonialsMarquee from "@/components/testimonials-marquee"
+import YouTubeHeroBackground from "@/components/youtube-hero-background"
 
 // Animation hook for scroll-triggered animations
 function useIntersectionObserver(options = {}) {
