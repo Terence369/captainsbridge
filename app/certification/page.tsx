@@ -103,11 +103,22 @@ export default function CertificationPage() {
                 </div>
               </div>
 
-              <blockquote className="min-h-[84px] text-balance italic leading-relaxed transition-all">
-                “{testimonials[index].quote}”
-              </blockquote>
-              <div className="mt-3 text-sm font-semibold">
-                {testimonials[index].name} <span className="opacity-80 font-normal">— {testimonials[index].role}</span>
+              <div className="relative overflow-hidden" aria-roledescription="carousel">
+                <div
+                  className="flex w-full transition-transform duration-500"
+                  style={{ transform: `translateX(-${index * 100}%)` }}
+                >
+                  {testimonials.map((t, i) => (
+                    <div key={i} className="w-full shrink-0" role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${testimonials.length}`}>
+                      <blockquote className="min-h-[84px] text-balance italic leading-relaxed">
+                        “{t.quote}”
+                      </blockquote>
+                      <div className="mt-3 text-sm font-semibold">
+                        {t.name} <span className="opacity-80 font-normal">— {t.role}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="mt-6 flex items-center justify-between">
