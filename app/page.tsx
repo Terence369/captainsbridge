@@ -446,7 +446,7 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Facilities Highlight */}
-      <section id="facilities" className="py-16 md:py-24 bg-white">
+      <section id="facilities" className="py-16 md:py-24" style={{ backgroundColor: "rgba(11, 42, 74, 0)" }}>
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <div className="text-center mb-12">
