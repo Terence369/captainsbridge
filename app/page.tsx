@@ -488,7 +488,7 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-16 md:py-24 bg-[#0B2A4A]">
+      <section id="testimonials" className="bg-[#0B2A4A]" style={{ padding: "96px 0 3px" }}>
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <div className="text-center mb-12">
