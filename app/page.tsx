@@ -461,7 +461,7 @@ export default function CochinMaritimeAcademy() {
                 <div className="relative">
                   <div className="border-4 border-[#D4AF37] p-4 rounded-lg">
                     <img
-                      src="/director-couple-portrait-formal-maritime-academy.jpg"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F5467efc660814048b4ece449e1f2e104%2F9b9a033ea00d44ecb3052033f1830fc2"
                       alt="Director's Portrait"
                       className="w-full rounded-lg shadow-lg"
                     />
