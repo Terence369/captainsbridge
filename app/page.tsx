@@ -116,7 +116,7 @@ export default function CochinMaritimeAcademy() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center">
-        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.1}>
           <div className="container mx-auto px-4 py-20 flex flex-col items-start justify-start min-h-screen relative flex-center">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 animate-in slide-in-from-bottom duration-800 text-balance">

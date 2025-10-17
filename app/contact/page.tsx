@@ -9,7 +9,7 @@ import YouTubeHeroBackground from "@/components/youtube-hero-background"
 export default function ContactPage() {
   return (
     <div>
-      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3} height="half">
+      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.1} height="half">
         <div className="h-[220px] w-full md:h-[300px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-4xl">Contact</h1>
         </div>
