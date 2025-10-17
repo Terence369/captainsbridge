@@ -287,6 +287,7 @@ export default function CochinMaritimeAcademy() {
                       src={course.image || "/placeholder.svg"}
                       alt={course.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy" decoding="async"
                     />
                     <div className="absolute inset-0 bg-[#0B2A4A]/0 group-hover:bg-[#0B2A4A]/20 transition-all duration-300"></div>
                   </div>
