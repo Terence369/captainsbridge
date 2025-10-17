@@ -33,23 +33,11 @@ export default function ValueAddedCoursesPage() {
 
   return (
     <div>
-      <section className="relative">
-        <div className="h-[260px] w-full md:h-[360px]">
-          <video
-            className="h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="https://source.unsplash.com/1600x900/?offshore,oil,rig"
-          >
-            <source src="https://cdn.coverr.co/videos/coverr-oil-rig-in-the-ocean-3828/1080p.mp4" type="video/mp4" />
-          </video>
+      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+        <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
+          <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Value Added Courses</h1>
         </div>
-        <div className="absolute inset-0 grid place-items-center bg-[#0B2A4A]/50">
-          <h1 className="text-center text-3xl font-bold text-white md:text-5xl">Value Added Courses</h1>
-        </div>
-      </section>
+      </YouTubeHeroBackground>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-3xl text-center">
