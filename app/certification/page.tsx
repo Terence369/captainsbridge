@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight, Anchor, Compass, Ship, LifeBuoy } from "lucide-react"
+import YouTubeHeroBackground from "@/components/youtube-hero-background"
 
 const offerings = [
   { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "https://source.unsplash.com/800x600/?safety,offshore,training" },
