@@ -386,7 +386,7 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Stats Section */}
-      <section id="stats" className="py-16 md:py-20 bg-[#0B2A4A] text-white">
+      <section id="stats" className="bg-[#0B2A4A] text-white" style={{ padding: "59px 0 69px" }}>
         <style jsx>{`
           @keyframes float {
             0%, 100% {
