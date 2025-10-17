@@ -5,6 +5,7 @@ interface YouTubeHeroBackgroundProps {
   children?: React.ReactNode
   overlayOpacity?: number
   height?: "screen" | "half"
+  heightClass?: string
 }
 
 export default function YouTubeHeroBackground({
@@ -12,8 +13,10 @@ export default function YouTubeHeroBackground({
   children,
   overlayOpacity = 0.1,
   height = "screen",
+  heightClass,
 }: YouTubeHeroBackgroundProps) {
-  const minHeightClass = height === "half" ? "min-h-[50vh]" : "min-h-screen"
+  const defaultMinHeightClass = height === "half" ? "min-h-[50vh]" : "min-h-screen"
+  const minHeightClass = heightClass ? heightClass : defaultMinHeightClass
 
   return (
     <div className={`relative w-full ${minHeightClass} overflow-hidden`}>
