@@ -4,13 +4,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 const facilities = [
-  { title: "SPACIOUS CLASS ROOMS WITH WELL EQUIPPED FURNITURE", desc: "Spacious, well-ventilated and excellently furnished classrooms to make learning comfortable and enjoyable. Individual tables and chairs are provided to students.", image: "https://source.unsplash.com/800x600/?classroom,lecture,maritime" },
-  { title: "ADVANCED COMPUTER LAB FACILITY", desc: "State-of-the-art teaching lab supporting a wide range of spatial information system research projects and simulation-based training.", image: "https://source.unsplash.com/800x600/?computer,lab,simulation" },
-  { title: "FOOD SAFETY AND HACCP TRAINING", desc: "Understanding of management systems approach to food safety and skills required to implement and maintain a Food Safety System.", image: "https://source.unsplash.com/800x600/?food,safety,kitchen" },
-  { title: "PLACEMENT GUIDELINES", desc: "Unique at-sea placement program where cadets train on various ship types across different marine sectors.", image: "https://source.unsplash.com/800x600/?interview,placement,candidates" },
-  { title: "ACCREDITATIONS / APPROVALS", desc: "Courses approved by STCW Council with guidance from an advisory board of industry experts and academic leaders.", image: "https://source.unsplash.com/800x600/?certificate,approval,document" },
-  { title: "PARTNERS & SUPPORTING ORGANISATIONS", desc: "Extended knowledge, expertise, and network from supporting partners keep our standards relevant.", image: "https://source.unsplash.com/800x600/?meeting,partners,handshake" },
-  { title: "LABORATORY FACILITY FOR HANDS-ON TRAINING", desc: "First-hand experience with course concepts; opportunity to explore practical methods used by industry specialists.", image: "https://source.unsplash.com/800x600/?laboratory,experiment,training" },
+  { title: "SPACIOUS CLASS ROOMS WITH WELL EQUIPPED FURNITURE", desc: "Spacious, well-ventilated and excellently furnished classrooms to make learning comfortable and enjoyable. Individual tables and chairs are provided to students.", image: "https://images.pexels.com/photos/1708912/pexels-photo-1708912.jpeg" },
+  { title: "ADVANCED COMPUTER LAB FACILITY", desc: "State-of-the-art teaching lab supporting a wide range of spatial information system research projects and simulation-based training.", image: "https://images.pexels.com/photos/5530484/pexels-photo-5530484.jpeg" },
+  { title: "FOOD SAFETY AND HACCP TRAINING", desc: "Understanding of management systems approach to food safety and skills required to implement and maintain a Food Safety System.", image: "https://images.pexels.com/photos/7426529/pexels-photo-7426529.jpeg" },
+  { title: "PLACEMENT GUIDELINES", desc: "Unique at-sea placement program where cadets train on various ship types across different marine sectors.", image: "https://images.pexels.com/photos/7647956/pexels-photo-7647956.jpeg" },
+  { title: "ACCREDITATIONS / APPROVALS", desc: "Courses approved by STCW Council with guidance from an advisory board of industry experts and academic leaders.", image: "https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg" },
+  { title: "PARTNERS & SUPPORTING ORGANISATIONS", desc: "Extended knowledge, expertise, and network from supporting partners keep our standards relevant.", image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" },
+  { title: "LABORATORY FACILITY FOR HANDS-ON TRAINING", desc: "First-hand experience with course concepts; opportunity to explore practical methods used by industry specialists.", image: "https://images.pexels.com/photos/19393164/pexels-photo-19393164.jpeg" },
 ]
 
 export default function FacilitiesPage() {
