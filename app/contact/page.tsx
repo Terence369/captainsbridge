@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { useSearchParams } from "next/navigation"
+import { courses } from "@/lib/courses"
 
 export default function ContactPage() {
   const searchParams = useSearchParams()
