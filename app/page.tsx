@@ -117,12 +117,12 @@ export default function CochinMaritimeAcademy() {
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center">
         <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.1}>
-          <div className="container mx-auto px-4 py-20 flex flex-col items-start justify-start min-h-screen relative flex-center">
+          <div className="mx-auto max-w-[1304px] px-4 pt-20 pb-[21px] flex flex-col items-start justify-start relative min-h-[813px]">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 animate-in slide-in-from-bottom duration-800 text-balance">
                 WELCOME TO COCHIN MARITIME ACADEMY
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed">
+              <p className="text-lg md:text-xl text-[#0B2A4A] mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed">
                 Located in South India, Kochi is blessed with a rich coastline, a well-known port and an established
                 maritime environment, and is notable for its positive side of the marine sector. By catering courses that
                 touch various aspects of marine studies, we can offer a candidate can select from a wide range of courses
@@ -139,7 +139,7 @@ export default function CochinMaritimeAcademy() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#0B2A4A] font-semibold text-base px-8 py-6 transition-all bg-transparent"
+                  className="border-2 border-[#0B2A4A] text-[#0B2A4A] hover:bg-white hover:text-[#0B2A4A] font-semibold text-base px-8 py-6 transition-all bg-transparent"
                   onClick={() => scrollToSection("contact")}
                 >
                   CONTACT US
