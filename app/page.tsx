@@ -116,55 +116,43 @@ export default function CochinMaritimeAcademy() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section id="home" className="relative pt-20 min-h-screen flex items-center">
-        <div className="absolute inset-0 z-0">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/large-container-ship-at-sea-with-sunset.jpg"
-          >
-            <source src="https://cdn.builder.io/o/assets%2F36014cc458b649769a7ba595a5c2c17d%2Fa5dbc24f26434ac48fbf23ee4c88480f?alt=media&token=a9cc98ad-1907-46ed-ab25-295fb0e00496&apiKey=36014cc458b649769a7ba595a5c2c17d" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0" style={{ backgroundImage: "url('https://media.ktoo.org/wp-content/uploads/2021/09/Eielson-masks.jpg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover" }}></div>
-        </div>
+        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+          <div className="container mx-auto px-4 py-20 flex flex-col items-start justify-start min-h-screen relative flex-center">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 animate-in slide-in-from-bottom duration-800 text-balance">
+                WELCOME TO COCHIN MARITIME ACADEMY
+              </h1>
+              <p className="text-lg md:text-xl text-white/90 mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed">
+                Located in South India, Kochi is blessed with a rich coastline, a well-known port and an established
+                maritime environment, and is notable for its positive side of the marine sector. By catering courses that
+                touch various aspects of marine studies, we can offer a candidate can select from a wide range of courses
+                and also few of the best upstage training centers.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-bottom duration-800 delay-300">
+                <Button
+                  size="lg"
+                  className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#0B2A4A] font-semibold text-base px-8 py-6 transition-transform hover:scale-105"
+                  onClick={() => scrollToSection("courses")}
+                >
+                  EXPLORE COURSES
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-[#0B2A4A] font-semibold text-base px-8 py-6 transition-all bg-transparent"
+                  onClick={() => scrollToSection("contact")}
+                >
+                  CONTACT US
+                </Button>
+              </div>
+            </div>
 
-        <div className="container mx-auto px-4 relative z-10 py-20 flex flex-col items-start justify-start">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 animate-in slide-in-from-bottom duration-800 text-balance">
-              WELCOME TO COCHIN MARITIME ACADEMY
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed">
-              Located in South India, Kochi is blessed with a rich coastline, a well-known port and an established
-              maritime environment, and is notable for its positive side of the marine sector. By catering courses that
-              touch various aspects of marine studies, we can offer a candidate can select from a wide range of courses
-              and also few of the best upstage training centers.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-bottom duration-800 delay-300">
-              <Button
-                size="lg"
-                className="bg-[#D4AF37] hover:bg-[#B8941F] text-[#0B2A4A] font-semibold text-base px-8 py-6 transition-transform hover:scale-105"
-                onClick={() => scrollToSection("courses")}
-              >
-                EXPLORE COURSES
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#0B2A4A] font-semibold text-base px-8 py-6 transition-all bg-transparent"
-                onClick={() => scrollToSection("contact")}
-              >
-                CONTACT US
-              </Button>
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+              <ChevronRight className="text-white rotate-90" size={32} />
             </div>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronRight className="text-white rotate-90" size={32} />
-        </div>
+        </YouTubeHeroBackground>
       </section>
 
       {/* About Section */}
