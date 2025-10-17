@@ -115,9 +115,9 @@ export default function CochinMaritimeAcademy() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center">
-        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.1}>
-          <div className="mx-auto max-w-[1304px] px-4 pt-20 pb-[21px] flex flex-col items-start justify-start relative min-h-[813px]">
+      <section id="home" className="relative min-h-[90vh] flex items-center">
+        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.1} heightClass="min-h-[90vh]">
+          <div className="mx-auto max-w-[1304px] px-4 pt-20 pb-[21px] flex flex-col items-start justify-start relative min-h-[90vh]">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 animate-in slide-in-from-bottom duration-800 text-balance">
                 WELCOME TO COCHIN MARITIME ACADEMY
