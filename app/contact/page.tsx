@@ -8,9 +8,7 @@ import { Mail, MapPin, Phone } from "lucide-react"
 export default function ContactPage() {
   return (
     <div>
-      <div className="relative min-h-[50vh] w-full overflow-hidden">
-        <img src="https://source.unsplash.com/1600x900/?harbor,maritime,coast" alt="Contact hero at harbor" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} />
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop')" }}>
         <div className="h-[220px] w-full md:h-[300px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-4xl">Contact</h1>
         </div>
