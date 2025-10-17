@@ -180,22 +180,25 @@ export default function CochinMaritimeAcademy() {
                 icon: Ship,
                 title: "MARINE INSTITUTE",
                 description:
-                  "We undertake, coordinate, promote and assist in marine research and development. We also provide specialized manpower and...",
+                  "We undertake, coordinate, promote and assist in marine research and development. We also provide specialized manpower and training services to the maritime industry. Our institute is committed to excellence in maritime education and professional development.",
                 image: "/maritime-training-classroom-with-students.jpg",
+                contactMessage: "Inquiry about Marine Institute programs: Please provide details about research opportunities and specialized manpower training services.",
               },
               {
                 icon: Anchor,
                 title: "BLESSED WITH",
                 description:
-                  "Blessed with a rich coastal line and a well known sea port in south India Kochi is notable for its positive and supportive mariti...",
+                  "Blessed with a rich coastal line and a well known sea port in south India Kochi is notable for its positive and supportive maritime environment. Our location provides unique advantages for practical maritime training and industry connections.",
                 image: "/advanced-computer-lab-with-maritime-simulation.jpg",
+                contactMessage: "Inquiry about Kochi's maritime advantages: Please share information about local port facilities and training opportunities.",
               },
               {
                 icon: Compass,
                 title: "WHY CHOOSE US",
                 description:
-                  "Shipping, logistics, and freight are industries at the heart of modern society. These high-technology and operational-driven services...",
+                  "Shipping, logistics, and freight are industries at the heart of modern society. These high-technology and operational-driven services require skilled professionals. We provide comprehensive training that meets international standards and industry requirements.",
                 image: "/group-of-maritime-students-in-uniform.jpg",
+                contactMessage: "Inquiry about program advantages: Please explain why your academy is the best choice for maritime training.",
               },
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 100}>
@@ -219,6 +222,15 @@ export default function CochinMaritimeAcademy() {
                     <Button
                       variant="link"
                       className="text-[#0B2A4A] hover:text-[#D4AF37] mt-4 mx-auto block font-semibold"
+                      onClick={() => {
+                        setDialogData({
+                          title: item.title,
+                          description: item.description,
+                          image: item.image,
+                          contactMessage: item.contactMessage,
+                        })
+                        setDialogOpen(true)
+                      }}
                     >
                       READ MORE →
                     </Button>
@@ -297,7 +309,18 @@ export default function CochinMaritimeAcademy() {
                   <CardContent className="p-6 flex-grow flex flex-col">
                     <h3 className="text-lg font-bold text-[#0B2A4A] mb-3 leading-tight">{course.title}</h3>
                     <p className="text-[#5A5A5A] text-sm leading-relaxed mb-4 flex-grow">{course.description}</p>
-                    <Button className="bg-[#0B2A4A] hover:bg-[#081E35] text-white w-full font-semibold transition-all">
+                    <Button
+                      className="bg-[#0B2A4A] hover:bg-[#081E35] text-white w-full font-semibold transition-all"
+                      onClick={() => {
+                        setDialogData({
+                          title: course.title,
+                          description: course.description,
+                          image: course.image,
+                          contactMessage: course.contactMessage,
+                        })
+                        setDialogOpen(true)
+                      }}
+                    >
                       VIEW DETAIL
                     </Button>
                   </CardContent>
