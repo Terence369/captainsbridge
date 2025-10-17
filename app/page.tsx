@@ -261,38 +261,44 @@ export default function CochinMaritimeAcademy() {
               {
                 title: "SPACIOUS CLASS ROOMS WITH WELL EQUIPPED FURNITURE",
                 description:
-                  "Cochin Maritime can boast of spacious, well-ventilated and excellently furnished classrooms to make the students learning comfortable and enjoyable. Individual tables and chairs are provided to studen...",
+                  "Cochin Maritime Academy boasts spacious, well-ventilated and excellently furnished classrooms designed to make student learning comfortable and enjoyable. Individual tables and chairs are provided to each student, ensuring proper ergonomics and individual workspace. Our modern classroom infrastructure supports interactive learning, multimedia presentations, and practical demonstrations essential for maritime education.",
                 image: "/spacious-maritime-classroom-with-modern-furniture.jpg",
+                contactMessage: "Inquiry about classroom facilities: Please provide details about classroom capacity, equipment, and booking procedures.",
               },
               {
                 title: "ADVANCED COMPUTER LAB FACILITY",
                 description:
-                  "The Advanced Computer Lab is a state-of-the-art teaching computer kits, which also supports a wide range of spatial information system research projects. The lab is used by many different classes from...",
+                  "Our Advanced Computer Lab features state-of-the-art teaching equipment and computer systems that support a wide range of maritime simulation and information system training. The lab is equipped with the latest software for ship navigation simulators, maritime planning tools, and operational management systems. Used by multiple maritime training programs, it provides hands-on experience with industry-standard platforms.",
                 image: "/modern-computer-lab-with-red-chairs-maritime-train.jpg",
+                contactMessage: "Inquiry about computer lab facilities: Please share details about lab access, available software, and training schedule.",
               },
               {
                 title: "FOOD SAFETY AND HACCP TRAINING",
                 description:
-                  "Cochin Maritime has developed this course to provide an understanding of management systems approach to food safety and data required to implement and maintain Food Safety System. By the end of the...",
+                  "Cochin Maritime Academy has developed comprehensive courses to provide understanding of management systems approach to food safety and data required to implement and maintain effective Food Safety Systems. By the end of the program, participants gain certification in HACCP (Hazard Analysis and Critical Control Points) and are equipped to manage food safety protocols aboard maritime vessels.",
                 image: "/food-safety-training-checklist-maritime.jpg",
+                contactMessage: "Inquiry about food safety training: Please provide course curriculum, certification details, and batch schedules.",
               },
               {
                 title: "PLACEMENT GUIDELINES",
                 description:
-                  "Cochin Maritime operate a unique of sea placement program where the Cadets train on various ship types across different marine sectors...",
+                  "Cochin Maritime Academy operates a unique at-sea placement program where cadets train on various ship types across different marine sectors. Our 100% placement support ensures that graduates are connected with major shipping companies and maritime employers worldwide. Career guidance counselors assist in job placement, onboarding, and career progression.",
                 image: "/maritime-cadets-in-white-uniform-training.jpg",
+                contactMessage: "Inquiry about placement program: Please share details about employer networks, placement rate, and career support services.",
               },
               {
                 title: "ACCREDITATIONS / APPROVALS",
                 description:
-                  "All Courses approved by STCW COUNCIL has had the unique good fortune it having a succession of eminent directors to direct its destiny along with an extraordinary advisory board and educational experts...",
+                  "All courses at Cochin Maritime Academy are approved by the STCW (Standards of Training, Certification and Watchkeeping) Council and aligned with international maritime standards. Our institute has benefited from a succession of eminent directors and maintains an extraordinary advisory board comprising industry leaders and educational experts who ensure curriculum relevance and training quality.",
                 image: "/person-signing-maritime-certification-documents.jpg",
+                contactMessage: "Inquiry about accreditations: Please provide a list of all approvals, certifications, and quality assurance processes.",
               },
               {
                 title: "PARTNERS & SUPPORTING ORGANISATIONS",
                 description:
-                  "Our supporting partners have extended their knowledge, expertise, network and valuable insights in so many ways we are thankful for Cochin Maritime standards and process remain relevant because of our...",
+                  "Our supporting partners have extended their knowledge, expertise, network and valuable insights to enhance our training programs. These strategic partnerships keep Cochin Maritime Academy standards and processes relevant and aligned with industry demands. We collaborate with leading shipping companies, maritime organizations, and educational institutions globally.",
                 image: "/maritime-professionals-discussing-partnership.jpg",
+                contactMessage: "Inquiry about partnerships: Please share information about partner organizations and collaboration opportunities.",
               },
             ].map((course, index) => (
               <AnimatedSection key={index} delay={index * 100}>
