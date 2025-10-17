@@ -115,6 +115,12 @@ export default function CochinMaritimeAcademy() {
     setMobileMenuOpen(false)
   }
 
+  const openDetails = (data: { title: string; description: string; image?: string | null }) => {
+    const contactMessage = `Inquiry about ${data.title}: Please share detailed syllabus/facility info, schedule, fees, and next steps.`
+    setDialogData({ title: data.title, description: data.description, image: data.image ?? null, contactMessage })
+    setDialogOpen(true)
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -219,6 +225,13 @@ export default function CochinMaritimeAcademy() {
                     <Button
                       variant="link"
                       className="text-[#0B2A4A] hover:text-[#D4AF37] mt-4 mx-auto block font-semibold"
+                      onClick={() =>
+                        openDetails({
+                          title: item.title,
+                          description: `${item.description.replace(/\.*$/, "")} Learn more about our programs, expert mentors, and career pathways related to ${item.title}.`,
+                          image: item.image,
+                        })
+                      }
                     >
                       READ MORE →
                     </Button>
@@ -297,7 +310,7 @@ export default function CochinMaritimeAcademy() {
                   <CardContent className="p-6 flex-grow flex flex-col">
                     <h3 className="text-lg font-bold text-[#0B2A4A] mb-3 leading-tight">{course.title}</h3>
                     <p className="text-[#5A5A5A] text-sm leading-relaxed mb-4 flex-grow">{course.description}</p>
-                    <Button className="bg-[#0B2A4A] hover:bg-[#081E35] text-white w-full font-semibold transition-all">
+                    <Button className="bg-[#0B2A4A] hover:bg-[#081E35] text-white w-full font-semibold transition-all" onClick={() => openDetails({ title: course.title, description: `${course.description.replace(/\.*$/, "")} Detailed modules, hands‑on practice, and guidance on enrollment are available.`, image: course.image })}>
                       VIEW DETAIL
                     </Button>
                   </CardContent>
@@ -631,6 +644,7 @@ export default function CochinMaritimeAcademy() {
       >
         <ChevronRight className="rotate-[-90deg]" size={24} />
       </button>
+      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
     </div>
   )
 }
