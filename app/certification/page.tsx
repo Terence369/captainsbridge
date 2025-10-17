@@ -48,7 +48,7 @@ export default function CertificationPage() {
 
   return (
     <div>
-      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3} height="half">
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Certification</h1>
         </div>
@@ -105,7 +105,7 @@ export default function CertificationPage() {
               </div>
 
               <blockquote className="min-h-[84px] text-balance italic leading-relaxed transition-all">
-                “{testimonials[index].quote}”
+                ���{testimonials[index].quote}”
               </blockquote>
               <div className="mt-3 text-sm font-semibold">
                 {testimonials[index].name} <span className="opacity-80 font-normal">— {testimonials[index].role}</span>
