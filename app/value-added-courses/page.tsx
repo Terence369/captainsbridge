@@ -32,9 +32,7 @@ export default function ValueAddedCoursesPage() {
 
   return (
     <div>
-      <div className="relative min-h-[50vh] w-full overflow-hidden">
-        <img src="https://source.unsplash.com/1600x900/?offshore,safety,training" alt="Value added maritime courses hero" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }} />
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.unsplash.com/photo-1523359346063-d879354c0ea5?q=80&w=1600&auto=format&fit=crop')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Value Added Courses</h1>
         </div>
@@ -60,7 +58,7 @@ export default function ValueAddedCoursesPage() {
                 <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
               </div>
               <div className="rounded bg-white/90 p-4 shadow">
-                <img src={`https://source.unsplash.com/1200x800/?${encodeURIComponent(s.title.split(' ').slice(0,3).join(','))}`} alt={`${s.title} details`} className="h-auto w-full rounded" />
+                <img src={`https://source.unsplash.com/1200x800/?${encodeURIComponent(s.title.split(' ').slice(0,3).join(','))}`} alt={`${s.title} details`} className="h-auto w-full rounded" referrerPolicy="no-referrer" />
               </div>
             </div>
           ))}
