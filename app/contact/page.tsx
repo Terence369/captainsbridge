@@ -46,7 +46,13 @@ export default function ContactPage() {
             <Input type="email" placeholder="Email *" required />
           </div>
           <Input type="tel" placeholder="Phone *" required />
-          <Input placeholder="Course of interest" />
+          <label className="mb-2 block text-sm font-medium text-[#0B2A4A]">Course of interest</label>
+          <select className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]" aria-label="Course of interest">
+            <option value="">Select a course</option>
+            {courses.map((c, i) => (
+              <option key={i} value={c.title}>{c.title}</option>
+            ))}
+          </select>
           <Textarea rows={5} placeholder="Message" defaultValue={message} />
           <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">Send Message</Button>
         </form>
