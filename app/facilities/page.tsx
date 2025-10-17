@@ -1,7 +1,9 @@
 "use client"
 
+import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
 
 const facilities = [
   { title: "SPACIOUS CLASS ROOMS WITH WELL EQUIPPED FURNITURE", desc: "Spacious, well-ventilated and excellently furnished classrooms to make learning comfortable and enjoyable. Individual tables and chairs are provided to students.", image: "https://images.pexels.com/photos/1708912/pexels-photo-1708912.jpeg" },
@@ -14,6 +16,16 @@ const facilities = [
 ]
 
 export default function FacilitiesPage() {
+  const [dialogOpen, setDialogOpen] = useState(false)
+  const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
+
+  const openDetails = (f: { title: string; desc: string; image: string }) => {
+    const description = `${f.desc} This facility is integral to day‑to‑day training and assessments, ensuring comfort, safety, and industry‑aligned outcomes.`
+    const contactMessage = `Inquiry about facility: ${f.title}. Please share usage schedule, access rules, and availability.`
+    setDialogData({ title: f.title, description, image: f.image, contactMessage })
+    setDialogOpen(true)
+  }
+
   return (
     <div>
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/8442545/pexels-photo-8442545.jpeg')" }}>
@@ -47,12 +59,13 @@ export default function FacilitiesPage() {
               <CardContent className="p-6">
                 <h3 className="mb-2 text-lg font-semibold text-[#0B2A4A]">{f.title}</h3>
                 <p className="mb-4 text-sm leading-relaxed text-neutral-600">{f.desc}</p>
-                <Button className="bg-[#0B2A4A] text-white hover:bg-[#081E35]">View Detail</Button>
+                <Button className="bg-[#0B2A4A] text-white hover:bg-[#081E35]" onClick={() => openDetails(f)}>View Detail</Button>
               </CardContent>
             </Card>
           ))}
         </div>
       </section>
+      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
     </div>
   )
 }
