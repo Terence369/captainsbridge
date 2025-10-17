@@ -660,6 +660,9 @@ export default function CochinMaritimeAcademy() {
       >
         <ChevronRight className="rotate-[-90deg]" size={24} />
       </button>
+
+      {/* Detail Dialog */}
+      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
     </div>
   )
 }
