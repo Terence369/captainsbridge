@@ -202,6 +202,7 @@ export default function CochinMaritimeAcademy() {
                       src={item.image || "/placeholder.svg"}
                       alt={item.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy" decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B2A4A]/80 to-transparent flex items-end justify-center pb-6">
                       <div className="bg-white p-4 rounded-full group-hover:scale-110 transition-transform">
