@@ -528,7 +528,7 @@ export default function CochinMaritimeAcademy() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[#0B2A4A] mb-2">Address</h3>
-                    <p className="text-[#5A5A5A] leading-relaxed">
+                    <p className="text-[#5A5A5A] leading-relaxed" style={{ marginRight: "74px" }}>
                       Aditya Complex, Kochupally road,
                       <br />
                       Next to Anjali Marriage hall,
