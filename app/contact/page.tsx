@@ -4,16 +4,15 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Phone } from "lucide-react"
-import YouTubeHeroBackground from "@/components/youtube-hero-background"
 
 export default function ContactPage() {
   return (
     <div>
-      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('/images/hero-contact.svg')" }}>
         <div className="h-[220px] w-full md:h-[300px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-4xl">Contact</h1>
         </div>
-      </YouTubeHeroBackground>
+      </div>
 
       <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-2 md:py-16">
         <div>

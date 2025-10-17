@@ -2,7 +2,6 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import YouTubeHeroBackground from "@/components/youtube-hero-background"
 
 const facilities = [
   { title: "SPACIOUS CLASS ROOMS WITH WELL EQUIPPED FURNITURE", desc: "Spacious, well-ventilated and excellently furnished classrooms to make learning comfortable and enjoyable. Individual tables and chairs are provided to students.", image: "https://source.unsplash.com/800x600/?classroom,lecture,maritime" },
@@ -17,11 +16,11 @@ const facilities = [
 export default function FacilitiesPage() {
   return (
     <div>
-      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('/images/hero-facilities.svg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Facilities</h1>
         </div>
-      </YouTubeHeroBackground>
+      </div>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-3xl text-center">
@@ -40,9 +39,19 @@ export default function FacilitiesPage() {
             >
               <div className="h-48 w-full overflow-hidden">
                 <img
-                  src={f.image}
+                  src={(() => {
+                  switch (i) {
+                    case 0: return '/images/cards/classroom.svg'
+                    case 1: return '/images/cards/offshore.svg'
+                    case 2: return '/images/cards/cookery.svg'
+                    case 3: return '/images/cards/placement.svg'
+                    case 4: return '/images/cards/documents.svg'
+                    case 5: return '/images/cards/partners.svg'
+                    default: return '/images/cards/laboratory.svg'
+                  }
+                })()}
                   alt={f.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async"
                 />
               </div>
               <CardContent className="p-6">

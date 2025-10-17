@@ -115,14 +115,14 @@ export default function CochinMaritimeAcademy() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section id="home" className="relative pt-20 min-h-screen flex items-center">
-        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
-          <div className="container mx-auto px-4 py-20 flex flex-col items-start justify-start min-h-screen relative flex-center">
+      <section id="home" className="relative min-h-[90vh] flex items-center">
+        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.1} heightClass="min-h-[90vh]">
+          <div className="mx-auto max-w-[1304px] px-4 pt-20 pb-[21px] flex flex-col items-start justify-start relative min-h-[90vh]">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 animate-in slide-in-from-bottom duration-800 text-balance">
                 WELCOME TO COCHIN MARITIME ACADEMY
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed">
+              <p className="text-lg md:text-xl text-[#0B2A4A] mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed">
                 Located in South India, Kochi is blessed with a rich coastline, a well-known port and an established
                 maritime environment, and is notable for its positive side of the marine sector. By catering courses that
                 touch various aspects of marine studies, we can offer a candidate can select from a wide range of courses
@@ -139,7 +139,7 @@ export default function CochinMaritimeAcademy() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-[#0B2A4A] font-semibold text-base px-8 py-6 transition-all bg-transparent"
+                  className="border-2 border-[#0B2A4A] text-[#0B2A4A] hover:bg-white hover:text-[#0B2A4A] font-semibold text-base px-8 py-6 transition-all bg-transparent"
                   onClick={() => scrollToSection("contact")}
                 >
                   CONTACT US
@@ -202,6 +202,7 @@ export default function CochinMaritimeAcademy() {
                       src={item.image || "/placeholder.svg"}
                       alt={item.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy" decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B2A4A]/80 to-transparent flex items-end justify-center pb-6">
                       <div className="bg-white p-4 rounded-full group-hover:scale-110 transition-transform">
@@ -286,6 +287,7 @@ export default function CochinMaritimeAcademy() {
                       src={course.image || "/placeholder.svg"}
                       alt={course.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy" decoding="async"
                     />
                     <div className="absolute inset-0 bg-[#0B2A4A]/0 group-hover:bg-[#0B2A4A]/20 transition-all duration-300"></div>
                   </div>

@@ -2,25 +2,24 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import YouTubeHeroBackground from "@/components/youtube-hero-background"
 
 const courses = [
-  { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://source.unsplash.com/800x600/?hazmat,gas,ship" },
-  { title: "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)", image: "https://source.unsplash.com/800x600/?helicopter,rescue,sea" },
-  { title: "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)", image: "https://source.unsplash.com/800x600/?offshore,safety,training" },
-  { title: "RIGGING AND SLINGING SAFETY LEVEL 2", image: "https://source.unsplash.com/800x600/?rigging,crane,ship" },
-  { title: "LIFTING AND HOISTING SAFETY", image: "https://source.unsplash.com/800x600/?lifting,hoist,crew" },
-  { title: "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)", image: "https://source.unsplash.com/800x600/?crane,operator,shipyard" },
-  { title: "COOKERY COURSE WITH HACCP", image: "https://source.unsplash.com/800x600/?commercial,kitchen,cookery" },
-  { title: "BASIC COOKING COURSE CERTIFICATION", image: "https://source.unsplash.com/800x600/?cooking,classroom,chef" },
-  { title: "PSD CROWD MANAGEMENT", image: "https://source.unsplash.com/800x600/?crowd,management,training" },
-  { title: "PSD HUMAN BEHAVIOUR", image: "https://source.unsplash.com/800x600/?psychology,training,students" },
-  { title: "HOSPITALITY & SPANISH COURSE", image: "https://source.unsplash.com/800x600/?hospitality,training,service" },
-  { title: "SHIP BOARD SAFETY & SECURITY (SOFF)", image: "https://source.unsplash.com/800x600/?ship,bridge,crew" },
-  { title: "SECURITY FACILITY CODE & AWARENESS", image: "https://source.unsplash.com/800x600/?security,training,maritime" },
-  { title: "SHIPPING NEW ENTRY FOR FITTER & WELDERS", image: "https://source.unsplash.com/800x600/?welder,workshop,ship" },
-  { title: "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS", image: "https://source.unsplash.com/800x600/?mechanic,technician,engine" },
-  { title: "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE", image: "https://source.unsplash.com/800x600/?electrical,technician,training" },
+  { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "/images/cards/safety.svg" },
+  { title: "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)", image: "/images/cards/helicopter.svg" },
+  { title: "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)", image: "/images/cards/offshore.svg" },
+  { title: "RIGGING AND SLINGING SAFETY LEVEL 2", image: "/images/cards/rigging.svg" },
+  { title: "LIFTING AND HOISTING SAFETY", image: "/images/cards/lifting.svg" },
+  { title: "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)", image: "/images/cards/crane.svg" },
+  { title: "COOKERY COURSE WITH HACCP", image: "/images/cards/cookery.svg" },
+  { title: "BASIC COOKING COURSE CERTIFICATION", image: "/images/cards/cookery.svg" },
+  { title: "PSD CROWD MANAGEMENT", image: "/images/cards/crowd.svg" },
+  { title: "PSD HUMAN BEHAVIOUR", image: "/images/cards/crowd.svg" },
+  { title: "HOSPITALITY & SPANISH COURSE", image: "/images/cards/hospitality.svg" },
+  { title: "SHIP BOARD SAFETY & SECURITY (SOFF)", image: "/images/cards/offshore.svg" },
+  { title: "SECURITY FACILITY CODE & AWARENESS", image: "/images/cards/partners.svg" },
+  { title: "SHIPPING NEW ENTRY FOR FITTER & WELDERS", image: "/images/cards/welder.svg" },
+  { title: "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS", image: "/images/cards/mechanical.svg" },
+  { title: "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE", image: "/images/cards/electrical.svg" },
 ]
 
 const table = [
@@ -36,11 +35,11 @@ const table = [
 export default function CoursesPage() {
   return (
     <div>
-      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('/images/hero-courses.svg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Courses</h1>
         </div>
-      </YouTubeHeroBackground>
+      </div>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-3xl text-center">
@@ -58,7 +57,7 @@ export default function CoursesPage() {
               className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="h-40 w-full">
-                <img src={course.image} alt={course.title} className="h-full w-full object-cover" />
+                <img src={course.image} alt={course.title} className="h-full w-full object-cover" loading="lazy" decoding="async" />
               </div>
               <CardContent className="p-5">
                 <h3 className="mb-2 text-base font-semibold text-[#0B2A4A]">{course.title}</h3>

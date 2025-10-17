@@ -3,7 +3,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight, Anchor, Compass, Ship, LifeBuoy } from "lucide-react"
-import YouTubeHeroBackground from "@/components/youtube-hero-background"
 
 const offerings = [
   { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "https://source.unsplash.com/800x600/?safety,offshore,training" },
@@ -48,11 +47,11 @@ export default function CertificationPage() {
 
   return (
     <div>
-      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('/images/hero-certification.svg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Certification</h1>
         </div>
-      </YouTubeHeroBackground>
+      </div>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-4xl text-center">
@@ -69,9 +68,18 @@ export default function CertificationPage() {
             <Card key={i} className="overflow-hidden border-0 shadow-md">
               <div className="h-48 w-full">
                 <img
-                  src={o.image}
+                  src={(() => {
+                  switch (i) {
+                    case 0: return '/images/cards/safety.svg'
+                    case 1: return '/images/cards/crew.svg'
+                    case 2: return '/images/cards/documents.svg'
+                    case 3: return '/images/cards/cdc.svg'
+                    case 4: return '/images/cards/placement.svg'
+                    default: return '/images/cards/offshore.svg'
+                  }
+                })()}
                   alt={o.title}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover" loading="lazy" decoding="async"
                 />
               </div>
               <CardContent className="p-6">
@@ -86,7 +94,7 @@ export default function CertificationPage() {
           <Card className="border-0 shadow-md">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-semibold text-[#0B2A4A]">Certifications</h3>
-              <img src="https://picsum.photos/seed/certificates/1200/800" alt="Certificates" className="h-auto w-full rounded" />
+              <img src="/images/cards/documents.svg" alt="Certificates" className="h-auto w-full rounded" loading="lazy" decoding="async" />
             </CardContent>
           </Card>
 

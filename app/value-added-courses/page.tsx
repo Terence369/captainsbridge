@@ -1,6 +1,5 @@
 "use client"
 
-import YouTubeHeroBackground from "@/components/youtube-hero-background"
 
 export default function ValueAddedCoursesPage() {
   const sections = [
@@ -33,11 +32,11 @@ export default function ValueAddedCoursesPage() {
 
   return (
     <div>
-      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('/images/hero-value-added.svg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Value Added Courses</h1>
         </div>
-      </YouTubeHeroBackground>
+      </div>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
         <div className="mx-auto mb-10 max-w-3xl text-center">
@@ -59,7 +58,7 @@ export default function ValueAddedCoursesPage() {
                 <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
               </div>
               <div className="rounded bg-white/90 p-4 shadow">
-                <img src={`https://source.unsplash.com/1200x800/?${encodeURIComponent(s.title.split(' ').slice(0,3).join(','))}`} alt={`${s.title} details`} className="h-auto w-full rounded" />
+                <img src={"/images/cards/offshore.svg"} alt={`${s.title} details`} className="h-auto w-full rounded" loading="lazy" decoding="async" />
               </div>
             </div>
           ))}

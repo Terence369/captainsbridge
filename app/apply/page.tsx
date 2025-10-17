@@ -8,7 +8,7 @@ import YouTubeHeroBackground from "@/components/youtube-hero-background"
 export default function ApplyPage() {
   return (
     <div>
-      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.3}>
+      <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.1}>
         <div className="h-[220px] w-full md:h-[300px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-4xl">Apply Now</h1>
         </div>
