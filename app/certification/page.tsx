@@ -5,12 +5,12 @@ import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight, Anchor, Compass, Ship, LifeBuoy } from "lucide-react"
 
 const offerings = [
-  { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "https://source.unsplash.com/800x600/?safety,offshore,training" },
-  { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "https://source.unsplash.com/800x600/?crew,management,ship" },
-  { title: "MARINE DOCUMENTATION", desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.", image: "https://source.unsplash.com/800x600/?documents,maritime,office" },
-  { title: "INDIAN CDC ASSISTANCE", desc: "Assistance for arranging CDC and guidance for meeting requirements across the maritime industry.", image: "https://source.unsplash.com/800x600/?certificate,cdc,card" },
-  { title: "PLACEMENT GUIDANCE", desc: "Invitations to companies and organizations for placement interviews with relevant information.", image: "https://source.unsplash.com/800x600/?job,interview,placement" },
-  { title: "MARINE – OFFSHORE COURSES", desc: "Broad range of courses for Marine and Offshore sectors with compliant training as per guidelines.", image: "https://source.unsplash.com/800x600/?oil,rig,offshore" },
+  { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "https://images.pexels.com/photos/3207531/pexels-photo-3207531.jpeg" },
+  { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "https://images.pexels.com/photos/3660828/pexels-photo-3660828.jpeg" },
+  { title: "MARINE DOCUMENTATION", desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.", image: "https://images.pexels.com/photos/8830663/pexels-photo-8830663.jpeg" },
+  { title: "INDIAN CDC ASSISTANCE", desc: "Assistance for arranging CDC and guidance for meeting requirements across the maritime industry.", image: "https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg" },
+  { title: "PLACEMENT GUIDANCE", desc: "Invitations to companies and organizations for placement interviews with relevant information.", image: "https://images.pexels.com/photos/7647956/pexels-photo-7647956.jpeg" },
+  { title: "MARINE – OFFSHORE COURSES", desc: "Broad range of courses for Marine and Offshore sectors with compliant training as per guidelines.", image: "https://images.pexels.com/photos/3192669/pexels-photo-3192669.jpeg" },
 ]
 
 const testimonials = [
@@ -68,16 +68,7 @@ export default function CertificationPage() {
             <Card key={i} className="overflow-hidden border-0 shadow-md">
               <div className="h-48 w-full">
                 <img
-                  src={(() => {
-                  switch (i) {
-                    case 0: return '/images/cards/safety.svg'
-                    case 1: return '/images/cards/crew.svg'
-                    case 2: return '/images/cards/documents.svg'
-                    case 3: return '/images/cards/cdc.svg'
-                    case 4: return '/images/cards/placement.svg'
-                    default: return '/images/cards/offshore.svg'
-                  }
-                })()}
+                  src={o.image}
                   alt={o.title}
                   className="h-full w-full object-cover" loading="lazy" decoding="async"
                 />
@@ -94,7 +85,7 @@ export default function CertificationPage() {
           <Card className="border-0 shadow-md">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-semibold text-[#0B2A4A]">Certifications</h3>
-              <img src="/images/cards/documents.svg" alt="Certificates" className="h-auto w-full rounded" loading="lazy" decoding="async" />
+              <img src="https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg" alt="Certificates" className="h-auto w-full rounded" loading="lazy" decoding="async" />
             </CardContent>
           </Card>
 
