@@ -1,11 +1,22 @@
 "use client"
 
+import { useEffect, useState } from "react"
+import { useSearchParams } from "next/navigation"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Phone } from "lucide-react"
 
 export default function ContactPage() {
+  const searchParams = useSearchParams()
+  const [messageText, setMessageText] = useState("")
+
+  useEffect(() => {
+    const message = searchParams.get("message")
+    if (message) {
+      setMessageText(decodeURIComponent(message))
+    }
+  }, [searchParams])
   return (
     <div>
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/7634228/pexels-photo-7634228.jpeg')" }}>
