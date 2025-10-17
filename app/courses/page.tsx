@@ -1,7 +1,9 @@
 "use client"
 
+import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
 
 const courses = [
   { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://images.pexels.com/photos/7959357/pexels-photo-7959357.jpeg" },
@@ -33,6 +35,16 @@ const table = [
 ]
 
 export default function CoursesPage() {
+  const [dialogOpen, setDialogOpen] = useState(false)
+  const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
+
+  const openDetails = (course: { title: string; image: string }) => {
+    const description = `${course.title} — Overview: Hands-on modules, safety standards, and practical drills. Includes competency assessment and course completion guidance. For schedule, fees, and enrollment assistance, contact our team.`
+    const contactMessage = `Inquiry about ${course.title}: Please share syllabus, next batch dates, fees, and prerequisites.`
+    setDialogData({ title: course.title, description, image: course.image, contactMessage })
+    setDialogOpen(true)
+  }
+
   return (
     <div>
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/1708912/pexels-photo-1708912.jpeg')" }}>
@@ -64,7 +76,7 @@ export default function CoursesPage() {
                 <p className="mb-4 text-sm leading-relaxed text-neutral-600">
                   Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
                 </p>
-                <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">View Detail</Button>
+                <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]" onClick={() => openDetails(course)}>View Detail</Button>
               </CardContent>
             </Card>
           ))}
@@ -96,6 +108,7 @@ export default function CoursesPage() {
           </div>
         </div>
       </section>
+      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
     </div>
   )
 }
