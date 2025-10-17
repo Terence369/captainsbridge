@@ -7,26 +7,31 @@ export default function ValueAddedCoursesPage() {
       title: "OFFSHORE OIL FIELD COURSES",
       content:
         "Specialized programs aligned with offshore operations including safety, survival, and equipment handling modules based on industry standards.",
+      image: "https://images.pexels.com/photos/3192669/pexels-photo-3192669.jpeg",
     },
     {
       title: "PASSENGER / CRUISE / YACHT COURSES",
       content:
         "Hospitality and onboard service training focused on passenger handling, emergency procedures, and international etiquette.",
+      image: "https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg",
     },
     {
       title: "INLAND – NEAR COASTAL – MAIN FLEET COURSES",
       content:
         "Foundational and advanced training for deck and engine departments operating in coastal and main fleet sectors.",
+      image: "https://images.pexels.com/photos/13586360/pexels-photo-13586360.jpeg",
     },
     {
       title: "PROJECT SKILLED",
       content:
         "Specialized craft courses and upskilling programs for project-based maritime roles with competency-based assessment.",
+      image: "https://images.pexels.com/photos/8961066/pexels-photo-8961066.jpeg",
     },
     {
       title: "MANAGEMENT COURSES",
       content:
         "Leadership, documentation, and compliance training to prepare candidates for supervisory responsibilities.",
+      image: "https://images.pexels.com/photos/7647956/pexels-photo-7647956.jpeg",
     },
   ]
 
@@ -58,7 +63,7 @@ export default function ValueAddedCoursesPage() {
                 <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
               </div>
               <div className="rounded bg-white/90 p-4 shadow">
-                <img src={"/images/cards/offshore.svg"} alt={`${s.title} details`} className="h-auto w-full rounded" loading="lazy" decoding="async" />
+                <img src={s.image} alt={`${s.title} details`} className="h-auto w-full rounded" loading="lazy" decoding="async" />
               </div>
             </div>
           ))}
