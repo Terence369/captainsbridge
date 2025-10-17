@@ -17,20 +17,47 @@ const testimonials = [
   {
     name: "T. Kishore Kumar",
     role: "Deck Cadet",
+    course: "BSP (Basic Seafarers Package)",
+    year: "2024",
+    photo: "https://images.pexels.com/photos/34290769/pexels-photo-34290769.jpeg",
     quote:
-      "I'm very happy to join this institute. The institute has all the facilities required as per the norms of DG Shipping.",
+      "I'm very happy to join this institute. The institute has all the facilities required as per the norms of DG Shipping. Classroom resources and bridge simulator sessions were exactly what I needed to build confidence before sailing.",
   },
   {
     name: "Rahul Menon",
     role: "Engine Officer",
+    course: "Marine Engineering Bridging",
+    year: "2023",
+    photo: "https://images.pexels.com/photos/8487402/pexels-photo-8487402.jpeg",
     quote:
-      "Experienced faculty and practical training helped me excel at sea. Highly recommended for aspiring seafarers.",
+      "Experienced faculty and practical training helped me excel at sea. The workshops and ERM drills improved my troubleshooting skills and teamwork under pressure.",
   },
   {
     name: "Anita Sharma",
     role: "Navigation Officer",
+    course: "Deck Officer Prep",
+    year: "2023",
+    photo: "https://images.pexels.com/photos/20889911/pexels-photo-20889911.jpeg",
     quote:
-      "Modern infrastructure and supportive mentors prepared me well for real‑world responsibilities on board.",
+      "Modern infrastructure and supportive mentors prepared me for real‑world responsibilities on board. ECDIS practice and COLREGs scenarios were especially helpful.",
+  },
+  {
+    name: "Arjun Nair",
+    role: "GP Rating",
+    course: "Safety & Survival",
+    year: "2024",
+    photo: "https://images.pexels.com/photos/769773/pexels-photo-769773.jpeg",
+    quote:
+      "From firefighting drills to survival craft handling, every session was hands‑on. Placement support guided me through interviews and documentation.",
+  },
+  {
+    name: "Priya Verma",
+    role: "Chief Mate (Asp.)",
+    course: "Management Level Refresher",
+    year: "2024",
+    photo: "https://images.pexels.com/photos/23020753/pexels-photo-23020753.jpeg",
+    quote:
+      "Leadership modules, audit readiness, and incident reporting workshops made a real difference. The academy’s mentors care about long‑term growth.",
   },
 ]
 
@@ -110,11 +137,19 @@ export default function CertificationPage() {
                 >
                   {testimonials.map((t, i) => (
                     <div key={i} className="w-full shrink-0" role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${testimonials.length}`}>
-                      <blockquote className="min-h-[84px] text-balance italic leading-relaxed">
-                        “{t.quote}”
-                      </blockquote>
-                      <div className="mt-3 text-sm font-semibold">
-                        {t.name} <span className="opacity-80 font-normal">— {t.role}</span>
+                      <div className="flex items-start gap-4">
+                        <img src={t.photo} alt={t.name} className="h-16 w-16 rounded-full object-cover ring-2 ring-white/30" loading="lazy" decoding="async" />
+                        <div className="flex-1">
+                          <blockquote className="text-balance italic leading-relaxed">
+                            “{t.quote}”
+                          </blockquote>
+                          <div className="mt-3 text-sm font-semibold">
+                            {t.name} <span className="opacity-80 font-normal">— {t.role}</span>
+                          </div>
+                          <div className="text-xs text-white/80 mt-1">
+                            {t.course} • {t.year}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
