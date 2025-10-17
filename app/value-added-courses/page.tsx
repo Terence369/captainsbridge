@@ -7,32 +7,37 @@ export default function ValueAddedCoursesPage() {
       title: "OFFSHORE OIL FIELD COURSES",
       content:
         "Specialized programs aligned with offshore operations including safety, survival, and equipment handling modules based on industry standards.",
+      image: "https://images.pexels.com/photos/3192669/pexels-photo-3192669.jpeg",
     },
     {
       title: "PASSENGER / CRUISE / YACHT COURSES",
       content:
-        "Hospitality and onboard service training focused on passenger handling, emergency procedures, and international etiquette.",
+        "Hospitality and onboard service training focused on passenger handling, emergency procedures, and international etiquette. Modules include guest relations, housekeeping, food & beverage service, safety briefings, crowd control, and SOLAS/STCW emergency response with practical drills. Certificates align with STCW and MLC hospitality practices; typical roles include cabin steward, F&B assistant, and guest services on cruise and yacht fleets.",
+      image: "https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg",
     },
     {
       title: "INLAND – NEAR COASTAL – MAIN FLEET COURSES",
       content:
-        "Foundational and advanced training for deck and engine departments operating in coastal and main fleet sectors.",
+        "Foundational and advanced training for deck and engine departments operating in coastal and main fleet sectors. Topics cover seamanship, watchkeeping, basic navigation, mooring operations, engine room procedures, ISM/ISPS awareness, and bridge resource management with logbook practice. Includes practical chartwork, COLREGs, introductory ECDIS, preventive maintenance routines, and simulator-based assessments with oral evaluations.",
+      image: "https://images.pexels.com/photos/13586360/pexels-photo-13586360.jpeg",
     },
     {
       title: "PROJECT SKILLED",
       content:
-        "Specialized craft courses and upskilling programs for project-based maritime roles with competency-based assessment.",
+        "Specialized craft courses and upskilling programs for project-based maritime roles with competency-based assessment. Training includes rigging & slinging signals, welding basics, scaffolding safety, electrical LOTO, permit-to-work systems, hazard identification (JSA), and QA/QC documentation. Emphasis on PPE selection, confined space awareness, hot-work controls, and team coordination to deliver safe, on-time project outcomes.",
+      image: "https://images.pexels.com/photos/8961066/pexels-photo-8961066.jpeg",
     },
     {
       title: "MANAGEMENT COURSES",
       content:
-        "Leadership, documentation, and compliance training to prepare candidates for supervisory responsibilities.",
+        "Leadership, documentation, and compliance training to prepare candidates for supervisory responsibilities. Includes team communication at sea, audit readiness, incident investigation & reporting, risk assessment, voyage planning oversight, performance reviews, and regulatory record-keeping. Covers document control, KPI tracking, budgeting basics, stakeholder communication, and mock external audits to build confidence for Mate/Chief Mate leadership roles.",
+      image: "https://images.pexels.com/photos/7647956/pexels-photo-7647956.jpeg",
     },
   ]
 
   return (
     <div>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('/images/hero-value-added.svg')" }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Value Added Courses</h1>
         </div>
@@ -54,11 +59,11 @@ export default function ValueAddedCoursesPage() {
               className="grid items-center gap-6 rounded-lg border bg-white/90 p-6 md:grid-cols-2 bg-ocean-pattern"
             >
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-[#0B2A4A]">{s.title}</h3>
-                <p className="text-sm leading-relaxed text-neutral-700">{s.content}</p>
+                <h3 className="mb-2 text-xl font-semibold text-white">{s.title}</h3>
+                <p className="text-sm leading-relaxed text-white">{s.content}</p>
               </div>
               <div className="rounded bg-white/90 p-4 shadow">
-                <img src={"/images/cards/offshore.svg"} alt={`${s.title} details`} className="h-auto w-full rounded" loading="lazy" decoding="async" />
+                <img src={s.image} alt={`${s.title} details`} className="h-auto w-full rounded" loading="lazy" decoding="async" />
               </div>
             </div>
           ))}

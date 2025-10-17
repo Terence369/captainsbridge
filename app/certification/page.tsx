@@ -5,32 +5,59 @@ import { useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight, Anchor, Compass, Ship, LifeBuoy } from "lucide-react"
 
 const offerings = [
-  { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "https://source.unsplash.com/800x600/?safety,offshore,training" },
-  { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "https://source.unsplash.com/800x600/?crew,management,ship" },
-  { title: "MARINE DOCUMENTATION", desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.", image: "https://source.unsplash.com/800x600/?documents,maritime,office" },
-  { title: "INDIAN CDC ASSISTANCE", desc: "Assistance for arranging CDC and guidance for meeting requirements across the maritime industry.", image: "https://source.unsplash.com/800x600/?certificate,cdc,card" },
-  { title: "PLACEMENT GUIDANCE", desc: "Invitations to companies and organizations for placement interviews with relevant information.", image: "https://source.unsplash.com/800x600/?job,interview,placement" },
-  { title: "MARINE – OFFSHORE COURSES", desc: "Broad range of courses for Marine and Offshore sectors with compliant training as per guidelines.", image: "https://source.unsplash.com/800x600/?oil,rig,offshore" },
+  { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "https://images.pexels.com/photos/3207531/pexels-photo-3207531.jpeg" },
+  { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "https://images.pexels.com/photos/3660828/pexels-photo-3660828.jpeg" },
+  { title: "MARINE DOCUMENTATION", desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.", image: "https://images.pexels.com/photos/8830663/pexels-photo-8830663.jpeg" },
+  { title: "INDIAN CDC ASSISTANCE", desc: "Assistance for arranging CDC and guidance for meeting requirements across the maritime industry.", image: "https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg" },
+  { title: "PLACEMENT GUIDANCE", desc: "Invitations to companies and organizations for placement interviews with relevant information.", image: "https://images.pexels.com/photos/7647956/pexels-photo-7647956.jpeg" },
+  { title: "MARINE – OFFSHORE COURSES", desc: "Broad range of courses for Marine and Offshore sectors with compliant training as per guidelines.", image: "https://images.pexels.com/photos/3192669/pexels-photo-3192669.jpeg" },
 ]
 
 const testimonials = [
   {
     name: "T. Kishore Kumar",
     role: "Deck Cadet",
+    course: "BSP (Basic Seafarers Package)",
+    year: "2024",
+    photo: "https://images.pexels.com/photos/34290769/pexels-photo-34290769.jpeg",
     quote:
-      "I'm very happy to join this institute. The institute has all the facilities required as per the norms of DG Shipping.",
+      "I'm very happy to join this institute. The institute has all the facilities required as per the norms of DG Shipping. Classroom resources and bridge simulator sessions were exactly what I needed to build confidence before sailing.",
   },
   {
     name: "Rahul Menon",
     role: "Engine Officer",
+    course: "Marine Engineering Bridging",
+    year: "2023",
+    photo: "https://images.pexels.com/photos/8487402/pexels-photo-8487402.jpeg",
     quote:
-      "Experienced faculty and practical training helped me excel at sea. Highly recommended for aspiring seafarers.",
+      "Experienced faculty and practical training helped me excel at sea. The workshops and ERM drills improved my troubleshooting skills and teamwork under pressure.",
   },
   {
     name: "Anita Sharma",
     role: "Navigation Officer",
+    course: "Deck Officer Prep",
+    year: "2023",
+    photo: "https://images.pexels.com/photos/20889911/pexels-photo-20889911.jpeg",
     quote:
-      "Modern infrastructure and supportive mentors prepared me well for real‑world responsibilities on board.",
+      "Modern infrastructure and supportive mentors prepared me for real‑world responsibilities on board. ECDIS practice and COLREGs scenarios were especially helpful.",
+  },
+  {
+    name: "Arjun Nair",
+    role: "GP Rating",
+    course: "Safety & Survival",
+    year: "2024",
+    photo: "https://images.pexels.com/photos/769773/pexels-photo-769773.jpeg",
+    quote:
+      "From firefighting drills to survival craft handling, every session was hands‑on. Placement support guided me through interviews and documentation.",
+  },
+  {
+    name: "Priya Verma",
+    role: "Chief Mate (Asp.)",
+    course: "Management Level Refresher",
+    year: "2024",
+    photo: "https://images.pexels.com/photos/23020753/pexels-photo-23020753.jpeg",
+    quote:
+      "Leadership modules, audit readiness, and incident reporting workshops made a real difference. The academy’s mentors care about long‑term growth.",
   },
 ]
 
@@ -47,7 +74,7 @@ export default function CertificationPage() {
 
   return (
     <div>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('/images/hero-certification.svg')" }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Certification</h1>
         </div>
@@ -68,16 +95,7 @@ export default function CertificationPage() {
             <Card key={i} className="overflow-hidden border-0 shadow-md">
               <div className="h-48 w-full">
                 <img
-                  src={(() => {
-                  switch (i) {
-                    case 0: return '/images/cards/safety.svg'
-                    case 1: return '/images/cards/crew.svg'
-                    case 2: return '/images/cards/documents.svg'
-                    case 3: return '/images/cards/cdc.svg'
-                    case 4: return '/images/cards/placement.svg'
-                    default: return '/images/cards/offshore.svg'
-                  }
-                })()}
+                  src={o.image}
                   alt={o.title}
                   className="h-full w-full object-cover" loading="lazy" decoding="async"
                 />
@@ -94,7 +112,7 @@ export default function CertificationPage() {
           <Card className="border-0 shadow-md">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-semibold text-[#0B2A4A]">Certifications</h3>
-              <img src="/images/cards/documents.svg" alt="Certificates" className="h-auto w-full rounded" loading="lazy" decoding="async" />
+              <img src="https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg" alt="Certificates" className="h-auto w-full rounded" loading="lazy" decoding="async" />
             </CardContent>
           </Card>
 
@@ -112,11 +130,30 @@ export default function CertificationPage() {
                 </div>
               </div>
 
-              <blockquote className="min-h-[84px] text-balance italic leading-relaxed transition-all">
-                “{testimonials[index].quote}”
-              </blockquote>
-              <div className="mt-3 text-sm font-semibold">
-                {testimonials[index].name} <span className="opacity-80 font-normal">— {testimonials[index].role}</span>
+              <div className="relative overflow-hidden" aria-roledescription="carousel">
+                <div
+                  className="flex w-full transition-transform duration-500"
+                  style={{ transform: `translateX(-${index * 100}%)` }}
+                >
+                  {testimonials.map((t, i) => (
+                    <div key={i} className="w-full shrink-0" role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${testimonials.length}`}>
+                      <div className="flex items-start gap-4">
+                        <img src={t.photo} alt={t.name} className="h-16 w-16 rounded-full object-cover ring-2 ring-white/30" loading="lazy" decoding="async" />
+                        <div className="flex-1">
+                          <blockquote className="text-balance italic leading-relaxed">
+                            “{t.quote}”
+                          </blockquote>
+                          <div className="mt-3 text-sm font-semibold">
+                            {t.name} <span className="opacity-80 font-normal">— {t.role}</span>
+                          </div>
+                          <div className="text-xs text-white/80 mt-1">
+                            {t.course} • {t.year}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="mt-6 flex items-center justify-between">

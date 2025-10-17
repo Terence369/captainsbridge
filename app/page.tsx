@@ -22,6 +22,7 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import AnimatedCounter from "@/components/animated-counter"
@@ -76,6 +77,8 @@ function AnimatedSection({
 
 export default function CochinMaritimeAcademy() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [dialogOpen, setDialogOpen] = useState(false)
+  const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -122,7 +125,7 @@ export default function CochinMaritimeAcademy() {
               <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 animate-in slide-in-from-bottom duration-800 text-balance">
                 WELCOME TO COCHIN MARITIME ACADEMY
               </h1>
-              <p className="text-lg md:text-xl text-[#0B2A4A] mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed">
+              <p className="text-lg md:text-xl text-[#0B2A4A] font-semibold mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed">
                 Located in South India, Kochi is blessed with a rich coastline, a well-known port and an established
                 maritime environment, and is notable for its positive side of the marine sector. By catering courses that
                 touch various aspects of marine studies, we can offer a candidate can select from a wide range of courses
@@ -162,7 +165,7 @@ export default function CochinMaritimeAcademy() {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-bold text-[#0B2A4A] mb-4">WELCOME TO COCHIN MARITIME ACADEMY</h2>
               <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-6"></div>
-              <p className="text-base md:text-lg text-[#5A5A5A] max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg text-[#5A5A5A] font-semibold max-w-4xl mx-auto leading-relaxed">
                 Situated in South India Kochi is blessed with a rich coastline, a well-known port and an established
                 marine environment, and is notable for its positive side of the marine sector. By catering courses that
                 touch various aspects of marine studies, a candidate can select from a wide range of courses and the few
