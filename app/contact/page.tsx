@@ -1,11 +1,17 @@
 "use client"
 
+"use client"
+
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin, Phone } from "lucide-react"
+import { useSearchParams } from "next/navigation"
+import { courses } from "@/lib/courses"
 
 export default function ContactPage() {
+  const searchParams = useSearchParams()
+  const message = searchParams.get("message") || ""
   return (
     <div>
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/7634228/pexels-photo-7634228.jpeg')" }}>
@@ -41,8 +47,14 @@ export default function ContactPage() {
             <Input type="email" placeholder="Email *" required />
           </div>
           <Input type="tel" placeholder="Phone *" required />
-          <Input placeholder="Course of interest" />
-          <Textarea rows={5} placeholder="Message" />
+          <label className="mb-2 block text-sm font-medium text-[#0B2A4A]">Course of interest</label>
+          <select className="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]" aria-label="Course of interest">
+            <option value="">Select a course</option>
+            {courses.map((c, i) => (
+              <option key={i} value={c.title}>{c.title}</option>
+            ))}
+          </select>
+          <Textarea rows={5} placeholder="Message" defaultValue={message} />
           <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">Send Message</Button>
         </form>
       </section>
