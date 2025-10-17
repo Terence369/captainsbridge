@@ -77,6 +77,8 @@ function AnimatedSection({
 
 export default function CochinMaritimeAcademy() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [dialogOpen, setDialogOpen] = useState(false)
+  const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
