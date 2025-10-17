@@ -47,7 +47,7 @@ export default function CertificationPage() {
 
   return (
     <div>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.unsplash.com/photo-1503437313881-503a91226402?q=80&w=1600&auto=format&fit=crop')" }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('/images/hero-certification.svg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Certification</h1>
         </div>
@@ -68,10 +68,18 @@ export default function CertificationPage() {
             <Card key={i} className="overflow-hidden border-0 shadow-md">
               <div className="h-48 w-full">
                 <img
-                  src={o.image}
+                  src={(() => {
+                  switch (i) {
+                    case 0: return '/images/cards/safety.svg'
+                    case 1: return '/images/cards/crew.svg'
+                    case 2: return '/images/cards/documents.svg'
+                    case 3: return '/images/cards/cdc.svg'
+                    case 4: return '/images/cards/placement.svg'
+                    default: return '/images/cards/offshore.svg'
+                  }
+                })()}
                   alt={o.title}
-                  className="h-full w-full object-cover"
-                  referrerPolicy="no-referrer"
+                  className="h-full w-full object-cover" loading="lazy" decoding="async"
                 />
               </div>
               <CardContent className="p-6">
@@ -86,7 +94,7 @@ export default function CertificationPage() {
           <Card className="border-0 shadow-md">
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-semibold text-[#0B2A4A]">Certifications</h3>
-              <img src="https://picsum.photos/seed/certificates/1200/800" alt="Certificates" className="h-auto w-full rounded" />
+              <img src="/images/cards/documents.svg" alt="Certificates" className="h-auto w-full rounded" loading="lazy" decoding="async" />
             </CardContent>
           </Card>
 
