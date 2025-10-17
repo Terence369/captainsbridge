@@ -39,17 +39,7 @@ export default function FacilitiesPage() {
             >
               <div className="h-48 w-full overflow-hidden">
                 <img
-                  src={(() => {
-                  switch (i) {
-                    case 0: return '/images/cards/classroom.svg'
-                    case 1: return '/images/cards/offshore.svg'
-                    case 2: return '/images/cards/cookery.svg'
-                    case 3: return '/images/cards/placement.svg'
-                    case 4: return '/images/cards/documents.svg'
-                    case 5: return '/images/cards/partners.svg'
-                    default: return '/images/cards/laboratory.svg'
-                  }
-                })()}
+                  src={f.image}
                   alt={f.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async"
                 />
