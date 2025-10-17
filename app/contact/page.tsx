@@ -53,7 +53,7 @@ export default function ContactPage() {
           </div>
           <Input type="tel" placeholder="Phone *" required />
           <Input placeholder="Course of interest" />
-          <Textarea rows={5} placeholder="Message" />
+          <Textarea rows={5} placeholder="Message" value={messageText} onChange={(e) => setMessageText(e.target.value)} />
           <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">Send Message</Button>
         </form>
       </section>
