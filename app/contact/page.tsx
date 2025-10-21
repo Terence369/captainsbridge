@@ -1,5 +1,6 @@
 "use client"
 
+import { Suspense } from "react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -8,7 +9,7 @@ import { Mail, MapPin, Phone } from "lucide-react"
 import { useSearchParams } from "next/navigation"
 import { courseTitles } from "@/lib/courses"
 
-export default function ContactPage() {
+function ContactClient() {
   const searchParams = useSearchParams()
   const initialMessage = searchParams.get("message") || ""
 
@@ -58,5 +59,13 @@ export default function ContactPage() {
         </form>
       </section>
     </div>
+  )
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={null}>
+      <ContactClient />
+    </Suspense>
   )
 }
