@@ -3,6 +3,7 @@
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import { Select } from "@/components/ui/select"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { useSearchParams } from "next/navigation"
 
@@ -45,7 +46,12 @@ export default function ContactPage() {
             <Input type="email" placeholder="Email *" required />
           </div>
           <Input type="tel" placeholder="Phone *" required />
-          <Input placeholder="Course of interest" />
+          <Select defaultValue="">
+            <option value="" disabled>Select a course</option>
+            {require("@/lib/courses").courseTitles.map((title: string) => (
+              <option key={title} value={title}>{title}</option>
+            ))}
+          </Select>
           <Textarea rows={5} placeholder="Message" defaultValue={initialMessage} />
           <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">Send Message</Button>
         </form>

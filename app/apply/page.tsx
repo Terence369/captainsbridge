@@ -3,6 +3,7 @@
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
+import { Select } from "@/components/ui/select"
 
 export default function ApplyPage() {
   return (
@@ -19,7 +20,12 @@ export default function ApplyPage() {
             <Input type="email" placeholder="Email *" required />
             <Input type="tel" placeholder="Phone *" required />
           </div>
-          <Input placeholder="Course applying for *" required />
+          <Select required defaultValue="">
+            <option value="" disabled>Select course *</option>
+            {require("@/lib/courses").courseTitles.map((title: string) => (
+              <option key={title} value={title}>{title}</option>
+            ))}
+          </Select>
           <Textarea rows={5} placeholder="Briefly tell us about your interest" />
           <Button className="w-full bg-[#0B2A4A] text-white hover:bg-[#081E35]">Submit Application</Button>
         </form>
