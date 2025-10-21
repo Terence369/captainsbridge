@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Select } from "@/components/ui/select"
+import { courseTitles } from "@/lib/courses"
 
 export default function ApplyPage() {
   return (
@@ -22,7 +23,7 @@ export default function ApplyPage() {
           </div>
           <Select required defaultValue="">
             <option value="" disabled>Select course *</option>
-            {require("@/lib/courses").courseTitles.map((title: string) => (
+            {courseTitles.map((title) => (
               <option key={title} value={title}>{title}</option>
             ))}
           </Select>
