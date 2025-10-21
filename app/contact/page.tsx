@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Select } from "@/components/ui/select"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { useSearchParams } from "next/navigation"
+import { courseTitles } from "@/lib/courses"
 
 export default function ContactPage() {
   const searchParams = useSearchParams()
@@ -48,7 +49,7 @@ export default function ContactPage() {
           <Input type="tel" placeholder="Phone *" required />
           <Select defaultValue="">
             <option value="" disabled>Select a course</option>
-            {require("@/lib/courses").courseTitles.map((title: string) => (
+            {courseTitles.map((title) => (
               <option key={title} value={title}>{title}</option>
             ))}
           </Select>
