@@ -36,7 +36,7 @@ export default function ValueAddedCoursesPage() {
 
   return (
     <div className="bg-page-white">
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg')" }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url('https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-primary-cyan">
             Value Added Courses

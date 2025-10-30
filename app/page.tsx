@@ -121,7 +121,7 @@ export default function CochinMaritimeAcademy() {
     <div className="min-h-screen bg-page-white">
       {/* Hero Section (left intact) */}
       <section id="home" className="relative min-h-[90vh] flex items-center bg-page-white">
-        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.4} heightClass="min-h-[90vh]">
+        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0} heightClass="min-h-[90vh]">
           <div className="mx-auto max-w-[1320px] px-20 pt-20 pb-[21px] flex flex-col items-start justify-center relative min-h-[90vh]" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
             <div className="max-w-3xl">
               <h1 className="text-6xl md:text-7xl font-black mb-8 animate-in slide-in-from-bottom duration-800 text-balance leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>

@@ -14,7 +14,7 @@ function ContactClient() {
 
   return (
     <div className="bg-page-white">
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.pexels.com/photos/7634228/pexels-photo-7634228.jpeg')" }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url('https://images.pexels.com/photos/7634228/pexels-photo-7634228.jpeg')" }}>
         <div className="h-[220px] w-full md:h-[300px] grid place-items-center relative z-10">
           <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-primary-cyan">
             Contact
