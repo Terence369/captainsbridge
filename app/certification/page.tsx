@@ -57,7 +57,7 @@ const testimonials = [
     year: "2024",
     photo: "https://images.pexels.com/photos/23020753/pexels-photo-23020753.jpeg",
     quote:
-      "Leadership modules, audit readiness, and incident reporting workshops made a real difference. The academy’s mentors care about long‑term growth.",
+      "Leadership modules, audit readiness, and incident reporting workshops made a real difference. The academy's mentors care about long‑term growth.",
   },
 ]
 
@@ -73,17 +73,21 @@ export default function CertificationPage() {
   const next = () => setIndex((i) => (i + 1) % testimonials.length)
 
   return (
-    <div>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg')" }}>
+    <div style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Certification</h1>
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+            Certification
+          </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(23, 23, 23)' }}>
         <div className="mx-auto mb-10 max-w-4xl text-center">
-          <h2 className="text-2xl font-bold text-[#0B2A4A] md:text-3xl">COCHIN MARITIME ACADEMY WE OFFER</h2>
-          <div className="mt-2 text-sm font-semibold text-[#0B2A4A] md:text-base">
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+            Cochin Maritime Academy We Offer
+          </h2>
+          <div className="text-base font-semibold md:text-lg" style={{ fontFamily: 'var(--font-display)', color: 'rgb(222, 140, 4)', letterSpacing: '0.8px' }}>
             Focus: One of a kind in India
             <br />
             BSP (Basic Seafarers Package) Course — Approved by NCT New Delhi, Govt of India.
@@ -92,40 +96,56 @@ export default function CertificationPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {offerings.map((o, i) => (
-            <Card key={i} className="overflow-hidden border-0 shadow-md">
-              <div className="h-48 w-full">
+            <Card key={i} className="overflow-hidden border-0 shadow-md group hover:shadow-lg transition-all" style={{ backgroundColor: 'rgb(15, 16, 16)' }}>
+              <div className="h-48 w-full overflow-hidden">
                 <img
                   src={o.image}
                   alt={o.title}
-                  className="h-full w-full object-cover" loading="lazy" decoding="async"
+                  className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="mb-2 text-lg font-semibold text-[#0B2A4A]">{o.title}</h3>
-                <p className="text-sm leading-relaxed text-neutral-600">{o.desc}</p>
+                <h3 className="mb-2 text-lg font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
+                  {o.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                  {o.desc}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <Card className="border-0 shadow-md">
+          <Card className="border-0 shadow-md overflow-hidden" style={{ backgroundColor: 'rgb(15, 16, 16)' }}>
             <CardContent className="p-6">
-              <h3 className="mb-4 text-lg font-semibold text-[#0B2A4A]">Certifications</h3>
-              <img src="https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg" alt="Certificates" className="h-auto w-full rounded" loading="lazy" decoding="async" />
+              <h3 className="mb-4 text-lg font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
+                Certifications
+              </h3>
+              <img 
+                src="https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg" 
+                alt="Certificates" 
+                className="h-auto w-full rounded" 
+                loading="lazy" 
+                decoding="async" 
+              />
             </CardContent>
           </Card>
 
           {/* Testimonial Carousel */}
-          <Card className="border-0 bg-[#0B2A4A] text-white shadow-md overflow-hidden">
+          <Card className="border-0 shadow-md overflow-hidden" style={{ backgroundColor: 'rgb(0, 152, 183)' }}>
             <CardContent className="relative p-6">
-              <h3 className="mb-2 text-lg font-semibold">Students Testimonial</h3>
+              <h3 className="mb-4 text-lg font-bold uppercase text-white" style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.8px' }}>
+                Students Testimonial
+              </h3>
 
               {/* Animated maritime icons loop */}
               <div className="relative mb-4 overflow-hidden">
                 <div className="flex animate-[marquee_12s_linear_infinite] gap-6 opacity-80">
                   {[Ship, Anchor, Compass, LifeBuoy, Anchor, Ship].map((Icon, i) => (
-                    <Icon key={i} className="h-6 w-6" />
+                    <Icon key={i} className="h-6 w-6 text-white" />
                   ))}
                 </div>
               </div>
@@ -138,12 +158,19 @@ export default function CertificationPage() {
                   {testimonials.map((t, i) => (
                     <div key={i} className="w-full shrink-0" role="group" aria-roledescription="slide" aria-label={`${i + 1} of ${testimonials.length}`}>
                       <div className="flex items-start gap-4">
-                        <img src={t.photo} alt={t.name} className="h-16 w-16 rounded-full object-cover ring-2 ring-white/30" loading="lazy" decoding="async" />
+                        <img 
+                          src={t.photo} 
+                          alt={t.name} 
+                          className="h-16 w-16 rounded-full object-cover ring-2"
+                          style={{ ringColor: 'rgba(255, 255, 255, 0.3)' }}
+                          loading="lazy" 
+                          decoding="async" 
+                        />
                         <div className="flex-1">
-                          <blockquote className="text-balance italic leading-relaxed">
-                            “{t.quote}”
+                          <blockquote className="text-balance italic leading-relaxed text-white">
+                            "{t.quote}"
                           </blockquote>
-                          <div className="mt-3 text-sm font-semibold">
+                          <div className="mt-3 text-sm font-semibold text-white">
                             {t.name} <span className="opacity-80 font-normal">— {t.role}</span>
                           </div>
                           <div className="text-xs text-white/80 mt-1">
@@ -159,21 +186,28 @@ export default function CertificationPage() {
               <div className="mt-6 flex items-center justify-between">
                 <button
                   aria-label="Previous"
-                  className="rounded bg-white/10 p-2 hover:bg-white/20"
+                  className="rounded p-2 transition-all hover:scale-110"
+                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
                   onClick={prev}
                 >
-                  <ChevronLeft />
+                  <ChevronLeft className="text-white" />
                 </button>
                 <div className="flex gap-2">
                   {testimonials.map((_, i) => (
                     <span
                       key={i}
-                      className={`h-2 w-2 rounded-full ${i === index ? "bg-white" : "bg-white/40"}`}
+                      className="h-2 w-2 rounded-full transition-all"
+                      style={{ backgroundColor: i === index ? 'rgb(255, 255, 255)' : 'rgba(255, 255, 255, 0.4)' }}
                     />
                   ))}
                 </div>
-                <button aria-label="Next" className="rounded bg-white/10 p-2 hover:bg-white/20" onClick={next}>
-                  <ChevronRight />
+                <button 
+                  aria-label="Next" 
+                  className="rounded p-2 transition-all hover:scale-110"
+                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}
+                  onClick={next}
+                >
+                  <ChevronRight className="text-white" />
                 </button>
               </div>
             </CardContent>
