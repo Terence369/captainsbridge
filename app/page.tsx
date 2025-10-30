@@ -358,9 +358,16 @@ export default function CochinMaritimeAcademy() {
                   <div className="mx-auto mb-4 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(0, 152, 183, 0.2)' }}>
                     <LifeBuoy style={{ color: 'rgb(0, 152, 183)' }} />
                   </div>
-                  <h3 className="text-base font-semibold uppercase heading-premium text-primary-cyan">
-                    {card.title}
-                  </h3>
+                  {card.title === "Rigging and Slinging Safety Level - 2" ? (
+                    <h3 className="text-base font-semibold uppercase heading-premium text-primary-cyan">
+                      Rigging and Slinging <br />
+                      Safety Level - 2
+                    </h3>
+                  ) : (
+                    <h3 className="text-base font-semibold uppercase heading-premium text-primary-cyan">
+                      {card.title}
+                    </h3>
+                  )}
                   <p className="mt-3 text-sm leading-relaxed text-dark-secondary">
                     {card.desc}
                   </p>
