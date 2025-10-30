@@ -35,37 +35,33 @@ export default function ValueAddedCoursesPage() {
   ]
 
   return (
-    <div style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg')" }}>
+    <div className="bg-page-white">
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-primary-cyan">
             Value Added Courses
           </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(23, 23, 23)' }}>
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-section-cream">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-dark">
             Course Categories
           </h2>
-          <p className="text-base leading-relaxed md:text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+          <p className="text-base leading-relaxed md:text-lg body-premium">
             Content and layout inspired by the provided page: two-column sections on maritime-themed backgrounds. Each module has a clear overview so nothing is left blank.
           </p>
         </div>
 
         <div className="space-y-12">
           {sections.map((s, i) => (
-            <div
-              key={i}
-              className="grid items-center gap-6 rounded-lg border p-8 md:grid-cols-2"
-              style={{ backgroundColor: 'rgb(15, 16, 16)', borderColor: 'rgba(255, 255, 255, 0.1)' }}
-            >
+            <div key={i} className="grid items-center gap-6 rounded-lg border p-8 md:grid-cols-2 bg-white border-light-color">
               <div>
-                <h3 className="mb-4 text-2xl font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
+                <h3 className="mb-4 text-2xl font-bold uppercase heading-premium text-primary-cyan">
                   {s.title}
                 </h3>
-                <p className="text-base leading-relaxed" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+                <p className="text-base leading-relaxed body-premium">
                   {s.content}
                 </p>
               </div>
@@ -82,7 +78,7 @@ export default function ValueAddedCoursesPage() {
           ))}
         </div>
 
-        <div className="mt-12 text-center text-base" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+        <div className="mt-12 text-center text-base body-premium">
           A complete courses list and downloadable brochure are available on request.
         </div>
       </section>

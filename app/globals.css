@@ -431,3 +431,45 @@
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }
 .delay-400 { transition-delay: 0.4s; }
+
+/* ========================================
+   Light theme utility helpers
+   ======================================== */
+.bg-page-white { background-color: var(--bg-white); }
+.bg-section-cream { background-color: var(--bg-cream); }
+.bg-section-light { background-color: var(--bg-light); }
+.text-dark { color: var(--text-dark); }
+.text-dark-secondary { color: var(--text-dark-secondary); }
+.border-light-color { border-color: var(--border-light); }
+.border-lighter-color { border-color: var(--border-lighter); }
+.bg-cyan { background-color: var(--primary-cyan); }
+.bg-gold { background-color: var(--accent-gold); }
+.btn-outline-cyan {
+  background-color: transparent;
+  color: var(--primary-cyan);
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+  border: 1.6px solid var(--primary-cyan);
+}
+.btn-outline-cyan:hover {
+  background-color: var(--primary-cyan);
+  color: var(--bg-white);
+  transform: scale(1.02);
+}
+.icon-circle-cyan {
+  background-color: var(--primary-cyan);
+  color: var(--bg-white);
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.divider-light {
+  height: 1px;
+  background-color: var(--border-light);
+  width: 100%;
+}

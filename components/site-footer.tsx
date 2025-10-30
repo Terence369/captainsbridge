@@ -8,13 +8,13 @@ export default function SiteFooter() {
   }
 
   return (
-    <footer className="relative w-full text-gray-800" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
+    <footer className="relative w-full text-gray-800 bg-section-cream">
       {/* Main Footer Content */}
       <div className="container-premium section-spacing">
         <div className="grid gap-8 md:grid-cols-4 mb-8">
           {/* About Section */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold uppercase tracking-wider heading-premium" style={{ color: 'rgb(0, 152, 183)' }}>
+            <h3 className="text-lg font-semibold uppercase tracking-wider heading-premium text-primary-cyan">
               About CMA
             </h3>
             <p className="text-sm text-gray-700 leading-relaxed font-body">
@@ -24,7 +24,7 @@ export default function SiteFooter() {
 
           {/* Services Section */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold uppercase tracking-wider heading-premium" style={{ color: 'rgb(0, 152, 183)' }}>
+            <h3 className="text-lg font-semibold uppercase tracking-wider heading-premium text-primary-cyan">
               Services
             </h3>
             <ul className="space-y-2 text-sm text-gray-700 font-body">
@@ -37,7 +37,7 @@ export default function SiteFooter() {
 
           {/* Courses Section */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold uppercase tracking-wider heading-premium" style={{ color: 'rgb(0, 152, 183)' }}>
+            <h3 className="text-lg font-semibold uppercase tracking-wider heading-premium text-primary-cyan">
               DP Marine
             </h3>
             <ul className="space-y-2 text-sm text-gray-700 font-body">
@@ -50,20 +50,20 @@ export default function SiteFooter() {
 
           {/* Contact Section */}
           <div className="space-y-3">
-            <h3 className="text-lg font-semibold uppercase tracking-wider heading-premium" style={{ color: 'rgb(0, 152, 183)' }}>
+            <h3 className="text-lg font-semibold uppercase tracking-wider heading-premium text-primary-cyan">
               Get in Touch
             </h3>
             <ul className="space-y-3 text-sm text-gray-700 font-body">
               <li className="flex items-start gap-3 hover:text-gray-900 transition-colors duration-200">
-                <MapPin size={18} className="mt-0.5 flex-shrink-0" style={{ color: 'rgb(0, 152, 183)' }} />
+                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-primary-cyan" />
                 <span>Aditya Complex, Kochupally road, Thoppumpady, Kochi – 682005</span>
               </li>
               <li className="flex items-center gap-3 hover:text-gray-900 transition-colors duration-200">
-                <Phone size={18} style={{ color: 'rgb(0, 152, 183)' }} />
+                <Phone size={18} className="text-primary-cyan" />
                 <a href="tel:+914842234500">+91 484 2234500</a>
               </li>
               <li className="flex items-center gap-3 hover:text-gray-900 transition-colors duration-200">
-                <Mail size={18} style={{ color: 'rgb(0, 152, 183)' }} />
+                <Mail size={18} className="text-primary-cyan" />
                 <a href="mailto:cochinmaritime@gmail.com">cochinmaritime@gmail.com</a>
               </li>
             </ul>
@@ -71,7 +71,7 @@ export default function SiteFooter() {
         </div>
 
         {/* Divider */}
-        <div className="my-8 h-px w-full" style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)' }} />
+        <div className="my-8 w-full divider-light" />
 
         {/* Footer Bottom */}
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
@@ -82,12 +82,11 @@ export default function SiteFooter() {
           {/* Back to Top Button */}
           <button
             onClick={scrollToTop}
-            className="group flex items-center gap-2 rounded-full border-2 p-2 transition-all duration-300 ease-out hover:scale-110"
-            style={{ borderColor: 'rgb(0, 152, 183)' }}
+            className="group flex items-center gap-2 rounded-full border-2 p-2 transition-all duration-300 ease-out hover:scale-110 border-cyan"
             aria-label="Back to top"
           >
-            <ArrowUp size={16} style={{ color: 'rgb(0, 152, 183)' }} />
-            <span className="text-xs font-semibold uppercase tracking-wider text-gray-600 group-hover:text-gray-900" style={{ color: 'rgb(0, 152, 183)' }}>
+            <ArrowUp size={16} className="text-primary-cyan" />
+            <span className="text-xs font-semibold uppercase tracking-wider text-primary-cyan">
               Back Top
             </span>
           </button>
@@ -96,33 +95,15 @@ export default function SiteFooter() {
           <div className="flex items-center gap-4">
             <span className="text-xs font-semibold uppercase tracking-wider text-gray-600">Follow Us</span>
             <div className="flex gap-3">
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-200 hover:border-cyan-500 hover:scale-110"
-                style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}
-              >
-                <span className="text-xs font-bold" style={{ color: 'rgb(0, 152, 183)' }}>f</span>
-              </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-200 hover:border-cyan-500 hover:scale-110"
-                style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}
-              >
-                <span className="text-xs font-bold" style={{ color: 'rgb(0, 152, 183)' }}>i</span>
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-200 hover:border-cyan-500 hover:scale-110"
-                style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}
-              >
-                <span className="text-xs font-bold" style={{ color: 'rgb(0, 152, 183)' }}>in</span>
-              </a>
+              {['f','i','in'].map((label) => (
+                <a 
+                  key={label}
+                  href="#" 
+                  className="flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-200 hover:scale-110 border-light-color"
+                >
+                  <span className="text-xs font-bold text-primary-cyan">{label}</span>
+                </a>
+              ))}
             </div>
           </div>
         </div>
