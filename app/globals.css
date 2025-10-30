@@ -300,9 +300,10 @@
 .heading-premium {
   font-family: var(--font-display);
   text-transform: uppercase;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.7px;
   line-height: 1;
   color: var(--text-dark);
+  font-weight: 700;
 }
 
 .heading-xl {
