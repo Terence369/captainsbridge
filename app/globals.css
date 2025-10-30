@@ -3,7 +3,35 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Alata&display=swap');
+
 :root {
+  /* Premium Design System Color Palette */
+  --primary-cyan: rgb(0, 152, 183);
+  --accent-gold: rgb(222, 140, 4);
+  --bg-dark: rgb(23, 23, 23);
+  --bg-black: rgb(0, 0, 0);
+  --bg-darker: rgb(15, 16, 16);
+  --text-white: rgb(255, 255, 255);
+  --text-white-secondary: rgba(255, 255, 255, 0.8);
+  --text-white-muted: rgba(255, 255, 255, 0.6);
+  --text-white-faint: rgba(255, 255, 255, 0.2);
+
+  /* Spacing System */
+  --spacing-unit: 80px;
+  --spacing-section: 74.08px;
+  --spacing-container-padding: 80px;
+
+  /* Typography */
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Alata', serif;
+  
+  /* Transitions & Animations */
+  --transition-smooth: cubic-bezier(0.2, 1.33, 0.25, 1);
+  --transition-standard: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --transition-ease: ease-in-out;
+
+  /* Legacy theme variables for compatibility */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -74,10 +102,8 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
-
 @theme inline {
-  --font-sans: "Merriweather", Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-body);
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -123,15 +149,19 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
   }
 }
 
-/* Custom animations */
+/* ========================================
+   PREMIUM DESIGN SYSTEM ANIMATIONS
+   ======================================== */
+
+/* Fade in up animation - primary scroll-triggered animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -141,6 +171,74 @@
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
+}
+
+/* Staggered fade in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Scale + Fade animation for cards */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+/* Rotating loader animation */
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotating {
+  animation: rotating 0.8s ease-in-out infinite;
+}
+
+/* Marquee scroll animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Hover scale effect */
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
 /* Reduced motion support */
@@ -153,15 +251,175 @@
   }
 }
 
-/* Background helper for ocean pattern used in Value Added Courses */
-.bg-ocean-pattern {
-  background-image: url('/--encodeuricomponent--------------------ocean-back.jpg');
-  background-size: cover;
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Container with max-width and centered padding */
+.container-premium {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-container-padding);
+  padding-right: var(--spacing-container-padding);
+  width: 100%;
 }
 
-/* Subtle patterned backgrounds for white sections */
-.bg-subtle {
-  background-image: radial-gradient(circle at 10% 10%, rgba(11,42,74,0.03) 0px, transparent 30%), radial-gradient(circle at 90% 90%, rgba(11,42,74,0.02) 0px, transparent 25%);
-  background-repeat: no-repeat;
-  background-size: cover;
+/* Section spacing */
+.section-spacing {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
 }
+
+/* Hero section styling */
+.hero-section {
+  background-color: var(--bg-black);
+  color: var(--text-white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Primary cyan text */
+.text-primary-cyan {
+  color: var(--primary-cyan);
+}
+
+/* Accent gold text */
+.text-accent-gold {
+  color: var(--accent-gold);
+}
+
+/* Premium heading with Anton font */
+.heading-premium {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.heading-xl {
+  font-size: clamp(2.5rem, 8vw, 7.5rem);
+  font-weight: 700;
+}
+
+.heading-lg {
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 700;
+}
+
+.heading-md {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* Premium body text with Alata */
+.body-premium {
+  font-family: var(--font-body);
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* Gold horizontal divider */
+.divider-gold {
+  height: 1px;
+  background-color: var(--accent-gold);
+  width: 100%;
+}
+
+/* Cyan border styling */
+.border-cyan {
+  border-color: var(--primary-cyan);
+}
+
+/* Gold border styling */
+.border-gold {
+  border-color: var(--accent-gold);
+}
+
+/* Hover effects */
+.hover-scale {
+  transition: transform 0.3s ease-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-opacity {
+  transition: opacity 0.3s ease-out;
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+
+/* Button base styles */
+.btn-primary {
+  background-color: var(--primary-cyan);
+  color: var(--text-white);
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+  border: 1.6px solid var(--primary-cyan);
+  box-shadow: rgba(89, 220, 255, 0.1) 0px 0px 15px 0px inset;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  border-color: var(--primary-cyan);
+  transform: scale(1.02);
+}
+
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: var(--bg-black);
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out;
+}
+
+.btn-gold:hover {
+  background-color: var(--text-white);
+  transform: scale(1.02);
+}
+
+/* Text highlight boxes */
+.highlight-box {
+  background-color: var(--accent-gold);
+  border-radius: 6px;
+  padding: 8px 16px;
+  display: inline-block;
+  height: 51px;
+  width: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scroll-triggered animation states */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.7s ease-out;
+}
+
+/* Stagger delay utilities */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
