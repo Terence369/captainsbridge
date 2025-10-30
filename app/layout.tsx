@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={`font-sans antialiased`}>
         <MarqueeBanner />
         <SiteHeader />
-        <main className="min-h-[60vh]">{children}</main>
+        <main className="min-h-[60vh] pt-24">{children}</main>
         <SiteFooter />
         <WhatsAppButton />
       </body>
