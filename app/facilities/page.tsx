@@ -27,21 +27,21 @@ export default function FacilitiesPage() {
   }
 
   return (
-    <div style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/8442545/pexels-photo-8442545.jpeg')" }}>
+    <div style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.pexels.com/photos/8442545/pexels-photo-8442545.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
             Facilities
           </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(23, 23, 23)' }}>
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
             Cochin Maritime Academy Facilities
           </h2>
-          <p className="text-base leading-relaxed md:text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+          <p className="text-base leading-relaxed md:text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
             We are enriched with an outstanding faculty team, comprising of high profile and experienced Captains and Chief-Officers who are capable of providing excellent academic training in all our courses.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function FacilitiesPage() {
             <Card
               key={i}
               className="group overflow-hidden border-0 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg"
-              style={{ backgroundColor: 'rgb(15, 16, 16)' }}
+              style={{ backgroundColor: 'rgb(255, 255, 255)' }}
             >
               <div className="h-48 w-full overflow-hidden">
                 <img
@@ -66,7 +66,7 @@ export default function FacilitiesPage() {
                 <h3 className="mb-2 text-lg font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
                   {f.title}
                 </h3>
-                <p className="mb-4 text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                <p className="mb-4 text-sm leading-relaxed" style={{ color: 'rgb(51, 51, 51)' }}>
                   {f.desc}
                 </p>
                 <button 
