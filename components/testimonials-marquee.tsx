@@ -53,7 +53,7 @@ export default function TestimonialsMarquee() {
   const [isPaused, setIsPaused] = useState(false)
 
   return (
-    <div className="w-full overflow-hidden" style={{ background: 'linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0))' }}>
+    <div className="w-full overflow-hidden" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
       <style jsx>{`
         @keyframes marqueeScroll {
           0% {
@@ -94,7 +94,7 @@ export default function TestimonialsMarquee() {
             <div key={idx} className="testimonial-card-wrapper">
               <Card 
                 className="border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full group"
-                style={{ backgroundColor: 'rgb(15, 16, 16)' }}
+                style={{ backgroundColor: 'rgb(245, 243, 239)' }}
               >
                 <CardContent className="p-6 text-center flex flex-col h-full justify-between">
                   <div>
@@ -106,7 +106,7 @@ export default function TestimonialsMarquee() {
                         style={{ borderColor: 'rgb(222, 140, 4)' }}
                       />
                     </div>
-                    <p className="italic mb-4 leading-relaxed text-sm" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                    <p className="italic mb-4 leading-relaxed text-sm text-gray-700">
                       "{testimonial.quote}"
                     </p>
                   </div>
@@ -121,7 +121,7 @@ export default function TestimonialsMarquee() {
                     <h4 className="font-bold text-base uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
                       {testimonial.name}
                     </h4>
-                    <p className="text-xs font-semibold" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+                    <p className="text-xs font-semibold text-gray-600">
                       {testimonial.role}
                     </p>
                   </div>
