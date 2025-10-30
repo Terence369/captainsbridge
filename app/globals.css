@@ -6,16 +6,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Alata&display=swap');
 
 :root {
-  /* Premium Design System Color Palette */
+  /* Light Theme Design System Color Palette */
   --primary-cyan: rgb(0, 152, 183);
   --accent-gold: rgb(222, 140, 4);
-  --bg-dark: rgb(23, 23, 23);
-  --bg-black: rgb(0, 0, 0);
-  --bg-darker: rgb(15, 16, 16);
-  --text-white: rgb(255, 255, 255);
-  --text-white-secondary: rgba(255, 255, 255, 0.8);
-  --text-white-muted: rgba(255, 255, 255, 0.6);
-  --text-white-faint: rgba(255, 255, 255, 0.2);
+  --bg-white: rgb(255, 255, 255);
+  --bg-light: rgb(250, 249, 247);
+  --bg-cream: rgb(245, 243, 239);
+  --text-dark: rgb(51, 51, 51);
+  --text-dark-secondary: rgba(51, 51, 51, 0.8);
+  --text-dark-muted: rgba(51, 51, 51, 0.6);
+  --text-dark-faint: rgba(51, 51, 51, 0.2);
+  --border-light: rgba(0, 0, 0, 0.1);
+  --border-lighter: rgba(0, 0, 0, 0.05);
 
   /* Spacing System */
   --spacing-unit: 80px;
@@ -150,6 +152,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    background-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
   }
 }
 
@@ -273,8 +277,8 @@
 
 /* Hero section styling */
 .hero-section {
-  background-color: var(--bg-black);
-  color: var(--text-white);
+  background-color: var(--bg-white);
+  color: var(--text-dark);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -297,6 +301,7 @@
   text-transform: uppercase;
   letter-spacing: -0.02em;
   line-height: 1;
+  color: var(--text-dark);
 }
 
 .heading-xl {
@@ -321,6 +326,7 @@
   font-family: var(--font-body);
   font-size: 24px;
   line-height: 32px;
+  color: var(--text-dark-secondary);
 }
 
 /* Gold horizontal divider */
@@ -360,7 +366,7 @@
 /* Button base styles */
 .btn-primary {
   background-color: var(--primary-cyan);
-  color: var(--text-white);
+  color: var(--bg-white);
   padding: 12px 32px;
   border-radius: 6px;
   font-weight: 600;
@@ -368,18 +374,19 @@
   text-transform: uppercase;
   transition: all 0.3s ease-out;
   border: 1.6px solid var(--primary-cyan);
-  box-shadow: rgba(89, 220, 255, 0.1) 0px 0px 15px 0px inset;
+  box-shadow: rgba(0, 152, 183, 0.1) 0px 0px 15px 0px inset;
 }
 
 .btn-primary:hover {
   background-color: transparent;
   border-color: var(--primary-cyan);
+  color: var(--primary-cyan);
   transform: scale(1.02);
 }
 
 .btn-gold {
   background-color: var(--accent-gold);
-  color: var(--bg-black);
+  color: var(--bg-white);
   padding: 12px 32px;
   border-radius: 6px;
   font-weight: 600;
@@ -389,7 +396,8 @@
 }
 
 .btn-gold:hover {
-  background-color: var(--text-white);
+  background-color: var(--text-dark);
+  color: var(--bg-white);
   transform: scale(1.02);
 }
 
