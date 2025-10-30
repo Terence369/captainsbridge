@@ -73,18 +73,18 @@ export default function CertificationPage() {
   const next = () => setIndex((i) => (i + 1) % testimonials.length)
 
   return (
-    <div style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg')" }}>
+    <div style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
             Certification
           </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(23, 23, 23)' }}>
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
         <div className="mx-auto mb-10 max-w-4xl text-center">
-          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
             Cochin Maritime Academy We Offer
           </h2>
           <div className="text-base font-semibold md:text-lg" style={{ fontFamily: 'var(--font-display)', color: 'rgb(222, 140, 4)', letterSpacing: '0.8px' }}>
@@ -96,7 +96,7 @@ export default function CertificationPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {offerings.map((o, i) => (
-            <Card key={i} className="overflow-hidden border-0 shadow-md group hover:shadow-lg transition-all" style={{ backgroundColor: 'rgb(15, 16, 16)' }}>
+            <Card key={i} className="overflow-hidden border-0 shadow-md group hover:shadow-lg transition-all" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
               <div className="h-48 w-full overflow-hidden">
                 <img
                   src={o.image}
@@ -110,7 +110,7 @@ export default function CertificationPage() {
                 <h3 className="mb-2 text-lg font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
                   {o.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgb(51, 51, 51)' }}>
                   {o.desc}
                 </p>
               </CardContent>
@@ -119,7 +119,7 @@ export default function CertificationPage() {
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <Card className="border-0 shadow-md overflow-hidden" style={{ backgroundColor: 'rgb(15, 16, 16)' }}>
+          <Card className="border-0 shadow-md overflow-hidden" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
                 Certifications
