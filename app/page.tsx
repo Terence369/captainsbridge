@@ -124,12 +124,9 @@ export default function CochinMaritimeAcademy() {
         <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0} heightClass="min-h-[90vh]">
           <div className="mx-auto max-w-[1320px] px-20 pt-20 pb-[21px] flex flex-col items-start justify-center relative min-h-[90vh]" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
             <div className="max-w-3xl">
-              <h1 className="text-6xl md:text-7xl font-black mb-8 animate-in slide-in-from-bottom duration-800 text-balance leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+              <h1 className="text-6xl md:text-7xl font-black mb-8 animate-in slide-in-from-bottom duration-800 text-balance leading-tight" style={{ color: 'rgba(255, 255, 255, 1)', letterSpacing: '3.6px', textTransform: 'uppercase', font: '900 99px/90px "Bebas Neue", sans-serif' }}>
                 Welcome to Cochin Maritime Academy
               </h1>
-              <p className="text-xl md:text-2xl mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed font-medium" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
-                Located in South India, Kochi is blessed with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the marine sector.
-              </p>
               <div className="flex flex-col sm:flex-row gap-6 animate-in slide-in-from-bottom duration-800 delay-300">
                 <button
                   className="px-10 py-4 text-lg font-bold uppercase transition-all duration-300 border-2 rounded btn-primary"
