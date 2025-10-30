@@ -19,7 +19,7 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white text-gray-800 transition-all duration-300 ease-in-out border-light-color">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-white text-gray-800 transition-all duration-300 ease-in-out border-light-color">
       <div className="container-premium flex h-24 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="group relative z-10 flex items-center gap-3 transition-transform duration-500 ease-in-out hover:scale-110">
