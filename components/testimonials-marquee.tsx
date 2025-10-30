@@ -53,7 +53,7 @@ export default function TestimonialsMarquee() {
   const [isPaused, setIsPaused] = useState(false)
 
   return (
-    <div className="w-full overflow-hidden bg-gradient-to-r from-[#0B2A4A] via-[#0B2A4A]/95 to-[#0B2A4A]">
+    <div className="w-full overflow-hidden" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
       <style jsx>{`
         @keyframes marqueeScroll {
           0% {
@@ -92,30 +92,38 @@ export default function TestimonialsMarquee() {
         <div className="testimonials-marquee-track">
           {testimonials.concat(testimonials).concat(testimonials).map((testimonial, idx) => (
             <div key={idx} className="testimonial-card-wrapper">
-              <Card className="bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full">
+              <Card 
+                className="border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full group"
+                style={{ backgroundColor: 'rgb(245, 243, 239)' }}
+              >
                 <CardContent className="p-6 text-center flex flex-col h-full justify-between">
                   <div>
                     <div className="mb-4">
                       <img
                         src={testimonial.image || "/placeholder.svg"}
                         alt={testimonial.name}
-                        className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-[#D4AF37]"
+                        className="w-20 h-20 rounded-full mx-auto object-cover border-4 transition-all group-hover:border-cyan-500"
+                        style={{ borderColor: 'rgb(222, 140, 4)' }}
                       />
                     </div>
-                    <p className="text-[#5A5A5A] italic mb-4 leading-relaxed text-sm">
+                    <p className="italic mb-4 leading-relaxed text-sm text-gray-700">
                       "{testimonial.quote}"
                     </p>
                   </div>
                   <div>
                     <div className="flex justify-center mb-3">
                       {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-[#D4AF37] text-lg">
+                        <span key={i} className="text-lg" style={{ color: 'rgb(222, 140, 4)' }}>
                           ★
                         </span>
                       ))}
                     </div>
-                    <h4 className="font-bold text-[#0B2A4A] text-base">{testimonial.name}</h4>
-                    <p className="text-[#5A5A5A] text-xs font-semibold">{testimonial.role}</p>
+                    <h4 className="font-bold text-base uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-xs font-semibold text-gray-600">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </CardContent>
               </Card>

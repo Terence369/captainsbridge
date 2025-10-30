@@ -27,19 +27,22 @@ export default function FacilitiesPage() {
   }
 
   return (
-    <div>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/8442545/pexels-photo-8442545.jpeg')" }}>
+    <div style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.pexels.com/photos/8442545/pexels-photo-8442545.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Facilities</h1>
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+            Facilities
+          </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-2xl font-bold text-[#0B2A4A] md:text-3xl">COCHIN MARITIME ACADEMY FACILITIES</h2>
-          <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
-            We are enriched with an outstanding faculty team, comprising of high profile and experienced Captains and
-            Chief-Officers who are capable of providing excellent academic training in all our courses.
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+            Cochin Maritime Academy Facilities
+          </h2>
+          <p className="text-base leading-relaxed md:text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
+            We are enriched with an outstanding faculty team, comprising of high profile and experienced Captains and Chief-Officers who are capable of providing excellent academic training in all our courses.
           </p>
         </div>
 
@@ -48,18 +51,35 @@ export default function FacilitiesPage() {
             <Card
               key={i}
               className="group overflow-hidden border-0 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg"
+              style={{ backgroundColor: 'rgb(255, 255, 255)' }}
             >
               <div className="h-48 w-full overflow-hidden">
                 <img
                   src={f.image}
                   alt={f.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" decoding="async"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="mb-2 text-lg font-semibold text-[#0B2A4A]">{f.title}</h3>
-                <p className="mb-4 text-sm leading-relaxed text-neutral-600">{f.desc}</p>
-                <Button className="bg-[#0B2A4A] text-white hover:bg-[#081E35]" onClick={() => openDetails(f)}>View Detail</Button>
+                <h3 className="mb-2 text-lg font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
+                  {f.title}
+                </h3>
+                <p className="mb-4 text-sm leading-relaxed" style={{ color: 'rgb(51, 51, 51)' }}>
+                  {f.desc}
+                </p>
+                <button 
+                  className="w-full font-semibold py-2 rounded transition-all uppercase"
+                  style={{ 
+                    backgroundColor: 'rgb(0, 152, 183)',
+                    color: 'rgb(255, 255, 255)',
+                    letterSpacing: '0.8px'
+                  }}
+                  onClick={() => openDetails(f)}
+                >
+                  View Detail
+                </button>
               </CardContent>
             </Card>
           ))}
