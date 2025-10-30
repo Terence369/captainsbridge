@@ -7,12 +7,12 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 
 const nav = [
-  { href: "/", label: "Home" },
-  { href: "/courses", label: "Courses" },
-  { href: "/value-added-courses", label: "Value Added Courses" },
-  { href: "/facilities", label: "Facilities" },
-  { href: "/certification", label: "Certification" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "HOME" },
+  { href: "/courses", label: "COURSES" },
+  { href: "/value-added-courses", label: "VALUE ADDED" },
+  { href: "/facilities", label: "FACILITIES" },
+  { href: "/certification", label: "CERTIFICATION" },
+  { href: "/contact", label: "CONTACT" },
 ]
 
 export default function SiteHeader() {
@@ -20,52 +20,96 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0B2A4A] text-white">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20">
-        <Link href="/" className="flex items-center gap-3">
-          <img src="/images/logo.png" alt="Cochin Maritime Academy" className="h-10 w-10 sm:h-12 sm:w-12" />
-          <span className="hidden text-sm font-semibold tracking-wider sm:block">COCHIN MARITIME ACADEMY</span>
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black text-white transition-all duration-300 ease-in-out">
+      <div className="container-premium flex h-24 items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="group relative z-10 flex items-center gap-3 transition-transform duration-500 ease-in-out hover:scale-110">
+          <img 
+            src="/images/logo.png" 
+            alt="Cochin Maritime Academy" 
+            className="h-12 w-12 transition-all duration-300"
+          />
+          <span className="hidden text-xs font-semibold tracking-widest uppercase sm:block font-display" style={{ color: 'rgb(0, 152, 183)' }}>
+            Cochin Maritime
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
-          {nav.map((item) => (
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-8 lg:flex">
+          {nav.map((item, index) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium transition-colors hover:text-[#D4AF37] ${
-                pathname === item.href ? "text-[#D4AF37]" : "text-white"
+              className={`relative text-xs font-medium transition-all duration-200 ease-out uppercase font-body tracking-wider group ${
+                pathname === item.href ? 'text-white' : 'text-white/70 hover:text-white'
               }`}
             >
               {item.label}
+              <span 
+                className={`absolute bottom-0 left-1/2 h-0.5 transition-all duration-300 ease-out transform -translate-x-1/2 ${
+                  pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}
+                style={{ backgroundColor: 'rgb(0, 152, 183)' }}
+              />
             </Link>
           ))}
-          <Link href="/apply">
-            <Button className="bg-[#D4AF37] text-[#0B2A4A] hover:bg-[#B8941F]">Apply Now</Button>
-          </Link>
         </nav>
 
-        <button className="rounded p-2 lg:hidden" aria-label="Toggle Menu" onClick={() => setOpen((s) => !s)}>
-          {open ? <X /> : <Menu />}
+        {/* Apply Button */}
+        <Link href="/apply" className="hidden lg:block">
+          <button
+            className="relative overflow-hidden rounded-lg px-6 py-3 text-xs font-semibold uppercase tracking-widest transition-all duration-300 ease-out border-2 hover:scale-105"
+            style={{
+              borderColor: 'rgb(0, 152, 183)',
+              color: 'rgb(0, 152, 183)',
+            }}
+          >
+            <span className="relative z-10 block">Apply Now</span>
+            <div
+              className="absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-10"
+              style={{ backgroundColor: 'rgb(89, 220, 255)' }}
+            />
+          </button>
+        </Link>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="rounded-lg p-2 transition-all duration-200 lg:hidden hover:bg-white/10" 
+          aria-label="Toggle Menu"
+          onClick={() => setOpen((s) => !s)}
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
+      {/* Mobile Navigation */}
       {open && (
-        <div className="lg:hidden">
-          <nav className="mx-auto grid max-w-7xl gap-2 px-4 pb-4">
+        <div className="border-t border-white/10 bg-black/95 backdrop-blur-sm lg:hidden">
+          <nav className="container-premium grid gap-1 py-4">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={`rounded px-3 py-3 text-sm font-medium hover:bg-white/10 ${
-                  pathname === item.href ? "text-[#D4AF37]" : "text-white"
+                className={`rounded-lg px-4 py-3 text-sm font-medium uppercase tracking-wide transition-all duration-200 ${
+                  pathname === item.href 
+                    ? 'bg-white/10 text-white' 
+                    : 'text-white/70 hover:bg-white/5 hover:text-white'
                 }`}
               >
                 {item.label}
               </Link>
             ))}
-            <Link href="/apply" onClick={() => setOpen(false)}>
-              <Button className="mt-2 w-full bg-[#D4AF37] text-[#0B2A4A] hover:bg-[#B8941F]">Apply Now</Button>
+            <Link href="/apply" onClick={() => setOpen(false)} className="mt-3">
+              <button
+                className="w-full rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-widest transition-all duration-300 hover:scale-105"
+                style={{
+                  backgroundColor: 'rgb(0, 152, 183)',
+                  color: 'white',
+                }}
+              >
+                Apply Now
+              </button>
             </Link>
           </nav>
         </div>
