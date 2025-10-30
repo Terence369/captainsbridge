@@ -13,9 +13,12 @@ const marqueeItems = [
 
 export default function MarqueeBanner() {
   return (
-    <div className="sticky top-0 z-40 w-full overflow-hidden bg-[#D4AF37] h-14">
+    <div 
+      className="sticky top-24 z-40 w-full overflow-hidden h-16 flex items-center border-b border-white/10"
+      style={{ backgroundColor: 'rgb(0, 0, 0)' }}
+    >
       <style jsx>{`
-        @keyframes scroll {
+        @keyframes marquee {
           0% {
             transform: translateX(0);
           }
@@ -26,30 +29,55 @@ export default function MarqueeBanner() {
 
         .marquee-track {
           display: flex;
-          animation: scroll 40s linear infinite;
-          gap: 1.5rem;
+          animation: marquee 50s linear infinite;
+          gap: 2rem;
+          will-change: transform;
+        }
+
+        .marquee-track:hover {
+          animation-play-state: paused;
         }
 
         .marquee-item {
           display: flex;
           align-items: center;
-          gap: 0.5rem;
+          gap: 0.75rem;
           white-space: nowrap;
           flex-shrink: 0;
-          padding: 0 1rem;
+          padding: 0 1.5rem;
           font-weight: 600;
-          font-size: 0.875rem;
-          color: #0b2a4a;
+          font-size: 0.9375rem;
+          font-family: 'Alata', serif;
+          letter-spacing: 0.8px;
+          text-transform: uppercase;
+          color: rgb(255, 255, 255);
+          transition: all 0.3s ease-out;
+        }
+
+        .marquee-item:hover {
+          color: rgb(0, 152, 183);
+          transform: scale(1.05);
+        }
+
+        .marquee-item svg {
+          color: rgb(222, 140, 4);
+          flex-shrink: 0;
+          transition: all 0.3s ease-out;
+        }
+
+        .marquee-item:hover svg {
+          color: rgb(0, 152, 183);
+          transform: rotate(15deg);
         }
       `}</style>
 
-      <div className="flex items-center h-full">
+      <div className="flex items-center h-full w-full">
         <div className="marquee-track">
-          {marqueeItems.concat(marqueeItems).map((item, idx) => {
+          {marqueeItems.concat(marqueeItems).concat(marqueeItems).map((item, idx) => {
             const Icon = item.icon
             return (
               <div key={idx} className="marquee-item">
-                <Icon size={18} />
+                <Icon size={20} />
                 <span>{item.text}</span>
               </div>
             )
