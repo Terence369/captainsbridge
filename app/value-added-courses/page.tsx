@@ -1,34 +1,33 @@
 "use client"
 
-
 export default function ValueAddedCoursesPage() {
   const sections = [
     {
-      title: "OFFSHORE OIL FIELD COURSES",
+      title: "Offshore Oil Field Courses",
       content:
         "Specialized programs aligned with offshore operations including safety, survival, and equipment handling modules based on industry standards.",
       image: "https://images.pexels.com/photos/3192669/pexels-photo-3192669.jpeg",
     },
     {
-      title: "PASSENGER / CRUISE / YACHT COURSES",
+      title: "Passenger / Cruise / Yacht Courses",
       content:
         "Hospitality and onboard service training focused on passenger handling, emergency procedures, and international etiquette. Modules include guest relations, housekeeping, food & beverage service, safety briefings, crowd control, and SOLAS/STCW emergency response with practical drills. Certificates align with STCW and MLC hospitality practices; typical roles include cabin steward, F&B assistant, and guest services on cruise and yacht fleets.",
       image: "https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg",
     },
     {
-      title: "INLAND – NEAR COASTAL – MAIN FLEET COURSES",
+      title: "Inland – Near Coastal – Main Fleet Courses",
       content:
         "Foundational and advanced training for deck and engine departments operating in coastal and main fleet sectors. Topics cover seamanship, watchkeeping, basic navigation, mooring operations, engine room procedures, ISM/ISPS awareness, and bridge resource management with logbook practice. Includes practical chartwork, COLREGs, introductory ECDIS, preventive maintenance routines, and simulator-based assessments with oral evaluations.",
       image: "https://images.pexels.com/photos/13586360/pexels-photo-13586360.jpeg",
     },
     {
-      title: "PROJECT SKILLED",
+      title: "Project Skilled",
       content:
         "Specialized craft courses and upskilling programs for project-based maritime roles with competency-based assessment. Training includes rigging & slinging signals, welding basics, scaffolding safety, electrical LOTO, permit-to-work systems, hazard identification (JSA), and QA/QC documentation. Emphasis on PPE selection, confined space awareness, hot-work controls, and team coordination to deliver safe, on-time project outcomes.",
       image: "https://images.pexels.com/photos/8961066/pexels-photo-8961066.jpeg",
     },
     {
-      title: "MANAGEMENT COURSES",
+      title: "Management Courses",
       content:
         "Leadership, documentation, and compliance training to prepare candidates for supervisory responsibilities. Includes team communication at sea, audit readiness, incident investigation & reporting, risk assessment, voyage planning oversight, performance reviews, and regulatory record-keeping. Covers document control, KPI tracking, budgeting basics, stakeholder communication, and mock external audits to build confidence for Mate/Chief Mate leadership roles.",
       image: "https://images.pexels.com/photos/7647956/pexels-photo-7647956.jpeg",
@@ -36,19 +35,22 @@ export default function ValueAddedCoursesPage() {
   ]
 
   return (
-    <div>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg')" }}>
+    <div style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/33689/ship-boat-lake-garda-italy.jpg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-3xl font-bold text-black md:text-5xl">Value Added Courses</h1>
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+            Value Added Courses
+          </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-subtle">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(23, 23, 23)' }}>
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-2xl font-bold text-[#0B2A4A] md:text-3xl">Course Categories</h2>
-          <p className="mt-3 text-sm leading-relaxed text-neutral-600 md:text-base">
-            Content and layout inspired by the provided page: two-column sections on maritime-themed backgrounds. Each
-            module has a clear overview so nothing is left blank.
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+            Course Categories
+          </h2>
+          <p className="text-base leading-relaxed md:text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+            Content and layout inspired by the provided page: two-column sections on maritime-themed backgrounds. Each module has a clear overview so nothing is left blank.
           </p>
         </div>
 
@@ -56,20 +58,31 @@ export default function ValueAddedCoursesPage() {
           {sections.map((s, i) => (
             <div
               key={i}
-              className="grid items-center gap-6 rounded-lg border bg-white/90 p-6 md:grid-cols-2 bg-ocean-pattern"
+              className="grid items-center gap-6 rounded-lg border p-8 md:grid-cols-2"
+              style={{ backgroundColor: 'rgb(15, 16, 16)', borderColor: 'rgba(255, 255, 255, 0.1)' }}
             >
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-white">{s.title}</h3>
-                <p className="text-sm leading-relaxed text-white">{s.content}</p>
+                <h3 className="mb-4 text-2xl font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
+                  {s.title}
+                </h3>
+                <p className="text-base leading-relaxed" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+                  {s.content}
+                </p>
               </div>
-              <div className="rounded bg-white/90 p-4 shadow">
-                <img src={s.image} alt={`${s.title} details`} className="h-auto w-full rounded" loading="lazy" decoding="async" />
+              <div className="rounded overflow-hidden shadow-lg">
+                <img 
+                  src={s.image} 
+                  alt={`${s.title} details`} 
+                  className="h-auto w-full rounded" 
+                  loading="lazy" 
+                  decoding="async" 
+                />
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center text-sm text-neutral-600">
+        <div className="mt-12 text-center text-base" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
           A complete courses list and downloadable brochure are available on request.
         </div>
       </section>
