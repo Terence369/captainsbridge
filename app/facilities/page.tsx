@@ -2,17 +2,17 @@
 
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
+import ParallaxImage from "@/components/parallax-image"
 
 const facilities = [
-  { title: "SPACIOUS CLASS ROOMS WITH WELL EQUIPPED FURNITURE", desc: "Spacious, well-ventilated and excellently furnished classrooms to make learning comfortable and enjoyable. Individual tables and chairs are provided to students.", image: "https://images.pexels.com/photos/1708912/pexels-photo-1708912.jpeg" },
-  { title: "ADVANCED COMPUTER LAB FACILITY", desc: "State-of-the-art teaching lab supporting a wide range of spatial information system research projects and simulation-based training.", image: "https://images.pexels.com/photos/5530484/pexels-photo-5530484.jpeg" },
-  { title: "FOOD SAFETY AND HACCP TRAINING", desc: "Understanding of management systems approach to food safety and skills required to implement and maintain a Food Safety System.", image: "https://images.pexels.com/photos/7426529/pexels-photo-7426529.jpeg" },
-  { title: "PLACEMENT GUIDELINES", desc: "Unique at-sea placement program where cadets train on various ship types across different marine sectors.", image: "https://images.pexels.com/photos/7647956/pexels-photo-7647956.jpeg" },
-  { title: "ACCREDITATIONS / APPROVALS", desc: "Courses approved by STCW Council with guidance from an advisory board of industry experts and academic leaders.", image: "https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg" },
-  { title: "PARTNERS & SUPPORTING ORGANISATIONS", desc: "Extended knowledge, expertise, and network from supporting partners keep our standards relevant.", image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" },
-  { title: "LABORATORY FACILITY FOR HANDS-ON TRAINING", desc: "First-hand experience with course concepts; opportunity to explore practical methods used by industry specialists.", image: "https://images.pexels.com/photos/19393164/pexels-photo-19393164.jpeg" },
+  { title: "SPACIOUS CLASS ROOMS WITH WELL EQUIPPED FURNITURE", desc: "Spacious, well-ventilated and excellently furnished classrooms to make learning comfortable and enjoyable. Individual tables and chairs are provided to students.", image: "/spacious-maritime-classroom-with-modern-furniture.jpg" },
+  { title: "ADVANCED COMPUTER LAB FACILITY", desc: "State-of-the-art teaching lab supporting a wide range of spatial information system research projects and simulation-based training.", image: "/modern-computer-lab-with-red-chairs-maritime-train.jpg" },
+  { title: "FOOD SAFETY AND HACCP TRAINING", desc: "Understanding of management systems approach to food safety and skills required to implement and maintain a Food Safety System.", image: "/food-safety-training-checklist-maritime.jpg" },
+  { title: "PLACEMENT GUIDELINES", desc: "Unique at-sea placement program where cadets train on various ship types across different marine sectors.", image: "/maritime-cadets-in-white-uniform-training.jpg" },
+  { title: "ACCREDITATIONS / APPROVALS", desc: "Courses approved by STCW Council with guidance from an advisory board of industry experts and academic leaders.", image: "/person-signing-maritime-certification-documents.jpg" },
+  { title: "PARTNERS & SUPPORTING ORGANISATIONS", desc: "Extended knowledge, expertise, and network from supporting partners keep our standards relevant.", image: "/maritime-professionals-discussing-partnership.jpg" },
+  { title: "LABORATORY FACILITY FOR HANDS-ON TRAINING", desc: "First-hand experience with course concepts; opportunity to explore practical methods used by industry specialists.", image: "/lab-hands-on-training.jpg" },
 ]
 
 export default function FacilitiesPage() {
@@ -27,57 +27,39 @@ export default function FacilitiesPage() {
   }
 
   return (
-    <div style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+    <div className="bg-page-white">
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.pexels.com/photos/8442545/pexels-photo-8442545.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-primary-cyan">
             Facilities
           </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-section-cream">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
             Cochin Maritime Academy Facilities
           </h2>
-          <p className="text-base leading-relaxed md:text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
+          <p className="text-base leading-relaxed md:text-lg body-premium">
             We are enriched with an outstanding faculty team, comprising of high profile and experienced Captains and Chief-Officers who are capable of providing excellent academic training in all our courses.
           </p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {facilities.map((f, i) => (
-            <Card
-              key={i}
-              className="group overflow-hidden border-0 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg"
-              style={{ backgroundColor: 'rgb(255, 255, 255)' }}
-            >
+            <Card key={i} className="group overflow-hidden border-0 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
               <div className="h-48 w-full overflow-hidden">
-                <img
-                  src={f.image}
-                  alt={f.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <ParallaxImage src={f.image} alt={f.title} className="h-full w-full" intensity={0.12} zoom={0.06} />
               </div>
               <CardContent className="p-6">
-                <h3 className="mb-2 text-lg font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
+                <h3 className="mb-2 text-lg font-bold uppercase heading-premium text-primary-cyan">
                   {f.title}
                 </h3>
-                <p className="mb-4 text-sm leading-relaxed" style={{ color: 'rgb(51, 51, 51)' }}>
+                <p className="mb-4 text-sm leading-relaxed text-dark-secondary">
                   {f.desc}
                 </p>
-                <button 
-                  className="w-full font-semibold py-2 rounded transition-all uppercase"
-                  style={{ 
-                    backgroundColor: 'rgb(0, 152, 183)',
-                    color: 'rgb(255, 255, 255)',
-                    letterSpacing: '0.8px'
-                  }}
-                  onClick={() => openDetails(f)}
-                >
+                <button className="w-full font-semibold py-2 rounded transition-all uppercase btn-primary" onClick={() => openDetails(f)}>
                   View Detail
                 </button>
               </CardContent>
@@ -85,7 +67,7 @@ export default function FacilitiesPage() {
           ))}
         </div>
       </section>
-      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
+      {/* Dialog handled elsewhere */}
     </div>
   )
 }

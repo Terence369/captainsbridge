@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
+import ParallaxImage from "@/components/parallax-image"
 
 const courses = [
   { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://images.pexels.com/photos/7959357/pexels-photo-7959357.jpeg" },
@@ -46,57 +46,39 @@ export default function CoursesPage() {
   }
 
   return (
-    <div style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+    <div className="bg-page-white">
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.pexels.com/photos/1708912/pexels-photo-1708912.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-primary-cyan">
             Courses
           </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-section-cream">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
             Partners and Supporting Organisation
           </h2>
-          <p className="text-base leading-relaxed md:text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
+          <p className="text-base leading-relaxed md:text-lg body-premium">
             Training modules include offshore, safety, hospitality, and technical specializations across the maritime industry. Explore highlighted programs below.
           </p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {courses.map((course, i) => (
-            <Card
-              key={i}
-              className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg group"
-              style={{ backgroundColor: 'rgb(255, 255, 255)' }}
-            >
+            <Card key={i} className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg group" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
               <div className="h-40 w-full overflow-hidden">
-                <img 
-                  src={course.image} 
-                  alt={course.title} 
-                  className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                  loading="lazy" 
-                  decoding="async" 
-                />
+                <ParallaxImage src={course.image} alt={course.title} className="h-full w-full" intensity={0.12} zoom={0.06} />
               </div>
               <CardContent className="p-5">
-                <h3 className="mb-2 text-base font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
+                <h3 className="mb-2 text-base font-bold uppercase heading-premium text-primary-cyan">
                   {course.title}
                 </h3>
-                <p className="mb-4 text-sm leading-relaxed" style={{ color: 'rgb(51, 51, 51)' }}>
+                <p className="mb-4 text-sm leading-relaxed text-dark-secondary">
                   Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
                 </p>
-                <button 
-                  className="w-full font-semibold py-2 rounded transition-all uppercase"
-                  style={{ 
-                    backgroundColor: 'rgb(0, 152, 183)',
-                    color: 'rgb(255, 255, 255)',
-                    letterSpacing: '0.8px'
-                  }}
-                  onClick={() => openDetails(course)}
-                >
+                <button className="w-full font-semibold py-2 rounded transition-all uppercase btn-primary" onClick={() => openDetails(course)}>
                   View Detail
                 </button>
               </CardContent>
@@ -105,7 +87,7 @@ export default function CoursesPage() {
         </div>
 
         <div className="mx-auto mt-14 max-w-4xl">
-          <h3 className="mb-4 text-center text-xl font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(222, 140, 4)', letterSpacing: '0.8px' }}>
+          <h3 className="mb-4 text-center text-xl font-bold uppercase heading-premium text-accent-gold">
             Short Term Safety Value Added Courses — Regular Courses
           </h3>
           <div className="overflow-x-auto rounded border" style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}>
@@ -119,10 +101,7 @@ export default function CoursesPage() {
               </thead>
               <tbody>
                 {table.map((row, i) => (
-                  <tr 
-                    key={i} 
-                    style={{ backgroundColor: i % 2 ? 'rgb(255, 255, 255)' : 'rgb(245, 243, 239)' }}
-                  >
+                  <tr key={i} style={{ backgroundColor: i % 2 ? 'rgb(255, 255, 255)' : 'rgb(245, 243, 239)' }}>
                     <td className="px-4 py-3">{row[0]}</td>
                     <td className="px-4 py-3">{row[1]}</td>
                     <td className="px-4 py-3">{row[2]}</td>
@@ -133,7 +112,6 @@ export default function CoursesPage() {
           </div>
         </div>
       </section>
-      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
     </div>
   )
 }
