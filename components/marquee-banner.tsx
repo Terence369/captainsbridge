@@ -14,8 +14,8 @@ const marqueeItems = [
 export default function MarqueeBanner() {
   return (
     <div 
-      className="sticky top-24 z-40 w-full overflow-hidden h-16 flex items-center border-b border-white/10"
-      style={{ backgroundColor: 'rgb(0, 0, 0)' }}
+      className="sticky top-24 z-40 w-full overflow-hidden h-16 flex items-center border-b"
+      style={{ backgroundColor: 'rgb(255, 255, 255)', borderColor: 'rgba(0, 0, 0, 0.1)' }}
     >
       <style jsx>{`
         @keyframes marquee {
@@ -50,7 +50,7 @@ export default function MarqueeBanner() {
           font-family: 'Alata', serif;
           letter-spacing: 0.8px;
           text-transform: uppercase;
-          color: rgb(255, 255, 255);
+          color: rgb(51, 51, 51);
           transition: all 0.3s ease-out;
         }
 
