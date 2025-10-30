@@ -20,7 +20,7 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black text-white transition-all duration-300 ease-in-out">
+    <header className="sticky top-0 z-50 w-full border-b bg-white text-gray-800 transition-all duration-300 ease-in-out" style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}>
       <div className="container-premium flex h-24 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="group relative z-10 flex items-center gap-3 transition-transform duration-500 ease-in-out hover:scale-110">
@@ -41,7 +41,7 @@ export default function SiteHeader() {
               key={item.href}
               href={item.href}
               className={`relative text-xs font-medium transition-all duration-200 ease-out uppercase font-body tracking-wider group ${
-                pathname === item.href ? 'text-white' : 'text-white/70 hover:text-white'
+                pathname === item.href ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               {item.label}
@@ -67,14 +67,15 @@ export default function SiteHeader() {
             <span className="relative z-10 block">Apply Now</span>
             <div
               className="absolute inset-0 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-10"
-              style={{ backgroundColor: 'rgb(89, 220, 255)' }}
+              style={{ backgroundColor: 'rgb(0, 152, 183)' }}
             />
           </button>
         </Link>
 
         {/* Mobile Menu Button */}
         <button 
-          className="rounded-lg p-2 transition-all duration-200 lg:hidden hover:bg-white/10" 
+          className="rounded-lg p-2 transition-all duration-200 lg:hidden hover:bg-gray-100"
+          style={{ color: 'rgb(51, 51, 51)' }}
           aria-label="Toggle Menu"
           onClick={() => setOpen((s) => !s)}
         >
@@ -84,7 +85,7 @@ export default function SiteHeader() {
 
       {/* Mobile Navigation */}
       {open && (
-        <div className="border-t border-white/10 bg-black/95 backdrop-blur-sm lg:hidden">
+        <div className="border-t bg-white lg:hidden" style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}>
           <nav className="container-premium grid gap-1 py-4">
             {nav.map((item) => (
               <Link
@@ -93,8 +94,8 @@ export default function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className={`rounded-lg px-4 py-3 text-sm font-medium uppercase tracking-wide transition-all duration-200 ${
                   pathname === item.href 
-                    ? 'bg-white/10 text-white' 
-                    : 'text-white/70 hover:bg-white/5 hover:text-white'
+                    ? 'bg-gray-100 text-gray-900' 
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                 }`}
               >
                 {item.label}
@@ -102,10 +103,9 @@ export default function SiteHeader() {
             ))}
             <Link href="/apply" onClick={() => setOpen(false)} className="mt-3">
               <button
-                className="w-full rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-widest transition-all duration-300 hover:scale-105"
+                className="w-full rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-widest transition-all duration-300 hover:scale-105 text-white"
                 style={{
                   backgroundColor: 'rgb(0, 152, 183)',
-                  color: 'white',
                 }}
               >
                 Apply Now
