@@ -46,21 +46,21 @@ export default function CoursesPage() {
   }
 
   return (
-    <div style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/1708912/pexels-photo-1708912.jpeg')" }}>
+    <div style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.pexels.com/photos/1708912/pexels-photo-1708912.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
             Courses
           </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(23, 23, 23)' }}>
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
             Partners and Supporting Organisation
           </h2>
-          <p className="text-base leading-relaxed md:text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+          <p className="text-base leading-relaxed md:text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
             Training modules include offshore, safety, hospitality, and technical specializations across the maritime industry. Explore highlighted programs below.
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function CoursesPage() {
             <Card
               key={i}
               className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg group"
-              style={{ backgroundColor: 'rgb(15, 16, 16)' }}
+              style={{ backgroundColor: 'rgb(255, 255, 255)' }}
             >
               <div className="h-40 w-full overflow-hidden">
                 <img 
@@ -85,7 +85,7 @@ export default function CoursesPage() {
                 <h3 className="mb-2 text-base font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
                   {course.title}
                 </h3>
-                <p className="mb-4 text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                <p className="mb-4 text-sm leading-relaxed" style={{ color: 'rgb(51, 51, 51)' }}>
                   Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
                 </p>
                 <button 
@@ -108,20 +108,20 @@ export default function CoursesPage() {
           <h3 className="mb-4 text-center text-xl font-bold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(222, 140, 4)', letterSpacing: '0.8px' }}>
             Short Term Safety Value Added Courses — Regular Courses
           </h3>
-          <div className="overflow-x-auto rounded border" style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }}>
-            <table className="min-w-full text-left text-sm" style={{ color: 'rgb(255, 255, 255)' }}>
+          <div className="overflow-x-auto rounded border" style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}>
+            <table className="min-w-full text-left text-sm" style={{ color: 'rgb(51, 51, 51)' }}>
               <thead style={{ backgroundColor: 'rgb(0, 152, 183)' }}>
                 <tr>
-                  <th className="px-4 py-3 font-bold uppercase" style={{ letterSpacing: '0.8px' }}>Code</th>
-                  <th className="px-4 py-3 font-bold uppercase" style={{ letterSpacing: '0.8px' }}>Shipping & Maritime Course</th>
-                  <th className="px-4 py-3 font-bold uppercase" style={{ letterSpacing: '0.8px' }}>Duration</th>
+                  <th className="px-4 py-3 font-bold uppercase text-white" style={{ letterSpacing: '0.8px' }}>Code</th>
+                  <th className="px-4 py-3 font-bold uppercase text-white" style={{ letterSpacing: '0.8px' }}>Shipping & Maritime Course</th>
+                  <th className="px-4 py-3 font-bold uppercase text-white" style={{ letterSpacing: '0.8px' }}>Duration</th>
                 </tr>
               </thead>
               <tbody>
                 {table.map((row, i) => (
                   <tr 
                     key={i} 
-                    style={{ backgroundColor: i % 2 ? 'rgb(15, 16, 16)' : 'rgb(23, 23, 23)' }}
+                    style={{ backgroundColor: i % 2 ? 'rgb(255, 255, 255)' : 'rgb(245, 243, 239)' }}
                   >
                     <td className="px-4 py-3">{row[0]}</td>
                     <td className="px-4 py-3">{row[1]}</td>
