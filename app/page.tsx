@@ -118,16 +118,16 @@ export default function CochinMaritimeAcademy() {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
+    <div className="min-h-screen" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
       {/* Hero Section */}
-      <section id="home" className="relative min-h-[90vh] flex items-center" style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
+      <section id="home" className="relative min-h-[90vh] flex items-center" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.4} heightClass="min-h-[90vh]">
           <div className="mx-auto max-w-[1320px] px-20 pt-20 pb-[21px] flex flex-col items-start justify-center relative min-h-[90vh]" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
             <div className="max-w-3xl">
-              <h1 className="text-6xl md:text-7xl font-black mb-8 animate-in slide-in-from-bottom duration-800 text-balance leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+              <h1 className="text-6xl md:text-7xl font-black mb-8 animate-in slide-in-from-bottom duration-800 text-balance leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                 Welcome to Cochin Maritime Academy
               </h1>
-              <p className="text-xl md:text-2xl mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed font-medium" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+              <p className="text-xl md:text-2xl mb-8 animate-in slide-in-from-bottom duration-800 delay-150 leading-relaxed font-medium" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
                 Located in South India, Kochi is blessed with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the marine sector.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 animate-in slide-in-from-bottom duration-800 delay-300">
@@ -142,9 +142,11 @@ export default function CochinMaritimeAcademy() {
                   onClick={() => scrollToSection("courses")}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = 'transparent'
+                    e.currentTarget.style.color = 'rgb(0, 152, 183)'
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = 'rgb(0, 152, 183)'
+                    e.currentTarget.style.color = 'rgb(255, 255, 255)'
                   }}
                 >
                   Explore Courses
@@ -181,15 +183,15 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24" style={{ backgroundColor: 'rgb(23, 23, 23)' }}>
+      <section id="about" className="py-24" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                 Welcome to Cochin Maritime Academy
               </h2>
               <div className="w-24 h-1 mx-auto mb-8" style={{ backgroundColor: 'rgb(222, 140, 4)' }}></div>
-              <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-medium" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+              <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-medium" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
                 Situated in South India Kochi is blessed with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the marine sector. By catering courses that touch various aspects of marine studies, a candidate can select from a wide range of courses and the few of the best upstage training centers.
               </p>
             </div>
@@ -220,7 +222,7 @@ export default function CochinMaritimeAcademy() {
               },
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden h-full" style={{ backgroundColor: 'rgb(15, 16, 16)' }}>
+                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden h-full" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={item.image || "/placeholder.svg"}
@@ -238,7 +240,7 @@ export default function CochinMaritimeAcademy() {
                     <h3 className="text-xl font-bold mb-3 text-center uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-center" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                    <p className="text-sm leading-relaxed text-center" style={{ color: 'rgb(51, 51, 51)' }}>
                       {item.description}
                     </p>
                     <button
@@ -256,15 +258,15 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Courses Section */}
-      <section id="courses" className="py-24" style={{ backgroundColor: 'rgb(0, 0, 0)' }}>
+      <section id="courses" className="py-24" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                 Cochin Maritime Academy Facilities
               </h2>
               <div className="w-24 h-1 mx-auto mb-8" style={{ backgroundColor: 'rgb(222, 140, 4)' }}></div>
-              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
                 Our offerings are wide-ranging and all-inclusive. We are adept in making available optimal solutions for residential, commercial and industrial verticals.
               </p>
             </div>
@@ -310,7 +312,7 @@ export default function CochinMaritimeAcademy() {
               },
             ].map((course, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden h-full flex flex-col" style={{ backgroundColor: 'rgb(15, 16, 16)' }}>
+                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden h-full flex flex-col" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
                   <div className="relative h-56 overflow-hidden">
                     <img
                       src={course.image || "/placeholder.svg"}
@@ -324,7 +326,7 @@ export default function CochinMaritimeAcademy() {
                     <h3 className="text-lg font-bold mb-3 leading-tight uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
                       {course.title}
                     </h3>
-                    <p className="text-sm leading-relaxed mb-4 flex-grow" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                    <p className="text-sm leading-relaxed mb-4 flex-grow" style={{ color: 'rgb(51, 51, 51)' }}>
                       {course.description}
                     </p>
                     <button 
@@ -346,14 +348,14 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Partners Section */}
-      <section id="partners" className="py-24" style={{backgroundImage: "url('https://media.ktoo.org/wp-content/uploads/2021/09/Eielson-masks.jpg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover", backgroundColor: 'rgba(0, 0, 0, 0.7)', backgroundBlendMode: 'overlay'}}>
+      <section id="partners" className="py-24" style={{backgroundImage: "url('https://media.ktoo.org/wp-content/uploads/2021/09/Eielson-masks.jpg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover", backgroundColor: 'rgba(255, 255, 255, 0.95)', backgroundBlendMode: 'overlay'}}>
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                 Partners and Supporting Organization
               </h2>
-              <p className="text-lg md:text-xl" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.9)' }}>
+              <p className="text-lg md:text-xl" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
                 The Institute for Cochin Maritime Institute strives to increase public understanding of the causes and consequences of marine degradation while also promoting solutions. Through our partnerships, we are working to further conservation of marine life and ocean environments around the world.
               </p>
             </div>
@@ -402,7 +404,7 @@ export default function CochinMaritimeAcademy() {
                   "Get info about online programs in cooking. Read about program requiremen...",
               },
             ].map((card, i) => (
-              <Card key={i} className="border-0 overflow-hidden" style={{ backgroundColor: 'rgb(15, 16, 16)' }}>
+              <Card key={i} className="border-0 overflow-hidden" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
                 <div className="p-6 text-center">
                   <div className="mx-auto mb-4 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(0, 152, 183, 0.2)' }}>
                     <LifeBuoy style={{ color: 'rgb(0, 152, 183)' }} />
@@ -410,7 +412,7 @@ export default function CochinMaritimeAcademy() {
                   <h3 className="text-base font-semibold uppercase" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', letterSpacing: '0.8px' }}>
                     {card.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                  <p className="mt-3 text-sm leading-relaxed" style={{ color: 'rgb(51, 51, 51)' }}>
                     {card.desc}
                   </p>
                 </div>
@@ -483,11 +485,11 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Facilities Highlight */}
-      <section id="facilities" className="py-24" style={{ backgroundColor: 'rgb(23, 23, 23)' }}>
+      <section id="facilities" className="py-24" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                 Director's Message
               </h2>
               <div className="w-24 h-1 mx-auto" style={{ backgroundColor: 'rgb(222, 140, 4)' }}></div>
@@ -507,10 +509,10 @@ export default function CochinMaritimeAcademy() {
                   </div>
                 </div>
                 <div>
-                  <p className="leading-relaxed mb-6 text-justify text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+                  <p className="leading-relaxed mb-6 text-justify text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
                     Cochin Maritime training for merchant navy is a new dimension in the field of job oriented professional courses. Facility here in catering with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the maritime sector. By catering complete courses in accordance with the guidelines of the International Maritime Organization's Standards for Training, Certification and Watchkeeping, International Safety Management Code, and International Ship and Port Facility Security.
                   </p>
-                  <p className="leading-relaxed text-justify text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+                  <p className="leading-relaxed text-justify text-lg" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
                     We further mention that we have the vast experience in training the aspirant candidates in all trades essential for merchant navy career from Cadet & GP Officer.
                   </p>
                 </div>
@@ -521,15 +523,15 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-24" style={{ backgroundColor: 'rgb(0, 152, 183)' }}>
+      <section id="testimonials" className="py-24" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                 Student Testimonials
               </h2>
               <div className="w-24 h-1 mx-auto mb-8" style={{ backgroundColor: 'rgb(222, 140, 4)' }}></div>
-              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.9)' }}>
+              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
                 Hear from our successful alumni who are now sailing the seven seas
               </p>
             </div>
@@ -541,15 +543,15 @@ export default function CochinMaritimeAcademy() {
       <TestimonialsMarquee />
 
       {/* Contact Section */}
-      <section id="contact" className="py-24" style={{ backgroundColor: 'rgb(23, 23, 23)' }}>
+      <section id="contact" className="py-24" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(255, 255, 255)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
+              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight" style={{ fontFamily: 'var(--font-display)', color: 'rgb(0, 152, 183)', textTransform: 'uppercase', letterSpacing: '-0.02em' }}>
                 Get in Touch
               </h2>
               <div className="w-24 h-1 mx-auto mb-8" style={{ backgroundColor: 'rgb(222, 140, 4)' }}></div>
-              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'var(--font-body)', color: 'rgba(255, 255, 255, 0.8)' }}>
+              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'var(--font-body)', color: 'rgb(51, 51, 51)' }}>
                 Have questions? We're here to help you start your maritime career
               </p>
             </div>
@@ -566,7 +568,7 @@ export default function CochinMaritimeAcademy() {
                     <h3 className="font-bold mb-2 uppercase text-lg" style={{ fontFamily: 'var(--font-display)', color: 'rgb(222, 140, 4)', letterSpacing: '0.8px' }}>
                       Address
                     </h3>
-                    <p className="leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                    <p className="leading-relaxed" style={{ color: 'rgb(51, 51, 51)' }}>
                       Aditya Complex, Kochupally road,
                       <br />
                       Next to Anjali Marriage hall,
@@ -584,8 +586,8 @@ export default function CochinMaritimeAcademy() {
                     <h3 className="font-bold mb-2 uppercase text-lg" style={{ fontFamily: 'var(--font-display)', color: 'rgb(222, 140, 4)', letterSpacing: '0.8px' }}>
                       Phone
                     </h3>
-                    <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Call: +91 484 2234500</p>
-                    <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>Mobile: +91 8484545501</p>
+                    <p style={{ color: 'rgb(51, 51, 51)' }}>Call: +91 484 2234500</p>
+                    <p style={{ color: 'rgb(51, 51, 51)' }}>Mobile: +91 8484545501</p>
                   </div>
                 </div>
 
@@ -597,7 +599,7 @@ export default function CochinMaritimeAcademy() {
                     <h3 className="font-bold mb-2 uppercase text-lg" style={{ fontFamily: 'var(--font-display)', color: 'rgb(222, 140, 4)', letterSpacing: '0.8px' }}>
                       Email
                     </h3>
-                    <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>cochinmaritime@gmail.com</p>
+                    <p style={{ color: 'rgb(51, 51, 51)' }}>cochinmaritime@gmail.com</p>
                   </div>
                 </div>
 
@@ -621,14 +623,14 @@ export default function CochinMaritimeAcademy() {
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <Card className="border-0 shadow-lg" style={{ backgroundColor: 'rgb(15, 16, 16)' }}>
+              <Card className="border-0 shadow-lg" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
                 <CardContent className="p-8">
                   <form className="space-y-6">
                     <div>
                       <Input
                         placeholder="Your Name *"
-                        className="border-0 rounded"
-                        style={{ backgroundColor: 'rgb(23, 23, 23)', color: 'rgb(255, 255, 255)' }}
+                        className="border rounded"
+                        style={{ backgroundColor: 'rgb(255, 255, 255)', color: 'rgb(51, 51, 51)', borderColor: 'rgba(0, 0, 0, 0.1)' }}
                         required
                       />
                     </div>
@@ -636,8 +638,8 @@ export default function CochinMaritimeAcademy() {
                       <Input
                         type="email"
                         placeholder="Your Email *"
-                        className="border-0 rounded"
-                        style={{ backgroundColor: 'rgb(23, 23, 23)', color: 'rgb(255, 255, 255)' }}
+                        className="border rounded"
+                        style={{ backgroundColor: 'rgb(255, 255, 255)', color: 'rgb(51, 51, 51)', borderColor: 'rgba(0, 0, 0, 0.1)' }}
                         required
                       />
                     </div>
@@ -645,16 +647,16 @@ export default function CochinMaritimeAcademy() {
                       <Input
                         type="tel"
                         placeholder="Your Phone *"
-                        className="border-0 rounded"
-                        style={{ backgroundColor: 'rgb(23, 23, 23)', color: 'rgb(255, 255, 255)' }}
+                        className="border rounded"
+                        style={{ backgroundColor: 'rgb(255, 255, 255)', color: 'rgb(51, 51, 51)', borderColor: 'rgba(0, 0, 0, 0.1)' }}
                         required
                       />
                     </div>
                     <div>
                       <Select
                         defaultValue=""
-                        className="border-0 rounded"
-                        style={{ backgroundColor: 'rgb(23, 23, 23)', color: 'rgb(255, 255, 255)' }}
+                        className="border rounded"
+                        style={{ backgroundColor: 'rgb(255, 255, 255)', color: 'rgb(51, 51, 51)', borderColor: 'rgba(0, 0, 0, 0.1)' }}
                       >
                         <option value="" disabled>Select a course</option>
                         {courseTitles.map((title) => (
@@ -666,13 +668,13 @@ export default function CochinMaritimeAcademy() {
                       <Textarea
                         placeholder="Your Message"
                         rows={4}
-                        className="border-0 rounded"
-                        style={{ backgroundColor: 'rgb(23, 23, 23)', color: 'rgb(255, 255, 255)' }}
+                        className="border rounded"
+                        style={{ backgroundColor: 'rgb(255, 255, 255)', color: 'rgb(51, 51, 51)', borderColor: 'rgba(0, 0, 0, 0.1)' }}
                       />
                     </div>
                     <button
                       type="submit"
-                      className="w-full font-semibold py-4 rounded transition-all uppercase hover:scale-105"
+                      className="w-full font-semibold py-4 rounded transition-all uppercase"
                       style={{ 
                         backgroundColor: 'rgb(0, 152, 183)',
                         color: 'rgb(255, 255, 255)',
