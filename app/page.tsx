@@ -152,6 +152,11 @@ export default function CochinMaritimeAcademy() {
         </YouTubeHeroBackground>
       </section>
 
+      {/* Reveal Image List (services) */}
+      <section aria-label="our-expertise" className="py-12 bg-page-white">
+        <RevealImageList />
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-24 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
