@@ -3,118 +3,118 @@
 import React, { useState } from "react"
 import { cn } from "@/lib/utils"
 
-type ShowImage = { src: string; alt?: string }
+type ImageSource = { src: string; alt?: string }
 
 type ShowImageListItemProps = {
   text: string
-  images: ShowImage[]
+  images: [ImageSource, ImageSource]
+}
+
+function RevealImageListItem({ text, images }: ShowImageListItemProps) {
+  // container for absolute images near the inline text
+  const container = "absolute -right-20 top-0 z-40 h-20 w-28"
+  const effect =
+    "relative duration-500 delay-100 shadow-none group-hover:shadow-xl opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-16 h-16 overflow-hidden transition-all rounded-md"
+
+  return (
+    <span className="group relative inline-block align-baseline mx-1">
+      <button
+        type="button"
+        className="inline-block text-base font-medium text-foreground transition-all duration-300 group-hover:opacity-40 focus:outline-none"
+        aria-label={text}
+      >
+        {text}
+      </button>
+
+      <span className={container} aria-hidden>
+        <span className={effect}>
+          <img alt={images[1].alt} src={images[1].src} className="h-full w-full object-cover rounded-md" />
+        </span>
+      </span>
+
+      <span
+        className={cn(
+          container,
+          "translate-x-0 translate-y-0 rotate-0 transition-all delay-150 duration-500 group-hover:translate-x-6 group-hover:translate-y-6 group-hover:rotate-6"
+        )}
+        aria-hidden
+      >
+        <span className={cn(effect, "duration-200")}> 
+          <img alt={images[0].alt} src={images[0].src} className="h-full w-full object-cover rounded-md" />
+        </span>
+      </span>
+    </span>
+  )
 }
 
 export function RevealImageList({ className }: { className?: string }) {
+  // Use the site's existing paragraph text split into segments, each mapped to existing site images
+  const paragraph =
+    "Situated in South India, Kochi is blessed with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the marine sector. By catering courses that touch various aspects of marine studies, a candidate can select from a wide range of courses and the few of the best upstage training centers."
+
   const items: ShowImageListItemProps[] = [
     {
-      text: "Premier Maritime Training",
+      text: "Situated in South India, Kochi",
       images: [
-        { src: "/images/home-hero.jpg", alt: "Maritime Training Vessel" },
-        { src: "/images/cards/classroom.svg", alt: "Training Classroom" },
+        { src: "/images/home-hero.jpg", alt: "Kochi coastline" },
+        { src: "/images/cards/offshore.svg", alt: "Offshore" },
       ],
     },
     {
-      text: "Certified Courses",
+      text: "is blessed with a rich coastline, a well-known port",
       images: [
-        { src: "/images/certification-hero.jpg", alt: "Certification Programs" },
-        { src: "/images/courses-hero.jpg", alt: "Marine Engineering Course" },
+        { src: "/images/cards/partners.svg", alt: "Port" },
+        { src: "/images/cards/classroom.svg", alt: "Classroom" },
       ],
     },
     {
-      text: "Career Excellence",
+      text: "and an established maritime environment",
       images: [
-        { src: "/images/value-added-hero.jpg", alt: "Marine Engineer Graduate" },
-        { src: "/images/cards/placement.svg", alt: "Placement Support" },
+        { src: "/images/courses-hero.jpg", alt: "Maritime environment" },
+        { src: "/images/value-added-hero.jpg", alt: "Value added" },
+      ],
+    },
+    {
+      text: "and is notable for its positive side of the marine sector.",
+      images: [
+        { src: "/images/certification-hero.jpg", alt: "Marine sector" },
+        { src: "/images/cards/placement.svg", alt: "Placement" },
+      ],
+    },
+    {
+      text: "By catering courses that touch various aspects of marine studies,",
+      images: [
+        { src: "/images/cards/electrical.svg", alt: "Courses" },
+        { src: "/images/cards/mechanical.svg", alt: "Mechanical" },
+      ],
+    },
+    {
+      text: "a candidate can select from a wide range of courses",
+      images: [
+        { src: "/images/cards/crew.svg", alt: "Crew" },
+        { src: "/images/cards/rigging.svg", alt: "Rigging" },
+      ],
+    },
+    {
+      text: "and the few of the best upstage training centers.",
+      images: [
+        { src: "/images/home-hero.jpg", alt: "Training center" },
+        { src: "/images/cards/laboratory.svg", alt: "Laboratory" },
       ],
     },
   ]
 
-  const [active, setActive] = useState<number | null>(0)
-
   return (
-    <div className={cn("mx-auto my-12 max-w-7xl px-4", className)}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-4">
-          <h3 className="text-3xl md:text-4xl font-black heading-premium text-primary-cyan">Our Expertise</h3>
-          <p className="text-base body-premium text-dark-secondary max-w-xl">
-            Explore our flagship offerings. Hover or focus each item to reveal contextual imagery and quick highlights of our maritime training capabilities.
-          </p>
-
-          <ul className="mt-6 space-y-3">
-            {items.map((it, idx) => (
-              <li key={it.text}>
-                <button
-                  onMouseEnter={() => setActive(idx)}
-                  onFocus={() => setActive(idx)}
-                  onMouseLeave={() => setActive(null)}
-                  onBlur={() => setActive(null)}
-                  className={cn(
-                    "w-full text-left p-4 rounded-lg transition-colors duration-200 border",
-                    active === idx ? "bg-section-light border-cyan" : "bg-white border-lighter-color",
-                  )}
-                >
-                  <span className="block text-lg font-semibold heading-premium text-primary-cyan">
-                    {it.text}
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-lg bg-section-light">
+    <div className={cn("mx-auto max-w-7xl px-4", className)}>
+      <div className="prose prose-lg text-dark-secondary leading-relaxed">
+        <p className="inline">
           {items.map((it, idx) => (
-            <div
-              key={it.text}
-              aria-hidden={active !== idx}
-              className={cn(
-                "absolute inset-0 transition-all duration-700 ease-out flex items-center justify-center",
-                active === idx ? "opacity-100 scale-100 z-20" : "opacity-0 scale-95 z-10 pointer-events-none",
-              )}
-            >
-              <div className="relative w-full h-full">
-                {it.images.map((img, i) => (
-                  <img
-                    key={i}
-                    src={img.src}
-                    alt={img.alt}
-                    className={cn(
-                      "absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out",
-                      i === 0 ? "transform scale-100" : "transform scale-105",
-                    )}
-                    style={{
-                      opacity: active === idx ? (i === 0 ? 1 : 0.95) : 0,
-                      transform: active === idx ? (i === 0 ? "scale(1)" : "scale(1.06)") : undefined,
-                    }}
-                  />
-                ))}
-
-                {/* subtle overlay when active to balance contrast */}
-                <div
-                  className={cn(
-                    "absolute inset-0 transition-opacity duration-500",
-                    active === null ? "opacity-0" : active === idx ? "opacity-0" : "opacity-40",
-                  )}
-                  style={{ background: "linear-gradient(180deg, rgba(255,255,255,0.0), rgba(0,0,0,0.12))" }}
-                />
-              </div>
-            </div>
+            <React.Fragment key={idx}>
+              <RevealImageListItem text={it.text} images={it.images} />
+              {" "}
+            </React.Fragment>
           ))}
-
-          {/* default preview when none active: show first item */}
-          {active === null && (
-            <div className="absolute inset-0">
-              <img src={items[0].images[0].src} alt={items[0].images[0].alt} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-            </div>
-          )}
-        </div>
+        </p>
       </div>
     </div>
   )
