@@ -166,9 +166,6 @@ export default function CochinMaritimeAcademy() {
                 Welcome to Cochin Maritime Academy
               </h2>
               <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
-              <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-medium body-premium">
-                Situated in South India Kochi is blessed with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the marine sector. By catering courses that touch various aspects of marine studies, a candidate can select from a wide range of courses and the few of the best upstage training centers.
-              </p>
             </div>
           </AnimatedSection>
 
