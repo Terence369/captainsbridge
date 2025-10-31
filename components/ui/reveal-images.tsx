@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React from "react"
 import { cn } from "@/lib/utils"
 
 type ImageSource = { src: string; alt?: string }
@@ -11,35 +11,38 @@ type ShowImageListItemProps = {
 }
 
 function RevealImageListItem({ text, images }: ShowImageListItemProps) {
-  // container for absolute images near the inline text
-  const container = "absolute -right-20 top-0 z-40 h-20 w-28"
-  const effect =
-    "relative duration-500 delay-100 shadow-none group-hover:shadow-xl opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-16 h-16 overflow-hidden transition-all rounded-md"
+  // renamed class variables to be descriptive
+  const imageContainerClass = "absolute -right-10 -top-8 z-40 h-28 w-36 md:h-40 md:w-56"
+  const imageEffectClass =
+    "relative duration-500 delay-100 shadow-none group-hover:shadow-2xl opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-20 h-20 overflow-hidden transition-all rounded-md"
 
   return (
-    <span className="group relative inline-block align-baseline mx-1">
+    <span className="reveal-item group relative inline-block align-baseline mx-2">
       <button
         type="button"
-        className="inline-block text-base font-medium text-foreground transition-all duration-300 group-hover:opacity-40 focus:outline-none"
+        className="reveal-trigger inline-block text-2xl md:text-4xl font-extrabold uppercase text-teal-700 tracking-tight leading-none transition-all duration-300 group-hover:opacity-40 focus:outline-none"
         aria-label={text}
       >
         {text}
       </button>
 
-      <span className={container} aria-hidden>
-        <span className={effect}>
+      {/* small yellow square separator similar to reference image */}
+      <span className="reveal-separator inline-block w-3 h-3 bg-yellow-500 ml-2 rounded-sm align-middle" aria-hidden />
+
+      <span className={imageContainerClass} aria-hidden>
+        <span className={imageEffectClass}>
           <img alt={images[1].alt} src={images[1].src} className="h-full w-full object-cover rounded-md" />
         </span>
       </span>
 
       <span
         className={cn(
-          container,
+          imageContainerClass,
           "translate-x-0 translate-y-0 rotate-0 transition-all delay-150 duration-500 group-hover:translate-x-6 group-hover:translate-y-6 group-hover:rotate-6"
         )}
         aria-hidden
       >
-        <span className={cn(effect, "duration-200")}> 
+        <span className={cn(imageEffectClass, "duration-200")}>
           <img alt={images[0].alt} src={images[0].src} className="h-full w-full object-cover rounded-md" />
         </span>
       </span>
@@ -105,13 +108,13 @@ export function RevealImageList({ className }: { className?: string }) {
   ]
 
   return (
-    <div className={cn("mx-auto max-w-7xl px-4", className)}>
-      <div className="prose prose-lg text-dark-secondary leading-relaxed">
-        <p className="inline">
+    <div className={cn("reveal-list-root mx-auto max-w-4xl px-4 py-8 text-center", className)}>
+      <div className="reveal-list-wrapper inline-block">
+        <p className="reveal-paragraph text-center">{/* keep inline-wrapping structure */}
           {items.map((it, idx) => (
             <React.Fragment key={idx}>
               <RevealImageListItem text={it.text} images={it.images} />
-              {" "}
+              {" \u00A0"}
             </React.Fragment>
           ))}
         </p>
