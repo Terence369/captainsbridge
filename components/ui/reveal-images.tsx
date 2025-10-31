@@ -12,7 +12,7 @@ type ShowImageListItemProps = {
 
 function RevealImageListItem({ text, images }: ShowImageListItemProps) {
   // renamed class variables to be descriptive
-  const imageContainerClass = "absolute -right-10 -top-8 z-40 h-28 w-36 md:h-40 md:w-56"
+  const imageContainerClass = "absolute -right-10 -top-8 z-40 h-[160px] w-[224px]"
   const imageEffectClass =
     "relative duration-500 delay-100 shadow-none group-hover:shadow-2xl opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-20 h-20 overflow-hidden transition-all rounded-md"
 
@@ -20,14 +20,14 @@ function RevealImageListItem({ text, images }: ShowImageListItemProps) {
     <span className="reveal-item group relative inline-block align-baseline mx-2">
       <button
         type="button"
-        className="reveal-trigger inline-block text-2xl md:text-4xl font-extrabold uppercase text-teal-700 tracking-tight leading-none transition-all duration-300 group-hover:opacity-40 focus:outline-none"
+        className="reveal-trigger inline-block text-[36px] leading-[36px] tracking-[-0.9px] font-semibold uppercase text-[#0098b7] transition-all duration-300 group-hover:opacity-40 focus:outline-none"
         aria-label={text}
       >
         {text}
       </button>
 
       {/* small yellow square separator similar to reference image */}
-      <span className="reveal-separator inline-block w-3 h-3 bg-yellow-500 ml-2 rounded-sm align-middle" aria-hidden />
+      <span className="reveal-separator inline-block w-3 h-3 bg-[#de8c04] ml-2 rounded-sm align-middle" aria-hidden />
 
       <span className={imageContainerClass} aria-hidden>
         <span className={imageEffectClass}>
