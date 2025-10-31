@@ -84,7 +84,7 @@ export function RevealImageList({ className }: { className?: string }) {
     {
       text: "By catering courses that touch various aspects of marine studies,",
       images: [
-        { src: "/images/cards/electrical.svg", alt: "Courses" },
+        { src: "/images/courses-hero.jpg", alt: "Courses" },
         { src: "/images/cards/mechanical.svg", alt: "Mechanical" },
       ],
     },
