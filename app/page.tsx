@@ -30,6 +30,7 @@ import AnimatedCounter from "@/components/animated-counter"
 import TestimonialsMarquee from "@/components/testimonials-marquee"
 import YouTubeHeroBackground from "@/components/youtube-hero-background"
 import ParallaxImage from "@/components/parallax-image"
+import { RevealImageList } from "@/components/ui/reveal-images"
 
 // Animation hook for scroll-triggered animations
 function useIntersectionObserver(options = {}) {
