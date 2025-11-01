@@ -1,5 +1,6 @@
 "use client"
 
+import React, { useEffect, useRef, useState } from "react"
 import { Ship, Anchor, Compass, Award } from "lucide-react"
 
 const marqueeItems = [
@@ -12,10 +13,39 @@ const marqueeItems = [
 ]
 
 export default function MarqueeBanner() {
+  const [visible, setVisible] = useState(true)
+  const lastY = useRef(0)
+  const ticking = useRef(false)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const delta = y - lastY.current
+          // if scrolling down and beyond threshold, hide
+          if (delta > 10 && y > 50) {
+            setVisible(false)
+          } else if (delta < -10) {
+            // scrolling up, show
+            setVisible(true)
+          }
+          lastY.current = y
+          ticking.current = false
+        })
+        ticking.current = true
+      }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
   return (
-    <div 
-      className="sticky top-24 z-40 w-full overflow-hidden h-16 flex items-center border-b"
-      style={{ backgroundColor: 'rgb(255, 255, 255)', borderColor: 'rgba(0, 0, 0, 0.1)' }}
+    <div
+      className={`sticky top-24 z-40 w-full overflow-hidden h-16 flex items-center border-b transform transition-transform duration-300 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+      style={{ backgroundColor: "rgb(255, 255, 255)", borderColor: "rgba(0, 0, 0, 0.1)" }}
     >
       <style jsx>{`
         @keyframes marquee {
@@ -47,7 +77,7 @@ export default function MarqueeBanner() {
           padding: 0 1.5rem;
           font-weight: 600;
           font-size: 0.9375rem;
-          font-family: 'Alata', serif;
+          font-family: var(--font-body);
           letter-spacing: 0.8px;
           text-transform: uppercase;
           color: rgb(51, 51, 51);
