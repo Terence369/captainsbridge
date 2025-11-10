@@ -502,15 +502,15 @@ export default function CochinMaritimeAcademy() {
       {/* Testimonials */}
       <ParallaxFixedSection
         imageUrl="https://images.pexels.com/photos/8650298/pexels-photo-8650298.jpeg"
-        className="py-24"
+        className="py-32"
       >
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-12">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-white">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-white">
                 Student Testimonials
               </h2>
-              <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
+              <div className="w-16 h-px mx-auto mb-10 divider-gold" />
               <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed body-premium text-white/90">
                 Hear from our successful alumni who are now sailing the seven seas
               </p>
