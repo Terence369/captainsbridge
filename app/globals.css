@@ -26,7 +26,7 @@
 
   /* Typography */
   --font-display: 'Bebas Neue', sans-serif;
-  --font-body: 'Montserrat', sans-serif;
+  --font-body: Georgia, 'Times New Roman', serif;
   
   /* Transitions & Animations */
   --transition-smooth: cubic-bezier(0.2, 1.33, 0.25, 1);
