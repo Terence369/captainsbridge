@@ -32,9 +32,9 @@ const testimonials = [
 export default function CertificationPage() {
   return (
     <div className="bg-page-white">
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url('https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg')" }}>
+      <div className="relative w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F3cbfdedf70df4be68fabc1e93a892a1a)", minHeight: "456.5px", backgroundRepeat: "no-repeat" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-white">
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-white" style={{ marginTop: "59px" }}>
             Certification
           </h1>
         </div>
@@ -86,13 +86,7 @@ export default function CertificationPage() {
                 Students Testimonial
               </h3>
 
-              <div className="relative mb-4 overflow-hidden">
-                <div className="flex animate-[marquee_12s_linear_infinite] gap-6 opacity-80">
-                  {[Ship, Anchor, Compass, LifeBuoy, Anchor, Ship].map((Icon, i) => (
-                    <Icon key={i} className="h-6 w-6 text-white" />
-                  ))}
-                </div>
-              </div>
+              <div className="relative mb-4 overflow-hidden" />
 
               <div className="relative overflow-hidden">
                 <div className="flex w-full">
