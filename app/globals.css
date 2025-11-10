@@ -464,6 +464,38 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
 .delay-400 { transition-delay: 0.4s; }
 
 /* ========================================
+   Academic Minimalist Link Styles
+   ======================================== */
+a {
+  transition: color 0.2s ease-out;
+}
+
+a:focus-visible {
+  outline: 1px solid var(--primary-cyan);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   Form Element Refinements
+   ======================================== */
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: none;
+}
+
+/* ========================================
+   Border Refinements
+   ======================================== */
+.border-light-color {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.border-lighter-color {
+  border-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ========================================
    Light theme utility helpers
    ======================================== */
 .bg-page-white { background-color: var(--bg-white); }
