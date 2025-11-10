@@ -387,37 +387,38 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   background-color: var(--primary-cyan);
   color: var(--bg-white);
   padding: 12px 32px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   transition: all 0.3s ease-out;
-  border: 1.6px solid var(--primary-cyan);
-  box-shadow: rgba(0, 152, 183, 0.1) 0px 0px 15px 0px inset;
+  border: 1px solid var(--primary-cyan);
+  box-shadow: none;
 }
 
 .btn-primary:hover {
   background-color: transparent;
   border-color: var(--primary-cyan);
   color: var(--primary-cyan);
-  transform: scale(1.02);
+  transform: none;
 }
 
 .btn-gold {
   background-color: var(--accent-gold);
   color: var(--bg-white);
   padding: 12px 32px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   transition: all 0.3s ease-out;
+  border: 1px solid var(--accent-gold);
 }
 
 .btn-gold:hover {
   background-color: var(--text-dark);
   color: var(--bg-white);
-  transform: scale(1.02);
+  transform: none;
 }
 
 /* Text highlight boxes */
