@@ -486,3 +486,12 @@ body, p, span, a, li, label, button, input, select, textarea, small, strong, b, 
   background-color: var(--border-light);
   width: 100%;
 }
+
+/* ========================================
+   Parallax utilities
+   ======================================== */
+.parallax-fixed-bg { background-attachment: fixed; }
+.overlay-white-80 { background-color: rgba(255, 255, 255, 0.8); }
+.overlay-white-85 { background-color: rgba(255, 255, 255, 0.85); }
+.overlay-white-90 { background-color: rgba(255, 255, 255, 0.9); }
+.overlay-white-95 { background-color: rgba(255, 255, 255, 0.95); }
