@@ -235,21 +235,21 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Courses Section */}
-      <section id="courses" className="py-24 bg-page-white">
+      <section id="courses" className="py-32 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
                 Cochin Maritime Academy Facilities
               </h2>
-              <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
+              <div className="w-16 h-px mx-auto mb-10 divider-gold" />
               <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium body-premium">
                 Our offerings are wide-ranging and all-inclusive. We are adept in making available optimal solutions for residential, commercial and industrial verticals.
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
               {
                 title: "Spacious Class Rooms With Well Equipped Furniture",
@@ -289,16 +289,16 @@ export default function CochinMaritimeAcademy() {
               },
             ].map((course, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden h-full flex flex-col" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+                <Card className="group hover:shadow-md transition-shadow duration-300 border-0 overflow-hidden h-full flex flex-col card-minimal" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
                   <div className="relative h-56 overflow-hidden">
                     <ParallaxImage src={course.image || "/placeholder.svg"} alt={course.title} className="w-full h-full" intensity={0.12} zoom={0.08} />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-all duration-300"></div>
                   </div>
-                  <CardContent className="p-6 flex-grow flex flex-col">
-                    <h3 className="text-lg font-bold mb-3 leading-tight uppercase heading-premium text-primary-cyan">
+                  <CardContent className="p-8 flex-grow flex flex-col">
+                    <h3 className="text-base font-bold mb-4 leading-tight uppercase heading-premium text-primary-cyan">
                       {course.title}
                     </h3>
-                    <p className="text-sm leading-relaxed mb-4 flex-grow text-dark-secondary">
+                    <p className="text-sm leading-relaxed mb-6 flex-grow text-dark-secondary">
                       {course.description}
                     </p>
                     <button className="w-full font-semibold transition-all py-3 rounded uppercase btn-primary">
