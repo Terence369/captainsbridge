@@ -30,7 +30,7 @@ export default function FacilitiesPage() {
     <div className="bg-page-white">
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url('https://images.pexels.com/photos/8442545/pexels-photo-8442545.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-primary-cyan">
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-white">
             Facilities
           </h1>
         </div>
