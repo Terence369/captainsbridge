@@ -25,18 +25,18 @@ export default function SiteHeader() {
     <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-white text-gray-800 transition-all duration-300 ease-in-out border-light-color">
       <div className="relative flex items-center justify-between" style={{ height: "134px", maxWidth: "1652px", width: "100%", margin: "0 auto", padding: "0 29px 0 80px" }}>
         {/* Left navigation (desktop) */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-10">
           {leftNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`relative text-xs font-medium transition-all duration-200 ease-out uppercase font-body tracking-wider group ${
+              className={`relative text-xs font-medium transition-colors duration-200 ease-out uppercase font-body tracking-wider group ${
                 pathname === item.href ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               {item.label}
               <span
-                className={`absolute bottom-0 left-1/2 h-0.5 transition-all duration-300 ease-out transform -translate-x-1/2 bg-cyan ${
+                className={`absolute bottom-0 left-1/2 h-px transition-all duration-300 ease-out transform -translate-x-1/2 bg-cyan ${
                   pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}
               />
@@ -59,19 +59,19 @@ export default function SiteHeader() {
         </div>
 
         {/* Right navigation and Apply (desktop) */}
-        <div className="hidden lg:flex items-center gap-6">
-          <nav className="flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
+          <nav className="flex items-center gap-10">
             {rightNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative text-xs font-medium transition-all duration-200 ease-out uppercase font-body tracking-wider group ${
+                className={`relative text-xs font-medium transition-colors duration-200 ease-out uppercase font-body tracking-wider group ${
                   pathname === item.href ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {item.label}
                 <span
-                  className={`absolute bottom-0 left-1/2 h-0.5 transition-all duration-300 ease-out transform -translate-x-1/2 bg-cyan ${
+                  className={`absolute bottom-0 left-1/2 h-px transition-all duration-300 ease-out transform -translate-x-1/2 bg-cyan ${
                     pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
                   }`}
                 />
@@ -80,7 +80,7 @@ export default function SiteHeader() {
           </nav>
 
           <Link href="/apply" className="hidden lg:block">
-            <button className="relative overflow-hidden rounded-lg btn-outline-cyan text-xs">
+            <button className="relative overflow-hidden rounded-sm btn-outline-cyan text-xs">
               <span className="relative z-10 block">Apply Now</span>
             </button>
           </Link>
@@ -88,7 +88,7 @@ export default function SiteHeader() {
 
         {/* Mobile Menu Button */}
         <button
-          className="rounded-lg p-2 transition-all duration-200 lg:hidden hover:bg-gray-100 text-dark"
+          className="rounded-md p-2 transition-colors duration-200 lg:hidden hover:bg-gray-100 text-dark"
           aria-label="Toggle Menu"
           onClick={() => setOpen((s) => !s)}
         >
@@ -105,7 +105,7 @@ export default function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={`rounded-lg px-4 py-3 text-sm font-medium uppercase tracking-wide transition-all duration-200 ${
+                className={`rounded-md px-4 py-3 text-sm font-medium uppercase tracking-wide transition-colors duration-200 ${
                   pathname === item.href
                     ? 'bg-gray-100 text-gray-900'
                     : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
@@ -115,7 +115,7 @@ export default function SiteHeader() {
               </Link>
             ))}
             <Link href="/apply" onClick={() => setOpen(false)} className="mt-3">
-              <button className="w-full rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-widest transition-all duration-300 hover:scale-105 text-white bg-cyan">
+              <button className="w-full rounded-md px-4 py-3 text-sm font-semibold uppercase tracking-widest transition-colors duration-300 text-white bg-cyan hover:bg-cyan/90">
                 Apply Now
               </button>
             </Link>
