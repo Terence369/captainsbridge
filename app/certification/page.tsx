@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import ParallaxImage from "@/components/parallax-image"
-import { ChevronLeft, ChevronRight, Anchor, Compass, Ship, LifeBuoy } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const offerings = [
   { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "/maritime-safety.jpg" },
