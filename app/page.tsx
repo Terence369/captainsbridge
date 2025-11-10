@@ -523,9 +523,6 @@ export default function CochinMaritimeAcademy() {
         </div>
       </ParallaxFixedSection>
 
-      {/* Testimonials Marquee - Full Width */}
-      <TestimonialsMarquee />
-
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
