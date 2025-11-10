@@ -77,7 +77,7 @@ export default function CertificationPage() {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-12 grid gap-6 lg:grid-cols-2 border-t pt-12">
           <Card className="border-0 shadow-md overflow-hidden" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
             <CardContent className="p-6">
               <h3 className="mb-4 text-lg font-bold uppercase heading-premium text-primary-cyan">
