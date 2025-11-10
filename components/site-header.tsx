@@ -23,7 +23,7 @@ export default function SiteHeader() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-white text-gray-800 transition-all duration-300 ease-in-out border-light-color">
-      <div className="container-premium relative flex h-24 items-center justify-between">
+      <div className="container-premium relative flex h-32 items-center justify-between">
         {/* Left navigation (desktop) */}
         <nav className="hidden lg:flex items-center gap-8">
           {leftNav.map((item) => (
