@@ -352,11 +352,17 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   font-weight: 400 !important;
 }
 
-/* Gold horizontal divider */
+/* Gold horizontal divider - minimalist academic style */
 .divider-gold {
   height: 1px;
   background-color: var(--accent-gold);
   width: 100%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-out;
+}
+
+.divider-gold:hover {
+  opacity: 1;
 }
 
 /* Cyan border styling */
