@@ -315,12 +315,12 @@ export default function CochinMaritimeAcademy() {
       {/* Partners Section with Fixed-Layer Parallax */}
       <ParallaxFixedSection
         imageUrl="https://images.pexels.com/photos/3435378/pexels-photo-3435378.jpeg"
-        className="py-24"
+        className="py-32"
       >
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-white" style={{ color: "rgba(255, 255, 255, 0.87)" }}>
+            <div className="mx-auto max-w-4xl text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight heading-premium text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
                 Partners and Supporting Organization
               </h2>
               <p className="text-lg md:text-xl body-premium text-white" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
@@ -329,7 +329,7 @@ export default function CochinMaritimeAcademy() {
             </div>
           </AnimatedSection>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 title: "Hydrogen Sulphide Awareness (H2S)",
@@ -372,22 +372,22 @@ export default function CochinMaritimeAcademy() {
                   "Get info about online programs in cooking. Read about program requiremen...",
               },
             ].map((card, i) => (
-              <Card key={i} className="border-0 overflow-hidden" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
-                <div className="p-6 text-center">
-                  <div className="mx-auto mb-4 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(0, 152, 183, 0.2)' }}>
+              <Card key={i} className="border-0 overflow-hidden card-minimal" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+                <div className="p-8 text-center">
+                  <div className="mx-auto mb-6 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(0, 152, 183, 0.12)' }}>
                     <LifeBuoy style={{ color: 'rgb(0, 152, 183)' }} />
                   </div>
                   {card.title === "Rigging and Slinging Safety Level - 2" ? (
-                    <h3 className="text-base font-semibold uppercase heading-premium text-primary-cyan">
+                    <h3 className="text-sm font-semibold uppercase heading-premium text-primary-cyan mb-4">
                       Rigging and Slinging <br />
                       Safety Level - 2
                     </h3>
                   ) : (
-                    <h3 className="text-base font-semibold uppercase heading-premium text-primary-cyan">
+                    <h3 className="text-sm font-semibold uppercase heading-premium text-primary-cyan mb-4">
                       {card.title}
                     </h3>
                   )}
-                  <p className="mt-3 text-sm leading-relaxed text-dark-secondary">
+                  <p className="text-sm leading-relaxed text-dark-secondary">
                     {card.desc}
                   </p>
                 </div>
