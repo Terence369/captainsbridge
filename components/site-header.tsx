@@ -46,13 +46,13 @@ export default function SiteHeader() {
 
         {/* Centered Logo */}
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
-          <Link href="/" className="group relative flex items-center gap-3">
+          <Link href="/" className="group relative flex flex-col items-center">
             <img
               src="/images/logo.png"
               alt="Cochin Maritime Academy"
               className="h-24 w-24 transition-all duration-300"
             />
-            <span className="hidden text-xs font-semibold tracking-widest uppercase sm:block font-display text-primary-cyan">
+            <span className="block text-sm font-semibold tracking-widest uppercase mt-2 font-display text-primary-cyan">
               Cochin Maritime
             </span>
           </Link>
