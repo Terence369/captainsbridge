@@ -4,6 +4,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import ParallaxImage from "@/components/parallax-image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
+const certifications = [
+  { title: "American Board of Education", image: "https://images.pexels.com/photos/7841439/pexels-photo-7841439.jpeg" },
+  { title: "STED Council", image: "https://images.pexels.com/photos/7869139/pexels-photo-7869139.jpeg" },
+  { title: "Cochin Maritime Academy", image: "https://images.pexels.com/photos/31078561/pexels-photo-31078561.jpeg" },
+  { title: "ISO 21001:2018 Certified", image: "https://images.pexels.com/photos/12324202/pexels-photo-12324202.jpeg" },
+]
+
 const offerings = [
   { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "/maritime-safety.jpg" },
   { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "/crew-management.jpg" },
