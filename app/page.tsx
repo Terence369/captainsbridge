@@ -398,7 +398,7 @@ export default function CochinMaritimeAcademy() {
       </ParallaxFixedSection>
 
       {/* Stats Section */}
-      <section id="stats" className="py-24 bg-cyan" style={{ backgroundColor: 'var(--primary-cyan)' }}>
+      <section id="stats" className="py-32 bg-cyan" style={{ backgroundColor: 'var(--primary-cyan)' }}>
         <style jsx>{`
           @keyframes float {
             0%, 100% {
