@@ -315,7 +315,6 @@ export default function CochinMaritimeAcademy() {
       {/* Partners Section with Fixed-Layer Parallax */}
       <ParallaxFixedSection
         imageUrl="https://images.pexels.com/photos/3435378/pexels-photo-3435378.jpeg"
-        overlayClassName="overlay-white-95"
         className="py-24"
       >
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
