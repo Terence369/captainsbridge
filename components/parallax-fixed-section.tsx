@@ -11,7 +11,7 @@ type ParallaxFixedSectionProps = {
 
 export default function ParallaxFixedSection({
   imageUrl,
-  overlayClassName = "overlay-white-90",
+  overlayClassName = "",
   className,
   containerClassName,
   children,
@@ -23,7 +23,7 @@ export default function ParallaxFixedSection({
         style={{ backgroundImage: `url(${imageUrl})` }}
         aria-hidden
       />
-      <div className={cn("absolute inset-0 -z-10", overlayClassName)} aria-hidden />
+      {overlayClassName ? <div className={cn("absolute inset-0 -z-10", overlayClassName)} aria-hidden /> : null}
       <div className={cn("relative z-10", containerClassName)}>{children}</div>
     </section>
   )
