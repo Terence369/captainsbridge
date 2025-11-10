@@ -55,7 +55,7 @@ export default function CoursesPage() {
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-section-cream">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-page-white">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
             Partners and Supporting Organisation
