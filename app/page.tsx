@@ -460,36 +460,36 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Facilities Highlight */}
-      <section id="facilities" className="py-24 bg-page-white">
+      <section id="facilities" className="py-32 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
                 Director's Message
               </h2>
-              <div className="w-24 h-1 mx-auto divider-gold" />
+              <div className="w-16 h-px mx-auto divider-gold" />
             </div>
           </AnimatedSection>
 
           <div className="max-w-5xl mx-auto">
             <AnimatedSection>
-              <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="relative">
-                  <div className="border-4 p-4 rounded-lg border-gold">
-                    <ParallaxImage
+                  <div className="border border-gold p-2 rounded-lg">
+                    <ParallexImage
                       src="https://cdn.builder.io/api/v1/image/assets%2F5467efc660814048b4ece449e1f2e104%2F9b9a033ea00d44ecb3052033f1830fc2"
                       alt="Director's Portrait"
-                      className="w-full rounded-lg shadow-lg"
+                      className="w-full rounded-md shadow-sm"
                       intensity={0.06}
                       zoom={0.03}
                     />
                   </div>
                 </div>
                 <div>
-                  <p className="leading-relaxed mb-6 text-justify text-lg body-premium text-dark-secondary">
+                  <p className="leading-relaxed mb-8 text-justify text-base body-premium text-dark-secondary">
                     Cochin Maritime training for merchant navy is a new dimension in the field of job oriented professional courses. Facility here in catering with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the maritime sector. By catering complete courses in accordance with the guidelines of the International Maritime Organization's Standards for Training, Certification and Watchkeeping, International Safety Management Code, and International Ship and Port Facility Security.
                   </p>
-                  <p className="leading-relaxed text-justify text-lg body-premium text-dark-secondary">
+                  <p className="leading-relaxed text-justify text-base body-premium text-dark-secondary">
                     We further mention that we have the vast experience in training the aspirant candidates in all trades essential for merchant navy career from Cadet & GP Officer.
                   </p>
                 </div>
