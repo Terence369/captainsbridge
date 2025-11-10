@@ -11,7 +11,7 @@ interface YouTubeHeroBackgroundProps {
 export default function YouTubeHeroBackground({
   videoId,
   children,
-  overlayOpacity = 0.1,
+  overlayOpacity = 0,
   height = "screen",
   heightClass,
 }: YouTubeHeroBackgroundProps) {
