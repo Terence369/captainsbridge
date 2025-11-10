@@ -300,14 +300,15 @@
   color: var(--accent-gold);
 }
 
-/* Premium heading with Anton font */
+/* Premium heading with structured hierarchy */
 .heading-premium {
   font-family: var(--font-display);
   text-transform: uppercase;
-  letter-spacing: 0.7px;
-  line-height: 1;
+  letter-spacing: 0.8px;
+  line-height: 1.1;
   color: var(--text-dark);
   font-weight: 700;
+  margin-bottom: 0.5em;
 }
 
 .heading-xl {
