@@ -323,7 +323,7 @@ export default function CochinMaritimeAcademy() {
               <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-white">
                 Partners and Supporting Organization
               </h2>
-              <p className="text-lg md:text-xl body-premium text-white/90">
+              <p className="text-lg md:text-xl body-premium text-white">
                 The Institute for Cochin Maritime Institute strives to increase public understanding of the causes and consequences of marine degradation while also promoting solutions. Through our partnerships, we are working to further conservation of marine life and ocean environments around the world.
               </p>
             </div>
