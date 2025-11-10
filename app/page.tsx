@@ -161,7 +161,6 @@ export default function CochinMaritimeAcademy() {
       {/* Parallax Section Break */}
       <ParallaxFixedSection
         imageUrl="https://images.pexels.com/photos/34664187/pexels-photo-34664187.jpeg"
-        overlayClassName="overlay-white-85"
         className="py-16"
       >
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
