@@ -34,18 +34,6 @@ function RevealImageListItem({ text, images }: ShowImageListItemProps) {
           <img alt={images[1].alt} src={images[1].src} className="h-full w-full object-cover rounded-md" />
         </span>
       </span>
-
-      <span
-        className={cn(
-          imageContainerClass,
-          "translate-x-0 translate-y-0 rotate-0 transition-all delay-150 duration-500 group-hover:translate-x-6 group-hover:translate-y-6 group-hover:rotate-6"
-        )}
-        aria-hidden
-      >
-        <span className={cn(imageEffectClass, "duration-200")}>
-          <img alt={images[0].alt} src={images[0].src} className="h-full w-full object-cover rounded-md" />
-        </span>
-      </span>
     </span>
   )
 }
