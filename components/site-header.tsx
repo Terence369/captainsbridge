@@ -23,7 +23,7 @@ export default function SiteHeader() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-white text-gray-800 transition-all duration-300 ease-in-out border-light-color">
-      <div className="container-premium relative flex h-32 items-center justify-between">
+      <div className="relative flex items-center justify-between" style={{ height: "134px", maxWidth: "1652px", width: "100%", margin: "0 auto", padding: "0 29px 0 80px" }}>
         {/* Left navigation (desktop) */}
         <nav className="hidden lg:flex items-center gap-8">
           {leftNav.map((item) => (
@@ -48,12 +48,12 @@ export default function SiteHeader() {
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
           <Link href="/" className="group relative flex flex-col items-center">
             <img
-              src="/images/logo.png"
+              src="https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fa867cc2fa9c64655859d3f65ac1500c0"
               alt="Cochin Maritime Academy"
               className="h-24 w-24 transition-all duration-300"
             />
-            <span className="block text-sm font-semibold tracking-widest uppercase mt-2 font-display text-primary-cyan">
-              Cochin Maritime
+            <span className="block text-sm font-semibold tracking-widest uppercase font-display text-primary-cyan" style={{ fontWeight: "600" }}>
+              <span style={{ color: "rgb(157, 57, 57)" }}>SNEFF INDIA</span>
             </span>
           </Link>
         </div>

@@ -123,11 +123,11 @@ export default function CochinMaritimeAcademy() {
     <div className="min-h-screen bg-page-white">
       {/* Hero Section (left intact) */}
       <section id="home" className="relative min-h-[90vh] flex items-center bg-page-white">
-        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0} heightClass="min-h-[90vh]">
+        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.2} heightClass="min-h-[90vh]">
           <div className="mx-auto max-w-[1320px] px-20 pt-20 pb-[21px] flex flex-col items-start justify-center relative min-h-[90vh]" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
             <div className="max-w-3xl">
-              <h1 className="text-6xl md:text-7xl font-black mb-8 animate-in slide-in-from-bottom duration-800 text-balance leading-tight" style={{ color: 'rgba(255, 255, 255, 1)', letterSpacing: '3.6px', textTransform: 'uppercase', font: '900 99px/90px "Bebas Neue", sans-serif' }}>
-                Welcome to Cochin Maritime Academy
+              <h1 className="text-6xl md:text-7xl font-black mb-8 animate-in fade-in slide-in-from-bottom duration-1000 text-balance leading-tight" style={{ color: 'rgba(255, 255, 255, 1)', letterSpacing: '3.6px', textTransform: 'uppercase', font: '900 99px/90px "Bebas Neue", sans-serif' }}>
+                Welcome to SNEFF INDIA
               </h1>
               <div className="flex flex-col sm:flex-row gap-6 animate-in slide-in-from-bottom duration-800 delay-300">
                 <button
@@ -320,10 +320,10 @@ export default function CochinMaritimeAcademy() {
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-white">
+              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-white" style={{ color: "rgba(255, 255, 255, 0.87)" }}>
                 Partners and Supporting Organization
               </h2>
-              <p className="text-lg md:text-xl body-premium text-white">
+              <p className="text-lg md:text-xl body-premium text-white" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
                 The Institute for Cochin Maritime Institute strives to increase public understanding of the causes and consequences of marine degradation while also promoting solutions. Through our partnerships, we are working to further conservation of marine life and ocean environments around the world.
               </p>
             </div>

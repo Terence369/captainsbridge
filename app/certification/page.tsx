@@ -2,7 +2,14 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import ParallaxImage from "@/components/parallax-image"
-import { ChevronLeft, ChevronRight, Anchor, Compass, Ship, LifeBuoy } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+
+const certifications = [
+  { title: "American Board of Education", image: "https://images.pexels.com/photos/7841439/pexels-photo-7841439.jpeg" },
+  { title: "STED Council", image: "https://images.pexels.com/photos/7869139/pexels-photo-7869139.jpeg" },
+  { title: "Cochin Maritime Academy", image: "https://images.pexels.com/photos/31078561/pexels-photo-31078561.jpeg" },
+  { title: "ISO 21001:2018 Certified", image: "https://images.pexels.com/photos/12324202/pexels-photo-12324202.jpeg" },
+]
 
 const offerings = [
   { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "/maritime-safety.jpg" },
@@ -32,16 +39,46 @@ const testimonials = [
 export default function CertificationPage() {
   return (
     <div className="bg-page-white">
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url('https://images.pexels.com/photos/7942524/pexels-photo-7942524.jpeg')" }}>
+      <div className="relative w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F3cbfdedf70df4be68fabc1e93a892a1a)", minHeight: "456.5px", backgroundRepeat: "no-repeat" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-white">
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-white" style={{ marginTop: "59px" }}>
             Certification
           </h1>
         </div>
       </div>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-page-white">
-        <div className="mx-auto mb-10 max-w-4xl text-center">
+        {/* Certifications & Accreditations Section */}
+        <div className="mb-16 pb-12 border-b">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-black md:text-4xl mb-2 leading-tight heading-premium text-primary-cyan">
+              Our Certifications & Accreditations
+            </h2>
+            <p className="text-base leading-relaxed md:text-lg body-premium text-dark-secondary">
+              Recognized by leading educational and maritime institutions worldwide
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {certifications.map((cert, i) => (
+              <div key={i} className="flex flex-col items-center justify-center p-6 rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="h-32 w-full mb-4 flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden">
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-center text-sm font-bold uppercase heading-premium text-primary-cyan">
+                  {cert.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Offerings Section */}
+        <div className="mx-auto mb-10 max-w-4xl text-center pt-12">
           <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
             Cochin Maritime Academy We Offer
           </h2>
@@ -86,13 +123,7 @@ export default function CertificationPage() {
                 Students Testimonial
               </h3>
 
-              <div className="relative mb-4 overflow-hidden">
-                <div className="flex animate-[marquee_12s_linear_infinite] gap-6 opacity-80">
-                  {[Ship, Anchor, Compass, LifeBuoy, Anchor, Ship].map((Icon, i) => (
-                    <Icon key={i} className="h-6 w-6 text-white" />
-                  ))}
-                </div>
-              </div>
+              <div className="relative mb-4 overflow-hidden" />
 
               <div className="relative overflow-hidden">
                 <div className="flex w-full">
