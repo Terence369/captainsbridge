@@ -313,8 +313,12 @@ export default function CochinMaritimeAcademy() {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section id="partners" className="py-24" style={{backgroundImage: "url('https://media.ktoo.org/wp-content/uploads/2021/09/Eielson-masks.jpg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover", backgroundColor: 'rgba(255, 255, 255, 0.95)', backgroundBlendMode: 'overlay'}}>
+      {/* Partners Section with Fixed-Layer Parallax */}
+      <ParallaxFixedSection
+        imageUrl="https://images.pexels.com/photos/3435378/pexels-photo-3435378.jpeg"
+        overlayClassName="overlay-white-95"
+        className="py-24"
+      >
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="mx-auto max-w-4xl text-center">
@@ -393,7 +397,7 @@ export default function CochinMaritimeAcademy() {
             ))}
           </div>
         </div>
-      </section>
+      </ParallaxFixedSection>
 
       {/* Stats Section */}
       <section id="stats" className="py-24 bg-cyan" style={{ backgroundColor: 'var(--primary-cyan)' }}>
