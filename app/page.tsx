@@ -320,10 +320,10 @@ export default function CochinMaritimeAcademy() {
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-white">
                 Partners and Supporting Organization
               </h2>
-              <p className="text-lg md:text-xl body-premium text-dark-secondary">
+              <p className="text-lg md:text-xl body-premium text-white/90">
                 The Institute for Cochin Maritime Institute strives to increase public understanding of the causes and consequences of marine degradation while also promoting solutions. Through our partnerships, we are working to further conservation of marine life and ocean environments around the world.
               </p>
             </div>
@@ -459,67 +459,65 @@ export default function CochinMaritimeAcademy() {
         </div>
       </section>
 
-      {/* Facilities Highlight with Fixed-Layer Parallax */}
-      <ParallaxFixedSection
-        imageUrl="https://images.pexels.com/photos/4238750/pexels-photo-4238750.jpeg"
-        className="py-24"
-      >
-        <section id="facilities" className="bg-transparent">
-          <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
-            <AnimatedSection>
-              <div className="text-center mb-16">
-                <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
-                  Director's Message
-                </h2>
-                <div className="w-24 h-1 mx-auto divider-gold" />
-              </div>
-            </AnimatedSection>
-
-            <div className="max-w-5xl mx-auto">
-              <AnimatedSection>
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div className="relative">
-                    <div className="border-4 p-4 rounded-lg border-gold">
-                      <ParallaxImage
-                        src="https://cdn.builder.io/api/v1/image/assets%2F5467efc660814048b4ece449e1f2e104%2F9b9a033ea00d44ecb3052033f1830fc2"
-                        alt="Director's Portrait"
-                        className="w-full rounded-lg shadow-lg"
-                        intensity={0.06}
-                        zoom={0.03}
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <p className="leading-relaxed mb-6 text-justify text-lg body-premium text-dark-secondary">
-                      Cochin Maritime training for merchant navy is a new dimension in the field of job oriented professional courses. Facility here in catering with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the maritime sector. By catering complete courses in accordance with the guidelines of the International Maritime Organization's Standards for Training, Certification and Watchkeeping, International Safety Management Code, and International Ship and Port Facility Security.
-                    </p>
-                    <p className="leading-relaxed text-justify text-lg body-premium text-dark-secondary">
-                      We further mention that we have the vast experience in training the aspirant candidates in all trades essential for merchant navy career from Cadet & GP Officer.
-                    </p>
-                  </div>
-                </div>
-              </AnimatedSection>
-            </div>
-          </div>
-        </section>
-      </ParallaxFixedSection>
-
-      {/* Testimonials */}
-      <section id="testimonials" className="py-24 bg-section-cream">
+      {/* Facilities Highlight */}
+      <section id="facilities" className="py-24 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+                Director's Message
+              </h2>
+              <div className="w-24 h-1 mx-auto divider-gold" />
+            </div>
+          </AnimatedSection>
+
+          <div className="max-w-5xl mx-auto">
+            <AnimatedSection>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="relative">
+                  <div className="border-4 p-4 rounded-lg border-gold">
+                    <ParallaxImage
+                      src="https://cdn.builder.io/api/v1/image/assets%2F5467efc660814048b4ece449e1f2e104%2F9b9a033ea00d44ecb3052033f1830fc2"
+                      alt="Director's Portrait"
+                      className="w-full rounded-lg shadow-lg"
+                      intensity={0.06}
+                      zoom={0.03}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <p className="leading-relaxed mb-6 text-justify text-lg body-premium text-dark-secondary">
+                    Cochin Maritime training for merchant navy is a new dimension in the field of job oriented professional courses. Facility here in catering with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the maritime sector. By catering complete courses in accordance with the guidelines of the International Maritime Organization's Standards for Training, Certification and Watchkeeping, International Safety Management Code, and International Ship and Port Facility Security.
+                  </p>
+                  <p className="leading-relaxed text-justify text-lg body-premium text-dark-secondary">
+                    We further mention that we have the vast experience in training the aspirant candidates in all trades essential for merchant navy career from Cadet & GP Officer.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <ParallaxFixedSection
+        imageUrl="https://images.pexels.com/photos/4238750/pexels-photo-4238750.jpeg"
+        className="py-24"
+      >
+        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-white">
                 Student Testimonials
               </h2>
               <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
-              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed body-premium text-dark-secondary">
+              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed body-premium text-white/90">
                 Hear from our successful alumni who are now sailing the seven seas
               </p>
             </div>
           </AnimatedSection>
         </div>
-      </section>
+      </ParallaxFixedSection>
 
       {/* Testimonials Marquee - Full Width */}
       <TestimonialsMarquee />
