@@ -23,10 +23,10 @@ export default function SiteHeader() {
       <div className="container-premium flex h-24 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="group relative z-10 flex items-center gap-3 transition-transform duration-500 ease-in-out hover:scale-110">
-          <img 
-            src="/images/logo.png" 
-            alt="Cochin Maritime Academy" 
-            className="h-12 w-12 transition-all duration-300"
+          <img
+            src="/images/logo.png"
+            alt="Cochin Maritime Academy"
+            className="h-24 w-24 transition-all duration-300"
           />
           <span className="hidden text-xs font-semibold tracking-widest uppercase sm:block font-display text-primary-cyan">
             Cochin Maritime
