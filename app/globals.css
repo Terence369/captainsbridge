@@ -502,3 +502,40 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
 .overlay-white-85 { background-color: rgba(255, 255, 255, 0.85); }
 .overlay-white-90 { background-color: rgba(255, 255, 255, 0.9); }
 .overlay-white-95 { background-color: rgba(255, 255, 255, 0.95); }
+
+/* ========================================
+   Minimalist Card & Shadow Refinements
+   ======================================== */
+.card-minimal {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.card-minimal:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.section-divider {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  width: 100%;
+  margin: 0;
+}
+
+/* ========================================
+   Improved Spacing & Grid
+   ======================================== */
+.grid-minimal {
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-minimal {
+    gap: 2.5rem;
+  }
+}
+
+/* Refined card spacing */
+.card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
