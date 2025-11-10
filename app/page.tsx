@@ -154,7 +154,7 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Reveal Image List (services) */}
-      <section aria-label="our-expertise" className="py-12 bg-page-white">
+      <section aria-label="our-expertise" className="py-20 bg-page-white border-t border-b border-light-color">
         <RevealImageList />
       </section>
 
