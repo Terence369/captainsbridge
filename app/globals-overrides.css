@@ -1,0 +1,10 @@
+/* Enforce Georgia and non-bold for all non-heading elements site-wide */
+body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-weight: 400 !important;
+}
+
+/* Ensure buttons don't show bold by utility class */
+.button, button, a.button {
+  font-weight: 400 !important;
+}
