@@ -468,17 +468,17 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   background-color: transparent;
   color: var(--primary-cyan);
   padding: 12px 32px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   transition: all 0.3s ease-out;
-  border: 1.6px solid var(--primary-cyan);
+  border: 1px solid var(--primary-cyan);
 }
 .btn-outline-cyan:hover {
   background-color: var(--primary-cyan);
   color: var(--bg-white);
-  transform: scale(1.02);
+  transform: none;
 }
 .icon-circle-cyan {
   background-color: var(--primary-cyan);
