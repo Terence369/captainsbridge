@@ -320,10 +320,10 @@ export default function CochinMaritimeAcademy() {
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-white">
+              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-white" style={{ color: "rgba(255, 255, 255, 0.87)" }}>
                 Partners and Supporting Organization
               </h2>
-              <p className="text-lg md:text-xl body-premium text-white">
+              <p className="text-lg md:text-xl body-premium text-white" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
                 The Institute for Cochin Maritime Institute strives to increase public understanding of the causes and consequences of marine degradation while also promoting solutions. Through our partnerships, we are working to further conservation of marine life and ocean environments around the world.
               </p>
             </div>
