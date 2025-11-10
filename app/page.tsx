@@ -516,54 +516,8 @@ export default function CochinMaritimeAcademy() {
               </p>
             </div>
 
-            <div className="mt-8 grid gap-8 md:grid-cols-3">
-              {/* Card 1 */}
-              <Card className="relative overflow-hidden h-full text-white">
-                <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url(https://images.pexels.com/photos/8650298/pexels-photo-8650298.jpeg)" }} />
-                <div className="absolute inset-0 bg-black/30" />
-                <CardContent className="relative z-10 p-6">
-                  <p className="italic mb-4">"Outstanding faculty and world-class infrastructure. The institute prepared me exceptionally well for my career at sea."</p>
-                  <div className="flex items-center justify-between mt-4">
-                    <div>
-                      <div className="font-bold uppercase">VIKRAM PATEL</div>
-                      <div className="text-sm">First Officer</div>
-                    </div>
-                    <div className="text-accent-gold font-semibold">★ ★ ★ ★ ★</div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Card 2 */}
-              <Card className="relative overflow-hidden h-full text-white">
-                <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url(https://images.pexels.com/photos/8650298/pexels-photo-8650298.jpeg)" }} />
-                <div className="absolute inset-0 bg-black/30" />
-                <CardContent className="relative z-10 p-6">
-                  <p className="italic mb-4">"The hands-on training and mentorship at Cochin Maritime made all the difference in my professional development."</p>
-                  <div className="flex items-center justify-between mt-4">
-                    <div>
-                      <div className="font-bold uppercase">PRIYA DESHMUKH</div>
-                      <div className="text-sm">Chief Engineer</div>
-                    </div>
-                    <div className="text-accent-gold font-semibold">★ ★ ★ ★ ★</div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Card 3 */}
-              <Card className="relative overflow-hidden h-full text-white">
-                <div className="absolute inset-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: "url(https://images.pexels.com/photos/8650298/pexels-photo-8650298.jpeg)" }} />
-                <div className="absolute inset-0 bg-black/30" />
-                <CardContent className="relative z-10 p-6">
-                  <p className="italic mb-4">"Best maritime academy in the region. The courses are comprehensive and the faculty is highly experienced."</p>
-                  <div className="flex items-center justify-between mt-4">
-                    <div>
-                      <div className="font-bold uppercase">ARJUN KUMAR</div>
-                      <div className="text-sm">Deck Officer / Cadet</div>
-                    </div>
-                    <div className="text-accent-gold font-semibold">★ ★ ★ ★ ★</div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="mt-8">
+              <TestimonialsMarquee />
             </div>
           </AnimatedSection>
         </div>
