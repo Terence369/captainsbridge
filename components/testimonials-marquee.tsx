@@ -88,14 +88,13 @@ export default function TestimonialsMarquee() {
         <div className="testimonials-marquee-track w-full" style={isPaused ? { animationPlayState: 'paused' } : undefined}>
           {testimonials.concat(testimonials).concat(testimonials).map((testimonial, idx) => (
             <div key={idx} className="testimonial-card-wrapper px-4">
-              <Card className="relative border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full group overflow-hidden" style={{ backgroundColor: 'transparent' }}>
-                {/* Card background is transparent so parallax parent shows through */}
-                <CardContent className="p-6 text-center flex flex-col h-full justify-between text-white">
+              <Card className="relative border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full group overflow-hidden" style={{ backgroundColor: 'rgba(255,255,255,0.5)' }}>
+                <CardContent className="p-6 text-center flex flex-col h-full justify-between text-dark">
                   <div>
                     <div className="mb-4">
                       <ParallaxImage src={testimonial.image || "/placeholder.svg"} alt={testimonial.name} className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-white/30" intensity={0.08} zoom={0.06} />
                     </div>
-                    <p className="italic mb-4 leading-relaxed text-sm text-white/90">"{testimonial.quote}"</p>
+                    <p className="italic mb-4 leading-relaxed text-sm text-dark-secondary">"{testimonial.quote}"</p>
                   </div>
                   <div>
                     <div className="flex justify-center mb-3">
@@ -103,8 +102,8 @@ export default function TestimonialsMarquee() {
                         <span key={i} className="text-lg text-accent-gold">★</span>
                       ))}
                     </div>
-                    <h4 className="font-bold text-base uppercase heading-premium text-white">{testimonial.name}</h4>
-                    <p className="text-xs font-semibold text-white/80">{testimonial.role}</p>
+                    <h4 className="font-bold text-base uppercase heading-premium text-primary-cyan">{testimonial.name}</h4>
+                    <p className="text-xs font-semibold text-dark-secondary">{testimonial.role}</p>
                   </div>
                 </CardContent>
               </Card>
