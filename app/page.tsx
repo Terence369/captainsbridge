@@ -462,7 +462,6 @@ export default function CochinMaritimeAcademy() {
       {/* Facilities Highlight with Fixed-Layer Parallax */}
       <ParallaxFixedSection
         imageUrl="https://images.pexels.com/photos/4238750/pexels-photo-4238750.jpeg"
-        overlayClassName="overlay-white-90"
         className="py-24"
       >
         <section id="facilities" className="bg-transparent">
