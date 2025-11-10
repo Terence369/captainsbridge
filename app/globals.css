@@ -154,7 +154,11 @@
     font-family: var(--font-body);
     background-color: rgb(255, 255, 255);
     color: rgb(51, 51, 51);
-    font-weight: 600;
+    font-weight: 400;
+  }
+
+  input, textarea, select {
+    font-weight: 400;
   }
 }
 
