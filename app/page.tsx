@@ -523,32 +523,32 @@ export default function CochinMaritimeAcademy() {
       </ParallaxFixedSection>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-page-white">
+      <section id="contact" className="py-32 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
                 Get in Touch
               </h2>
-              <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
+              <div className="w-16 h-px mx-auto mb-10 divider-gold" />
               <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed body-premium text-dark-secondary">
                 Have questions? We're here to help you start your maritime career
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
             <AnimatedSection>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-full bg-cyan">
+                  <div className="p-3 rounded-full bg-cyan flex-shrink-0">
                     <MapPin className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2 uppercase text-lg heading-premium text-accent-gold">
+                    <h3 className="font-bold mb-3 uppercase text-base heading-premium text-accent-gold">
                       Address
                     </h3>
-                    <p className="leading-relaxed text-dark-secondary">
+                    <p className="leading-relaxed text-sm text-dark-secondary">
                       Aditya Complex, Kochupally road,
                       <br />
                       Next to Anjali Marriage hall,
@@ -559,37 +559,37 @@ export default function CochinMaritimeAcademy() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-full bg-cyan">
+                  <div className="p-3 rounded-full bg-cyan flex-shrink-0">
                     <Phone className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2 uppercase text-lg heading-premium text-accent-gold">
+                    <h3 className="font-bold mb-3 uppercase text-base heading-premium text-accent-gold">
                       Phone
                     </h3>
-                    <p className="text-dark-secondary">Call: +91 484 2234500</p>
-                    <p className="text-dark-secondary">Mobile: +91 8484545501</p>
+                    <p className="text-sm text-dark-secondary">Call: +91 484 2234500</p>
+                    <p className="text-sm text-dark-secondary">Mobile: +91 8484545501</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-full bg-cyan">
+                  <div className="p-3 rounded-full bg-cyan flex-shrink-0">
                     <Mail className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2 uppercase text-lg heading-premium text-accent-gold">
+                    <h3 className="font-bold mb-3 uppercase text-base heading-premium text-accent-gold">
                       Email
                     </h3>
-                    <p className="text-dark-secondary">cochinmaritime@gmail.com</p>
+                    <p className="text-sm text-dark-secondary">cochinmaritime@gmail.com</p>
                   </div>
                 </div>
 
-                <div className="pt-6">
-                  <h3 className="font-bold mb-4 uppercase text-lg heading-premium text-accent-gold">
+                <div className="pt-4">
+                  <h3 className="font-bold mb-4 uppercase text-base heading-premium text-accent-gold">
                     Follow Us
                   </h3>
                   <div className="flex space-x-4">
                     {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
-                      <button key={index} className="p-3 rounded-full hover:scale-110 transition-all bg-cyan">
+                      <button key={index} className="p-3 rounded-full hover:bg-cyan/90 transition-colors duration-200 bg-cyan">
                         <Icon className="text-white" size={20} />
                       </button>
                     ))}
@@ -599,20 +599,20 @@ export default function CochinMaritimeAcademy() {
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <Card className="border-0 shadow-lg" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
-                <CardContent className="p-8">
+              <Card className="border border-light-color card-minimal" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
+                <CardContent className="p-10">
                   <form className="space-y-6">
                     <div>
-                      <Input placeholder="Your Name *" className="border rounded bg-white text-gray-800" required />
+                      <Input placeholder="Your Name *" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" required />
                     </div>
                     <div>
-                      <Input type="email" placeholder="Your Email *" className="border rounded bg-white text-gray-800" required />
+                      <Input type="email" placeholder="Your Email *" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" required />
                     </div>
                     <div>
-                      <Input type="tel" placeholder="Your Phone *" className="border rounded bg-white text-gray-800" required />
+                      <Input type="tel" placeholder="Your Phone *" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" required />
                     </div>
                     <div>
-                      <Select defaultValue="" className="border rounded bg-white text-gray-800">
+                      <Select defaultValue="" className="border border-light-color rounded-md bg-white text-gray-800 text-sm">
                         <option value="" disabled>Select a course</option>
                         {courseTitles.map((title) => (
                           <option key={title} value={title}>{title}</option>
@@ -620,7 +620,7 @@ export default function CochinMaritimeAcademy() {
                       </Select>
                     </div>
                     <div>
-                      <Textarea rows={4} placeholder="Your Message" className="border rounded bg-white text-gray-800" />
+                      <Textarea rows={4} placeholder="Your Message" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" />
                     </div>
                     <button type="submit" className="w-full btn-primary">Send Message</button>
                   </form>
