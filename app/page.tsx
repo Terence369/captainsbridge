@@ -515,12 +515,11 @@ export default function CochinMaritimeAcademy() {
                 Hear from our successful alumni who are now sailing the seven seas
               </p>
             </div>
-
-            <div className="mt-8">
-              <TestimonialsMarquee />
-            </div>
           </AnimatedSection>
         </div>
+
+        {/* Full width marquee sits outside the centered container */}
+        <TestimonialsMarquee />
       </ParallaxFixedSection>
 
       {/* Contact Section */}
