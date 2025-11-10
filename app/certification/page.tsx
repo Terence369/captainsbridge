@@ -49,7 +49,7 @@ export default function CertificationPage() {
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-page-white">
         {/* Certifications & Accreditations Section */}
-        <div className="mb-16">
+        <div className="mb-16 pb-12 border-b">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-black md:text-4xl mb-2 leading-tight heading-premium text-primary-cyan">
               Our Certifications & Accreditations
@@ -58,13 +58,13 @@ export default function CertificationPage() {
               Recognized by leading educational and maritime institutions worldwide
             </p>
           </div>
-          
+
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {certifications.map((cert, i) => (
               <div key={i} className="flex flex-col items-center justify-center p-6 rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="h-32 w-full mb-4 flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden">
-                  <img 
-                    src={cert.image} 
+                  <img
+                    src={cert.image}
                     alt={cert.title}
                     className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -78,35 +78,33 @@ export default function CertificationPage() {
         </div>
 
         {/* Offerings Section */}
-        <div className="border-t pt-12">
-          <div className="mx-auto mb-10 max-w-4xl text-center">
-            <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
-              Cochin Maritime Academy We Offer
-            </h2>
-            <div className="text-base font-semibold md:text-lg heading-premium text-accent-gold">
-              Focus: One of a kind in India
-              <br />
-              BSP (Basic Seafarers Package) Course — Approved by NCT New Delhi, Govt of India.
-            </div>
+        <div className="mx-auto mb-10 max-w-4xl text-center pt-12">
+          <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
+            Cochin Maritime Academy We Offer
+          </h2>
+          <div className="text-base font-semibold md:text-lg heading-premium text-accent-gold">
+            Focus: One of a kind in India
+            <br />
+            BSP (Basic Seafarers Package) Course — Approved by NCT New Delhi, Govt of India.
           </div>
+        </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {offerings.map((o, i) => (
-              <Card key={i} className="overflow-hidden border-0 shadow-md group hover:shadow-lg transition-all" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
-                <div className="h-48 w-full overflow-hidden">
-                  <ParallaxImage src={o.image} alt={o.title} className="h-full w-full" intensity={0.12} zoom={0.06} />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="mb-2 text-lg font-bold uppercase heading-premium text-primary-cyan">
-                    {o.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-dark-secondary">
-                    {o.desc}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {offerings.map((o, i) => (
+            <Card key={i} className="overflow-hidden border-0 shadow-md group hover:shadow-lg transition-all" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+              <div className="h-48 w-full overflow-hidden">
+                <ParallaxImage src={o.image} alt={o.title} className="h-full w-full" intensity={0.12} zoom={0.06} />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="mb-2 text-lg font-bold uppercase heading-premium text-primary-cyan">
+                  {o.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-dark-secondary">
+                  {o.desc}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
