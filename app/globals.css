@@ -425,10 +425,10 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   transform: none;
 }
 
-/* Text highlight boxes */
+/* Text highlight boxes - minimalist style */
 .highlight-box {
   background-color: var(--accent-gold);
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 8px 16px;
   display: inline-block;
   height: 51px;
@@ -436,6 +436,7 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 600;
 }
 
 /* Scroll-triggered animation states */
