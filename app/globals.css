@@ -328,12 +328,13 @@
   text-transform: uppercase;
 }
 
-/* Premium body text with Alata */
+/* Premium body text - academic style */
 .body-premium {
   font-family: var(--font-body);
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--text-dark-secondary);
+  font-weight: 400;
 }
 
 /* Global typography overrides */
