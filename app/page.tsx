@@ -171,18 +171,18 @@ export default function CochinMaritimeAcademy() {
       </ParallaxFixedSection>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-page-white">
+      <section id="about" className="py-32 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
                 Welcome to Cochin Maritime Academy
               </h2>
-              <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
+              <div className="w-16 h-px mx-auto divider-gold" />
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="grid md:grid-cols-3 gap-10 mt-20">
             {[
               {
                 icon: Ship,
@@ -207,23 +207,23 @@ export default function CochinMaritimeAcademy() {
               },
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden h-full" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
+                <Card className="group hover:shadow-md transition-shadow duration-300 border-0 overflow-hidden h-full card-minimal" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
                   <div className="relative h-48 overflow-hidden">
                     <ParallaxImage src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-full" intensity={0.12} zoom={0.08} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-6">
-                      <div className="p-4 rounded-full group-hover:scale-110 transition-transform text-white icon-circle-cyan">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center pb-6">
+                      <div className="p-3 rounded-full text-white icon-circle-cyan">
                         <item.icon className="w-8 h-8" />
                       </div>
                     </div>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-3 text-center uppercase heading-premium text-primary-cyan">
+                  <CardContent className="p-8">
+                    <h3 className="text-lg font-bold mb-4 text-center uppercase heading-premium text-primary-cyan">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-center text-dark-secondary">
+                    <p className="text-sm leading-relaxed text-center text-dark-secondary mb-6">
                       {item.description}
                     </p>
-                    <button className="text-sm font-semibold mt-4 mx-auto block transition-all uppercase text-accent-gold">
+                    <button className="text-sm font-semibold mx-auto block transition-colors duration-200 uppercase text-accent-gold hover:text-accent-gold/80">
                       Read More →
                     </button>
                   </CardContent>
