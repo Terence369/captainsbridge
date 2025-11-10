@@ -30,6 +30,7 @@ import AnimatedCounter from "@/components/animated-counter"
 import TestimonialsMarquee from "@/components/testimonials-marquee"
 import YouTubeHeroBackground from "@/components/youtube-hero-background"
 import ParallaxImage from "@/components/parallax-image"
+import ParallaxFixedSection from "@/components/parallax-fixed-section"
 import { RevealImageList } from "@/components/ui/reveal-images"
 
 // Animation hook for scroll-triggered animations
@@ -157,6 +158,18 @@ export default function CochinMaritimeAcademy() {
         <RevealImageList />
       </section>
 
+      {/* Parallax Section Break */}
+      <ParallaxFixedSection
+        imageUrl="https://images.pexels.com/photos/34664187/pexels-photo-34664187.jpeg"
+        className="py-16"
+      >
+        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+          <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-black heading-premium text-primary-cyan">Explore Our Maritime World</h3>
+          </div>
+        </div>
+      </ParallaxFixedSection>
+
       {/* About Section */}
       <section id="about" className="py-24 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
@@ -222,7 +235,7 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Courses Section */}
-      <section id="courses" className="py-24 bg-section-cream">
+      <section id="courses" className="py-24 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -299,15 +312,18 @@ export default function CochinMaritimeAcademy() {
         </div>
       </section>
 
-      {/* Partners Section */}
-      <section id="partners" className="py-24" style={{backgroundImage: "url('https://media.ktoo.org/wp-content/uploads/2021/09/Eielson-masks.jpg')", backgroundRepeat: "no-repeat", backgroundPosition: "center", backgroundSize: "cover", backgroundColor: 'rgba(255, 255, 255, 0.95)', backgroundBlendMode: 'overlay'}}>
+      {/* Partners Section with Fixed-Layer Parallax */}
+      <ParallaxFixedSection
+        imageUrl="https://images.pexels.com/photos/3435378/pexels-photo-3435378.jpeg"
+        className="py-24"
+      >
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-white">
                 Partners and Supporting Organization
               </h2>
-              <p className="text-lg md:text-xl body-premium text-dark-secondary">
+              <p className="text-lg md:text-xl body-premium text-white">
                 The Institute for Cochin Maritime Institute strives to increase public understanding of the causes and consequences of marine degradation while also promoting solutions. Through our partnerships, we are working to further conservation of marine life and ocean environments around the world.
               </p>
             </div>
@@ -379,7 +395,7 @@ export default function CochinMaritimeAcademy() {
             ))}
           </div>
         </div>
-      </section>
+      </ParallaxFixedSection>
 
       {/* Stats Section */}
       <section id="stats" className="py-24 bg-cyan" style={{ backgroundColor: 'var(--primary-cyan)' }}>
@@ -484,24 +500,27 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-24 bg-section-cream">
+      <ParallaxFixedSection
+        imageUrl="https://images.pexels.com/photos/8650298/pexels-photo-8650298.jpeg"
+        className="py-24"
+      >
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+            <div className="text-center mb-12">
+              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-white">
                 Student Testimonials
               </h2>
               <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
-              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed body-premium text-dark-secondary">
+              <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed body-premium text-white/90">
                 Hear from our successful alumni who are now sailing the seven seas
               </p>
             </div>
           </AnimatedSection>
         </div>
-      </section>
 
-      {/* Testimonials Marquee - Full Width */}
-      <TestimonialsMarquee />
+        {/* Full width marquee sits outside the centered container */}
+        <TestimonialsMarquee />
+      </ParallaxFixedSection>
 
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-page-white">

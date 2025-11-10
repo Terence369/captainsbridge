@@ -54,7 +54,7 @@ export default function TestimonialsMarquee() {
   const [isPaused, setIsPaused] = useState(false)
 
   return (
-    <div className="w-full overflow-hidden bg-page-white">
+    <div className="w-full overflow-hidden">
       <style jsx>{`
         @keyframes marqueeScroll {
           0% {
@@ -84,17 +84,17 @@ export default function TestimonialsMarquee() {
         }
       `}</style>
 
-      <div className="flex items-center px-4" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
-        <div className="testimonials-marquee-track" style={isPaused ? { animationPlayState: 'paused' } : undefined}>
+      <div className="flex items-center px-0" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+        <div className="testimonials-marquee-track w-full" style={isPaused ? { animationPlayState: 'paused' } : undefined}>
           {testimonials.concat(testimonials).concat(testimonials).map((testimonial, idx) => (
-            <div key={idx} className="testimonial-card-wrapper">
-              <Card className="border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full group" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
-                <CardContent className="p-6 text-center flex flex-col h-full justify-between">
+            <div key={idx} className="testimonial-card-wrapper px-4">
+              <Card className="relative border-0 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 h-full group overflow-hidden" style={{ backgroundColor: 'rgba(255,255,255,0.5)' }}>
+                <CardContent className="p-6 text-center flex flex-col h-full justify-between text-dark">
                   <div>
                     <div className="mb-4">
-                      <ParallaxImage src={testimonial.image || "/placeholder.svg"} alt={testimonial.name} className="w-20 h-20 rounded-full mx-auto object-cover border-4" intensity={0.08} zoom={0.06} />
+                      <ParallaxImage src={testimonial.image || "/placeholder.svg"} alt={testimonial.name} className="w-20 h-20 rounded-full mx-auto object-cover border-4 border-white/30" intensity={0.08} zoom={0.06} />
                     </div>
-                    <p className="italic mb-4 leading-relaxed text-sm text-gray-700">"{testimonial.quote}"</p>
+                    <p className="italic mb-4 leading-relaxed text-sm text-dark-secondary">"{testimonial.quote}"</p>
                   </div>
                   <div>
                     <div className="flex justify-center mb-3">
@@ -103,7 +103,7 @@ export default function TestimonialsMarquee() {
                       ))}
                     </div>
                     <h4 className="font-bold text-base uppercase heading-premium text-primary-cyan">{testimonial.name}</h4>
-                    <p className="text-xs font-semibold text-gray-600">{testimonial.role}</p>
+                    <p className="text-xs font-semibold text-dark-secondary">{testimonial.role}</p>
                   </div>
                 </CardContent>
               </Card>

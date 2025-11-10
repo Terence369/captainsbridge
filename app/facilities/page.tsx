@@ -30,13 +30,13 @@ export default function FacilitiesPage() {
     <div className="bg-page-white">
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url('https://images.pexels.com/photos/8442545/pexels-photo-8442545.jpeg')" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-primary-cyan">
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-white">
             Facilities
           </h1>
         </div>
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-section-cream">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-page-white">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
             Cochin Maritime Academy Facilities

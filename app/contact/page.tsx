@@ -16,13 +16,13 @@ function ContactClient() {
     <div className="bg-page-white">
       <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url('https://images.pexels.com/photos/7634228/pexels-photo-7634228.jpeg')" }}>
         <div className="h-[220px] w-full md:h-[300px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-primary-cyan">
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-white">
             Contact
           </h1>
         </div>
       </div>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-2 md:py-16 bg-section-cream">
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-2 md:py-16 bg-page-white">
         <div>
           <h2 className="mb-4 text-2xl font-bold uppercase heading-premium text-primary-cyan">
             Get in touch
