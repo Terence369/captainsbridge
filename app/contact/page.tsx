@@ -14,9 +14,9 @@ function ContactClient() {
 
   return (
     <div className="bg-page-white">
-      <div className="relative min-h-[50vh] w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url('https://images.pexels.com/photos/7634228/pexels-photo-7634228.jpeg')" }}>
+      <div className="relative w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fe6f9fecb33324b9385aee778eafbc325)", minHeight: "566px", backgroundRepeat: "no-repeat" }}>
         <div className="h-[220px] w-full md:h-[300px] grid place-items-center relative z-10">
-          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium text-white">
+          <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium" style={{ color: "rgba(74, 74, 74, 1)" }}>
             Contact
           </h1>
         </div>
