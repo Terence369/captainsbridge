@@ -22,7 +22,7 @@ function ContactClient() {
         </div>
       </div>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-2 md:py-16 bg-section-cream">
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-2 md:py-16 bg-page-white">
         <div>
           <h2 className="mb-4 text-2xl font-bold uppercase heading-premium text-primary-cyan">
             Get in touch
