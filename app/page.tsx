@@ -149,7 +149,7 @@ export default function CochinMaritimeAcademy() {
           <div className="mx-auto max-w-[1320px] px-20 pt-20 pb-[21px] flex flex-col items-start justify-center relative min-h-[90vh]" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
             <div className="max-w-3xl">
               <h1 className="text-6xl md:text-7xl font-black mb-12 animate-in fade-in slide-in-from-bottom duration-1000 text-balance leading-tight" style={{ color: 'rgba(255, 255, 255, 1)', letterSpacing: '3.6px', textTransform: 'uppercase', font: '900 99px/90px "Bebas Neue", sans-serif' }}>
-                Welcome to SNEFF INDIA
+                Welcome to SNEF INDIA
               </h1>
               <div className="flex flex-col sm:flex-row gap-8 animate-in slide-in-from-bottom duration-800 delay-300">
                 <button
