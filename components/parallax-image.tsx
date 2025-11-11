@@ -33,11 +33,23 @@ export default function ParallaxImage({
       // normalized -1..1
       const norm = Math.max(-1, Math.min(1, distance / (vh / 2)))
 
-      const translateY = -norm * intensity * 100 // percent
-      const scale = 1 + (Math.abs(norm) * zoom)
+      // Reduce parallax effect on small screens to avoid overflow and layout shifts
+      const isSmall = window.innerWidth <= 640
+      const effIntensity = isSmall ? intensity * 0.35 : intensity
+      const effZoom = isSmall ? zoom * 0.35 : zoom
+
+      // cap translate to reasonable pixel values
+      const maxTranslate = 40 // px
+      const translateY = Math.max(-maxTranslate, Math.min(maxTranslate, -norm * effIntensity * 100))
+
+      // cap scale to avoid large zooms
+      const maxScale = 1 + effZoom
+      const scale = Math.min(maxScale, 1 + (Math.abs(norm) * effZoom))
 
       if (imgRef.current) {
+        imgRef.current.style.willChange = 'transform'
         imgRef.current.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`
+        imgRef.current.style.transformOrigin = 'center center'
       }
     }
 
