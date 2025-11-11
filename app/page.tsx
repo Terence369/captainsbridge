@@ -397,8 +397,11 @@ export default function CochinMaritimeAcademy() {
         </div>
       </ParallaxFixedSection>
 
-      {/* Stats Section */}
-      <section id="stats" className="py-32 bg-cyan" style={{ backgroundColor: 'var(--primary-cyan)' }}>
+      {/* Stats Section with Glass Morphism */}
+      <section id="stats" className="py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-cyan)' }}>
+        {/* Glass morphism overlay */}
+        <div className="absolute inset-0 backdrop-blur-sm" style={{ backgroundColor: 'rgba(0, 152, 183, 0.25)' }} aria-hidden />
+
         <style jsx>{`
           @keyframes float {
             0%, 100% {
@@ -432,8 +435,23 @@ export default function CochinMaritimeAcademy() {
           .icon-badge {
             animation: subtle-hop 2.5s ease-in-out infinite;
           }
+          .glass-stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 24px 16px;
+            transition: all 0.3s ease-out;
+          }
+          .glass-stat-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          }
         `}</style>
-        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+
+        <div className="container mx-auto px-4 relative z-10" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { icon: GraduationCap, number: "5000+", label: "Students Trained" },
@@ -442,7 +460,7 @@ export default function CochinMaritimeAcademy() {
               { icon: Users, number: "100%", label: "Placement Support" },
             ].map((stat, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <div className="text-center group hover:scale-105 transition-transform">
+                <div className="glass-stat-card text-center group">
                   <div className="icon-badge bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-colors">
                     <stat.icon className="w-10 h-10 icon-animate" style={{ color: 'rgb(255, 255, 255)' }} />
                   </div>
