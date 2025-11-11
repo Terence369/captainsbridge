@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
+import * as Dialog from "@radix-ui/react-dialog"
 import {
   Phone,
   Mail,
@@ -19,6 +20,7 @@ import {
   Anchor,
   Compass,
   LifeBuoy,
+  X,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
