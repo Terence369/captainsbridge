@@ -86,7 +86,7 @@ export default function CochinMaritimeAcademy() {
   const [dialogOpen, setDialogOpen] = useState(false)
   const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
   const [courseModalOpen, setCourseModalOpen] = useState(false)
-  const [selectedCourse, setSelectedCourse] = useState<{ title: string; description: string } | null>(null)
+  const [selectedCourse, setSelectedCourse] = useState<{ title: string; description: string; image?: string | null } | null>(null)
 
   const courseDescriptions = {
     "Hydrogen Sulphide Awareness (H2S)": "Hydrogen Sulphide (H2S) is a highly toxic and flammable gas. Each year in Canada, workers are injured and killed by exposure to H2S. H2S Awareness explains the properties of H2S, identifies control measures and provides a practical description of what to do in the event of exposure. The risk of H2S exposure exists in many industries, including, but not limited to oil and gas, pulp and paper, construction, and mining. In workplaces where the possibility of H2S exposure exists, ALL workers should have H2S Awareness training. Workers who are at risk of exposure to H2S and/or workers with rescue responsibilities also require H2S Alive and workplace-specific training.",
@@ -396,41 +396,49 @@ export default function CochinMaritimeAcademy() {
                 title: "Hydrogen Sulphide Awareness (H2S)",
                 desc:
                   "Hydrogen Sulphide (H2S) is a highly toxic and flammable gas. Each year in...",
+                image: "/images/value-added-hero.jpg",
               },
               {
                 title: "Helicopter Under‑Water Escape Training (HUET)",
                 desc:
                   "This course aims to train personnel intended to work offshore, using the hel...",
+                image: "/images/courses-hero.jpg",
               },
               {
                 title: "Basic Offshore Safety & Emergency Training (BOISET)",
                 desc:
                   "The course is designed for personnel intending to ...",
+                image: "/images/certification-hero.jpg",
               },
               {
                 title: "Rigging and Slinging Safety Level - 2",
                 desc:
                   "Rigger Level 2 training provides the knowledge and skills necessary for a p...",
+                image: "/maritime-training-session.jpg",
               },
               {
                 title: "Lifting and Hoisting Safety",
                 desc:
                   "The course provides vital information for those assisting or working around...",
+                image: "/large-container-ship-at-sea-with-sunset.jpg",
               },
               {
                 title: "Crane Operators Theory (On Demand Practical)",
                 desc:
                   "Our Crane Operator Training Program will train your operators on the site...",
+                image: "/maritime-engineer-officer-portrait.jpg",
               },
               {
                 title: "Cookery Course With HACCP",
                 desc:
                   "On completion of this food safety training course, participants will be abl...",
+                image: "/food-safety-training-checklist-maritime.jpg",
               },
               {
                 title: "Basic Cooking Course Certification",
                 desc:
                   "Get info about online programs in cooking. Read about program requiremen...",
+                image: "/professional-maritime-officer-portrait.jpg",
               },
             ].map((card, i) => (
               <button
@@ -439,6 +447,7 @@ export default function CochinMaritimeAcademy() {
                   setSelectedCourse({
                     title: card.title,
                     description: courseDescriptions[card.title as keyof typeof courseDescriptions] || card.desc,
+                    image: (card as any).image || null,
                   })
                   setCourseModalOpen(true)
                 }}
@@ -752,7 +761,15 @@ export default function CochinMaritimeAcademy() {
                   </Dialog.Close>
                 </div>
                 <div className="w-full h-px bg-accent-gold mb-6" />
-                <div className="prose prose-sm max-w-none">
+
+                {selectedCourse.image ? (
+                  <div className="mt-2 overflow-hidden rounded-lg">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={selectedCourse.image} alt={selectedCourse.title} className="w-full h-auto max-h-[50vh] object-contain" loading="lazy" decoding="async" />
+                  </div>
+                ) : null}
+
+                <div className="prose prose-sm max-w-none mt-4">
                   <p className="text-sm md:text-base leading-relaxed text-gray-700 whitespace-pre-line">
                     {selectedCourse.description}
                   </p>
