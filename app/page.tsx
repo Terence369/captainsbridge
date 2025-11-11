@@ -330,17 +330,20 @@ export default function CochinMaritimeAcademy() {
           </AnimatedSection>
 
           <style jsx>{`
-            .glass-card {
-              background: rgba(255, 255, 255, 0.05) !important;
-              backdrop-filter: blur(10px);
-              -webkit-backdrop-filter: blur(10px);
-              border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            .glass-card-wrapper {
+              background: rgba(0, 0, 0, 0.15) !important;
+              backdrop-filter: blur(15px);
+              -webkit-backdrop-filter: blur(15px);
+              border: 1px solid rgba(255, 255, 255, 0.15) !important;
+              border-radius: 8px;
               transition: all 0.3s ease-out;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
             }
-            .glass-card:hover {
-              background: rgba(255, 255, 255, 0.08) !important;
-              border-color: rgba(255, 255, 255, 0.2) !important;
-              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            .glass-card-wrapper:hover {
+              background: rgba(0, 0, 0, 0.25) !important;
+              border-color: rgba(255, 255, 255, 0.25) !important;
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+              transform: translateY(-4px);
             }
           `}</style>
 
@@ -387,10 +390,10 @@ export default function CochinMaritimeAcademy() {
                   "Get info about online programs in cooking. Read about program requiremen...",
               },
             ].map((card, i) => (
-              <Card key={i} className="border-0 overflow-hidden card-minimal glass-card">
+              <div key={i} className="glass-card-wrapper">
                 <div className="p-8 text-center">
-                  <div className="mx-auto mb-6 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)' }}>
-                    <LifeBuoy style={{ color: 'rgb(255, 255, 255)' }} />
+                  <div className="mx-auto mb-6 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(255, 255, 255, 0.12)' }}>
+                    <LifeBuoy style={{ color: 'rgb(255, 255, 255)' }} size={28} />
                   </div>
                   {card.title === "Rigging and Slinging Safety Level - 2" ? (
                     <h3 className="text-sm font-semibold uppercase heading-premium mb-4" style={{ color: 'rgb(255, 255, 255)' }}>
@@ -402,11 +405,11 @@ export default function CochinMaritimeAcademy() {
                       {card.title}
                     </h3>
                   )}
-                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                     {card.desc}
                   </p>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
