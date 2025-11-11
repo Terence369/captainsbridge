@@ -6,6 +6,7 @@ import "./globals-overrides.css"
 import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
 import WhatsAppButton from "@/components/whatsapp-button"
+import SafeFetchProvider from "@/components/safe-fetch-provider"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
