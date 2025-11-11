@@ -48,7 +48,7 @@ export default function DetailDialog({
                   <Button variant="outline" className="border-[#0B2A4A] text-[#0B2A4A]">Close</Button>
                 </Dialog.Close>
                 <Link href={`/contact?message=${encodeURIComponent(`Hello, I would like to know more about ${data.title}. ${data.contactMessage}`)}`} className="inline-block">
-                  <Button className="bg-[#0B2A4A] text-white hover:bg-[#081E35]">Get to know more</Button>
+                  <Button className="bg-[#0B2A4A] text-white hover:bg-[#081E35]">Know more</Button>
                 </Link>
               </div>
             </div>
