@@ -23,11 +23,11 @@ export default function YouTubeHeroBackground({
   const minHeightClass = heightClass ? heightClass : defaultMinHeightClass
 
   return (
-    <div className={`relative w-full ${minHeightClass} overflow-hidden`}>
+    <div className={`youtube-hero-background relative w-full ${minHeightClass} overflow-hidden`}>
       <div className="absolute inset-0 w-full h-full">
         {videoSrc ? (
           <video
-            className="w-full h-full object-cover"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-[177.78vh] h-[100vh] object-cover"
             src={videoSrc}
             poster={poster}
             autoPlay
@@ -36,7 +36,7 @@ export default function YouTubeHeroBackground({
             playsInline
             preload="metadata"
             aria-hidden="true"
-            style={{ pointerEvents: "none" }}
+            style={{ pointerEvents: "none", border: 'none' }}
           >
             {/* Fallback source */}
             <source src={videoSrc} type="video/mp4" />
