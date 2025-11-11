@@ -20,7 +20,13 @@ function RevealImageListItem({ text, images }: ShowImageListItemProps) {
     <span className="reveal-item group relative inline-block align-baseline mx-2">
       <button
         type="button"
-        className="reveal-trigger inline-block text-[28px] md:text-[32px] leading-[1.3] tracking-[-0.02em] font-bold lowercase text-[#0098b7] transition-colors duration-300 group-hover:opacity-50 focus:outline-none"
+        className="reveal-trigger inline-block text-[79px] leading-[0.9] transition-colors duration-300 group-hover:opacity-50 focus:outline-none"
+        style={{
+          font: '900 79px/71px "Bebas Neue", sans-serif',
+          letterSpacing: '3.6px',
+          textTransform: 'uppercase',
+          color: '#0098b7',
+        }}
         aria-label={text}
       >
         {text}
