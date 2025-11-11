@@ -20,14 +20,14 @@ function RevealImageListItem({ text, images }: ShowImageListItemProps) {
     <span className="reveal-item group relative inline-block align-baseline mx-2">
       <button
         type="button"
-        className="reveal-trigger inline-block text-[36px] leading-[36px] tracking-[-0.9px] font-semibold uppercase text-[#0098b7] transition-colors duration-300 group-hover:opacity-50 focus:outline-none"
+        className="reveal-trigger inline-block text-[28px] md:text-[32px] leading-[1.3] tracking-[-0.02em] font-bold lowercase text-[#0098b7] transition-colors duration-300 group-hover:opacity-50 focus:outline-none"
         aria-label={text}
       >
         {text}
       </button>
 
-      {/* small gold square separator - minimalist divider */}
-      <span className="reveal-separator inline-block w-2.5 h-2.5 bg-[#de8c04] ml-2 rounded-sm align-middle" aria-hidden />
+      {/* gold circle separator - more prominent */}
+      <span className="reveal-separator inline-block w-4 h-4 bg-[#de8c04] mx-2.5 rounded-full align-middle" aria-hidden />
 
       <span className={imageContainerClass} aria-hidden>
         <span className={imageEffectClass}>
