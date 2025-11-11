@@ -145,7 +145,7 @@ export default function CochinMaritimeAcademy() {
     <div className="min-h-screen bg-page-white">
       {/* Hero Section */}
       <section id="home" className="relative min-h-[90vh] flex items-center bg-page-white">
-        <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.2} heightClass="min-h-[90vh]">
+        <YouTubeHeroBackground videoSrc="https://cdn.builder.io/o/assets%2F9aed9e355eef433f905fdc33685caf52%2Fbf936fb889cb44438b1217b5daa6a76d?alt=media&token=d97ab75b-fbac-4318-ba19-2275c16c1484&apiKey=9aed9e355eef433f905fdc33685caf52" overlayOpacity={0.2} heightClass="min-h-[90vh]">
           <div className="mx-auto max-w-[1320px] px-20 pt-20 pb-[21px] flex flex-col items-start justify-center relative min-h-[90vh]" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
             <div className="max-w-3xl">
               <h1 className="text-6xl md:text-7xl font-black mb-12 animate-in fade-in slide-in-from-bottom duration-1000 text-balance leading-tight" style={{ color: 'rgba(255, 255, 255, 1)', letterSpacing: '3.6px', textTransform: 'uppercase', font: '900 99px/90px "Bebas Neue", sans-serif' }}>
