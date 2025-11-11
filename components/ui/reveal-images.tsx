@@ -11,33 +11,34 @@ type ShowImageListItemProps = {
 }
 
 function RevealImageListItem({ text, images }: ShowImageListItemProps) {
-  // renamed class variables to be descriptive
-  const imageContainerClass = "absolute -right-10 -top-8 z-40 h-[160px] w-[224px]"
+  // responsive image container sizing
+  const imageContainerClass = "absolute -right-8 -top-6 md:-right-10 md:-top-8 z-40 h-[120px] md:h-[160px] w-[160px] md:w-[224px]"
   const imageEffectClass =
-    "relative duration-500 delay-100 shadow-sm group-hover:shadow-md opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-20 h-20 overflow-hidden transition-all rounded-md"
+    "relative duration-500 delay-100 shadow-sm group-hover:shadow-md opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-14 md:w-20 h-14 md:h-20 overflow-hidden transition-all rounded-md"
 
   return (
-    <span className="reveal-item group relative inline-block align-baseline mx-2">
+    <span className="reveal-item group relative inline-block align-baseline mx-1 md:mx-2">
       <button
         type="button"
-        className="reveal-trigger inline-block text-[79px] leading-[0.9] transition-colors duration-300 group-hover:opacity-50 focus:outline-none"
+        className="reveal-trigger inline-block text-[24px] md:text-[32px] lg:text-[40px] leading-[0.95] transition-colors duration-300 group-hover:opacity-50 focus:outline-none"
         style={{
-          font: '900 79px/71px "Bebas Neue", sans-serif',
-          letterSpacing: '3.6px',
+          font: '900 clamp(20px, 5vw, 40px) / 1 "Bebas Neue", sans-serif',
+          letterSpacing: '2px',
           textTransform: 'uppercase',
           color: '#0098b7',
+          fontWeight: 900,
         }}
         aria-label={text}
       >
         {text}
       </button>
 
-      {/* gold circle separator - more prominent */}
-      <span className="reveal-separator inline-block w-4 h-4 bg-[#de8c04] mx-2.5 rounded-full align-middle" aria-hidden />
+      {/* gold circle separator - responsive sizing */}
+      <span className="reveal-separator inline-block w-3 h-3 md:w-4 md:h-4 bg-[#de8c04] mx-1.5 md:mx-2.5 rounded-full align-middle" aria-hidden />
 
       <span className={imageContainerClass} aria-hidden>
         <span className={imageEffectClass}>
-          <img alt={images[1].alt} src={images[1].src} className="h-full w-full object-cover rounded-md" />
+          <img alt={images[1].alt} src={images[1].src} className="h-full w-full object-cover rounded-md" loading="lazy" />
         </span>
       </span>
     </span>
