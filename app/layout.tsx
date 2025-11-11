@@ -28,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`font-sans antialiased`}>
         <SiteHeader />
+        <SafeFetchProvider />
         <main className="min-h-[60vh] pt-24">{children}</main>
         <SiteFooter />
         <WhatsAppButton />
