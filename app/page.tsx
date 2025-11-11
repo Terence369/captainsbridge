@@ -207,25 +207,46 @@ export default function CochinMaritimeAcademy() {
           <div className="grid md:grid-cols-3 gap-10 mt-20">
             {[
               {
-                icon: Ship,
-                title: "Marine Institute",
+                icon: Award,
+                title: "MARINE VALUE-ADDED SAFETY COURSES",
                 description:
-                  "We undertake, coordinate, promote and assist in marine research and development. We also provide specialized manpower and...",
-                image: "/maritime-training-classroom-with-students.jpg",
+                  "We provide the best Value added courses in maritime with latest research and technique.",
+                image: "/maritime-safety.jpg",
+              },
+              {
+                icon: Users,
+                title: "MARINE CREW MANAGEMENT",
+                description:
+                  "Cochin Marine Recruitment can provide ongoing crew management services for entire crews or specific nationalities or departments depending on the requirements of the vessels and maritime industry employers.",
+                image: "/crew-management.jpg",
+              },
+              {
+                icon: Ship,
+                title: "MARINE DOCUMENTATION",
+                description:
+                  "We are a full-service source for all facets of marine documentation: pleasure crafts, commercial fishing vessels, charter, and fleet. With three, expertly staffed offices, we can assist in the preparation and processing of documentation.",
+                image: "/marine-documentation.jpg",
+              },
+              {
+                icon: MapPin,
+                title: "INDIAN CDC ASSISTANCE",
+                description:
+                  "Our service range includes a wide range of Arranging CDC. Indian mariners are among the most required professionals in the shipping industry worldwide. We assist with CDC processes and guidance.",
+                image: "/professional-maritime-officer-portrait.jpg",
               },
               {
                 icon: Anchor,
-                title: "Blessed With",
+                title: "PLACEMENT GUIDANCE",
                 description:
-                  "Blessed with a rich coastal line and a well known sea port in south India Kochi is notable for its positive and supportive mariti...",
-                image: "/advanced-computer-lab-with-maritime-simulation.jpg",
+                  "The Cochin Maritime Guidance and Placement Cell send invitations to companies/organizations along with relevant information and allots dates to companies for institute interviews based on various details.",
+                image: "/maritime-cadets-in-white-uniform-training.jpg",
               },
               {
                 icon: Compass,
-                title: "Why Choose Us",
+                title: "MARINE – OFFSHORE COURSES",
                 description:
-                  "Shipping, logistics, and freight are industries at the heart of modern society. These high-technology and operational-driven services...",
-                image: "/group-of-maritime-students-in-uniform.jpg",
+                  "Cochin Maritime offers a broad range of courses for the diverse Marine and Offshore sectors. We provide specialized training, as well as fully compliant courses in accordance with the guidelines of the industry.",
+                image: "/maritime-training-classroom-with-students.jpg",
               },
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 100}>
@@ -245,7 +266,7 @@ export default function CochinMaritimeAcademy() {
                     <p className="text-sm leading-relaxed text-center text-dark-secondary mb-6">
                       {item.description}
                     </p>
-                    <button className="text-sm font-semibold mx-auto block transition-colors duration-200 uppercase text-accent-gold hover:text-accent-gold/80">
+                    <button className="text-sm font-semibold mx-auto block transition-colors duration-200 uppercase text-accent-gold hover:text-accent-gold/80" onClick={() => openHomeDetail(item)}>
                       Read More →
                     </button>
                   </CardContent>
