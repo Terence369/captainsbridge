@@ -55,54 +55,54 @@ export function RevealImageList({ className }: { className?: string }) {
       text: "CERTIFIED MARITIME COURSES",
       images: [
         { src: "/images/certification-hero.jpg", alt: "Maritime certification programs" },
-        { src: "/images/cards/offshore.svg", alt: "Certified maritime courses" },
+        { src: "/images/hero-certification.svg", alt: "Certified maritime courses" },
       ],
     },
     {
       text: "ADVANCED TRAINING",
       images: [
         { src: "/images/courses-hero.jpg", alt: "Advanced maritime training programs" },
-        { src: "/images/cards/classroom.svg", alt: "Advanced training classrooms" },
+        { src: "/maritime-training-classroom-with-students.jpg", alt: "Advanced training classrooms" },
       ],
     },
     {
       text: "GLOBAL PLACEMENT OPPORTUNITIES",
       images: [
-        { src: "/images/facility-hero.jpg", alt: "Global placement network" },
-        { src: "/images/cards/placement.svg", alt: "Global placement opportunities" },
+        { src: "/maritime-professionals-discussing-partnership.jpg", alt: "Global placement network" },
+        { src: "/person-signing-maritime-certification-documents.jpg", alt: "Global placement opportunities" },
       ],
     },
     {
       text: "MODERN FACILITIES",
       images: [
-        { src: "/images/advanced-computer-lab-with-maritime-simulation.jpg", alt: "Modern maritime facilities" },
-        { src: "/images/cards/mechanical.svg", alt: "Modern facility equipment" },
+        { src: "/advanced-computer-lab-with-maritime-simulation.jpg", alt: "Modern maritime facilities" },
+        { src: "/modern-computer-lab-with-red-chairs-maritime-train.jpg", alt: "Modern facility equipment" },
       ],
     },
     {
       text: "EXPERT FACULTY",
       images: [
-        { src: "/images/maritime-training-classroom-with-students.jpg", alt: "Expert maritime faculty teaching" },
-        { src: "/images/cards/crew.svg", alt: "Expert faculty team" },
+        { src: "/maritime-training-session.jpg", alt: "Expert maritime faculty teaching" },
+        { src: "/group-of-maritime-students-in-uniform.jpg", alt: "Expert faculty team" },
       ],
     },
     {
       text: "INDUSTRY-RECOGNIZED ACCREDITATION",
       images: [
-        { src: "/images/certification-hero.jpg", alt: "Industry certification and accreditation" },
-        { src: "/images/cards/rigging.svg", alt: "Industry accreditation standards" },
+        { src: "/maritime-certificates.jpg", alt: "Industry certification and accreditation" },
+        { src: "/images/hero-certification.svg", alt: "Industry accreditation standards" },
       ],
     },
   ]
 
   return (
-    <div className={cn("reveal-list-root mx-auto px-4 py-8 text-center", className)} style={{ maxWidth: '75vw' }}>
+    <div className={cn("reveal-list-root mx-auto px-3 md:px-4 py-8 md:py-12 text-center", className)} style={{ maxWidth: '85vw' }}>
       <div className="reveal-list-wrapper inline-block">
-        <p className="reveal-paragraph text-center leading-relaxed">{/* continuous sentence with inline text */}
+        <p className="reveal-paragraph text-center leading-relaxed md:leading-loose">{/* continuous sentence with inline text */}
           {items.map((it, idx) => (
             <React.Fragment key={idx}>
               <RevealImageListItem text={it.text} images={it.images} />
-              {idx < items.length - 1 ? null : ""}
+              {" "}
             </React.Fragment>
           ))}
         </p>
