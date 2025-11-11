@@ -152,3 +152,18 @@ header img, .site-header img {
     width: 80%;
   }
 }
+
+/* Ensure hero video is positioned responsively */
+.youtube-hero-background video,
+.youtube-hero-background iframe {
+  display: block;
+  max-width: none;
+  max-height: none;
+}
+
+/* For very short viewports (mobile), limit the video size to avoid extreme scaling */
+@media (max-height: 600px) {
+  .youtube-hero-background video {
+    transform: translate(-50%, -50%) scale(1.05) !important;
+  }
+}
