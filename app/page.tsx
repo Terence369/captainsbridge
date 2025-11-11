@@ -99,6 +99,13 @@ export default function CochinMaritimeAcademy() {
     "Basic Cooking Course Certification": "Get info about online programs in cooking. Read about program requirements, course topics, and degree levels, and check out career and continuing education options. Online diploma programs in cooking don't exist, but there are fully online programs that award certificates in various types of culinary studies. Online cooking certificate programs emphasize the fundamentals of cuisine and practical cooking skills, combining textbooks, online study materials, training DVDs and cooking exercises to be done in students' kitchens. Therefore, online students must have a well-stocked, well-equipped kitchen.",
   }
 
+  const openHomeDetail = (course: { title: string; description?: string; image?: string }) => {
+    const description = `${course.title} — ${course.description || 'Overview: Hands-on modules, safety standards, and practical drills. Includes competency assessment and course completion guidance. For schedule, fees, and enrollment assistance, contact our team.'}`
+    const contactMessage = `Inquiry about ${course.title}: Please share syllabus, next batch dates, fees, and prerequisites.`
+    setDialogData({ title: course.title, description, image: course.image || null, contactMessage })
+    setDialogOpen(true)
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "courses", "partners", "stats", "facilities", "testimonials", "contact"]
