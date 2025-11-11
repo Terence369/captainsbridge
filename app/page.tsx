@@ -337,16 +337,18 @@ export default function CochinMaritimeAcademy() {
                     <ParallaxImage src={course.image || "/placeholder.svg"} alt={course.title} className="w-full h-full" intensity={0.12} zoom={0.08} />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-all duration-300"></div>
                   </div>
-                  <CardContent className="p-8 flex-grow flex flex-col">
-                    <h3 className="text-base font-bold mb-4 leading-tight uppercase heading-premium text-primary-cyan">
+                  <CardContent className="p-8 flex-grow flex flex-col min-h-[160px]">
+                    <h3 className="text-base font-bold mb-4 leading-tight uppercase heading-premium text-primary-cyan break-words">
                       {course.title}
                     </h3>
-                    <p className="text-sm leading-relaxed mb-6 flex-grow text-dark-secondary">
+                    <p className="text-sm leading-relaxed mb-6 flex-grow text-dark-secondary overflow-hidden">
                       {course.description}
                     </p>
-                    <button className="w-full font-semibold transition-all py-3 rounded uppercase btn-primary" onClick={() => openHomeDetail(course)}>
-                      View Detail
-                    </button>
+                    <div className="mt-2">
+                      <button className="w-full font-semibold transition-all py-3 rounded uppercase btn-primary" onClick={() => openHomeDetail(course)}>
+                        View Detail
+                      </button>
+                    </div>
                   </CardContent>
                 </Card>
               </AnimatedSection>
