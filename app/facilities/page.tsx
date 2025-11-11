@@ -67,7 +67,7 @@ export default function FacilitiesPage() {
           ))}
         </div>
       </section>
-      {/* Dialog handled elsewhere */}
+      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
     </div>
   )
 }
