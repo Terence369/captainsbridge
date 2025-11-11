@@ -15,7 +15,7 @@ export default function SiteFooter() {
           {/* About Section */}
           <div className="space-y-4">
             <h3 className="text-base font-semibold uppercase tracking-wider heading-premium text-primary-cyan">
-              About SNEFF INDIA
+              About SNEF INDIA
             </h3>
             <p className="text-xs text-gray-700 leading-relaxed font-body">
               Located in Kochi, India, we offer comprehensive maritime education with modern facilities and experienced faculty across shipping, logistics, and marine disciplines.
