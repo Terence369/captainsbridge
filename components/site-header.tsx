@@ -53,7 +53,7 @@ export default function SiteHeader() {
               className="h-24 w-24 transition-all duration-300"
             />
             <span className="block text-sm font-semibold tracking-widest uppercase font-display text-primary-cyan" style={{ fontWeight: "600" }}>
-              <span style={{ color: "rgb(157, 57, 57)" }}>SNEFF INDIA</span>
+              <span style={{ color: "rgb(157, 57, 57)" }}>SNEF INDIA</span>
             </span>
           </Link>
         </div>
