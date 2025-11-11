@@ -76,7 +76,7 @@ export default function SiteFooter() {
         {/* Footer Bottom */}
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <p className="text-xs text-gray-600 font-body uppercase tracking-wider">
-            © 2025 SNEFF INDIA. All Rights Reserved
+            © 2025 SNEF INDIA. All Rights Reserved
           </p>
 
           {/* Back to Top Button */}
