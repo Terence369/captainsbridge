@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useEffect, useRef, useState } from "react"
+import * as Dialog from "@radix-ui/react-dialog"
 import {
   Phone,
   Mail,
@@ -19,6 +20,7 @@ import {
   Anchor,
   Compass,
   LifeBuoy,
+  X,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
@@ -83,6 +85,19 @@ export default function CochinMaritimeAcademy() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [dialogOpen, setDialogOpen] = useState(false)
   const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
+  const [courseModalOpen, setCourseModalOpen] = useState(false)
+  const [selectedCourse, setSelectedCourse] = useState<{ title: string; description: string } | null>(null)
+
+  const courseDescriptions = {
+    "Hydrogen Sulphide Awareness (H2S)": "Hydrogen Sulphide (H2S) is a highly toxic and flammable gas. Each year in Canada, workers are injured and killed by exposure to H2S. H2S Awareness explains the properties of H2S, identifies control measures and provides a practical description of what to do in the event of exposure. The risk of H2S exposure exists in many industries, including, but not limited to oil and gas, pulp and paper, construction, and mining. In workplaces where the possibility of H2S exposure exists, ALL workers should have H2S Awareness training. Workers who are at risk of exposure to H2S and/or workers with rescue responsibilities also require H2S Alive and workplace-specific training.",
+    "Helicopter Under‑Water Escape Training (HUET)": "The course aims to train personnel intended to work offshore, using the helicopter as a means of transportation, so they can react safely in a helicopter emergency situation. We offer a quality range of Basic Offshore Helicopter Underwater Escape Training HUET Course. Our range includes Basic Offshore Safety Induction Emergency Training, Helicopter Underwater Escape Training HUET Course, Panama CDC, Belize CDC, Commercial Diving Training, Belize Competency Certificate, Dynamic Positioning Training.",
+    "Basic Offshore Safety & Emergency Training (BOISET)": "The course is designed for personnel intending to work on an offshore installation and forms part of a Common Offshore Safety Induction process. OPITO Basic Offshore Safety Induction and Emergency Training (BOSIET) course content covers offshore-specific safety induction, helicopter safety and escape, sea survival and fire fighting and self-rescue.",
+    "Rigging and Slinging Safety Level - 2": "Rigger Level 2 training provides the knowledge and skills necessary for a person to work as a journeyman level rigger. This course prepares persons to perform rigging calculations and to select and apply to rig for safe controlled load handling. Persons completing this training will understand their responsibility to ensure proper rigging methods are used and that all variables which could result in a rigging failure are accounted for through planning and proper selection of gear.",
+    "Lifting and Hoisting Safety": "The course provides vital information for those assisting or working around lifting operations. Specific topics include hoisting and rigging hazard recognition, knots, lifting hardware, materials, hand signals and working load limits. Information covers lifts using large fix-tower cranes and knuckle and telescoping boom trucks. It is an awareness course designed for employees that work directly or around lifting operations.",
+    "Crane Operators Theory (On Demand Practical)": "Our Crane Operator Training Program will train your operators on the safe use and operation of Electric Overhead Traveling Bridge Cranes (EOT). Operator responsibilities and requirements, applicable legislation and compliance requirements and how they apply to your company. Our training programs are designed to your specific requirements, fully develop your employ ability skills to maximize performance and certify your operators according to all legislative requirements.",
+    "Cookery Course With HACCP": "On completion of this food safety training course, participants will be able to understand their requirements under food safety legislation as well as following best work practices. So you can follow all with the utmost care and professionalism, ensuring a very high quality of preparation. Fully Practical Course by the participants who will be protagonists in the preparations that will be done within our professional lab.",
+    "Basic Cooking Course Certification": "Get info about online programs in cooking. Read about program requirements, course topics, and degree levels, and check out career and continuing education options. Online diploma programs in cooking don't exist, but there are fully online programs that award certificates in various types of culinary studies. Online cooking certificate programs emphasize the fundamentals of cuisine and practical cooking skills, combining textbooks, online study materials, training DVDs and cooking exercises to be done in students' kitchens. Therefore, online students must have a well-stocked, well-equipped kitchen.",
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -121,23 +136,23 @@ export default function CochinMaritimeAcademy() {
 
   return (
     <div className="min-h-screen bg-page-white">
-      {/* Hero Section (left intact) */}
+      {/* Hero Section */}
       <section id="home" className="relative min-h-[90vh] flex items-center bg-page-white">
         <YouTubeHeroBackground videoId="UG4wQMfSp6g" overlayOpacity={0.2} heightClass="min-h-[90vh]">
           <div className="mx-auto max-w-[1320px] px-20 pt-20 pb-[21px] flex flex-col items-start justify-center relative min-h-[90vh]" style={{ paddingLeft: '80px', paddingRight: '80px' }}>
             <div className="max-w-3xl">
-              <h1 className="text-6xl md:text-7xl font-black mb-8 animate-in fade-in slide-in-from-bottom duration-1000 text-balance leading-tight" style={{ color: 'rgba(255, 255, 255, 1)', letterSpacing: '3.6px', textTransform: 'uppercase', font: '900 99px/90px "Bebas Neue", sans-serif' }}>
+              <h1 className="text-6xl md:text-7xl font-black mb-12 animate-in fade-in slide-in-from-bottom duration-1000 text-balance leading-tight" style={{ color: 'rgba(255, 255, 255, 1)', letterSpacing: '3.6px', textTransform: 'uppercase', font: '900 99px/90px "Bebas Neue", sans-serif' }}>
                 Welcome to SNEFF INDIA
               </h1>
-              <div className="flex flex-col sm:flex-row gap-6 animate-in slide-in-from-bottom duration-800 delay-300">
+              <div className="flex flex-col sm:flex-row gap-8 animate-in slide-in-from-bottom duration-800 delay-300">
                 <button
-                  className="px-10 py-4 text-lg font-bold uppercase transition-all duration-300 border-2 rounded btn-primary"
+                  className="px-10 py-4 text-lg font-bold uppercase transition-all duration-300 rounded btn-primary"
                   onClick={() => scrollToSection("courses")}
                 >
                   Explore Courses
                 </button>
                 <button
-                  className="px-10 py-4 text-lg font-bold uppercase transition-all duration-300 border-2 rounded btn-outline-cyan"
+                  className="px-10 py-4 text-lg font-bold uppercase transition-all duration-300 rounded btn-outline-cyan"
                   onClick={() => scrollToSection("contact")}
                 >
                   Contact Us
@@ -154,7 +169,7 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Reveal Image List (services) */}
-      <section aria-label="our-expertise" className="py-12 bg-page-white">
+      <section aria-label="our-expertise" className="py-20 bg-page-white border-t border-b border-light-color">
         <RevealImageList />
       </section>
 
@@ -171,18 +186,18 @@ export default function CochinMaritimeAcademy() {
       </ParallaxFixedSection>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-page-white">
+      <section id="about" className="py-32 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
                 Welcome to Cochin Maritime Academy
               </h2>
-              <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
+              <div className="w-16 h-px mx-auto divider-gold" />
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="grid md:grid-cols-3 gap-10 mt-20">
             {[
               {
                 icon: Ship,
@@ -207,23 +222,23 @@ export default function CochinMaritimeAcademy() {
               },
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden h-full" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
+                <Card className="group hover:shadow-md transition-shadow duration-300 border-0 overflow-hidden h-full card-minimal" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
                   <div className="relative h-48 overflow-hidden">
                     <ParallaxImage src={item.image || "/placeholder.svg"} alt={item.title} className="w-full h-full" intensity={0.12} zoom={0.08} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end justify-center pb-6">
-                      <div className="p-4 rounded-full group-hover:scale-110 transition-transform text-white icon-circle-cyan">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center pb-6">
+                      <div className="p-3 rounded-full text-white icon-circle-cyan">
                         <item.icon className="w-8 h-8" />
                       </div>
                     </div>
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-3 text-center uppercase heading-premium text-primary-cyan">
+                  <CardContent className="p-8">
+                    <h3 className="text-lg font-bold mb-4 text-center uppercase heading-premium text-primary-cyan">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-center text-dark-secondary">
+                    <p className="text-sm leading-relaxed text-center text-dark-secondary mb-6">
                       {item.description}
                     </p>
-                    <button className="text-sm font-semibold mt-4 mx-auto block transition-all uppercase text-accent-gold">
+                    <button className="text-sm font-semibold mx-auto block transition-colors duration-200 uppercase text-accent-gold hover:text-accent-gold/80">
                       Read More →
                     </button>
                   </CardContent>
@@ -235,21 +250,21 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Courses Section */}
-      <section id="courses" className="py-24 bg-page-white">
+      <section id="courses" className="py-32 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
                 Cochin Maritime Academy Facilities
               </h2>
-              <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
+              <div className="w-16 h-px mx-auto mb-10 divider-gold" />
               <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium body-premium">
                 Our offerings are wide-ranging and all-inclusive. We are adept in making available optimal solutions for residential, commercial and industrial verticals.
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
               {
                 title: "Spacious Class Rooms With Well Equipped Furniture",
@@ -289,16 +304,16 @@ export default function CochinMaritimeAcademy() {
               },
             ].map((course, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 overflow-hidden h-full flex flex-col" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+                <Card className="group hover:shadow-md transition-shadow duration-300 border-0 overflow-hidden h-full flex flex-col card-minimal" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
                   <div className="relative h-56 overflow-hidden">
                     <ParallaxImage src={course.image || "/placeholder.svg"} alt={course.title} className="w-full h-full" intensity={0.12} zoom={0.08} />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-all duration-300"></div>
                   </div>
-                  <CardContent className="p-6 flex-grow flex flex-col">
-                    <h3 className="text-lg font-bold mb-3 leading-tight uppercase heading-premium text-primary-cyan">
+                  <CardContent className="p-8 flex-grow flex flex-col">
+                    <h3 className="text-base font-bold mb-4 leading-tight uppercase heading-premium text-primary-cyan">
                       {course.title}
                     </h3>
-                    <p className="text-sm leading-relaxed mb-4 flex-grow text-dark-secondary">
+                    <p className="text-sm leading-relaxed mb-6 flex-grow text-dark-secondary">
                       {course.description}
                     </p>
                     <button className="w-full font-semibold transition-all py-3 rounded uppercase btn-primary">
@@ -315,12 +330,12 @@ export default function CochinMaritimeAcademy() {
       {/* Partners Section with Fixed-Layer Parallax */}
       <ParallaxFixedSection
         imageUrl="https://images.pexels.com/photos/3435378/pexels-photo-3435378.jpeg"
-        className="py-24"
+        className="py-32"
       >
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight heading-premium text-white" style={{ color: "rgba(255, 255, 255, 0.87)" }}>
+            <div className="mx-auto max-w-4xl text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight heading-premium text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
                 Partners and Supporting Organization
               </h2>
               <p className="text-lg md:text-xl body-premium text-white" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
@@ -329,7 +344,25 @@ export default function CochinMaritimeAcademy() {
             </div>
           </AnimatedSection>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <style jsx>{`
+            .glass-card-wrapper {
+              background: rgba(0, 0, 0, 0.15) !important;
+              backdrop-filter: blur(15px);
+              -webkit-backdrop-filter: blur(15px);
+              border: 1px solid rgba(255, 255, 255, 0.15) !important;
+              border-radius: 8px;
+              transition: all 0.3s ease-out;
+              box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            }
+            .glass-card-wrapper:hover {
+              background: rgba(0, 0, 0, 0.25) !important;
+              border-color: rgba(255, 255, 255, 0.25) !important;
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+              transform: translateY(-4px);
+            }
+          `}</style>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 title: "Hydrogen Sulphide Awareness (H2S)",
@@ -372,33 +405,46 @@ export default function CochinMaritimeAcademy() {
                   "Get info about online programs in cooking. Read about program requiremen...",
               },
             ].map((card, i) => (
-              <Card key={i} className="border-0 overflow-hidden" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
-                <div className="p-6 text-center">
-                  <div className="mx-auto mb-4 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(0, 152, 183, 0.2)' }}>
-                    <LifeBuoy style={{ color: 'rgb(0, 152, 183)' }} />
+              <button
+                key={i}
+                onClick={() => {
+                  setSelectedCourse({
+                    title: card.title,
+                    description: courseDescriptions[card.title as keyof typeof courseDescriptions] || card.desc,
+                  })
+                  setCourseModalOpen(true)
+                }}
+                className="glass-card-wrapper text-left hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan rounded-lg"
+              >
+                <div className="p-8 text-center">
+                  <div className="mx-auto mb-6 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(255, 255, 255, 0.12)' }}>
+                    <LifeBuoy style={{ color: 'rgb(255, 255, 255)' }} size={28} />
                   </div>
                   {card.title === "Rigging and Slinging Safety Level - 2" ? (
-                    <h3 className="text-base font-semibold uppercase heading-premium text-primary-cyan">
+                    <h3 className="text-sm font-semibold uppercase heading-premium mb-4" style={{ color: 'rgb(255, 255, 255)' }}>
                       Rigging and Slinging <br />
                       Safety Level - 2
                     </h3>
                   ) : (
-                    <h3 className="text-base font-semibold uppercase heading-premium text-primary-cyan">
+                    <h3 className="text-sm font-semibold uppercase heading-premium mb-4" style={{ color: 'rgb(255, 255, 255)' }}>
                       {card.title}
                     </h3>
                   )}
-                  <p className="mt-3 text-sm leading-relaxed text-dark-secondary">
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
                     {card.desc}
                   </p>
                 </div>
-              </Card>
+              </button>
             ))}
           </div>
         </div>
       </ParallaxFixedSection>
 
-      {/* Stats Section */}
-      <section id="stats" className="py-24 bg-cyan" style={{ backgroundColor: 'var(--primary-cyan)' }}>
+      {/* Stats Section with Glass Morphism */}
+      <section id="stats" className="py-32 relative overflow-hidden" style={{ backgroundColor: 'var(--primary-cyan)' }}>
+        {/* Glass morphism overlay */}
+        <div className="absolute inset-0 backdrop-blur-sm" style={{ backgroundColor: 'rgba(0, 152, 183, 0.25)' }} aria-hidden />
+
         <style jsx>{`
           @keyframes float {
             0%, 100% {
@@ -432,8 +478,23 @@ export default function CochinMaritimeAcademy() {
           .icon-badge {
             animation: subtle-hop 2.5s ease-in-out infinite;
           }
+          .glass-stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 24px 16px;
+            transition: all 0.3s ease-out;
+          }
+          .glass-stat-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          }
         `}</style>
-        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+
+        <div className="container mx-auto px-4 relative z-10" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { icon: GraduationCap, number: "5000+", label: "Students Trained" },
@@ -442,7 +503,7 @@ export default function CochinMaritimeAcademy() {
               { icon: Users, number: "100%", label: "Placement Support" },
             ].map((stat, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <div className="text-center group hover:scale-105 transition-transform">
+                <div className="glass-stat-card text-center group">
                   <div className="icon-badge bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:bg-white/30 transition-colors">
                     <stat.icon className="w-10 h-10 icon-animate" style={{ color: 'rgb(255, 255, 255)' }} />
                   </div>
@@ -460,36 +521,36 @@ export default function CochinMaritimeAcademy() {
       </section>
 
       {/* Facilities Highlight */}
-      <section id="facilities" className="py-24 bg-page-white">
+      <section id="facilities" className="py-32 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
                 Director's Message
               </h2>
-              <div className="w-24 h-1 mx-auto divider-gold" />
+              <div className="w-16 h-px mx-auto divider-gold" />
             </div>
           </AnimatedSection>
 
           <div className="max-w-5xl mx-auto">
             <AnimatedSection>
-              <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="relative">
-                  <div className="border-4 p-4 rounded-lg border-gold">
+                  <div className="border border-gold p-2 rounded-lg">
                     <ParallaxImage
                       src="https://cdn.builder.io/api/v1/image/assets%2F5467efc660814048b4ece449e1f2e104%2F9b9a033ea00d44ecb3052033f1830fc2"
                       alt="Director's Portrait"
-                      className="w-full rounded-lg shadow-lg"
+                      className="w-full rounded-md shadow-sm"
                       intensity={0.06}
                       zoom={0.03}
                     />
                   </div>
                 </div>
                 <div>
-                  <p className="leading-relaxed mb-6 text-justify text-lg body-premium text-dark-secondary">
+                  <p className="leading-relaxed mb-8 text-justify text-base body-premium text-dark-secondary">
                     Cochin Maritime training for merchant navy is a new dimension in the field of job oriented professional courses. Facility here in catering with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the maritime sector. By catering complete courses in accordance with the guidelines of the International Maritime Organization's Standards for Training, Certification and Watchkeeping, International Safety Management Code, and International Ship and Port Facility Security.
                   </p>
-                  <p className="leading-relaxed text-justify text-lg body-premium text-dark-secondary">
+                  <p className="leading-relaxed text-justify text-base body-premium text-dark-secondary">
                     We further mention that we have the vast experience in training the aspirant candidates in all trades essential for merchant navy career from Cadet & GP Officer.
                   </p>
                 </div>
@@ -502,15 +563,15 @@ export default function CochinMaritimeAcademy() {
       {/* Testimonials */}
       <ParallaxFixedSection
         imageUrl="https://images.pexels.com/photos/8650298/pexels-photo-8650298.jpeg"
-        className="py-24"
+        className="py-32"
       >
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-12">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-white">
+            <div className="text-center mb-16">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-white">
                 Student Testimonials
               </h2>
-              <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
+              <div className="w-16 h-px mx-auto mb-10 divider-gold" />
               <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed body-premium text-white/90">
                 Hear from our successful alumni who are now sailing the seven seas
               </p>
@@ -523,32 +584,32 @@ export default function CochinMaritimeAcademy() {
       </ParallaxFixedSection>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-page-white">
+      <section id="contact" className="py-32 bg-page-white">
         <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
           <AnimatedSection>
-            <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight heading-premium text-primary-cyan">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
                 Get in Touch
               </h2>
-              <div className="w-24 h-1 mx-auto mb-8 divider-gold" />
+              <div className="w-16 h-px mx-auto mb-10 divider-gold" />
               <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed body-premium text-dark-secondary">
                 Have questions? We're here to help you start your maritime career
               </p>
             </div>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
             <AnimatedSection>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-full bg-cyan">
+                  <div className="p-3 rounded-full bg-cyan flex-shrink-0">
                     <MapPin className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2 uppercase text-lg heading-premium text-accent-gold">
+                    <h3 className="font-bold mb-3 uppercase text-base heading-premium text-accent-gold">
                       Address
                     </h3>
-                    <p className="leading-relaxed text-dark-secondary">
+                    <p className="leading-relaxed text-sm text-dark-secondary">
                       Aditya Complex, Kochupally road,
                       <br />
                       Next to Anjali Marriage hall,
@@ -559,37 +620,37 @@ export default function CochinMaritimeAcademy() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-full bg-cyan">
+                  <div className="p-3 rounded-full bg-cyan flex-shrink-0">
                     <Phone className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2 uppercase text-lg heading-premium text-accent-gold">
+                    <h3 className="font-bold mb-3 uppercase text-base heading-premium text-accent-gold">
                       Phone
                     </h3>
-                    <p className="text-dark-secondary">Call: +91 484 2234500</p>
-                    <p className="text-dark-secondary">Mobile: +91 8484545501</p>
+                    <p className="text-sm text-dark-secondary">Call: +91 484 2234500</p>
+                    <p className="text-sm text-dark-secondary">Mobile: +91 8484545501</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-full bg-cyan">
+                  <div className="p-3 rounded-full bg-cyan flex-shrink-0">
                     <Mail className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-bold mb-2 uppercase text-lg heading-premium text-accent-gold">
+                    <h3 className="font-bold mb-3 uppercase text-base heading-premium text-accent-gold">
                       Email
                     </h3>
-                    <p className="text-dark-secondary">cochinmaritime@gmail.com</p>
+                    <p className="text-sm text-dark-secondary">cochinmaritime@gmail.com</p>
                   </div>
                 </div>
 
-                <div className="pt-6">
-                  <h3 className="font-bold mb-4 uppercase text-lg heading-premium text-accent-gold">
+                <div className="pt-4">
+                  <h3 className="font-bold mb-4 uppercase text-base heading-premium text-accent-gold">
                     Follow Us
                   </h3>
                   <div className="flex space-x-4">
                     {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
-                      <button key={index} className="p-3 rounded-full hover:scale-110 transition-all bg-cyan">
+                      <button key={index} className="p-3 rounded-full hover:bg-cyan/90 transition-colors duration-200 bg-cyan">
                         <Icon className="text-white" size={20} />
                       </button>
                     ))}
@@ -599,20 +660,20 @@ export default function CochinMaritimeAcademy() {
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <Card className="border-0 shadow-lg" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
-                <CardContent className="p-8">
+              <Card className="border border-light-color card-minimal" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
+                <CardContent className="p-10">
                   <form className="space-y-6">
                     <div>
-                      <Input placeholder="Your Name *" className="border rounded bg-white text-gray-800" required />
+                      <Input placeholder="Your Name *" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" required />
                     </div>
                     <div>
-                      <Input type="email" placeholder="Your Email *" className="border rounded bg-white text-gray-800" required />
+                      <Input type="email" placeholder="Your Email *" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" required />
                     </div>
                     <div>
-                      <Input type="tel" placeholder="Your Phone *" className="border rounded bg-white text-gray-800" required />
+                      <Input type="tel" placeholder="Your Phone *" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" required />
                     </div>
                     <div>
-                      <Select defaultValue="" className="border rounded bg-white text-gray-800">
+                      <Select defaultValue="" className="border border-light-color rounded-md bg-white text-gray-800 text-sm">
                         <option value="" disabled>Select a course</option>
                         {courseTitles.map((title) => (
                           <option key={title} value={title}>{title}</option>
@@ -620,7 +681,7 @@ export default function CochinMaritimeAcademy() {
                       </Select>
                     </div>
                     <div>
-                      <Textarea rows={4} placeholder="Your Message" className="border rounded bg-white text-gray-800" />
+                      <Textarea rows={4} placeholder="Your Message" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" />
                     </div>
                     <button type="submit" className="w-full btn-primary">Send Message</button>
                   </form>
@@ -639,6 +700,54 @@ export default function CochinMaritimeAcademy() {
       >
         <ChevronRight className="rotate-[-90deg]" size={24} />
       </button>
+
+      {/* Course Modal Dialog */}
+      <Dialog.Root open={courseModalOpen} onOpenChange={setCourseModalOpen}>
+        <Dialog.Portal>
+          <Dialog.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 z-50" />
+          <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[92vw] max-h-[90vh] max-w-2xl -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-lg bg-white shadow-2xl focus:outline-none" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
+            {selectedCourse && (
+              <div className="p-6 md:p-8">
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <Dialog.Title className="text-lg md:text-2xl font-bold uppercase heading-premium text-primary-cyan flex-1">
+                    {selectedCourse.title}
+                  </Dialog.Title>
+                  <Dialog.Close asChild>
+                    <button
+                      aria-label="Close modal"
+                      className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors flex-shrink-0"
+                    >
+                      <X className="h-6 w-6" />
+                    </button>
+                  </Dialog.Close>
+                </div>
+                <div className="w-full h-px bg-accent-gold mb-6" />
+                <div className="prose prose-sm max-w-none">
+                  <p className="text-sm md:text-base leading-relaxed text-gray-700 whitespace-pre-line">
+                    {selectedCourse.description}
+                  </p>
+                </div>
+                <div className="mt-8 flex flex-col-reverse sm:flex-row gap-3">
+                  <Dialog.Close asChild>
+                    <button className="px-6 py-3 rounded-lg border border-light-color text-gray-800 hover:bg-gray-100 transition-colors font-semibold uppercase text-sm">
+                      Close
+                    </button>
+                  </Dialog.Close>
+                  <button
+                    onClick={() => {
+                      setCourseModalOpen(false)
+                      scrollToSection("contact")
+                    }}
+                    className="px-6 py-3 rounded-lg bg-cyan text-white hover:bg-cyan/90 transition-colors font-semibold uppercase text-sm"
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            )}
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
     </div>
   )
 }

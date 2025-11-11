@@ -154,7 +154,11 @@
     font-family: var(--font-body);
     background-color: rgb(255, 255, 255);
     color: rgb(51, 51, 51);
-    font-weight: 600;
+    font-weight: 400;
+  }
+
+  input, textarea, select {
+    font-weight: 400;
   }
 }
 
@@ -296,14 +300,15 @@
   color: var(--accent-gold);
 }
 
-/* Premium heading with Anton font */
+/* Premium heading with structured hierarchy */
 .heading-premium {
   font-family: var(--font-display);
   text-transform: uppercase;
-  letter-spacing: 0.7px;
-  line-height: 1;
+  letter-spacing: 0.8px;
+  line-height: 1.1;
   color: var(--text-dark);
   font-weight: 700;
+  margin-bottom: 0.5em;
 }
 
 .heading-xl {
@@ -323,12 +328,13 @@
   text-transform: uppercase;
 }
 
-/* Premium body text with Alata */
+/* Premium body text - academic style */
 .body-premium {
   font-family: var(--font-body);
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--text-dark-secondary);
+  font-weight: 400;
 }
 
 /* Global typography overrides */
@@ -348,11 +354,17 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   font-weight: 400 !important;
 }
 
-/* Gold horizontal divider */
+/* Gold horizontal divider - minimalist academic style */
 .divider-gold {
   height: 1px;
   background-color: var(--accent-gold);
   width: 100%;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-out;
+}
+
+.divider-gold:hover {
+  opacity: 1;
 }
 
 /* Cyan border styling */
@@ -387,43 +399,44 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   background-color: var(--primary-cyan);
   color: var(--bg-white);
   padding: 12px 32px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   transition: all 0.3s ease-out;
-  border: 1.6px solid var(--primary-cyan);
-  box-shadow: rgba(0, 152, 183, 0.1) 0px 0px 15px 0px inset;
+  border: 1px solid var(--primary-cyan);
+  box-shadow: none;
 }
 
 .btn-primary:hover {
   background-color: transparent;
   border-color: var(--primary-cyan);
   color: var(--primary-cyan);
-  transform: scale(1.02);
+  transform: none;
 }
 
 .btn-gold {
   background-color: var(--accent-gold);
   color: var(--bg-white);
   padding: 12px 32px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   transition: all 0.3s ease-out;
+  border: 1px solid var(--accent-gold);
 }
 
 .btn-gold:hover {
   background-color: var(--text-dark);
   color: var(--bg-white);
-  transform: scale(1.02);
+  transform: none;
 }
 
-/* Text highlight boxes */
+/* Text highlight boxes - minimalist style */
 .highlight-box {
   background-color: var(--accent-gold);
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 8px 16px;
   display: inline-block;
   height: 51px;
@@ -431,6 +444,7 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 600;
 }
 
 /* Scroll-triggered animation states */
@@ -452,6 +466,38 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
 .delay-400 { transition-delay: 0.4s; }
 
 /* ========================================
+   Academic Minimalist Link Styles
+   ======================================== */
+a {
+  transition: color 0.2s ease-out;
+}
+
+a:focus-visible {
+  outline: 1px solid var(--primary-cyan);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   Form Element Refinements
+   ======================================== */
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: none;
+}
+
+/* ========================================
+   Border Refinements
+   ======================================== */
+.border-light-color {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.border-lighter-color {
+  border-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ========================================
    Light theme utility helpers
    ======================================== */
 .bg-page-white { background-color: var(--bg-white); }
@@ -467,17 +513,17 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   background-color: transparent;
   color: var(--primary-cyan);
   padding: 12px 32px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   transition: all 0.3s ease-out;
-  border: 1.6px solid var(--primary-cyan);
+  border: 1px solid var(--primary-cyan);
 }
 .btn-outline-cyan:hover {
   background-color: var(--primary-cyan);
   color: var(--bg-white);
-  transform: scale(1.02);
+  transform: none;
 }
 .icon-circle-cyan {
   background-color: var(--primary-cyan);
@@ -501,3 +547,55 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
 .overlay-white-85 { background-color: rgba(255, 255, 255, 0.85); }
 .overlay-white-90 { background-color: rgba(255, 255, 255, 0.9); }
 .overlay-white-95 { background-color: rgba(255, 255, 255, 0.95); }
+
+/* ========================================
+   Minimalist Card & Shadow Refinements
+   ======================================== */
+.card-minimal {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.card-minimal:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+.section-divider {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  width: 100%;
+  margin: 0;
+}
+
+/* ========================================
+   Improved Spacing & Grid
+   ======================================== */
+.grid-minimal {
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-minimal {
+    gap: 2.5rem;
+  }
+}
+
+/* Refined card spacing */
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Academic section styling */
+section {
+  position: relative;
+}
+
+/* Refined section separators */
+section + section {
+  border-top: none;
+}
+
+/* Heading refinement - academic style */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.02em;
+}

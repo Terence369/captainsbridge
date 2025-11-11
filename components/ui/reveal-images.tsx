@@ -11,27 +11,34 @@ type ShowImageListItemProps = {
 }
 
 function RevealImageListItem({ text, images }: ShowImageListItemProps) {
-  // renamed class variables to be descriptive
-  const imageContainerClass = "absolute -right-10 -top-8 z-40 h-[160px] w-[224px]"
+  // responsive image container sizing
+  const imageContainerClass = "absolute -right-8 -top-6 md:-right-10 md:-top-8 z-40 h-[120px] md:h-[160px] w-[160px] md:w-[224px]"
   const imageEffectClass =
-    "relative duration-500 delay-100 shadow-none group-hover:shadow-2xl opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-20 h-20 overflow-hidden transition-all rounded-md"
+    "relative duration-500 delay-100 shadow-sm group-hover:shadow-md opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-14 md:w-20 h-14 md:h-20 overflow-hidden transition-all rounded-md"
 
   return (
-    <span className="reveal-item group relative inline-block align-baseline mx-2">
+    <span className="reveal-item group relative inline-block align-baseline mx-1 md:mx-2">
       <button
         type="button"
-        className="reveal-trigger inline-block text-[36px] leading-[36px] tracking-[-0.9px] font-semibold uppercase text-[#0098b7] transition-all duration-300 group-hover:opacity-40 focus:outline-none"
+        className="reveal-trigger inline-block text-[24px] md:text-[32px] lg:text-[40px] leading-[0.95] transition-colors duration-300 group-hover:opacity-50 focus:outline-none"
+        style={{
+          font: '900 clamp(20px, 5vw, 40px) / 1 "Bebas Neue", sans-serif',
+          letterSpacing: '2px',
+          textTransform: 'uppercase',
+          color: '#0098b7',
+          fontWeight: 900,
+        }}
         aria-label={text}
       >
         {text}
       </button>
 
-      {/* small yellow square separator similar to reference image */}
-      <span className="reveal-separator inline-block w-3 h-3 bg-[#de8c04] ml-2 rounded-sm align-middle" aria-hidden />
+      {/* gold circle separator - responsive sizing */}
+      <span className="reveal-separator inline-block w-3 h-3 md:w-4 md:h-4 bg-[#de8c04] mx-1.5 md:mx-2.5 rounded-full align-middle" aria-hidden />
 
       <span className={imageContainerClass} aria-hidden>
         <span className={imageEffectClass}>
-          <img alt={images[1].alt} src={images[1].src} className="h-full w-full object-cover rounded-md" />
+          <img alt={images[1].alt} src={images[1].src} className="h-full w-full object-cover rounded-md" loading="lazy" />
         </span>
       </span>
     </span>
@@ -39,70 +46,63 @@ function RevealImageListItem({ text, images }: ShowImageListItemProps) {
 }
 
 export function RevealImageList({ className }: { className?: string }) {
-  // Use the site's existing paragraph text split into segments, each mapped to existing site images
+  // New comprehensive text about maritime education offerings - all caps
   const paragraph =
-    "Situated in South India, Kochi is blessed with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the marine sector. By catering courses that touch various aspects of marine studies, a candidate can select from a wide range of courses and the few of the best upstage training centers."
+    "CERTIFIED MARITIME COURSES, ADVANCED TRAINING, GLOBAL PLACEMENT OPPORTUNITIES, MODERN FACILITIES, EXPERT FACULTY, AND INDUSTRY-RECOGNIZED ACCREDITATION."
 
   const items: ShowImageListItemProps[] = [
     {
-      text: "Situated in South India, Kochi",
+      text: "CERTIFIED MARITIME COURSES",
       images: [
-        { src: "/images/home-hero.jpg", alt: "Kochi coastline" },
-        { src: "/images/cards/offshore.svg", alt: "Offshore" },
+        { src: "/images/certification-hero.jpg", alt: "Maritime certification programs" },
+        { src: "/images/hero-certification.svg", alt: "Certified maritime courses" },
       ],
     },
     {
-      text: "is blessed with a rich coastline, a well-known port",
+      text: "ADVANCED TRAINING",
       images: [
-        { src: "/images/cards/partners.svg", alt: "Port" },
-        { src: "/images/cards/classroom.svg", alt: "Classroom" },
+        { src: "/images/courses-hero.jpg", alt: "Advanced maritime training programs" },
+        { src: "/maritime-training-classroom-with-students.jpg", alt: "Advanced training classrooms" },
       ],
     },
     {
-      text: "and an established maritime environment",
+      text: "GLOBAL PLACEMENT OPPORTUNITIES",
       images: [
-        { src: "/images/courses-hero.jpg", alt: "Maritime environment" },
-        { src: "/images/value-added-hero.jpg", alt: "Value added" },
+        { src: "/maritime-professionals-discussing-partnership.jpg", alt: "Global placement network" },
+        { src: "/person-signing-maritime-certification-documents.jpg", alt: "Global placement opportunities" },
       ],
     },
     {
-      text: "and is notable for its positive side of the marine sector.",
+      text: "MODERN FACILITIES",
       images: [
-        { src: "/images/certification-hero.jpg", alt: "Marine sector" },
-        { src: "/images/cards/placement.svg", alt: "Placement" },
+        { src: "/advanced-computer-lab-with-maritime-simulation.jpg", alt: "Modern maritime facilities" },
+        { src: "/modern-computer-lab-with-red-chairs-maritime-train.jpg", alt: "Modern facility equipment" },
       ],
     },
     {
-      text: "By catering courses that touch various aspects of marine studies,",
+      text: "EXPERT FACULTY",
       images: [
-        { src: "/images/courses-hero.jpg", alt: "Courses" },
-        { src: "/images/cards/mechanical.svg", alt: "Mechanical" },
+        { src: "/maritime-training-session.jpg", alt: "Expert maritime faculty teaching" },
+        { src: "/group-of-maritime-students-in-uniform.jpg", alt: "Expert faculty team" },
       ],
     },
     {
-      text: "a candidate can select from a wide range of courses",
+      text: "INDUSTRY-RECOGNIZED ACCREDITATION",
       images: [
-        { src: "/images/cards/crew.svg", alt: "Crew" },
-        { src: "/images/cards/rigging.svg", alt: "Rigging" },
-      ],
-    },
-    {
-      text: "and the few of the best upstage training centers.",
-      images: [
-        { src: "/images/home-hero.jpg", alt: "Training center" },
-        { src: "/images/cards/laboratory.svg", alt: "Laboratory" },
+        { src: "/maritime-certificates.jpg", alt: "Industry certification and accreditation" },
+        { src: "/images/hero-certification.svg", alt: "Industry accreditation standards" },
       ],
     },
   ]
 
   return (
-    <div className={cn("reveal-list-root mx-auto max-w-4xl px-4 py-8 text-center", className)}>
+    <div className={cn("reveal-list-root mx-auto px-3 md:px-4 py-8 md:py-12 text-center", className)} style={{ maxWidth: '85vw' }}>
       <div className="reveal-list-wrapper inline-block">
-        <p className="reveal-paragraph text-center">{/* keep inline-wrapping structure */}
+        <p className="reveal-paragraph text-center leading-relaxed md:leading-loose">{/* continuous sentence with inline text */}
           {items.map((it, idx) => (
             <React.Fragment key={idx}>
               <RevealImageListItem text={it.text} images={it.images} />
-              {" \u00A0"}
+              {" "}
             </React.Fragment>
           ))}
         </p>
