@@ -323,7 +323,7 @@ export default function CochinMaritimeAcademy() {
                     <p className="text-sm leading-relaxed mb-6 flex-grow text-dark-secondary">
                       {course.description}
                     </p>
-                    <button className="w-full font-semibold transition-all py-3 rounded uppercase btn-primary">
+                    <button className="w-full font-semibold transition-all py-3 rounded uppercase btn-primary" onClick={() => openHomeDetail(course)}>
                       View Detail
                     </button>
                   </CardContent>
