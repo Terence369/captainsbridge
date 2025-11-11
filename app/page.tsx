@@ -211,21 +211,21 @@ export default function CochinMaritimeAcademy() {
                 title: "MARINE VALUE-ADDED SAFETY COURSES",
                 description:
                   "We provide the best Value added courses in maritime with latest research and technique.",
-                image: "/maritime-safety.jpg",
+                image: "/images/value-added-hero.jpg",
               },
               {
                 icon: Users,
                 title: "MARINE CREW MANAGEMENT",
                 description:
                   "Cochin Marine Recruitment can provide ongoing crew management services for entire crews or specific nationalities or departments depending on the requirements of the vessels and maritime industry employers.",
-                image: "/crew-management.jpg",
+                image: "/maritime-professionals-discussing-partnership.jpg",
               },
               {
                 icon: Ship,
                 title: "MARINE DOCUMENTATION",
                 description:
                   "We are a full-service source for all facets of marine documentation: pleasure crafts, commercial fishing vessels, charter, and fleet. With three, expertly staffed offices, we can assist in the preparation and processing of documentation.",
-                image: "/marine-documentation.jpg",
+                image: "/maritime-certificates.jpg",
               },
               {
                 icon: MapPin,
@@ -246,7 +246,7 @@ export default function CochinMaritimeAcademy() {
                 title: "MARINE – OFFSHORE COURSES",
                 description:
                   "Cochin Maritime offers a broad range of courses for the diverse Marine and Offshore sectors. We provide specialized training, as well as fully compliant courses in accordance with the guidelines of the industry.",
-                image: "/maritime-training-classroom-with-students.jpg",
+                image: "/maritime-training-session.jpg",
               },
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 100}>
