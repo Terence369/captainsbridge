@@ -405,7 +405,17 @@ export default function CochinMaritimeAcademy() {
                   "Get info about online programs in cooking. Read about program requiremen...",
               },
             ].map((card, i) => (
-              <div key={i} className="glass-card-wrapper">
+              <button
+                key={i}
+                onClick={() => {
+                  setSelectedCourse({
+                    title: card.title,
+                    description: courseDescriptions[card.title as keyof typeof courseDescriptions] || card.desc,
+                  })
+                  setCourseModalOpen(true)
+                }}
+                className="glass-card-wrapper text-left hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan rounded-lg"
+              >
                 <div className="p-8 text-center">
                   <div className="mx-auto mb-6 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(255, 255, 255, 0.12)' }}>
                     <LifeBuoy style={{ color: 'rgb(255, 255, 255)' }} size={28} />
@@ -424,7 +434,7 @@ export default function CochinMaritimeAcademy() {
                     {card.desc}
                   </p>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
