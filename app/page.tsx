@@ -708,6 +708,8 @@ export default function CochinMaritimeAcademy() {
         <ChevronRight className="rotate-[-90deg]" size={24} />
       </button>
 
+      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
+
       {/* Course Modal Dialog */}
       <Dialog.Root open={courseModalOpen} onOpenChange={setCourseModalOpen}>
         <Dialog.Portal>
