@@ -700,6 +700,54 @@ export default function CochinMaritimeAcademy() {
       >
         <ChevronRight className="rotate-[-90deg]" size={24} />
       </button>
+
+      {/* Course Modal Dialog */}
+      <Dialog.Root open={courseModalOpen} onOpenChange={setCourseModalOpen}>
+        <Dialog.Portal>
+          <Dialog.Overlay className="fixed inset-0 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 z-50" />
+          <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[92vw] max-h-[90vh] max-w-2xl -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-lg bg-white shadow-2xl focus:outline-none" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
+            {selectedCourse && (
+              <div className="p-6 md:p-8">
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <Dialog.Title className="text-lg md:text-2xl font-bold uppercase heading-premium text-primary-cyan flex-1">
+                    {selectedCourse.title}
+                  </Dialog.Title>
+                  <Dialog.Close asChild>
+                    <button
+                      aria-label="Close modal"
+                      className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors flex-shrink-0"
+                    >
+                      <X className="h-6 w-6" />
+                    </button>
+                  </Dialog.Close>
+                </div>
+                <div className="w-full h-px bg-accent-gold mb-6" />
+                <div className="prose prose-sm max-w-none">
+                  <p className="text-sm md:text-base leading-relaxed text-gray-700 whitespace-pre-line">
+                    {selectedCourse.description}
+                  </p>
+                </div>
+                <div className="mt-8 flex flex-col-reverse sm:flex-row gap-3">
+                  <Dialog.Close asChild>
+                    <button className="px-6 py-3 rounded-lg border border-light-color text-gray-800 hover:bg-gray-100 transition-colors font-semibold uppercase text-sm">
+                      Close
+                    </button>
+                  </Dialog.Close>
+                  <button
+                    onClick={() => {
+                      setCourseModalOpen(false)
+                      scrollToSection("contact")
+                    }}
+                    className="px-6 py-3 rounded-lg bg-cyan text-white hover:bg-cyan/90 transition-colors font-semibold uppercase text-sm"
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            )}
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
     </div>
   )
 }
