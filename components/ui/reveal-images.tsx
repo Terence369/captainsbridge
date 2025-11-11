@@ -45,51 +45,51 @@ function RevealImageListItem({ text, images }: ShowImageListItemProps) {
 }
 
 export function RevealImageList({ className }: { className?: string }) {
-  // New comprehensive text about maritime education offerings
+  // New comprehensive text about maritime education offerings - all caps
   const paragraph =
-    "Certified maritime courses, advanced training, global placement opportunities, modern facilities, expert faculty, and industry-recognized accreditation."
+    "CERTIFIED MARITIME COURSES, ADVANCED TRAINING, GLOBAL PLACEMENT OPPORTUNITIES, MODERN FACILITIES, EXPERT FACULTY, AND INDUSTRY-RECOGNIZED ACCREDITATION."
 
   const items: ShowImageListItemProps[] = [
     {
-      text: "Certified maritime courses",
+      text: "CERTIFIED MARITIME COURSES",
       images: [
-        { src: "/images/certification-hero.jpg", alt: "Maritime certification" },
-        { src: "/images/cards/offshore.svg", alt: "Certified maritime" },
+        { src: "/images/certification-hero.jpg", alt: "Maritime certification programs" },
+        { src: "/images/cards/offshore.svg", alt: "Certified maritime courses" },
       ],
     },
     {
-      text: "advanced training",
+      text: "ADVANCED TRAINING",
       images: [
-        { src: "/images/courses-hero.jpg", alt: "Training programs" },
-        { src: "/images/cards/classroom.svg", alt: "Advanced training classroom" },
+        { src: "/images/courses-hero.jpg", alt: "Advanced maritime training programs" },
+        { src: "/images/cards/classroom.svg", alt: "Advanced training classrooms" },
       ],
     },
     {
-      text: "global placement opportunities",
+      text: "GLOBAL PLACEMENT OPPORTUNITIES",
       images: [
-        { src: "/images/facility-hero.jpg", alt: "Global opportunities" },
-        { src: "/images/cards/placement.svg", alt: "Global placement" },
+        { src: "/images/facility-hero.jpg", alt: "Global placement network" },
+        { src: "/images/cards/placement.svg", alt: "Global placement opportunities" },
       ],
     },
     {
-      text: "modern facilities",
+      text: "MODERN FACILITIES",
       images: [
-        { src: "/images/advanced-computer-lab-with-maritime-simulation.jpg", alt: "Modern facilities" },
-        { src: "/images/cards/mechanical.svg", alt: "Modern equipment" },
+        { src: "/images/advanced-computer-lab-with-maritime-simulation.jpg", alt: "Modern maritime facilities" },
+        { src: "/images/cards/mechanical.svg", alt: "Modern facility equipment" },
       ],
     },
     {
-      text: "expert faculty",
+      text: "EXPERT FACULTY",
       images: [
-        { src: "/images/maritime-training-classroom-with-students.jpg", alt: "Expert instructors" },
-        { src: "/images/cards/crew.svg", alt: "Expert team" },
+        { src: "/images/maritime-training-classroom-with-students.jpg", alt: "Expert maritime faculty teaching" },
+        { src: "/images/cards/crew.svg", alt: "Expert faculty team" },
       ],
     },
     {
-      text: "industry-recognized accreditation",
+      text: "INDUSTRY-RECOGNIZED ACCREDITATION",
       images: [
-        { src: "/images/certification-hero.jpg", alt: "Industry accreditation" },
-        { src: "/images/cards/rigging.svg", alt: "Accreditation standards" },
+        { src: "/images/certification-hero.jpg", alt: "Industry certification and accreditation" },
+        { src: "/images/cards/rigging.svg", alt: "Industry accreditation standards" },
       ],
     },
   ]
@@ -97,7 +97,7 @@ export function RevealImageList({ className }: { className?: string }) {
   return (
     <div className={cn("reveal-list-root mx-auto px-4 py-8 text-center", className)} style={{ maxWidth: '75vw' }}>
       <div className="reveal-list-wrapper inline-block">
-        <p className="reveal-paragraph text-center text-[#333333] leading-relaxed">{/* continuous sentence with inline text */}
+        <p className="reveal-paragraph text-center leading-relaxed">{/* continuous sentence with inline text */}
           {items.map((it, idx) => (
             <React.Fragment key={idx}>
               <RevealImageListItem text={it.text} images={it.images} />
