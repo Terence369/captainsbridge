@@ -52,16 +52,18 @@ export default function FacilitiesPage() {
               <div className="h-48 w-full overflow-hidden">
                 <ParallaxImage src={f.image} alt={f.title} className="h-full w-full" intensity={0.12} zoom={0.06} />
               </div>
-              <CardContent className="p-6">
-                <h3 className="mb-2 text-lg font-bold uppercase heading-premium text-primary-cyan">
+              <CardContent className="p-6 flex flex-col flex-grow min-h-[160px]">
+                <h3 className="mb-2 text-lg font-bold uppercase heading-premium text-primary-cyan break-words">
                   {f.title}
                 </h3>
-                <p className="mb-4 text-sm leading-relaxed text-dark-secondary">
+                <p className="mb-4 text-sm leading-relaxed text-dark-secondary flex-grow overflow-hidden">
                   {f.desc}
                 </p>
-                <button className="w-full font-semibold py-2 rounded transition-all uppercase btn-primary" onClick={() => openDetails(f)}>
-                  View Detail
-                </button>
+                <div className="mt-2">
+                  <button className="w-full font-semibold py-2 rounded transition-all uppercase btn-primary" onClick={() => openDetails(f)}>
+                    View Detail
+                  </button>
+                </div>
               </CardContent>
             </Card>
           ))}
