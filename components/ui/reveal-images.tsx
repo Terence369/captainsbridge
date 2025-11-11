@@ -39,70 +39,63 @@ function RevealImageListItem({ text, images }: ShowImageListItemProps) {
 }
 
 export function RevealImageList({ className }: { className?: string }) {
-  // Use the site's existing paragraph text split into segments, each mapped to existing site images
+  // New comprehensive text about maritime education offerings
   const paragraph =
-    "Situated in South India, Kochi is blessed with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the marine sector. By catering courses that touch various aspects of marine studies, a candidate can select from a wide range of courses and the few of the best upstage training centers."
+    "Certified maritime courses, advanced training, global placement opportunities, modern facilities, expert faculty, and industry-recognized accreditation."
 
   const items: ShowImageListItemProps[] = [
     {
-      text: "Situated in South India, Kochi",
+      text: "Certified maritime courses",
       images: [
-        { src: "/images/home-hero.jpg", alt: "Kochi coastline" },
-        { src: "/images/cards/offshore.svg", alt: "Offshore" },
+        { src: "/images/certification-hero.jpg", alt: "Maritime certification" },
+        { src: "/images/cards/offshore.svg", alt: "Certified maritime" },
       ],
     },
     {
-      text: "is blessed with a rich coastline, a well-known port",
+      text: "advanced training",
       images: [
-        { src: "/images/cards/partners.svg", alt: "Port" },
-        { src: "/images/cards/classroom.svg", alt: "Classroom" },
+        { src: "/images/courses-hero.jpg", alt: "Training programs" },
+        { src: "/images/cards/classroom.svg", alt: "Advanced training classroom" },
       ],
     },
     {
-      text: "and an established maritime environment",
+      text: "global placement opportunities",
       images: [
-        { src: "/images/courses-hero.jpg", alt: "Maritime environment" },
-        { src: "/images/value-added-hero.jpg", alt: "Value added" },
+        { src: "/images/facility-hero.jpg", alt: "Global opportunities" },
+        { src: "/images/cards/placement.svg", alt: "Global placement" },
       ],
     },
     {
-      text: "and is notable for its positive side of the marine sector.",
+      text: "modern facilities",
       images: [
-        { src: "/images/certification-hero.jpg", alt: "Marine sector" },
-        { src: "/images/cards/placement.svg", alt: "Placement" },
+        { src: "/images/advanced-computer-lab-with-maritime-simulation.jpg", alt: "Modern facilities" },
+        { src: "/images/cards/mechanical.svg", alt: "Modern equipment" },
       ],
     },
     {
-      text: "By catering courses that touch various aspects of marine studies,",
+      text: "expert faculty",
       images: [
-        { src: "/images/courses-hero.jpg", alt: "Courses" },
-        { src: "/images/cards/mechanical.svg", alt: "Mechanical" },
+        { src: "/images/maritime-training-classroom-with-students.jpg", alt: "Expert instructors" },
+        { src: "/images/cards/crew.svg", alt: "Expert team" },
       ],
     },
     {
-      text: "a candidate can select from a wide range of courses",
+      text: "industry-recognized accreditation",
       images: [
-        { src: "/images/cards/crew.svg", alt: "Crew" },
-        { src: "/images/cards/rigging.svg", alt: "Rigging" },
-      ],
-    },
-    {
-      text: "and the few of the best upstage training centers.",
-      images: [
-        { src: "/images/home-hero.jpg", alt: "Training center" },
-        { src: "/images/cards/laboratory.svg", alt: "Laboratory" },
+        { src: "/images/certification-hero.jpg", alt: "Industry accreditation" },
+        { src: "/images/cards/rigging.svg", alt: "Accreditation standards" },
       ],
     },
   ]
 
   return (
-    <div className={cn("reveal-list-root mx-auto max-w-4xl px-4 py-8 text-center", className)}>
+    <div className={cn("reveal-list-root mx-auto px-4 py-8 text-center", className)} style={{ maxWidth: '75vw' }}>
       <div className="reveal-list-wrapper inline-block">
-        <p className="reveal-paragraph text-center">{/* keep inline-wrapping structure */}
+        <p className="reveal-paragraph text-center text-[#333333] leading-relaxed">{/* continuous sentence with inline text */}
           {items.map((it, idx) => (
             <React.Fragment key={idx}>
               <RevealImageListItem text={it.text} images={it.images} />
-              {" \u00A0"}
+              {idx < items.length - 1 ? null : ""}
             </React.Fragment>
           ))}
         </p>
