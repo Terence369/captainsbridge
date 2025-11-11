@@ -329,6 +329,21 @@ export default function CochinMaritimeAcademy() {
             </div>
           </AnimatedSection>
 
+          <style jsx>{`
+            .glass-card {
+              background: rgba(255, 255, 255, 0.05) !important;
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              border: 1px solid rgba(255, 255, 255, 0.1) !important;
+              transition: all 0.3s ease-out;
+            }
+            .glass-card:hover {
+              background: rgba(255, 255, 255, 0.08) !important;
+              border-color: rgba(255, 255, 255, 0.2) !important;
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            }
+          `}</style>
+
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
@@ -372,22 +387,22 @@ export default function CochinMaritimeAcademy() {
                   "Get info about online programs in cooking. Read about program requiremen...",
               },
             ].map((card, i) => (
-              <Card key={i} className="border-0 overflow-hidden card-minimal" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+              <Card key={i} className="border-0 overflow-hidden card-minimal glass-card">
                 <div className="p-8 text-center">
-                  <div className="mx-auto mb-6 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(0, 152, 183, 0.12)' }}>
-                    <LifeBuoy style={{ color: 'rgb(0, 152, 183)' }} />
+                  <div className="mx-auto mb-6 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)' }}>
+                    <LifeBuoy style={{ color: 'rgb(255, 255, 255)' }} />
                   </div>
                   {card.title === "Rigging and Slinging Safety Level - 2" ? (
-                    <h3 className="text-sm font-semibold uppercase heading-premium text-primary-cyan mb-4">
+                    <h3 className="text-sm font-semibold uppercase heading-premium mb-4" style={{ color: 'rgb(255, 255, 255)' }}>
                       Rigging and Slinging <br />
                       Safety Level - 2
                     </h3>
                   ) : (
-                    <h3 className="text-sm font-semibold uppercase heading-premium text-primary-cyan mb-4">
+                    <h3 className="text-sm font-semibold uppercase heading-premium mb-4" style={{ color: 'rgb(255, 255, 255)' }}>
                       {card.title}
                     </h3>
                   )}
-                  <p className="text-sm leading-relaxed text-dark-secondary">
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
                     {card.desc}
                   </p>
                 </div>
