@@ -39,7 +39,7 @@ export default function FacilitiesPage() {
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-page-white">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
-            Cochin Maritime Academy Facilities
+            SNEF India Facilities
           </h2>
           <p className="text-base leading-relaxed md:text-lg body-premium">
             We are enriched with an outstanding faculty team, comprising of high profile and experienced Captains and Chief-Officers who are capable of providing excellent academic training in all our courses.
