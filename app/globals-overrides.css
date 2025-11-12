@@ -1,4 +1,3 @@
-/* Enforce Inter and non-bold for all non-heading elements site-wide */
 body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif !important;
   font-weight: 400 !important;
@@ -263,5 +262,15 @@ header img, .site-header img {
   [data-slot="card"] img,
   .reveal-image img {
     object-fit: contain;
+  }
+}
+
+/* Video fallback sizing on narrow screens */
+@media (max-width: 640px) {
+  .youtube-hero-background video,
+  .youtube-hero-background iframe {
+    width: auto !important;
+    height: 100% !important;
+    min-width: 100% !important;
   }
 }
