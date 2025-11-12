@@ -185,7 +185,7 @@ export default function CochinMaritimeAcademy() {
         imageUrl="https://images.pexels.com/photos/34664187/pexels-photo-34664187.jpeg"
         className="py-16"
       >
-        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container mx-auto px-4 page-inner">
           <div className="text-center">
             <h3 className="text-3xl md:text-4xl font-black heading-premium text-primary-cyan">Explore Our Maritime World</h3>
           </div>
@@ -194,7 +194,7 @@ export default function CochinMaritimeAcademy() {
 
       {/* About Section */}
       <section id="about" className="py-32 bg-page-white">
-        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container mx-auto px-4 page-inner">
           <AnimatedSection>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
@@ -279,7 +279,7 @@ export default function CochinMaritimeAcademy() {
 
       {/* Courses Section */}
       <section id="courses" className="py-32 bg-page-white">
-        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container mx-auto px-4 page-inner">
           <AnimatedSection>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
@@ -362,7 +362,7 @@ export default function CochinMaritimeAcademy() {
         imageUrl="https://images.pexels.com/photos/3435378/pexels-photo-3435378.jpeg"
         className="py-32"
       >
-        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container mx-auto px-4 page-inner">
           <AnimatedSection>
             <div className="mx-auto max-w-4xl text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight heading-premium text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
@@ -561,7 +561,7 @@ export default function CochinMaritimeAcademy() {
 
       {/* Facilities Highlight */}
       <section id="facilities" className="py-32 bg-page-white">
-        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container mx-auto px-4 page-inner">
           <AnimatedSection>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
@@ -604,7 +604,7 @@ export default function CochinMaritimeAcademy() {
         imageUrl="https://images.pexels.com/photos/8650298/pexels-photo-8650298.jpeg"
         className="py-32"
       >
-        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container mx-auto px-4 page-inner">
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-white">
@@ -624,7 +624,7 @@ export default function CochinMaritimeAcademy() {
 
       {/* Contact Section */}
       <section id="contact" className="py-32 bg-page-white">
-        <div className="container mx-auto px-4" style={{ maxWidth: '1320px', paddingLeft: '80px', paddingRight: '80px' }}>
+        <div className="container mx-auto px-4 page-inner">
           <AnimatedSection>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
