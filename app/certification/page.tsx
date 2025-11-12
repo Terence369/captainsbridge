@@ -102,7 +102,7 @@ export default function CertificationPage() {
         {/* Offerings Section */}
         <div className="mx-auto mb-10 max-w-4xl text-center pt-12">
           <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
-            Cochin Maritime Academy We Offer
+            SNEF India We Offer
           </h2>
           <div className="text-base font-semibold md:text-lg heading-premium text-accent-gold">
             Focus: One of a kind in India
