@@ -198,7 +198,7 @@ export default function CochinMaritimeAcademy() {
           <AnimatedSection>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
-                Welcome to Cochin Maritime Academy
+                Welcome to SNEF India
               </h2>
               <div className="w-16 h-px mx-auto divider-gold" />
             </div>
@@ -283,7 +283,7 @@ export default function CochinMaritimeAcademy() {
           <AnimatedSection>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
-                Cochin Maritime Academy Facilities
+                SNEF India Facilities
               </h2>
               <div className="w-16 h-px mx-auto mb-10 divider-gold" />
               <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium body-premium">

@@ -49,7 +49,7 @@ export default function SiteHeader() {
           <Link href="/" className="group relative flex flex-col items-center">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fa867cc2fa9c64655859d3f65ac1500c0"
-              alt="Cochin Maritime Academy"
+              alt="SNEF India"
               className="h-24 w-24 transition-all duration-300"
             />
             <span className="block text-sm font-semibold tracking-widest uppercase font-display text-primary-cyan site-header-title">

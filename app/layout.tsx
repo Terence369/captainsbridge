@@ -12,7 +12,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Cochin Maritime Academy - Premier Maritime Training Institute",
+  title: "SNEF India - Premier Maritime Training Institute",
   description:
     "Located in South India, Kochi. Offering comprehensive maritime training courses for merchant navy, certifications, and placement support.",
   keywords: "maritime academy, merchant navy training, maritime courses, ship training, Kochi, maritime education",
