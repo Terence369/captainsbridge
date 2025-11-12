@@ -58,9 +58,9 @@ export default function YouTubeHeroBackground({
       </div>
 
       <div
-        className="absolute inset-0 z-5"
+        className="absolute inset-0 z-5 hero-overlay"
         style={{
-          backgroundColor: `rgba(255, 255, 255, ${overlayOpacity})`,
+          backgroundColor: `rgba(0, 0, 0, ${typeof overlayOpacity === 'number' ? overlayOpacity : 0.12})`,
         }}
       />
 
