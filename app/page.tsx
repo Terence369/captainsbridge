@@ -187,7 +187,7 @@ export default function CochinMaritimeAcademy() {
       >
         <div className="container mx-auto px-4 page-inner">
           <div className="text-center">
-            <h3 className="text-3xl md:text-4xl font-black heading-premium text-primary-cyan">Explore Our Maritime World</h3>
+            <h3 className="text-3xl md:text-4xl font-black heading-premium text-white">Explore Our Maritime World</h3>
           </div>
         </div>
       </ParallaxFixedSection>
