@@ -12,7 +12,7 @@ type ShowImageListItemProps = {
 
 function RevealImageListItem({ text, images }: ShowImageListItemProps) {
   // responsive image container sizing
-  const imageContainerClass = "absolute -right-8 -top-6 md:-right-10 md:-top-8 z-40 h-[120px] md:h-[160px] w-[160px] md:w-[224px]"
+  const imageContainerClass = "hidden sm:block absolute -right-8 -top-6 md:-right-10 md:-top-8 z-40 h-[120px] md:h-[160px] w-[160px] md:w-[224px]"
   const imageEffectClass =
     "relative duration-500 delay-100 shadow-sm group-hover:shadow-md opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full w-14 md:w-20 h-14 md:h-20 overflow-hidden transition-all rounded-md"
 

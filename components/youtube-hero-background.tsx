@@ -27,7 +27,7 @@ export default function YouTubeHeroBackground({
       <div className="absolute inset-0 w-full h-full">
         {videoSrc ? (
           <video
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-[177.78vh] h-[100vh] object-cover"
+            className="hero-video absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-[177.78vh] h-[100vh] object-cover"
             src={videoSrc}
             poster={poster}
             autoPlay
@@ -43,7 +43,7 @@ export default function YouTubeHeroBackground({
           </video>
         ) : videoId ? (
           <iframe
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full"
+            className="hero-video absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full"
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&modestbranding=1&rel=0&showinfo=0`}
             title="Background Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
