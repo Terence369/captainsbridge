@@ -159,7 +159,7 @@ export default function CochinMaritimeAcademy() {
                   Explore Courses
                 </button>
                 <button
-                  className="px-10 py-4 text-lg font-bold uppercase transition-all duration-300 rounded btn-outline-cyan"
+                  className="px-10 py-4 text-lg font-bold uppercase transition-all duration-300 rounded btn-primary"
                   onClick={() => scrollToSection("contact")}
                 >
                   Contact Us
