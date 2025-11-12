@@ -188,3 +188,80 @@ header img, .site-header img {
 .mobile-menu-toggle {
   /* Placeholder class for future header toggle overrides */
 }
+
+/* Page container used across sections instead of inline styles */
+.page-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* Card sizing and touch target improvements */
+.card-minimal {
+  /* Ensure cards have comfortable tap targets on small screens */
+}
+
+.reveal-list-max {
+  max-width: 85vw;
+}
+
+.reveal-trigger-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 900;
+  font-size: clamp(20px, 5vw, 40px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0098b7;
+  line-height: 0.95;
+}
+
+/* Adjust image object-fit on smaller screens to avoid cropping important visuals */
+.parallax-image img,
+[data-slot="card"] img,
+.reveal-image img {
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .page-inner {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  .site-header-container {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .site-header-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  /* Make cards slightly taller and increase internal padding for touch friendliness */
+  .card-minimal .p-8, .card-minimal .px-8, .card-minimal .py-8 {
+    padding: 16px !important;
+  }
+  .card-minimal .h-48 {
+    height: 220px !important;
+  }
+  .card-minimal {
+    min-height: 320px;
+  }
+  /* Reveal list adjustments */
+  .reveal-list-root {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  /* Prefer contain for images on very small screens to avoid undesired crops */
+  .parallax-image img,
+  [data-slot="card"] img,
+  .reveal-image img {
+    object-fit: contain;
+  }
+}
