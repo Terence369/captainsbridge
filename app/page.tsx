@@ -151,7 +151,7 @@ export default function CochinMaritimeAcademy() {
               <h1 className="hero-title animate-in fade-in slide-in-from-bottom duration-1000">
                 Welcome to SNEF INDIA
               </h1>
-              <div className="hero-cta flex flex-col sm:flex-row gap-8 animate-in slide-in-from-bottom duration-800 delay-300">
+              <div className="hero-cta mt-6 flex flex-col sm:flex-row gap-8 animate-in slide-in-from-bottom duration-800 delay-300">
                 <button
                   className="px-10 py-4 text-lg font-bold uppercase transition-all duration-300 rounded btn-primary"
                   onClick={() => scrollToSection("courses")}
