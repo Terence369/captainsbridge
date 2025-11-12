@@ -1,5 +1,7 @@
 "use client"
 
+import Head from "next/head"
+
 interface YouTubeHeroBackgroundProps {
   videoId?: string
   videoSrc?: string
