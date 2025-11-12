@@ -167,3 +167,24 @@ header img, .site-header img {
     transform: translate(-50%, -50%) scale(1.05) !important;
   }
 }
+
+/* Header specific layout overrides */
+.site-header-container {
+  height: 134px;
+  max-width: 1652px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 29px 0 80px;
+}
+
+.site-header-title {
+  font-weight: 600;
+}
+
+.site-header-brand-color {
+  color: rgb(157, 57, 57);
+}
+
+.mobile-menu-toggle {
+  /* Placeholder class for future header toggle overrides */
+}

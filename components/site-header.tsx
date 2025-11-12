@@ -23,7 +23,7 @@ export default function SiteHeader() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full border-b bg-white text-gray-800 transition-all duration-300 ease-in-out border-light-color">
-      <div className="relative flex items-center justify-between" style={{ height: "134px", maxWidth: "1652px", width: "100%", margin: "0 auto", padding: "0 29px 0 80px" }}>
+      <div className="relative flex items-center justify-between site-header-container">
         {/* Left navigation (desktop) */}
         <nav className="hidden lg:flex items-center gap-10">
           {leftNav.map((item) => (
@@ -52,8 +52,8 @@ export default function SiteHeader() {
               alt="Cochin Maritime Academy"
               className="h-24 w-24 transition-all duration-300"
             />
-            <span className="block text-sm font-semibold tracking-widest uppercase font-display text-primary-cyan" style={{ fontWeight: "600" }}>
-              <span style={{ color: "rgb(157, 57, 57)" }}>SNEF INDIA</span>
+            <span className="block text-sm font-semibold tracking-widest uppercase font-display text-primary-cyan site-header-title">
+              <span className="site-header-brand-color">SNEF INDIA</span>
             </span>
           </Link>
         </div>
@@ -88,7 +88,7 @@ export default function SiteHeader() {
 
         {/* Mobile Menu Button */}
         <button
-          className="rounded-md p-2 transition-colors duration-200 lg:hidden hover:bg-gray-100 text-dark"
+          className="ml-auto mobile-menu-toggle rounded-md p-2 transition-colors duration-200 lg:hidden hover:bg-gray-100 text-dark"
           aria-label="Toggle Menu"
           onClick={() => setOpen((s) => !s)}
         >
