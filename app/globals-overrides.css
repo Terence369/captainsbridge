@@ -112,8 +112,8 @@ header img, .site-header img {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 900;
   line-height: 0.9;
-  /* Subtle blurred shadow so title is readable above video */
-  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  /* Subtle blurred shadow so title is readable above video (increased by 50%) */
+  text-shadow: 0 12px 27px rgba(0, 0, 0, 0.675);
   /* Scale responsively but keep desktop proportions */
   font-size: clamp(28px, 6.5vw, 99px);
 }
