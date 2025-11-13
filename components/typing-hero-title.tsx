@@ -17,7 +17,7 @@ export default function TypingHeroTitle({
   ],
   className = "hero-title animate-in fade-in slide-in-from-bottom duration-1000",
   typingSpeed = 50,
-  displayDuration = 4000,
+  displayDuration = 3000,
 }: TypingHeroTitleProps) {
   const [displayText, setDisplayText] = useState("")
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
@@ -34,7 +34,7 @@ export default function TypingHeroTitle({
           setDisplayText(currentText.slice(0, displayText.length + 1))
         }, typingSpeed)
       } else {
-        // Finished typing, wait before deleting
+        // Finished typing, wait displayDuration (3 seconds) before deleting
         setIsTyping(false)
         timeout = setTimeout(() => {
           setIsTyping(true)
