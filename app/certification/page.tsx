@@ -114,7 +114,7 @@ export default function CertificationPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {offerings.map((o, i) => (
             <Card key={i} className="overflow-hidden border-0 shadow-md group hover:shadow-lg transition-all" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
-              <div className="h-48 w-full overflow-hidden">
+              <div className="h-48 w-full overflow-hidden bg-gray-50">
                 <ParallaxImage src={o.image} alt={o.title} className="h-full w-full" intensity={0.12} zoom={0.06} />
               </div>
               <CardContent className="p-6">
