@@ -155,7 +155,7 @@ export default function CochinMaritimeAcademy() {
                   "Top rated maritime training center",
                   "we train future marine engineers",
                 ]}
-                displayDuration={4000}
+                displayDuration={3000}
                 typingSpeed={50}
               />
               <div className="hero-cta mt-6 flex flex-col sm:flex-row gap-8 animate-in slide-in-from-bottom duration-800 delay-300">
