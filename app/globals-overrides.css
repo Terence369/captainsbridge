@@ -225,10 +225,19 @@ header img, .site-header img {
 }
 
 /* Adjust image object-fit on smaller screens to avoid cropping important visuals */
+.parallax-image {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .parallax-image img,
 [data-slot="card"] img,
 .reveal-image img {
   object-fit: cover;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 @media (max-width: 1024px) {
