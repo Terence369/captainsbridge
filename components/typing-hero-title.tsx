@@ -21,40 +21,42 @@ export default function TypingHeroTitle({
 }: TypingHeroTitleProps) {
   const [displayText, setDisplayText] = useState("")
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
-  const [isTyping, setIsTyping] = useState(true)
+  const [phase, setPhase] = useState<"typing" | "displaying" | "deleting">("typing")
   const currentText = texts[currentTextIndex]
 
   useEffect(() => {
     let timeout: NodeJS.Timeout
 
-    if (isTyping) {
-      // Typing phase
+    if (phase === "typing") {
+      // Typing phase: add one character at a time
       if (displayText.length < currentText.length) {
         timeout = setTimeout(() => {
           setDisplayText(currentText.slice(0, displayText.length + 1))
         }, typingSpeed)
       } else {
-        // Finished typing, wait displayDuration (3 seconds) before deleting
-        setIsTyping(false)
-        timeout = setTimeout(() => {
-          setIsTyping(true)
-        }, displayDuration)
+        // Finished typing, move to displaying phase
+        setPhase("displaying")
       }
-    } else {
-      // Deleting phase
+    } else if (phase === "displaying") {
+      // Displaying phase: show text for displayDuration
+      timeout = setTimeout(() => {
+        setPhase("deleting")
+      }, displayDuration)
+    } else if (phase === "deleting") {
+      // Deleting phase: remove one character at a time
       if (displayText.length > 0) {
         timeout = setTimeout(() => {
           setDisplayText(displayText.slice(0, -1))
         }, typingSpeed / 2)
       } else {
-        // Move to next text
+        // Finished deleting, move to next text
         setCurrentTextIndex((prev) => (prev + 1) % texts.length)
-        setIsTyping(true)
+        setPhase("typing")
       }
     }
 
     return () => clearTimeout(timeout)
-  }, [displayText, isTyping, currentText, typingSpeed, displayDuration, texts.length])
+  }, [displayText, phase, currentText, typingSpeed, displayDuration, texts.length])
 
   return (
     <h1 className={className}>
