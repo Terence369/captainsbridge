@@ -34,6 +34,7 @@ import YouTubeHeroBackground from "@/components/youtube-hero-background"
 import ParallaxImage from "@/components/parallax-image"
 import ParallaxFixedSection from "@/components/parallax-fixed-section"
 import { RevealImageList } from "@/components/ui/reveal-images"
+import TypingHeroTitle from "@/components/typing-hero-title"
 
 // Animation hook for scroll-triggered animations
 function useIntersectionObserver(options = {}) {
