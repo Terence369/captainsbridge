@@ -78,7 +78,7 @@ export default function ParallaxImage({
         ref={imgRef}
         src={src}
         alt={alt}
-        className="w-full h-full object-contain md:object-cover transition-transform duration-700 ease-out hero-parallax-image"
+        className="w-full h-full object-cover transition-transform duration-700 ease-out hero-parallax-image"
         style={{ transform: "translate3d(0,0,0) scale(1)", ...style }}
         {...rest}
       />
