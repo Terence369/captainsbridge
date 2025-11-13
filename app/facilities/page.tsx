@@ -12,7 +12,7 @@ const facilities = [
   { title: "PLACEMENT GUIDELINES", desc: "Unique at-sea placement program where cadets train on various ship types across different marine sectors.", image: "/maritime-cadets-in-white-uniform-training.jpg" },
   { title: "ACCREDITATIONS / APPROVALS", desc: "Courses approved by STCW Council with guidance from an advisory board of industry experts and academic leaders.", image: "/person-signing-maritime-certification-documents.jpg" },
   { title: "PARTNERS & SUPPORTING ORGANISATIONS", desc: "Extended knowledge, expertise, and network from supporting partners keep our standards relevant.", image: "/maritime-professionals-discussing-partnership.jpg" },
-  { title: "LABORATORY FACILITY FOR HANDS-ON TRAINING", desc: "First-hand experience with course concepts; opportunity to explore practical methods used by industry specialists.", image: "/lab-hands-on-training.jpg" },
+  { title: "LABORATORY FACILITY FOR HANDS-ON TRAINING", desc: "First-hand experience with course concepts; opportunity to explore practical methods used by industry specialists.", image: "/advanced-computer-lab-with-maritime-simulation.jpg" },
 ]
 
 export default function FacilitiesPage() {
