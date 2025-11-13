@@ -7,10 +7,10 @@ import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const certifications = [
-  { title: "American Board of Education", image: "/images/certification-hero.jpg" },
-  { title: "STED Council", image: "/images/hero-certification.svg" },
-  { title: "SNEF India", image: "/images/certificates-sample.jpg" },
-  { title: "ISO 21001:2018 Certified", image: "/images/value-added-hero.jpg" },
+  { title: "American Board of Education", image: "/maritime-certificates.jpg" },
+  { title: "STED Council", image: "/person-signing-maritime-certification-documents.jpg" },
+  { title: "SNEF India", image: "/maritime-professionals-discussing-partnership.jpg" },
+  { title: "ISO 21001:2018 Certified", image: "/maritime-training-session.jpg" },
 ]
 
 const offerings = [
