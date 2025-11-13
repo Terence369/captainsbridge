@@ -275,11 +275,11 @@ header img, .site-header img {
     padding-left: 12px !important;
     padding-right: 12px !important;
   }
-  /* Prefer contain for images on very small screens to avoid undesired crops */
+  /* Ensure images stay visible on mobile with object-cover */
   .parallax-image img,
   [data-slot="card"] img,
   .reveal-image img {
-    object-fit: contain;
+    object-fit: cover !important;
   }
 }
 
