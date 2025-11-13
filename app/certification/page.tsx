@@ -14,9 +14,9 @@ const certifications = [
 ]
 
 const offerings = [
-  { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "/images/value-added-hero.jpg" },
-  { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "/images/home-hero.jpg" },
-  { title: "MARINE DOCUMENTATION", desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.", image: "/images/hero-certification.svg" },
+  { title: "MARINE VALUE-ADDED SAFETY COURSES", desc: "We provide the best Value Added courses in maritime with the latest research and techniques.", image: "/food-safety-training-checklist-maritime.jpg" },
+  { title: "MARINE CREW MANAGEMENT", desc: "Ongoing crew management services for entire crews or specific nationalities/departments.", image: "/maritime-cadets-in-white-uniform-training.jpg" },
+  { title: "MARINE DOCUMENTATION", desc: "Full-service support for maritime documentation, pleasure crafts, commercial fishing vessels, and fleet.", image: "/person-signing-maritime-certification-documents.jpg" },
 ]
 
 const testimonials = [
