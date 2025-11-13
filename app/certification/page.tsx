@@ -138,7 +138,7 @@ export default function CertificationPage() {
               <h3 className="mb-4 text-lg font-bold uppercase heading-premium text-primary-cyan">
                 Certifications
               </h3>
-              <ParallaxImage src="/certificates-sample.jpg" alt="Certificates" className="w-full rounded" intensity={0.06} zoom={0.03} />
+              <ParallaxImage src="/maritime-certificates.jpg" alt="Certificates" className="w-full rounded" intensity={0.06} zoom={0.03} />
             </CardContent>
           </Card>
 
