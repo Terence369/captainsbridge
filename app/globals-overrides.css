@@ -281,6 +281,12 @@ header img, .site-header img {
   .reveal-image img {
     object-fit: cover !important;
   }
+
+  /* Ensure card image containers are tall enough */
+  .h-48, .h-40 {
+    height: 180px !important;
+    min-height: 180px !important;
+  }
 }
 
 /* Video fallback sizing on narrow screens */
