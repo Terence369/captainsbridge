@@ -149,9 +149,15 @@ export default function CochinMaritimeAcademy() {
         <YouTubeHeroBackground videoSrc="https://cdn.builder.io/o/assets%2F9aed9e355eef433f905fdc33685caf52%2Fbf936fb889cb44438b1217b5daa6a76d?alt=media&token=d97ab75b-fbac-4318-ba19-2275c16c1484&apiKey=9aed9e355eef433f905fdc33685caf52" overlayOpacity={0.2} heightClass="min-h-[90vh]">
           <div className="hero-inner mx-auto max-w-[1320px] px-20 pt-20 pb-[21px] flex flex-col items-center lg:items-start justify-center relative min-h-[90vh]">
             <div className="max-w-3xl">
-              <h1 className="hero-title animate-in fade-in slide-in-from-bottom duration-1000">
-                Welcome to SNEF INDIA
-              </h1>
+              <TypingHeroTitle
+                texts={[
+                  "Welcome to SNEF INDIA",
+                  "Top rated maritime training center",
+                  "we train future marine engineers",
+                ]}
+                displayDuration={4000}
+                typingSpeed={50}
+              />
               <div className="hero-cta mt-6 flex flex-col sm:flex-row gap-8 animate-in slide-in-from-bottom duration-800 delay-300">
                 <button
                   className="px-10 py-4 text-lg font-bold uppercase transition-all duration-300 rounded btn-primary"
