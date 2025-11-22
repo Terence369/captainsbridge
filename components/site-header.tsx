@@ -59,8 +59,8 @@ export default function SiteHeader() {
                   alt="Captains Bridge"
                   className="h-24 w-24 transition-all duration-300"
                 />
-                <span className="block text-sm font-semibold tracking-widest uppercase font-display text-primary-cyan site-header-title mt-1">
-                  <span className="site-header-brand-color">Captains Bridge</span>
+                <span className="block text-sm font-semibold tracking-widest uppercase font-display site-header-title mt-1">
+                  <span className="site-header-brand-color" style={{ color: 'rgb(0, 152, 183)' }}>Captains Bridge</span>
                 </span>
               </>
             ) : (
