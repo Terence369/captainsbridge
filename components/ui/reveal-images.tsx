@@ -83,7 +83,7 @@ export function RevealImageList({ className }: { className?: string }) {
       text: "INDUSTRY-RECOGNIZED ACCREDITATION",
       images: [
         { src: "/maritime-certificates.jpg", alt: "Industry certification and accreditation" },
-        { src: "/images/hero-certification.svg", alt: "Industry accreditation standards" },
+        { src: "https://images.pexels.com/photos/11035385/pexels-photo-11035385.jpeg", alt: "Industry accreditation standards" },
       ],
     },
   ]
