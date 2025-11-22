@@ -52,7 +52,7 @@ export default function SiteHeader() {
         {/* Centered Logo */}
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
           <Link href="/" className="group relative flex flex-col items-center">
-            {pathname === "/" ? (
+            {isHome ? (
               <>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F9aed9e355eef433f905fdc33685caf52%2Fae5c232152c6458babbf35a1bc3edf11?format=webp&width=800"
