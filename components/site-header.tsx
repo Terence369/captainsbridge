@@ -47,14 +47,29 @@ export default function SiteHeader() {
         {/* Centered Logo */}
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
           <Link href="/" className="group relative flex flex-col items-center">
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fa867cc2fa9c64655859d3f65ac1500c0"
-              alt="SNEF India"
-              className="h-24 w-24 transition-all duration-300"
-            />
-            <span className="block text-sm font-semibold tracking-widest uppercase font-display text-primary-cyan site-header-title">
-              <span className="site-header-brand-color">SNEF INDIA</span>
-            </span>
+            {pathname === "/" ? (
+              <>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F9aed9e355eef433f905fdc33685caf52%2Fae5c232152c6458babbf35a1bc3edf11?format=webp&width=800"
+                  alt="Captains Bridge"
+                  className="h-24 w-24 transition-all duration-300"
+                />
+                <span className="block text-sm font-semibold tracking-widest uppercase font-display text-primary-cyan site-header-title mt-1">
+                  <span className="site-header-brand-color">Captains Bridge</span>
+                </span>
+              </>
+            ) : (
+              <>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fa867cc2fa9c64655859d3f65ac1500c0"
+                  alt="SNEF India"
+                  className="h-24 w-24 transition-all duration-300"
+                />
+                <span className="block text-sm font-semibold tracking-widest uppercase font-display text-primary-cyan site-header-title">
+                  <span className="site-header-brand-color">SNEF INDIA</span>
+                </span>
+              </>
+            )}
           </Link>
         </div>
 
