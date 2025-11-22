@@ -17,6 +17,11 @@ const nav = [
 export default function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [isHome, setIsHome] = useState(false)
+
+  useEffect(() => {
+    setIsHome(pathname === "/")
+  }, [pathname])
 
   const leftNav = nav.slice(0, 3)
   const rightNav = nav.slice(3)
