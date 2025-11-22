@@ -48,7 +48,7 @@ export function RevealImageList({ className }: { className?: string }) {
       text: "CERTIFIED MARITIME COURSES",
       images: [
         { src: "/images/certification-hero.jpg", alt: "Maritime certification programs" },
-        { src: "/images/hero-certification.svg", alt: "Certified maritime courses" },
+        { src: "https://images.pexels.com/photos/8111865/pexels-photo-8111865.jpeg", alt: "Certified maritime courses" },
       ],
     },
     {
