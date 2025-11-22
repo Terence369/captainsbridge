@@ -304,7 +304,7 @@ export default function CaptainsBridge() {
               {
                 title: "Spacious Class Rooms With Well Equipped Furniture",
                 description:
-                  "Cochin Maritime can boast of spacious, well-ventilated and excellently furnished classrooms to make the students learning comfortable and enjoyable. Individual tables and chairs are provided to studen...",
+                  "Captains Bridge can boast of spacious, well-ventilated and excellently furnished classrooms to make the students learning comfortable and enjoyable. Individual tables and chairs are provided to studen...",
                 image: "/spacious-maritime-classroom-with-modern-furniture.jpg",
               },
               {
@@ -316,13 +316,13 @@ export default function CaptainsBridge() {
               {
                 title: "Food Safety and HACCP Training",
                 description:
-                  "Cochin Maritime has developed this course to provide an understanding of management systems approach to food safety and data required to implement and maintain Food Safety System. By the end of the...",
+                  "Captains Bridge has developed this course to provide an understanding of management systems approach to food safety and data required to implement and maintain Food Safety System. By the end of the...",
                 image: "/food-safety-training-checklist-maritime.jpg",
               },
               {
                 title: "Placement Guidelines",
                 description:
-                  "Cochin Maritime operate a unique of sea placement program where the Cadets train on various ship types across different marine sectors...",
+                  "Captains Bridge operate a unique of sea placement program where the Cadets train on various ship types across different marine sectors...",
                 image: "/maritime-cadets-in-white-uniform-training.jpg",
               },
               {
@@ -334,7 +334,7 @@ export default function CaptainsBridge() {
               {
                 title: "Partners & Supporting Organisations",
                 description:
-                  "Our supporting partners have extended their knowledge, expertise, network and valuable insights in so many ways we are thankful for Cochin Maritime standards and process remain relevant because of our...",
+                  "Our supporting partners have extended their knowledge, expertise, network and valuable insights in so many ways we are thankful for Captains Bridge standards and process remain relevant because of our...",
                 image: "/maritime-professionals-discussing-partnership.jpg",
               },
             ].map((course, index) => (
@@ -376,7 +376,7 @@ export default function CaptainsBridge() {
                 Partners and Supporting Organization
               </h2>
               <p className="text-lg md:text-xl body-premium text-white" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
-                The Institute for Cochin Maritime Institute strives to increase public understanding of the causes and consequences of marine degradation while also promoting solutions. Through our partnerships, we are working to further conservation of marine life and ocean environments around the world.
+                The Institute for Captains Bridge strives to increase public understanding of the causes and consequences of marine degradation while also promoting solutions. Through our partnerships, we are working to further conservation of marine life and ocean environments around the world.
               </p>
             </div>
           </AnimatedSection>
@@ -594,7 +594,7 @@ export default function CaptainsBridge() {
                 </div>
                 <div>
                   <p className="leading-relaxed mb-8 text-justify text-base body-premium text-dark-secondary">
-                    Cochin Maritime training for merchant navy is a new dimension in the field of job oriented professional courses. Facility here in catering with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the maritime sector. By catering complete courses in accordance with the guidelines of the International Maritime Organization's Standards for Training, Certification and Watchkeeping, International Safety Management Code, and International Ship and Port Facility Security.
+                    Captains Bridge training for merchant navy is a new dimension in the field of job oriented professional courses. Facility here in catering with a rich coastline, a well-known port and an established maritime environment, and is notable for its positive side of the maritime sector. By catering complete courses in accordance with the guidelines of the International Maritime Organization's Standards for Training, Certification and Watchkeeping, International Safety Management Code, and International Ship and Port Facility Security.
                   </p>
                   <p className="leading-relaxed text-justify text-base body-premium text-dark-secondary">
                     We further mention that we have the vast experience in training the aspirant candidates in all trades essential for merchant navy career from Cadet & GP Officer.
@@ -686,7 +686,7 @@ export default function CaptainsBridge() {
                     <h3 className="font-bold mb-3 uppercase text-base heading-premium text-accent-gold">
                       Email
                     </h3>
-                    <p className="text-sm text-dark-secondary">cochinmaritime@gmail.com</p>
+                    <p className="text-sm text-dark-secondary">captainsbridge@gmail.com</p>
                   </div>
                 </div>
 
