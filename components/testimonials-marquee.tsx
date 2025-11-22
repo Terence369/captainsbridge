@@ -39,7 +39,7 @@ const testimonials: Testimonial[] = [
   {
     name: "RAJESH IYER",
     role: "Engine Officer",
-    quote: "Cochin Maritime's approach to maritime education is modern, industry-relevant, and truly world-class.",
+    quote: "Captains Bridge's approach to maritime education is modern, industry-relevant, and truly world-class.",
     image: "/maritime-engineer-officer-portrait.jpg",
   },
   {
