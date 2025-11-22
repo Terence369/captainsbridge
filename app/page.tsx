@@ -218,7 +218,7 @@ export default function CaptainsBridge() {
                 title: "MARINE VALUE-ADDED SAFETY COURSES",
                 description:
                   "We provide the best Value added courses in maritime with latest research and technique.",
-                image: "/images/value-added-hero.jpg",
+                image: "https://images.pexels.com/photos/28282297/pexels-photo-28282297.jpeg",
               },
               {
                 icon: Users,
