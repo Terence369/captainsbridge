@@ -82,7 +82,7 @@ function AnimatedSection({
   )
 }
 
-export default function CochinMaritimeAcademy() {
+export default function CaptainsBridge() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [dialogOpen, setDialogOpen] = useState(false)
   const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
@@ -151,7 +151,7 @@ export default function CochinMaritimeAcademy() {
             <div className="max-w-3xl">
               <TypingHeroTitle
                 texts={[
-                  "Welcome to SNEF INDIA",
+                  "Welcome to CAPTAINS BRIDGE",
                   "Top rated maritime training center",
                   "we train future marine engineers",
                 ]}
@@ -205,7 +205,7 @@ export default function CochinMaritimeAcademy() {
           <AnimatedSection>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
-                Welcome to SNEF India
+                Welcome to CAPTAINS BRIDGE
               </h2>
               <div className="w-16 h-px mx-auto divider-gold" />
             </div>
@@ -224,7 +224,7 @@ export default function CochinMaritimeAcademy() {
                 icon: Users,
                 title: "MARINE CREW MANAGEMENT",
                 description:
-                  "Cochin Marine Recruitment can provide ongoing crew management services for entire crews or specific nationalities or departments depending on the requirements of the vessels and maritime industry employers.",
+                  "Captains Bridge can provide ongoing crew management services for entire crews or specific nationalities or departments depending on the requirements of the vessels and maritime industry employers.",
                 image: "/maritime-professionals-discussing-partnership.jpg",
               },
               {
@@ -245,14 +245,14 @@ export default function CochinMaritimeAcademy() {
                 icon: Anchor,
                 title: "PLACEMENT GUIDANCE",
                 description:
-                  "The Cochin Maritime Guidance and Placement Cell send invitations to companies/organizations along with relevant information and allots dates to companies for institute interviews based on various details.",
+                  "The Captains Bridge Guidance and Placement Cell send invitations to companies/organizations along with relevant information and allots dates to companies for institute interviews based on various details.",
                 image: "/maritime-cadets-in-white-uniform-training.jpg",
               },
               {
                 icon: Compass,
                 title: "MARINE – OFFSHORE COURSES",
                 description:
-                  "Cochin Maritime offers a broad range of courses for the diverse Marine and Offshore sectors. We provide specialized training, as well as fully compliant courses in accordance with the guidelines of the industry.",
+                  "Captains Bridge offers a broad range of courses for the diverse Marine and Offshore sectors. We provide specialized training, as well as fully compliant courses in accordance with the guidelines of the industry.",
                 image: "/maritime-training-session.jpg",
               },
             ].map((item, index) => (
@@ -290,7 +290,7 @@ export default function CochinMaritimeAcademy() {
           <AnimatedSection>
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight heading-premium text-primary-cyan">
-                SNEF India Facilities
+                Captains Bridge Facilities
               </h2>
               <div className="w-16 h-px mx-auto mb-10 divider-gold" />
               <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-medium body-premium">
