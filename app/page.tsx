@@ -686,7 +686,7 @@ export default function CaptainsBridge() {
                     <h3 className="font-bold mb-3 uppercase text-base heading-premium text-accent-gold">
                       Email
                     </h3>
-                    <p className="text-sm text-dark-secondary">captainsbridge@gmail.com</p>
+                    <p className="text-sm text-dark-secondary">cochinmaritime@gmail.com</p>
                   </div>
                 </div>
 
