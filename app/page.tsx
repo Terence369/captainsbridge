@@ -456,7 +456,7 @@ export default function CaptainsBridge() {
                   setSelectedCourse({
                     title: card.title,
                     description: courseDescriptions[card.title as keyof typeof courseDescriptions] || card.desc,
-                    image: (card as any).image || null,
+                    image: card.image,
                   })
                   setCourseModalOpen(true)
                 }}
