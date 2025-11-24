@@ -82,6 +82,112 @@ function AnimatedSection({
   )
 }
 
+function HomeContactForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    course: '',
+    message: ''
+  })
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    if (!formData.name || !formData.email || !formData.phone) {
+      alert('Please fill in all required fields')
+      return
+    }
+
+    setIsLoading(true)
+
+    const whatsappNumber = '919495145500'
+    const message = `Hello, I am interested in your courses.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCourse: ${formData.course || 'Not specified'}\n\nMessage: ${formData.message || 'No additional message'}`
+
+    const encodedMessage = encodeURIComponent(message)
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
+
+    window.open(whatsappLink, '_blank')
+
+    setFormData({ name: '', email: '', phone: '', course: '', message: '' })
+    setIsLoading(false)
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <Input
+          name="name"
+          placeholder="Your Name *"
+          className="border border-light-color rounded-md bg-white text-gray-800 text-sm"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <Input
+          name="email"
+          type="email"
+          placeholder="Your Email *"
+          className="border border-light-color rounded-md bg-white text-gray-800 text-sm"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <Input
+          name="phone"
+          type="tel"
+          placeholder="Your Phone *"
+          className="border border-light-color rounded-md bg-white text-gray-800 text-sm"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <Select
+          name="course"
+          value={formData.course}
+          onChange={handleChange}
+          defaultValue=""
+          className="border border-light-color rounded-md bg-white text-gray-800 text-sm"
+        >
+          <option value="">Select a course</option>
+          {courseTitles.map((title) => (
+            <option key={title} value={title}>{title}</option>
+          ))}
+        </Select>
+      </div>
+      <div>
+        <Textarea
+          name="message"
+          rows={4}
+          placeholder="Your Message"
+          className="border border-light-color rounded-md bg-white text-gray-800 text-sm"
+          value={formData.message}
+          onChange={handleChange}
+        />
+      </div>
+      <button
+        type="submit"
+        className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+        disabled={isLoading}
+      >
+        {isLoading ? 'Sending...' : 'Send Message'}
+      </button>
+    </form>
+  )
+}
+
 export default function CaptainsBridge() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [dialogOpen, setDialogOpen] = useState(false)
