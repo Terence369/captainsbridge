@@ -82,20 +82,62 @@ function ContactClient() {
           </div>
         </div>
 
-        <form className="space-y-4 rounded border p-6 shadow-sm bg-white border-light-color">
+        <form onSubmit={handleSubmit} className="space-y-4 rounded border p-6 shadow-sm bg-white border-light-color">
           <div className="grid gap-4 md:grid-cols-2">
-            <Input placeholder="Full name *" required className="border rounded bg-white text-gray-800" />
-            <Input type="email" placeholder="Email *" required className="border rounded bg-white text-gray-800" />
+            <Input
+              name="name"
+              placeholder="Full name *"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="border rounded bg-white text-gray-800"
+            />
+            <Input
+              name="email"
+              type="email"
+              placeholder="Email *"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="border rounded bg-white text-gray-800"
+            />
           </div>
-          <Input type="tel" placeholder="Phone *" required className="border rounded bg-white text-gray-800" />
-          <Select defaultValue="" className="border rounded bg-white text-gray-800">
-            <option value="" disabled>Select a course</option>
+          <Input
+            name="phone"
+            type="tel"
+            placeholder="Phone *"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            className="border rounded bg-white text-gray-800"
+          />
+          <Select
+            name="course"
+            value={formData.course}
+            onChange={handleChange}
+            defaultValue=""
+            className="border rounded bg-white text-gray-800"
+          >
+            <option value="">Select a course</option>
             {courseTitles.map((title) => (
               <option key={title} value={title}>{title}</option>
             ))}
           </Select>
-          <Textarea rows={5} placeholder="Message" defaultValue={initialMessage} className="border rounded bg-white text-gray-800" />
-          <button type="submit" className="w-full btn-primary">Send Message</button>
+          <Textarea
+            name="message"
+            rows={5}
+            placeholder="Message"
+            value={formData.message}
+            onChange={handleChange}
+            className="border rounded bg-white text-gray-800"
+          />
+          <button
+            type="submit"
+            className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={isLoading}
+          >
+            {isLoading ? 'Sending...' : 'Send Message'}
+          </button>
         </form>
       </section>
     </div>
