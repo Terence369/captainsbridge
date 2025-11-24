@@ -405,49 +405,49 @@ export default function CaptainsBridge() {
                 title: "Hydrogen Sulphide Awareness (H2S)",
                 desc:
                   "Hydrogen Sulphide (H2S) is a highly toxic and flammable gas. Each year in...",
-                image: "/images/value-added-hero.jpg",
+                image: null,
               },
               {
                 title: "Helicopter Under‑Water Escape Training (HUET)",
                 desc:
                   "This course aims to train personnel intended to work offshore, using the hel...",
-                image: "/images/courses-hero.jpg",
+                image: null,
               },
               {
                 title: "Basic Offshore Safety & Emergency Training (BOISET)",
                 desc:
                   "The course is designed for personnel intending to ...",
-                image: "/images/certification-hero.jpg",
+                image: null,
               },
               {
                 title: "Rigging and Slinging Safety Level - 2",
                 desc:
                   "Rigger Level 2 training provides the knowledge and skills necessary for a p...",
-                image: "/maritime-training-session.jpg",
+                image: null,
               },
               {
                 title: "Lifting and Hoisting Safety",
                 desc:
                   "The course provides vital information for those assisting or working around...",
-                image: "/large-container-ship-at-sea-with-sunset.jpg",
+                image: null,
               },
               {
                 title: "Crane Operators Theory (On Demand Practical)",
                 desc:
                   "Our Crane Operator Training Program will train your operators on the site...",
-                image: "/maritime-engineer-officer-portrait.jpg",
+                image: null,
               },
               {
                 title: "Cookery Course With HACCP",
                 desc:
                   "On completion of this food safety training course, participants will be abl...",
-                image: "/food-safety-training-checklist-maritime.jpg",
+                image: null,
               },
               {
                 title: "Basic Cooking Course Certification",
                 desc:
                   "Get info about online programs in cooking. Read about program requiremen...",
-                image: "/professional-maritime-officer-portrait.jpg",
+                image: null,
               },
             ].map((card, i) => (
               <button
