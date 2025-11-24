@@ -11,6 +11,41 @@ import { courseTitles } from "@/lib/courses"
 function ContactClient() {
   const searchParams = useSearchParams()
   const initialMessage = searchParams.get("message") || ""
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    course: '',
+    message: initialMessage
+  })
+  const [isLoading, setIsLoading] = useState(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    if (!formData.name || !formData.email || !formData.phone) {
+      alert('Please fill in all required fields')
+      return
+    }
+
+    setIsLoading(true)
+
+    const whatsappNumber = '919495145500'
+    const message = `Hello, I am interested in your courses.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCourse: ${formData.course || 'Not specified'}\n\nMessage: ${formData.message || 'No additional message'}`
+
+    const encodedMessage = encodeURIComponent(message)
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
+
+    window.open(whatsappLink, '_blank')
+
+    setFormData({ name: '', email: '', phone: '', course: '', message: '' })
+    setIsLoading(false)
+  }
 
   return (
     <div className="bg-page-white">
