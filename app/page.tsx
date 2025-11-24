@@ -708,29 +708,7 @@ export default function CaptainsBridge() {
             <AnimatedSection delay={200}>
               <Card className="border border-light-color card-minimal" style={{ backgroundColor: 'rgb(245, 243, 239)' }}>
                 <CardContent className="p-10">
-                  <form className="space-y-6">
-                    <div>
-                      <Input placeholder="Your Name *" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" required />
-                    </div>
-                    <div>
-                      <Input type="email" placeholder="Your Email *" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" required />
-                    </div>
-                    <div>
-                      <Input type="tel" placeholder="Your Phone *" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" required />
-                    </div>
-                    <div>
-                      <Select defaultValue="" className="border border-light-color rounded-md bg-white text-gray-800 text-sm">
-                        <option value="" disabled>Select a course</option>
-                        {courseTitles.map((title) => (
-                          <option key={title} value={title}>{title}</option>
-                        ))}
-                      </Select>
-                    </div>
-                    <div>
-                      <Textarea rows={4} placeholder="Your Message" className="border border-light-color rounded-md bg-white text-gray-800 text-sm" />
-                    </div>
-                    <button type="submit" className="w-full btn-primary">Send Message</button>
-                  </form>
+                  <HomeContactForm />
                 </CardContent>
               </Card>
             </AnimatedSection>
