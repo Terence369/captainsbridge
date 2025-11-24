@@ -1,6 +1,6 @@
 "use client"
 
-import { Suspense } from "react"
+import { Suspense, useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select } from "@/components/ui/select"
@@ -69,7 +69,7 @@ function ContactClient() {
           <div className="space-y-5 text-base text-dark-secondary">
             <div className="flex items-start gap-3">
               <MapPin className="flex-shrink-0 mt-1 text-primary-cyan" />
-              <span>Aditya Complex, Kochupally road, Next to Anjali Marriage hall, Thoppumpady, Kochi – 682005</span>
+              <span>Aditya Complex, Kochupally road, Next to Anjali Marriage hall, Thoppumpady, Kochi �� 682005</span>
             </div>
             <div className="flex items-center gap-3">
               <Phone className="flex-shrink-0 text-primary-cyan" />
