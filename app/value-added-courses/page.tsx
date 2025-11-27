@@ -306,7 +306,7 @@ export default function ValueAddedCoursesPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {courses.map((course, i) => (
             <Card key={i} className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg group" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
-              <div className="h-40 w-full overflow-hidden">
+              <div className="w-full overflow-hidden aspect-[4/3]">
                 <ParallaxImage src={course.image} alt={course.title} className="h-full w-full" intensity={0.12} zoom={0.06} />
               </div>
               <CardContent className="p-5 flex flex-col flex-grow min-h-[140px]">
