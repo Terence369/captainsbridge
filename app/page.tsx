@@ -340,13 +340,6 @@ export default function CaptainsBridge() {
                 image: "/maritime-certificates.jpg",
               },
               {
-                icon: MapPin,
-                title: "INDIAN CDC ASSISTANCE",
-                description:
-                  "Our service range includes a wide range of Arranging CDC. Indian mariners are among the most required professionals in the shipping industry worldwide. We assist with CDC processes and guidance.",
-                image: "/professional-maritime-officer-portrait.jpg",
-              },
-              {
                 icon: Anchor,
                 title: "PLACEMENT GUIDANCE",
                 description:
@@ -407,28 +400,10 @@ export default function CaptainsBridge() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
               {
-                title: "Spacious Class Rooms With Well Equipped Furniture",
-                description:
-                  "Captains Bridge can boast of spacious, well-ventilated and excellently furnished classrooms to make the students learning comfortable and enjoyable. Individual tables and chairs are provided to studen...",
-                image: "/spacious-maritime-classroom-with-modern-furniture.jpg",
-              },
-              {
-                title: "Advanced Computer Lab Facility",
-                description:
-                  "The Advanced Computer Lab is a state-of-the-art teaching computer kits, which also supports a wide range of spatial information system research projects. The lab is used by many different classes from...",
-                image: "/modern-computer-lab-with-red-chairs-maritime-train.jpg",
-              },
-              {
                 title: "Food Safety and HACCP Training",
                 description:
                   "Captains Bridge has developed this course to provide an understanding of management systems approach to food safety and data required to implement and maintain Food Safety System. By the end of the...",
                 image: "/food-safety-training-checklist-maritime.jpg",
-              },
-              {
-                title: "Placement Guidelines",
-                description:
-                  "Captains Bridge operate a unique of sea placement program where the Cadets train on various ship types across different marine sectors...",
-                image: "/maritime-cadets-in-white-uniform-training.jpg",
               },
               {
                 title: "Accreditations / Approvals",
