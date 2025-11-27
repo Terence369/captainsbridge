@@ -71,7 +71,7 @@ export default function CertificationPage() {
         <div className="mb-16 pb-12 border-b">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-black md:text-4xl mb-2 leading-tight heading-premium text-primary-cyan">
-              Our Certifications & Accreditations
+              Our Certifications, Accreditations and Consultancy
             </h2>
             <p className="text-base leading-relaxed md:text-lg body-premium text-dark-secondary">
               Recognized by leading educational and maritime institutions worldwide
