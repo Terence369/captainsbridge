@@ -22,19 +22,9 @@ const courses = [
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F764080d6f82a4557b354cf1aecf5b3a8?format=webp&width=800"
   },
   {
-    title: "PASSENGER SHIP FAMILIARISATION (PSF) (1 Day)",
-    description: "Teaches crew how to guide and assist passengers during emergencies. It covers basic crowd management, clear communication, reducing panic, and supporting evacuation procedures. The course helps crew understand passenger behaviour under stress and prepares them to maintain order and assist safely during situations like fires or evacuation.",
+    title: "PASSENGER SHIP FAMILIARISATION (PSF) – CROWD & CRISIS MANAGEMENT – HUMAN BEHAVIOUR (1–3 Days)",
+    description: "Training teaches crew how to guide and assist passengers during emergencies including basic crowd management, clear communication, reducing panic, and supporting evacuation procedures. The course helps crew understand passenger behaviour under stress and prepares them to maintain order and assist safely during situations like fires or evacuation.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F97829b05c4e9465e91f30eaa45d78584?format=webp&width=800"
-  },
-  {
-    title: "CROWD & CRISIS MANAGEMENT (3 Days)",
-    description: "Training teaches crew how to guide and assist passengers during emergencies. It covers basic crowd management, clear communication, reducing panic, and supporting evacuation procedures. The course helps crew understand passenger behaviour under stress and prepares them to maintain order and assist safely during situations like fires or evacuation.",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F9533a3358c204bd0b73d06fca729cc4c?format=webp&width=800"
-  },
-  {
-    title: "HUMAN BEHAVIOUR PASSENGER SHIP SAFETY (2 Days)",
-    description: "Training teaches crew how to guide and assist passengers during emergencies. It covers basic crowd management, clear communication, reducing panic, and supporting evacuation procedures. The course helps crew understand passenger behaviour under stress and prepares them to maintain order and assist safely during situations like fires or evacuation.",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fb7c9f19bf28740b381d9cd64dd658461?format=webp&width=800"
   },
   {
     title: "HAZARDS ANALYSING CRITICAL CONTROL POINT (HACCP) (3 Days)",
@@ -127,7 +117,7 @@ const courses = [
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F87fb9a891cd14175b23d1adc4a021b91?format=webp&width=800"
   },
   {
-    title: "ORDINARY SEAMAN – ABLE BODIED – BOSUN (30 Days)",
+    title: "ORDINARY SEAMAN – ABLE BODIED – BOSUN (OS–AB–BOSUN) (30 Days)",
     description: "This is a progressive deck-rating training pathway. Trainees start as Ordinary Seamen, learning basic seamanship like rope work, deck maintenance, and watch keeping. At the AB (Able Seaman) level, they perform advanced deck duties such as mooring, cargo operations, and lookout responsibilities. The Bosun stage prepares them for a supervisory role, leading deck crew, managing maintenance tasks, and ensuring safe deck operations.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F48baf9b103aa49a5a93f0eb50ff35070?format=webp&width=800"
   },
@@ -137,7 +127,7 @@ const courses = [
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F695e693fd1bc4ef088af6d6b79e7251a?format=webp&width=800"
   },
   {
-    title: "LIFTING & RIGGING WITH SCAFFOLDING – LEVEL 1-2 (7 Days)",
+    title: "LIFTING & RIGGING WITH SCAFFOLDING – LEVEL 1–2 (7 Days)",
     description: "Training teaches safe use, inspection, and selection of slings, shackles, chains, and lifting tools. It includes basic load calculations, communication signals, and teamwork during lifting jobs. Trainees also learn simple scaffolding assembly, working-at-height safety, and basic banksman duties. The course builds strong safety awareness and prepares workers to handle lifting and scaffolding tasks in marine, offshore, and industrial environments.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Ff1180778a3ab4c90ae891a6579a0e28d?format=webp&width=800"
   },
@@ -162,12 +152,12 @@ const courses = [
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F88d2de07bb3740f08bdd277cdcdbf3e3?format=webp&width=800"
   },
   {
-    title: "CV WRITING - EMIGRATION – MIGRATION - NORKA - RPSL JOB RECRUITING (RAS) STUDIES (1 Day)",
-    description: "CV writing plays a crucial role in emigration, migration, and NORKA-related processes, as a well-structured resume helps candidates present their qualifications professionally for overseas opportunities. For RPSL job recruiting under the Recruitment and Placement Services (RAS) system, a proper CV is essential to meet international standards and employer expectations. Whether applying for foreign studies, skilled employment abroad, or migration support through government agencies, a strong and accurate resume increases the chances of approval and successful placement.",
+    title: "CV WRITING – EMIGRATION – MIGRATION – NORKA – RPSL JOB RECRUITING (1 Day)",
+    description: "CV writing plays a crucial role in emigration, migration, and NORKA-related processes, as a well-structured resume helps candidates present their qualifications professionally for overseas opportunities. For RPSL job recruiting, a proper CV is essential to meet international standards and employer expectations. Whether applying for foreign studies, skilled employment abroad, or migration support through government agencies, a strong and accurate resume increases the chances of approval and successful placement.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F23bd6ab500084753b24775f684ff9c5c?format=webp&width=800"
   },
   {
-    title: "DRUG AND ALCOHOL POLICY AWARENESS COUNSELLING (120 Hrs. Online)",
+    title: "DRUG AND ALCOHOL POLICY AWARENESS COUNSELLING (120 Hrs Online)",
     description: "Drug and Alcohol Policy Awareness Counselling is designed to educate individuals about the risks, consequences, and workplace regulations related to substance use. This counselling helps participants understand organizational policies, legal requirements, and safety standards that prohibit drug and alcohol misuse, especially in high-risk industries like marine, offshore, and industrial sectors. It promotes responsible behavior, supports a safe working environment, and guides individuals toward healthy choices while ensuring full compliance with company and government guidelines.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fd65e6a45f44845dd8ece628f539e0102?format=webp&width=800"
   },
@@ -177,32 +167,32 @@ const courses = [
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F54fb63fe443646f2a910fd6ca441bc0f?format=webp&width=800"
   },
   {
-    title: "A CULINARY CHEF (6 Months)",
+    title: "CULINARY CHEF (6 Months)",
     description: "A Culinary Chef is a trained professional who prepares, cooks, and presents food in kitchens such as restaurants, hotels, and cruise ships. They plan menus, manage kitchen operations, ensure food quality, maintain hygiene standards, and create dishes with skill and creativity.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F7ef24db7f716437983a6b5173a64ea6d?format=webp&width=800"
   },
   {
-    title: "ELECTRO TECHNICAL & INSTRUMENTATION OPERATOR (ETIO) (6 Month Course)",
+    title: "ELECTRO TECHNICAL & INSTRUMENTATION OPERATOR (ETIO) (6 Months)",
     description: "Training candidates in the basic electrical, electronic, and instrumentation skills required on ships and offshore units. The course covers electrical safety, circuit basics, motor controls, navigation/communication equipment handling, and routine maintenance of shipboard electrical systems. After completion, candidates can work as assistants/trainees supporting marine electricians, ETOs, and technical teams on vessels and offshore installations.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F56fb51754dd748a4ab17c7db172d738f?format=webp&width=800"
   },
   {
-    title: "CATERING FOOD SAFETY - COMMI SERVICE (6 Month Course)",
-    description: "This course trains students in basic kitchen operations, food safety, and safe handling practices required in hotels, cruise ships, and offshore catering. It includes personal hygiene, kitchen sanitation, safe food storage, knife skills, basic cooking, serving techniques, and PPE usage. After completion, candidates can work as Commi -III / kitchen assistants in hospitality and marine catering departments.",
+    title: "CATERING FOOD SAFETY – COMMI SERVICE (6 Months)",
+    description: "This course trains students in basic kitchen operations, food safety, and safe handling practices required in hotels, cruise ships, and offshore catering. It includes personal hygiene, kitchen sanitation, safe food storage, knife skills, basic cooking, serving techniques, and PPE usage. After completion, candidates can work as Commi III / kitchen assistants in hospitality and marine catering departments.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fd3b26b76909645daa958eea88b37d16c?format=webp&width=800"
   },
   {
-    title: "LOGISTICS & SUPPLY CHAIN (6 Month Course)",
+    title: "LOGISTICS & SUPPLY CHAIN (6 Months)",
     description: "This course provides basic training in transportation, warehousing, inventory control, and cargo handling. Students learn how goods move from suppliers to customers, including packing, documentation, tracking, storage, and distribution processes. After completion, candidates can work in logistics companies, warehouses, shipping agencies, courier services, and supply chain operations as entry-level assistants.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fe0bfc9f678b144e8aa77ed29028f2f17?format=webp&width=800"
   },
   {
-    title: "SHIPPING IT COMMUNICATION (6 Month Course)",
+    title: "SHIPPING IT COMMUNICATION (6 Months)",
     description: "This course provides basic skills in maritime communication systems and IT support used in shipping companies and vessels. It covers email/VSAT operations, data transfer, documentation software, E-log systems, vessel tracking tools, and on board communication protocols. After completion, candidates can assist in IT support, communication handling, and digital documentation in shipping offices and shipboard operations.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F2b6ed2a94adb4504a904da0088baa33e?format=webp&width=800"
   },
   {
-    title: "ACCOUNTS & CHARTER OPERATIONS (6 Month Course)",
+    title: "ACCOUNTS & CHARTER OPERATIONS (6 Months)",
     description: "This course provides an introduction to shipping accounts, chartering basics, freight calculations, and vessel hire operations. Students learn documentation, invoicing, port disbursements, charter-party terms, lay time calculations, and financial procedures used in shipping companies. After completion, candidates can assist in accounts departments, charter desks, and shipping operations offices at entry level.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F9ea211ebb7a54892ba7fed0a2ed4f4a0?format=webp&width=800"
   },
@@ -263,7 +253,7 @@ const courses = [
   },
   {
     title: "OFFSHORE – YACHT CHIEF ENGINEER (3000 KW) (2 Years)",
-    description: "This programme trains candidates to become competent chief engineers on offshore and private yachts up to 1500 kW power. It covers marine diesel engines, auxiliary machinery, electrical systems, fuel systems, hydraulics, cooling systems, and preventive maintenance. Students learn troubleshooting, engine overhauling, machinery operation, safety procedures, pollution control, and technical documentation. The course prepares trainees to manage the entire engine room, ensure safe yacht operations, and lead engineering teams on offshore and luxury yachts.",
+    description: "This programme trains candidates to become competent chief engineers on offshore and private yachts up to 3000 kW power. It covers marine diesel engines, auxiliary machinery, electrical systems, fuel systems, hydraulics, cooling systems, and preventive maintenance. Students learn troubleshooting, engine overhauling, machinery operation, safety procedures, pollution control, and technical documentation. The course prepares trainees to manage the entire engine room, ensure safe yacht operations, and lead engineering teams on offshore and luxury yachts.",
     image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F7a0bba44ab784bc2a126128f2be49ebb?format=webp&width=800"
   },
   {
