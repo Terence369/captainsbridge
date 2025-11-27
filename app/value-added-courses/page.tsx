@@ -269,7 +269,7 @@ const courses = [
   {
     title: "OFFSHORE – YACHT MASTER (3000 GRT) (2 Years)",
     description: "This programme trains candidates to become professional offshore yacht operators capable of handling private, commercial, and charter yachts. It covers navigation, seamanship, yacht handling, safety management, COLREGS, weather reading, coastal/offshore sailing, radio operations, and engine basics. Trainees learn watch keeping, anchoring, docking, trip planning, emergency procedures, and international yacht operations. The course prepares students for duties as a Yacht Master, enabling them to operate and manage yachts in coastal and offshore waters with strong safety and leadership skills.",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2Fd7510a0513ca4fdc916290fc1635cce5?format=webp&width=800"
+    image: "https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F7a0bba44ab784bc2a126128f2be49ebb?format=webp&width=800"
   }
 ]
 
