@@ -35,18 +35,6 @@ export default function SiteFooter() {
             </ul>
           </div>
 
-          {/* Courses Section */}
-          <div className="space-y-4">
-            <h3 className="text-base font-semibold uppercase tracking-wider heading-premium text-primary-cyan">
-              DP Marine
-            </h3>
-            <ul className="space-y-2 text-xs text-gray-700 font-body">
-              <li className="hover:text-gray-900 transition-colors duration-200">Electrical & Electronics</li>
-              <li className="hover:text-gray-900 transition-colors duration-200">Bridging Course</li>
-              <li className="hover:text-gray-900 transition-colors duration-200">Ship Board Safety</li>
-              <li className="hover:text-gray-900 transition-colors duration-200">Security Officer</li>
-            </ul>
-          </div>
 
           {/* Contact Section */}
           <div className="space-y-4">
