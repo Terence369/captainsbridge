@@ -115,7 +115,6 @@ function ContactClient() {
             name="course"
             value={formData.course}
             onChange={handleChange}
-            defaultValue=""
             className="border rounded bg-white text-gray-800"
           >
             <option value="">Select a course</option>

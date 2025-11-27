@@ -158,7 +158,6 @@ function HomeContactForm() {
           name="course"
           value={formData.course}
           onChange={handleChange}
-          defaultValue=""
           className="border border-light-color rounded-md bg-white text-gray-800 text-sm"
         >
           <option value="">Select a course</option>
