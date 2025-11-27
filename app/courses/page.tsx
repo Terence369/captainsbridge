@@ -23,16 +23,6 @@ const courses = [
   { title: "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE", image: "https://images.pexels.com/photos/9242258/pexels-photo-9242258.jpeg" },
 ]
 
-const table = [
-  ["S-01", "MARINE ENGLISH", "30-45 DAYS"],
-  ["S-02", "BASIC FIRE PREVENTION", "3 DAYS"],
-  ["S-03", "PERSONAL SURVIVAL TECHNIQUES", "2 DAYS"],
-  ["S-04", "ELEMENTARY FIRST AID", "2 DAYS"],
-  ["S-05", "PERSONAL SAFETY & SOCIAL RESPONSIBILITIES", "2 DAYS"],
-  ["S-06", "SECURITY AWARENESS", "1 DAY"],
-  ["S-07", "CARGO HANDLING SAFETY", "2 DAYS"],
-]
-
 export default function CoursesPage() {
   const [dialogOpen, setDialogOpen] = useState(false)
   const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
