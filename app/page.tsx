@@ -343,7 +343,7 @@ export default function CaptainsBridge() {
                 icon: Anchor,
                 title: "PLACEMENT GUIDANCE",
                 description:
-                  "The Captains Bridge Guidance and Placement Cell send invitations to companies/organizations along with relevant information and allots dates to companies for institute interviews based on various details.",
+                  "The Captains Bridge Guidance and Placement Cell send invitations to companies/organizations along with relevant information and allots dates to companies based on various details.",
                 image: "/maritime-cadets-in-white-uniform-training.jpg",
               },
               {
@@ -408,7 +408,7 @@ export default function CaptainsBridge() {
               {
                 title: "Accreditations / Approvals",
                 description:
-                  "All Courses approved by STCW COUNCIL has had the unique good fortune it having a succession of eminent directors to direct its destiny along with an extraordinary advisory board and educational experts...",
+                  "All Courses approved by A Government of India Registered an Autonomous Organization, New Delhi has had the unique good fortune it having a succession of eminent directors to direct its destiny along with an extraordinary advisory board and educational experts...",
                 image: "/person-signing-maritime-certification-documents.jpg",
               },
               {
