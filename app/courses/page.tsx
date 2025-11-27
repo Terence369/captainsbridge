@@ -15,7 +15,7 @@ const courses = [
   { title: "COOKERY COURSE WITH HACCP", image: "https://images.pexels.com/photos/7426529/pexels-photo-7426529.jpeg" },
   { title: "BASIC COOKING COURSE CERTIFICATION", image: "https://images.pexels.com/photos/6517077/pexels-photo-6517077.jpeg" },
   { title: "PSF CROWD & CRISIS MANAGEMENT – HUMAN BEHAVIOUR", image: "https://images.pexels.com/photos/32870072/pexels-photo-32870072.jpeg" },
-  { title: "HOSPITALITY & CRUISER COURSE", image: "https://images.pexels.com/photos/2726618/pexels-photo-2726618.jpeg" },
+  { title: "HOSPITALITY & CRUISER COURSE", image: "https://images.pexels.com/photos/33544864/pexels-photo-33544864.jpeg" },
   { title: "SHIP BOARD SAFETY & SECURITY (SOFF)", image: "https://images.pexels.com/photos/1654497/pexels-photo-1654497.jpeg" },
   { title: "SECURITY FACILITY CODE & AWARENESS", image: "https://images.pexels.com/photos/1725617/pexels-photo-1725617.jpeg" },
   { title: "SHIPPING NEW ENTRY FOR FITTER & WELDERS", image: "https://images.pexels.com/photos/2760344/pexels-photo-2760344.jpeg" },
