@@ -87,31 +87,6 @@ export default function CoursesPage() {
           ))}
         </div>
 
-        <div className="mx-auto mt-14 max-w-4xl">
-          <h3 className="mb-4 text-center text-xl font-bold uppercase heading-premium text-accent-gold">
-            Short Term Safety Value Added Courses — Regular Courses
-          </h3>
-          <div className="overflow-x-auto rounded border" style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}>
-            <table className="min-w-full text-left text-sm" style={{ color: 'rgb(51, 51, 51)' }}>
-              <thead style={{ backgroundColor: 'rgb(0, 152, 183)' }}>
-                <tr>
-                  <th className="px-4 py-3 font-bold uppercase text-white" style={{ letterSpacing: '0.8px' }}>Code</th>
-                  <th className="px-4 py-3 font-bold uppercase text-white" style={{ letterSpacing: '0.8px' }}>Shipping & Maritime Course</th>
-                  <th className="px-4 py-3 font-bold uppercase text-white" style={{ letterSpacing: '0.8px' }}>Duration</th>
-                </tr>
-              </thead>
-              <tbody>
-                {table.map((row, i) => (
-                  <tr key={i} style={{ backgroundColor: i % 2 ? 'rgb(255, 255, 255)' : 'rgb(245, 243, 239)' }}>
-                    <td className="px-4 py-3">{row[0]}</td>
-                    <td className="px-4 py-3">{row[1]}</td>
-                    <td className="px-4 py-3">{row[2]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </section>
       <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
     </div>
