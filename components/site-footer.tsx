@@ -10,8 +10,8 @@ export default function SiteFooter() {
   return (
     <footer className="relative w-full text-gray-800 bg-section-cream">
       {/* Main Footer Content */}
-      <div className="container-premium py-20">
-        <div className="grid gap-12 md:grid-cols-4 mb-12">
+      <div className="w-full px-6 md:px-16 lg:px-20 py-20">
+        <div className="grid gap-16 md:grid-cols-3 w-full mb-12">
           {/* About Section */}
           <div className="space-y-4">
             <h3 className="text-base font-semibold uppercase tracking-wider heading-premium text-primary-cyan">
