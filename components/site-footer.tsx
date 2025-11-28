@@ -52,7 +52,7 @@ export default function SiteFooter() {
               </li>
               <li className="flex items-center gap-3 hover:text-gray-900 transition-colors duration-200">
                 <Mail size={16} className="text-primary-cyan" />
-                <a href="mailto:cochinmaritime@gmail.com">cochinmaritime@gmail.com</a>
+                <a href="mailto:cochinmaritime@gmail.com">snefindiaglobal@gmail.com</a>
               </li>
             </ul>
           </div>
