@@ -89,7 +89,6 @@ export default function CoursesPage() {
         </div>
 
       </section>
-      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
     </div>
   )
 }
