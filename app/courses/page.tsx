@@ -70,10 +70,10 @@ export default function CoursesPage() {
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-page-white">
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
-            Partners and Supporting Organisation
+            OPERATIONS
           </h2>
           <p className="text-base leading-relaxed md:text-lg body-premium">
-            Training modules include offshore, safety, hospitality, and technical specializations across the maritime industry. Explore highlighted programs below.
+            Comprehensive maritime business operations covering diversification strategies, cargo management, and shore-based services essential for maritime success.
           </p>
         </div>
 
