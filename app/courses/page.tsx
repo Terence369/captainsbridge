@@ -1,8 +1,6 @@
 "use client"
 
-import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
 import ParallaxImage from "@/components/parallax-image"
 
 const operations = [
