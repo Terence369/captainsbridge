@@ -5,22 +5,45 @@ import { Card, CardContent } from "@/components/ui/card"
 import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
 import ParallaxImage from "@/components/parallax-image"
 
-const courses = [
-  { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://images.pexels.com/photos/7959357/pexels-photo-7959357.jpeg" },
-  { title: "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)", image: "https://images.pexels.com/photos/7286074/pexels-photo-7286074.jpeg" },
-  { title: "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)", image: "https://images.pexels.com/photos/3207531/pexels-photo-3207531.jpeg" },
-  { title: "RIGGING AND SLINGING SAFETY LEVEL 2", image: "https://images.pexels.com/photos/29274538/pexels-photo-29274538.jpeg" },
-  { title: "LIFTING AND HOISTING SAFETY", image: "https://images.pexels.com/photos/31856779/pexels-photo-31856779.jpeg" },
-  { title: "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)", image: "https://images.pexels.com/photos/31856779/pexels-photo-31856779.jpeg" },
-  { title: "COOKERY COURSE WITH HACCP", image: "https://images.pexels.com/photos/7426529/pexels-photo-7426529.jpeg" },
-  { title: "BASIC COOKING COURSE CERTIFICATION", image: "https://images.pexels.com/photos/6517077/pexels-photo-6517077.jpeg" },
-  { title: "PSF CROWD & CRISIS MANAGEMENT – HUMAN BEHAVIOUR", image: "https://images.pexels.com/photos/32870072/pexels-photo-32870072.jpeg" },
-  { title: "HOSPITALITY & CRUISER COURSE", image: "https://images.pexels.com/photos/33544864/pexels-photo-33544864.jpeg" },
-  { title: "SHIP BOARD SAFETY & SECURITY (SOFF)", image: "https://images.pexels.com/photos/1654497/pexels-photo-1654497.jpeg" },
-  { title: "SECURITY FACILITY CODE & AWARENESS", image: "https://images.pexels.com/photos/1725617/pexels-photo-1725617.jpeg" },
-  { title: "SHIPPING NEW ENTRY FOR FITTER & WELDERS", image: "https://images.pexels.com/photos/2760344/pexels-photo-2760344.jpeg" },
-  { title: "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS", image: "https://images.pexels.com/photos/3819524/pexels-photo-3819524.jpeg" },
-  { title: "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE", image: "https://images.pexels.com/photos/9242258/pexels-photo-9242258.jpeg" },
+const operations = [
+  {
+    category: "Maritime Business Diversification",
+    items: [
+      "Port Operations",
+      "Legal & Regulatory Structure",
+      "Cargo Planning & Routing",
+      "Maritime Compliance",
+      "Marine Insurance",
+      "Crew Manning & Training",
+    ],
+    image: "https://images.pexels.com/photos/31642540/pexels-photo-31642540.jpeg",
+  },
+  {
+    category: "Cargo Segments",
+    items: [
+      "Container Cargo",
+      "Break-Bulk Cargo",
+      "Project Cargo",
+    ],
+    image: "https://images.pexels.com/photos/6169192/pexels-photo-6169192.jpeg",
+  },
+  {
+    category: "Shore-Based Operations",
+    items: [
+      "Berth Management",
+      "Cargo Handling",
+      "Storage & Warehousing",
+      "Customs & Documentation",
+      "Value-Added Port Services",
+      "Fuel Bunkering",
+      "Loading & Discharging",
+      "Ship Chartering & Brokerage",
+      "Vessel Repair & Maintenance",
+      "Spare Procurement",
+      "Technical Assistance",
+    ],
+    image: "https://images.pexels.com/photos/7019310/pexels-photo-7019310.jpeg",
+  },
 ]
 
 export default function CoursesPage() {
