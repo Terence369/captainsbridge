@@ -45,16 +45,6 @@ const operations = [
 ]
 
 export default function CoursesPage() {
-  const [dialogOpen, setDialogOpen] = useState(false)
-  const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
-
-  const openDetails = (course: { title: string; image: string }) => {
-    const description = `${course.title} — Overview: Hands-on modules, safety standards, and practical drills. Includes competency assessment and course completion guidance. For schedule, fees, and enrollment assistance, contact our team.`
-    const contactMessage = `Inquiry about ${course.title}: Please share syllabus, next batch dates, fees, and prerequisites.`
-    setDialogData({ title: course.title, description, image: course.image, contactMessage })
-    setDialogOpen(true)
-  }
-
   return (
     <div className="bg-page-white">
       <div className="relative w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F15aff742c7404b1eb1508baa387ebaa3)", minHeight: "420px", backgroundRepeat: "no-repeat", display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center" }}>
