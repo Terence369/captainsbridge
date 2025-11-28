@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import ParallaxImage from "@/components/parallax-image"
-import { Ship, Package, Anchor, Users, TrendingUp, Shield } from "lucide-react"
+import { Ship, Package, Anchor } from "lucide-react"
 
 const operations = [
   {
