@@ -52,51 +52,6 @@ const operations = [
     ],
     image: "https://images.pexels.com/photos/7019310/pexels-photo-7019310.jpeg",
   },
-  {
-    category: "Fleet Management",
-    icon: Users,
-    overview: "Complete fleet operations from crew management to vessel maintenance, ensuring optimal performance and compliance.",
-    benefits: ["Maximized efficiency", "Reduced downtime", "Skilled workforce"],
-    items: [
-      "Crew Recruitment & Training",
-      "Vessel Scheduling",
-      "Maintenance Planning",
-      "Safety Management Systems",
-      "Crew Welfare Programs",
-      "Performance Monitoring",
-    ],
-    image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
-  },
-  {
-    category: "Regulatory Compliance",
-    icon: Shield,
-    overview: "Ensuring adherence to international maritime regulations and standards for safe, secure, and responsible operations.",
-    benefits: ["Regulatory adherence", "Risk mitigation", "Industry recognition"],
-    items: [
-      "IMO Compliance",
-      "DG Shipping Certification",
-      "ISO Standards Implementation",
-      "Port State Control",
-      "Environmental Regulations",
-      "Safety Audits & Inspections",
-    ],
-    image: "https://images.pexels.com/photos/8111865/pexels-photo-8111865.jpeg",
-  },
-  {
-    category: "Training & Development",
-    icon: TrendingUp,
-    overview: "Professional development programs designed to upskill maritime professionals and enhance industry competency standards.",
-    benefits: ["Career advancement", "Skill enhancement", "Industry certification"],
-    items: [
-      "Professional Certifications",
-      "Technical Skills Training",
-      "Leadership Development",
-      "Safety & Security Training",
-      "Specialized Courses",
-      "Continuous Education Programs",
-    ],
-    image: "https://images.pexels.com/photos/7959357/pexels-photo-7959357.jpeg",
-  },
 ]
 
 export default function CoursesPage() {
