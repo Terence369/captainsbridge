@@ -69,7 +69,7 @@ function ContactClient() {
           <div className="space-y-5 text-base text-dark-secondary">
             <div className="flex items-start gap-3">
               <MapPin className="flex-shrink-0 mt-1 text-primary-cyan" />
-              <span>Aditya Complex, Kochupally road, Next to Anjali Marriage hall, Thoppumpady, Kochi �� 682005</span>
+              <p>Aditya Complex, Kochupally road, Next to Anjali Marriage hall, Thoppumpady, Kochi 682005</p>
             </div>
             <div className="flex items-center gap-3">
               <Phone className="flex-shrink-0 text-primary-cyan" />
@@ -77,7 +77,7 @@ function ContactClient() {
             </div>
             <div className="flex items-center gap-3">
               <Mail className="flex-shrink-0 text-primary-cyan" />
-              <span>cochinmaritime@gmail.com</span>
+              <p>snefindiaglobal@gmail.com</p>
             </div>
           </div>
         </div>
