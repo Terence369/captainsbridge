@@ -66,23 +66,23 @@ export default function CoursesPage() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {courses.map((course, i) => (
+          {operations.map((operation, i) => (
             <Card key={i} className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg group" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
               <div className="h-40 w-full overflow-hidden">
-                <ParallaxImage src={course.image} alt={course.title} className="h-full w-full" intensity={0.12} zoom={0.06} />
+                <ParallaxImage src={operation.image} alt={operation.category} className="h-full w-full" intensity={0.12} zoom={0.06} />
               </div>
-              <CardContent className="p-5 flex flex-col flex-grow min-h-[140px]">
-                <h3 className="mb-2 text-base font-bold uppercase heading-premium text-primary-cyan break-words">
-                  {course.title}
+              <CardContent className="p-5 flex flex-col flex-grow">
+                <h3 className="mb-4 text-base font-bold uppercase heading-premium text-primary-cyan break-words">
+                  {operation.category}
                 </h3>
-                <p className="mb-4 text-sm leading-relaxed text-dark-secondary flex-grow overflow-hidden">
-                  Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
-                </p>
-                <div className="mt-2">
-                  <button className="w-full font-semibold py-2 rounded transition-all uppercase btn-primary" onClick={() => openDetails(course)}>
-                    View Detail
-                  </button>
-                </div>
+                <ul className="space-y-2 flex-grow">
+                  {operation.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start gap-2 text-sm leading-relaxed text-dark-secondary">
+                      <span className="text-primary-cyan font-bold mt-1 flex-shrink-0">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
           ))}
