@@ -479,88 +479,62 @@ export default function CaptainsBridge() {
             }
           `}</style>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Hydrogen Sulphide Awareness (H2S)",
-                desc:
-                  "Hydrogen Sulphide (H2S) is a highly toxic and flammable gas. Each year in...",
-                image: null,
+                category: "Maritime Business Diversification",
+                items: [
+                  "Port Operations",
+                  "Legal & Regulatory Structure",
+                  "Cargo Planning & Routing",
+                  "Maritime Compliance",
+                  "Marine Insurance",
+                  "Crew Manning & Training",
+                ],
               },
               {
-                title: "Helicopter Under‑Water Escape Training (HUET)",
-                desc:
-                  "This course aims to train personnel intended to work offshore, using the hel...",
-                image: null,
+                category: "Cargo Segments",
+                items: [
+                  "Container Cargo",
+                  "Break-Bulk Cargo",
+                  "Project Cargo",
+                ],
               },
               {
-                title: "Basic Offshore Safety & Emergency Training (BOISET)",
-                desc:
-                  "The course is designed for personnel intending to ...",
-                image: null,
+                category: "Shore-Based Operations",
+                items: [
+                  "Berth Management",
+                  "Cargo Handling",
+                  "Storage & Warehousing",
+                  "Customs & Documentation",
+                  "Value-Added Port Services",
+                  "Fuel Bunkering",
+                  "Loading & Discharging",
+                  "Ship Chartering & Brokerage",
+                  "Vessel Repair & Maintenance",
+                  "Spare Procurement",
+                  "Technical Assistance",
+                ],
               },
-              {
-                title: "Rigging and Slinging Safety Level - 2",
-                desc:
-                  "Rigger Level 2 training provides the knowledge and skills necessary for a p...",
-                image: null,
-              },
-              {
-                title: "Lifting and Hoisting Safety",
-                desc:
-                  "The course provides vital information for those assisting or working around...",
-                image: null,
-              },
-              {
-                title: "Crane Operators Theory (On Demand Practical)",
-                desc:
-                  "Our Crane Operator Training Program will train your operators on the site...",
-                image: null,
-              },
-              {
-                title: "Cookery Course With HACCP",
-                desc:
-                  "On completion of this food safety training course, participants will be abl...",
-                image: null,
-              },
-              {
-                title: "Basic Cooking Course Certification",
-                desc:
-                  "Get info about online programs in cooking. Read about program requiremen...",
-                image: null,
-              },
-            ].map((card, i) => (
-              <button
+            ].map((operation, i) => (
+              <div
                 key={i}
-                onClick={() => {
-                  setSelectedCourse({
-                    title: card.title,
-                    description: courseDescriptions[card.title as keyof typeof courseDescriptions] || card.desc,
-                    image: card.image,
-                  })
-                  setCourseModalOpen(true)
-                }}
-                className="glass-card-wrapper text-left hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan rounded-lg"
+                className="glass-card-wrapper rounded-lg"
               >
-                <div className="p-8 text-center">
-                  <div className="mx-auto mb-6 grid size-16 place-items-center rounded-full" style={{ backgroundColor: 'rgba(255, 255, 255, 0.12)' }}>
-                    <LifeBuoy style={{ color: 'rgb(255, 255, 255)' }} size={28} />
-                  </div>
-                  {card.title === "Rigging and Slinging Safety Level - 2" ? (
-                    <h3 className="text-sm font-semibold uppercase heading-premium mb-4" style={{ color: 'rgb(255, 255, 255)' }}>
-                      Rigging and Slinging <br />
-                      Safety Level - 2
-                    </h3>
-                  ) : (
-                    <h3 className="text-sm font-semibold uppercase heading-premium mb-4" style={{ color: 'rgb(255, 255, 255)' }}>
-                      {card.title}
-                    </h3>
-                  )}
-                  <p className="text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
-                    {card.desc}
-                  </p>
+                <div className="p-8">
+                  <h3 className="text-sm font-semibold uppercase heading-premium mb-6" style={{ color: 'rgb(255, 255, 255)' }}>
+                    {operation.category}
+                  </h3>
+                  <ul className="space-y-3">
+                    {operation.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
+                        <span className="font-bold mt-1 flex-shrink-0" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </button>
+              </div>
             ))}
           </div>
         </div>
