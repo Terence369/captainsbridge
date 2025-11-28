@@ -17,7 +17,7 @@ const nav = [
 export default function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
-  const [isHome, setIsHome] = useState(false)
+  const [isHome, setIsHome] = useState(true)
 
   useEffect(() => {
     setIsHome(pathname === "/")
