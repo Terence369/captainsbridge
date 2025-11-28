@@ -95,12 +95,11 @@ export default function ApplyPage() {
           <Select
             name="course"
             required
-            defaultValue=""
             className="border rounded bg-white text-gray-800"
             value={formData.course}
             onChange={handleChange}
           >
-            <option value="" disabled>Select course *</option>
+            <option value="">Select course *</option>
             {courseTitles.map((title) => (
               <option key={title} value={title}>{title}</option>
             ))}
