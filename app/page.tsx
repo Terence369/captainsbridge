@@ -453,10 +453,10 @@ export default function CaptainsBridge() {
           <AnimatedSection>
             <div className="mx-auto max-w-4xl text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight heading-premium text-white" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
-                Partners and Supporting Organization
+                OPERATIONS
               </h2>
               <p className="text-lg md:text-xl body-premium text-white" style={{ color: "rgba(255, 255, 255, 0.9)" }}>
-                The Institute for Captains Bridge strives to increase public understanding of the causes and consequences of marine degradation while also promoting solutions. Through our partnerships, we are working to further conservation of marine life and ocean environments around the world.
+                Comprehensive maritime business operations covering diversification strategies, cargo management, and shore-based services essential for maritime success.
               </p>
             </div>
           </AnimatedSection>
