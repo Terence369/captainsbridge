@@ -39,23 +39,23 @@ function RevealImageListItem({ text, images }: ShowImageListItemProps) {
 }
 
 export function RevealImageList({ className }: { className?: string }) {
-  // New comprehensive text about maritime education offerings - all caps
+  // New comprehensive text about maritime business operations offerings - all caps
   const paragraph =
-    "CERTIFIED MARITIME COURSES, ADVANCED TRAINING, GLOBAL PLACEMENT OPPORTUNITIES, MODERN FACILITIES, EXPERT FACULTY, AND INDUSTRY-RECOGNIZED ACCREDITATION."
+    "MARITIME BUSINESS DIVERSIFICATION, CARGO SEGMENTS, GLOBAL PLACEMENT OPPORTUNITIES, SHORE-BASED OPERATIONS, EXPERT FACULTY, AND INDUSTRY-RECOGNIZED ACCREDITATION."
 
   const items: ShowImageListItemProps[] = [
     {
-      text: "CERTIFIED MARITIME COURSES",
+      text: "MARITIME BUSINESS DIVERSIFICATION",
       images: [
-        { src: "/images/certification-hero.jpg", alt: "Maritime certification programs" },
-        { src: "https://images.pexels.com/photos/8111865/pexels-photo-8111865.jpeg", alt: "Certified maritime courses" },
+        { src: "/images/certification-hero.jpg", alt: "Maritime business diversification" },
+        { src: "https://images.pexels.com/photos/31642540/pexels-photo-31642540.jpeg", alt: "Maritime business diversification" },
       ],
     },
     {
-      text: "ADVANCED TRAINING",
+      text: "CARGO SEGMENTS",
       images: [
-        { src: "/images/courses-hero.jpg", alt: "Advanced maritime training programs" },
-        { src: "/maritime-training-classroom-with-students.jpg", alt: "Advanced training classrooms" },
+        { src: "/images/courses-hero.jpg", alt: "Cargo segments and handling" },
+        { src: "https://images.pexels.com/photos/6169192/pexels-photo-6169192.jpeg", alt: "Cargo segments" },
       ],
     },
     {
@@ -66,10 +66,10 @@ export function RevealImageList({ className }: { className?: string }) {
       ],
     },
     {
-      text: "MODERN FACILITIES",
+      text: "SHORE-BASED OPERATIONS",
       images: [
-        { src: "/advanced-computer-lab-with-maritime-simulation.jpg", alt: "Modern maritime facilities" },
-        { src: "/modern-computer-lab-with-red-chairs-maritime-train.jpg", alt: "Modern facility equipment" },
+        { src: "/advanced-computer-lab-with-maritime-simulation.jpg", alt: "Shore-based maritime operations" },
+        { src: "https://images.pexels.com/photos/7019310/pexels-photo-7019310.jpeg", alt: "Shore-based operations" },
       ],
     },
     {

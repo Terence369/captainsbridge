@@ -7,7 +7,7 @@ import { useState, useEffect } from "react"
 
 const nav = [
   { href: "/", label: "HOME" },
-  { href: "/courses", label: "COURSES" },
+  { href: "/courses", label: "SERVICES" },
   { href: "/value-added-courses", label: "VALUE ADDED" },
   { href: "/facilities", label: "FACILITIES" },
   { href: "/certification", label: "CERTIFICATION" },
@@ -17,7 +17,7 @@ const nav = [
 export default function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
-  const [isHome, setIsHome] = useState(false)
+  const [isHome, setIsHome] = useState(true)
 
   useEffect(() => {
     setIsHome(pathname === "/")

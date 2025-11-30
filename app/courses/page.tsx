@@ -1,84 +1,144 @@
 "use client"
 
-import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import DetailDialog, { type DetailDialogData } from "@/components/detail-dialog"
 import ParallaxImage from "@/components/parallax-image"
+import { Ship, Package, Anchor } from "lucide-react"
 
-const courses = [
-  { title: "HYDROGEN SULPHIDE AWARENESS (H2S)", image: "https://images.pexels.com/photos/7959357/pexels-photo-7959357.jpeg" },
-  { title: "HELICOPTER UNDERWATER ESCAPE TRAINING (HUET)", image: "https://images.pexels.com/photos/7286074/pexels-photo-7286074.jpeg" },
-  { title: "BASIC OFFSHORE SAFETY EDUCATION AND EMERGENCY TRAINING (BOSET)", image: "https://images.pexels.com/photos/3207531/pexels-photo-3207531.jpeg" },
-  { title: "RIGGING AND SLINGING SAFETY LEVEL 2", image: "https://images.pexels.com/photos/29274538/pexels-photo-29274538.jpeg" },
-  { title: "LIFTING AND HOISTING SAFETY", image: "https://images.pexels.com/photos/31856779/pexels-photo-31856779.jpeg" },
-  { title: "CRANE OPERATIONS THEORY (PRACTICAL ON DEMAND)", image: "https://images.pexels.com/photos/31856779/pexels-photo-31856779.jpeg" },
-  { title: "COOKERY COURSE WITH HACCP", image: "https://images.pexels.com/photos/7426529/pexels-photo-7426529.jpeg" },
-  { title: "BASIC COOKING COURSE CERTIFICATION", image: "https://images.pexels.com/photos/6517077/pexels-photo-6517077.jpeg" },
-  { title: "PSF CROWD & CRISIS MANAGEMENT – HUMAN BEHAVIOUR", image: "https://images.pexels.com/photos/32870072/pexels-photo-32870072.jpeg" },
-  { title: "HOSPITALITY & CRUISER COURSE", image: "https://images.pexels.com/photos/33544864/pexels-photo-33544864.jpeg" },
-  { title: "SHIP BOARD SAFETY & SECURITY (SOFF)", image: "https://images.pexels.com/photos/1654497/pexels-photo-1654497.jpeg" },
-  { title: "SECURITY FACILITY CODE & AWARENESS", image: "https://images.pexels.com/photos/1725617/pexels-photo-1725617.jpeg" },
-  { title: "SHIPPING NEW ENTRY FOR FITTER & WELDERS", image: "https://images.pexels.com/photos/2760344/pexels-photo-2760344.jpeg" },
-  { title: "SHIPPING NEW ENTRY TO MECHANICAL & REFRIGERATION TECHNICIANS", image: "https://images.pexels.com/photos/3819524/pexels-photo-3819524.jpeg" },
-  { title: "ELECTRICAL & ELECTRONIC TECHNICIANS BRIDGING COURSE", image: "https://images.pexels.com/photos/9242258/pexels-photo-9242258.jpeg" },
+const operations = [
+  {
+    category: "Maritime Business Diversification",
+    icon: Ship,
+    overview: "Strategic business expansion in maritime sector covering regulatory frameworks, operational structures, and market positioning.",
+    benefits: ["Sustainable growth strategies", "Market expansion", "Risk management"],
+    items: [
+      "Port Operations",
+      "Legal & Regulatory Structure",
+      "Cargo Planning & Routing",
+      "Maritime Compliance",
+      "Marine Insurance",
+      "Crew Manning & Training",
+    ],
+    image: "https://images.pexels.com/photos/31642540/pexels-photo-31642540.jpeg",
+  },
+  {
+    category: "Cargo Segments",
+    icon: Package,
+    overview: "Specialized handling and management of diverse cargo types with tailored logistics solutions for optimal efficiency.",
+    benefits: ["Specialized expertise", "Efficient loading", "Cost optimization"],
+    items: [
+      "Container Cargo",
+      "Break-Bulk Cargo",
+      "Project Cargo",
+    ],
+    image: "https://images.pexels.com/photos/6169192/pexels-photo-6169192.jpeg",
+  },
+  {
+    category: "Shore-Based Operations",
+    icon: Anchor,
+    overview: "Comprehensive land-based maritime services ensuring seamless cargo flow, port management, and logistical excellence.",
+    benefits: ["Faster turnaround", "Quality assurance", "Enhanced safety"],
+    items: [
+      "Berth Management",
+      "Cargo Handling",
+      "Storage & Warehousing",
+      "Customs & Documentation",
+      "Value-Added Port Services",
+      "Fuel Bunkering",
+      "Loading & Discharging",
+      "Ship Chartering & Brokerage",
+      "Vessel Repair & Maintenance",
+      "Spare Procurement",
+      "Technical Assistance",
+    ],
+    image: "https://images.pexels.com/photos/7019310/pexels-photo-7019310.jpeg",
+  },
 ]
 
 export default function CoursesPage() {
-  const [dialogOpen, setDialogOpen] = useState(false)
-  const [dialogData, setDialogData] = useState<DetailDialogData | null>(null)
-
-  const openDetails = (course: { title: string; image: string }) => {
-    const description = `${course.title} — Overview: Hands-on modules, safety standards, and practical drills. Includes competency assessment and course completion guidance. For schedule, fees, and enrollment assistance, contact our team.`
-    const contactMessage = `Inquiry about ${course.title}: Please share syllabus, next batch dates, fees, and prerequisites.`
-    setDialogData({ title: course.title, description, image: course.image, contactMessage })
-    setDialogOpen(true)
-  }
-
   return (
     <div className="bg-page-white">
       <div className="relative w-full overflow-hidden bg-center bg-cover" style={{ backgroundImage: "url(https://cdn.builder.io/api/v1/image/assets%2F84749e18bca64bd7a57af62d04439b13%2F15aff742c7404b1eb1508baa387ebaa3)", minHeight: "420px", backgroundRepeat: "no-repeat", display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center" }}>
         <div className="h-[260px] w-full md:h-[360px] grid place-items-center relative z-10">
           <h1 className="text-center text-5xl font-black md:text-6xl leading-tight heading-premium" style={{ color: "rgba(0, 0, 0, 1)" }}>
-            Courses
+            GROUP SHIPPING SERVICES
           </h1>
         </div>
       </div>
 
       <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 bg-page-white">
-        <div className="mx-auto mb-10 max-w-3xl text-center">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
           <h2 className="text-3xl font-black md:text-4xl mb-4 leading-tight heading-premium text-primary-cyan">
-            Partners and Supporting Organisation
+            OPERATIONS
           </h2>
-          <p className="text-base leading-relaxed md:text-lg body-premium">
-            Training modules include offshore, safety, hospitality, and technical specializations across the maritime industry. Explore highlighted programs below.
+          <p className="text-base leading-relaxed md:text-lg body-premium text-dark-secondary">
+            Comprehensive maritime business operations covering diversification strategies, cargo management, and shore-based services essential for maritime success.
           </p>
+          <div className="mt-6 flex justify-center gap-2 flex-wrap">
+            <span className="inline-block px-3 py-1 text-xs font-semibold text-white bg-primary-cyan rounded-full">
+              {operations.length} Categories
+            </span>
+            <span className="inline-block px-3 py-1 text-xs font-semibold text-primary-cyan bg-gray-100 rounded-full">
+              {operations.reduce((sum, op) => sum + op.items.length, 0)}+ Services
+            </span>
+          </div>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {courses.map((course, i) => (
-            <Card key={i} className="overflow-hidden border-0 shadow-md transition hover:-translate-y-1 hover:shadow-lg group" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
-              <div className="h-40 w-full overflow-hidden">
-                <ParallaxImage src={course.image} alt={course.title} className="h-full w-full" intensity={0.12} zoom={0.06} />
-              </div>
-              <CardContent className="p-5 flex flex-col flex-grow min-h-[140px]">
-                <h3 className="mb-2 text-base font-bold uppercase heading-premium text-primary-cyan break-words">
-                  {course.title}
-                </h3>
-                <p className="mb-4 text-sm leading-relaxed text-dark-secondary flex-grow overflow-hidden">
-                  Concise overview of the course outcomes, key competencies, and duration with hands‑on practice.
-                </p>
-                <div className="mt-2">
-                  <button className="w-full font-semibold py-2 rounded transition-all uppercase btn-primary" onClick={() => openDetails(course)}>
-                    View Detail
-                  </button>
+          {operations.map((operation, i) => {
+            const IconComponent = operation.icon
+            return (
+              <Card key={i} className="overflow-hidden border-0 shadow-md transition hover:-translate-y-2 hover:shadow-xl group h-full flex flex-col" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+                <div className="h-40 w-full overflow-hidden">
+                  <ParallaxImage src={operation.image} alt={operation.category} className="h-full w-full" intensity={0.12} zoom={0.06} />
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+                <CardContent className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-start gap-3 mb-3">
+                    <div className="p-2 bg-primary-cyan/10 rounded-lg flex-shrink-0">
+                      <IconComponent className="w-5 h-5 text-primary-cyan" />
+                    </div>
+                    <div className="flex-grow">
+                      <h3 className="text-base font-bold uppercase heading-premium text-primary-cyan break-words">
+                        {operation.category}
+                      </h3>
+                      <span className="text-xs text-gray-500 font-semibold">
+                        {operation.items.length} Services
+                      </span>
+                    </div>
+                  </div>
+
+                  <p className="text-sm leading-relaxed text-dark-secondary mb-4 py-3 border-t border-b border-gray-100">
+                    {operation.overview}
+                  </p>
+
+                  <div className="mb-4 space-y-2">
+                    <p className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Key Benefits:</p>
+                    <div className="flex flex-wrap gap-1">
+                      {operation.benefits.map((benefit, idx) => (
+                        <span key={idx} className="text-xs bg-gray-50 text-gray-700 px-2 py-1 rounded border border-gray-200">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex-grow">
+                    <p className="text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2">Services:</p>
+                    <ul className="space-y-1.5">
+                      {operation.items.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start gap-2 text-xs leading-relaxed text-dark-secondary">
+                          <span className="text-primary-cyan font-bold flex-shrink-0">›</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            )
+          })}
         </div>
 
       </section>
-      <DetailDialog open={dialogOpen} onOpenChange={setDialogOpen} data={dialogData} />
     </div>
   )
 }
